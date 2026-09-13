@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/responsive.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="Image/Logo.jpeg" type="image/png">
    
-    
+</li>
 </head>
 
 <body>
@@ -27,29 +27,63 @@
          <nav class="navbar">
             <div id="close-navbar" class="close-icon"><img src="Image/close-icon.gif" width="50" /></div>
 
-          <ul class="navbar-links">    
-         <li class="navbar-dropdown">
-            <a href="index.html">Home</a>
-         </li>
-              <li class="navbar-dropdown">
-                <a href="#">Course</a>
-                <div class="dropdown"><ul>
-                  <li><a href="#">Primary Group</a>
-                     <ul class='dropdown2'>
-                <li><a href='nursery.html'>Nursery to UKG</a></li>
-               <li><a href='class-1-5.html'>Class 1st to 5th</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="#">Secondary Group</a>
-                     <ul class='dropdown2'>
-                        <li><a href='class-6-8.html'>Class 6th to 8th</a></li>
-                        <li><a href='class-9-10.html'>Class 9th & 10th</a></li>
-                     </ul>
-                  </li>
-               </ul>
-                </div>
-              </li>
+        <ul class="navbar-links">
 
+            <li class="navbar-dropdown">
+                <a href="index.html">Home</a>
+            </li>
+
+           <ul class="navbar-links">
+  
+              <li class="navbar-dropdown">
+    <a href="#">Course</a>
+
+    <div class="dropdown">
+        <ul>
+
+            <!-- PRIMARY GROUP -->
+            <li class="course-group">
+                <a href="javascript:void(0);">
+                    Primary Group
+                    <span class="arrow">›</span>
+                </a>
+
+                <ul class="dropdown2">
+                    <li>
+                        <a href="nursery.html">Nursery to UKG</a>
+                    </li>
+
+                    <li>
+                        <a href="class-1-5.html">Class 1st to 5th</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- SECONDARY GROUP -->
+            <li class="course-group">
+                <a href="javascript:void(0);">
+                    Secondary Group
+                    <span class="arrow">›</span>
+                </a>
+
+                <ul class="dropdown2">
+                    <li>
+                        <a href="class-6-8.html">Class 6th to 8th</a>
+                    </li>
+
+                    <li>
+                        <a href="class-9-10.html">Class 9th to 10th</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</li>
+
+        </ul>
+    </div>
+</li>
             <li class="navbar-dropdown">
                 <a href="admission-form.html" target ="_blank" >Admissions</a> </li>
                   
@@ -597,6 +631,28 @@ async function talk() {
             "Sorry, chatbot is currently unavailable.";
     }
 }
+</script>
+
+<script>
+document.querySelectorAll(".course-group > a").forEach(function(link) {
+
+    link.addEventListener("click", function(e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const submenu = this.parentElement.querySelector(".dropdown2");
+
+        document.querySelectorAll(".course-group .dropdown2").forEach(function(menu) {
+            if (menu !== submenu) {
+                menu.classList.remove("show");
+            }
+        });
+
+        submenu.classList.toggle("show");
+    });
+
+});
 </script>
 
 </body>
