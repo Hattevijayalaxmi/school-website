@@ -1,5 +1,5 @@
-# collegeweb
-A college website of Hindu Institute of Management. This is ny first project.
+# schoolweb
+A school website of Maria's Podar Learn School Nilanga. This is my first project.
 
 # website link 
 output : 
