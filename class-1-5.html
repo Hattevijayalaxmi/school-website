@@ -1,490 +1,2447 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Course - HIM sonipat</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="tab-style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maria's Podar Learn School Nilanga(CBSE)</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="Image/Logo.jpeg" type="image/png">
+
+
+    <!-- ================= CLASS 1 TO 5 PROFESSIONAL CSS ================= -->
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .primary-page {
+            background: #f7f9fc;
+            color: #263238;
+        }
+
+        /* ================= HERO ================= */
+
+        .primary-hero {
+            min-height: 500px;
+            padding: 150px 25px 90px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 35, 65, 0.88),
+                    rgba(15, 93, 125, 0.76)
+                ),
+                url("Image/Image.png");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .primary-hero-content {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .primary-badge {
+            display: inline-block;
+
+            padding: 9px 20px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid rgba(255,255,255,0.45);
+
+            border-radius: 50px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            background: rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(5px);
+        }
+
+        .primary-hero h1 {
+            margin: 0 0 18px;
+
+            font-size: clamp(38px, 6vw, 64px);
+
+            line-height: 1.1;
+
+            font-weight: 700;
+        }
+
+        .primary-hero h1 span {
+            display: block;
+
+            font-size: clamp(21px, 3vw, 30px);
+
+            margin-top: 12px;
+
+            font-weight: 500;
+
+            opacity: 0.95;
+        }
+
+        .primary-hero p {
+            max-width: 720px;
+
+            margin: 0 auto 30px;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: rgba(255,255,255,0.92);
+        }
+
+        .primary-breadcrumb {
+            margin-top: 25px;
+
+            font-size: 14px;
+
+            color: rgba(255,255,255,0.75);
+        }
+
+        /* ================= BUTTONS ================= */
+
+        .primary-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 13px 24px;
+
+            border-radius: 7px;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .primary-btn-main {
+            background: #fff;
+            color: #0c5877;
+        }
+
+        .primary-btn-main:hover {
+            transform: translateY(-3px);
+        }
+
+        .primary-btn-outline {
+            border: 1px solid rgba(255,255,255,0.7);
+
+            color: #fff;
+
+            background: rgba(255,255,255,0.08);
+        }
+
+        .primary-btn-outline:hover {
+            background: #fff;
+            color: #0c5877;
+        }
+
+
+        /* ================= COMMON SECTION ================= */
+
+        .primary-section {
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding: 75px 25px;
+        }
+
+        .primary-section-heading {
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 45px;
+        }
+
+        .primary-section-heading .small-title {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            color: #0b7298;
+        }
+
+        .primary-section-heading h2 {
+            margin: 0 0 15px;
+
+            font-size: clamp(28px, 4vw, 40px);
+
+            line-height: 1.2;
+
+            color: #183b56;
+        }
+
+        .primary-section-heading p {
+            margin: 0;
+
+            line-height: 1.8;
+
+            color: #667781;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= INTRO ================= */
+
+        .primary-intro {
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            gap: 45px;
+
+            align-items: center;
+        }
+
+        .primary-intro-text h2 {
+            margin: 0 0 18px;
+
+            font-size: 35px;
+
+            color: #183b56;
+        }
+
+        .primary-intro-text p {
+            margin-bottom: 15px;
+
+            line-height: 1.8;
+
+            color: #5e6d75;
+        }
+
+        .primary-highlight-box {
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: #fff;
+
+            box-shadow: 0 10px 35px rgba(20, 60, 90, 0.10);
+
+            border-left: 5px solid #0b7298;
+        }
+
+        .primary-highlight-box h3 {
+            margin: 0 0 18px;
+
+            color: #183b56;
+        }
+
+        .primary-highlight-box ul {
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .primary-highlight-box li {
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 14px;
+
+            line-height: 1.5;
+
+            color: #586970;
+        }
+
+        .primary-highlight-box li i {
+            margin-top: 4px;
+
+            color: #0b7298;
+        }
+
+
+        /* ================= LEARNING AREAS ================= */
+
+        .primary-learning-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .primary-learning-card {
+            padding: 30px 25px;
+
+            background: #fff;
+
+            border-radius: 15px;
+
+            border: 1px solid #e8edf1;
+
+            transition: 0.3s ease;
+
+            box-shadow: 0 5px 20px rgba(20, 60, 90, 0.05);
+        }
+
+        .primary-learning-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow: 0 15px 35px rgba(20, 60, 90, 0.12);
+        }
+
+        .primary-learning-icon {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 14px;
+
+            background: #eaf6fa;
+
+            color: #0b7298;
+
+            font-size: 23px;
+        }
+
+        .primary-learning-card h3 {
+            margin: 0 0 10px;
+
+            font-size: 20px;
+
+            color: #183b56;
+        }
+
+        .primary-learning-card p {
+            margin: 0;
+
+            line-height: 1.7;
+
+            color: #68777e;
+
+            font-size: 15px;
+        }
+
+
+        /* ================= CLASS JOURNEY ================= */
+
+        .primary-classes {
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 15px;
+        }
+
+        .primary-class-card {
+            padding: 28px 18px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            background: #fff;
+
+            border: 1px solid #e5ebef;
+
+            box-shadow: 0 5px 18px rgba(20, 60, 90, 0.05);
+
+            transition: 0.3s ease;
+        }
+
+        .primary-class-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #a8d8e7;
+        }
+
+        .primary-class-number {
+            width: 52px;
+            height: 52px;
+
+            margin: 0 auto 17px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #0b7298;
+
+            color: #fff;
+
+            font-size: 17px;
+
+            font-weight: 700;
+        }
+
+        .primary-class-card h3 {
+            margin: 0 0 9px;
+
+            color: #183b56;
+
+            font-size: 19px;
+        }
+
+        .primary-class-card p {
+            margin: 0;
+
+            color: #6b777d;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================= DEVELOPMENT ================= */
+
+        .primary-development {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .primary-development-item {
+            display: flex;
+
+            gap: 17px;
+
+            padding: 23px;
+
+            background: #fff;
+
+            border-radius: 13px;
+
+            border: 1px solid #e8edf1;
+        }
+
+        .primary-development-item i {
+            min-width: 43px;
+
+            width: 43px;
+            height: 43px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #eaf6fa;
+
+            color: #0b7298;
+        }
+
+        .primary-development-item h3 {
+            margin: 0 0 6px;
+
+            color: #183b56;
+
+            font-size: 18px;
+        }
+
+        .primary-development-item p {
+            margin: 0;
+
+            color: #68777e;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= LEARNING ENVIRONMENT ================= */
+
+        .primary-environment {
+            background: #edf7fa;
+        }
+
+        .primary-environment-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .primary-environment-card {
+            padding: 27px 20px;
+
+            text-align: center;
+
+            background: #fff;
+
+            border-radius: 14px;
+
+            box-shadow: 0 5px 18px rgba(20, 60, 90, 0.05);
+        }
+
+        .primary-environment-card i {
+            font-size: 27px;
+
+            color: #0b7298;
+
+            margin-bottom: 15px;
+        }
+
+        .primary-environment-card h3 {
+            margin: 0 0 8px;
+
+            color: #183b56;
+
+            font-size: 17px;
+        }
+
+        .primary-environment-card p {
+            margin: 0;
+
+            color: #68777e;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ================= ADMISSION CTA ================= */
+
+        .primary-admission {
+            margin: 20px auto 70px;
+
+            max-width: 1100px;
+
+            padding: 55px 35px;
+
+            border-radius: 22px;
+
+            text-align: center;
+
+            color: #fff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #123f59,
+                    #0b789d
+                );
+
+            box-shadow: 0 15px 40px rgba(10, 70, 100, 0.18);
+        }
+
+        .primary-admission h2 {
+            margin: 0 0 12px;
+
+            font-size: 32px;
+        }
+
+        .primary-admission p {
+            max-width: 700px;
+
+            margin: 0 auto 25px;
+
+            line-height: 1.7;
+
+            color: rgba(255,255,255,0.88);
+        }
+
+
+        /* ================= FAQ ================= */
+
+        .primary-faq {
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .primary-faq-item {
+            margin-bottom: 13px;
+
+            background: #fff;
+
+            border: 1px solid #e4eaee;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        .primary-faq-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 20px 22px;
+
+            cursor: pointer;
+        }
+
+        .primary-faq-header h3 {
+            margin: 0;
+
+            font-size: 17px;
+
+            color: #183b56;
+        }
+
+        .primary-faq-icon {
+            min-width: 32px;
+
+            width: 32px;
+            height: 32px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #edf7fa;
+
+            color: #0b7298;
+
+            transition: 0.3s ease;
+        }
+
+        .primary-faq-header.active .primary-faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .primary-faq-content {
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: max-height 0.35s ease;
+        }
+
+        .primary-faq-content p {
+            margin: 0;
+
+            padding: 0 22px 20px;
+
+            color: #68777e;
+
+            line-height: 1.7;
+
+            font-size: 15px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            .primary-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .primary-learning-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .primary-classes {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .primary-environment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .primary-hero {
+                min-height: 450px;
+
+                padding: 130px 18px 70px;
+            }
+
+            .primary-hero p {
+                font-size: 15px;
+            }
+
+            .primary-section {
+                padding: 55px 18px;
+            }
+
+            .primary-learning-grid,
+            .primary-development,
+            .primary-environment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .primary-classes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .primary-admission {
+                margin: 10px 15px 50px;
+
+                padding: 40px 20px;
+            }
+
+            .primary-admission h2 {
+                font-size: 27px;
+            }
+
+        }
+
+    </style>
 
 </head>
-<body>
-    
- 
-    <!-- header section starts  -->
 
-    <header class="header">
 
-      <a href="index.html" class="logo">
-         <img src="Image/logo.png" alt="collage logo" style="width: 80px; height: 55px; " /> 
-         <div class="collage-name">Hindu Institute of Management</div></a>
-   
-         <nav class="navbar">
-            <div id="close-navbar" class="close-icon"><img src="Image/close-icon.gif" width="50" /></div>
+<body class="primary-page">
 
-               <ul class="navbar-links">
 
-              <li class="navbar-dropdown">
-                <a href="#">course</a>
-                <div class="dropdown"><ul>
-                  <li><a href="#">Computer Department</a>
-                     <ul class='dropdown2'>
-                        <li><a href='BCA-course.html'>BCA Course</a></li>
-                        <li><a href='MCA-course.html'>MCA Course</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="#">Management Department</a>
-                     <ul class='dropdown2'>
-                        <li><a href='BBA-course.html'>BBA Course</a></li>
-                        <li><a href='MBA-course.html'>MBA Course</a></li>
-                     </ul>
-                  </li>
-               </ul>
+<!-- ================= HEADER START ================= -->
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+
+        <img src="Image/Logo.jpeg"
+             alt="Maria's Podar Learn School logo"
+             style="width: 80px; height: 55px;">
+
+        <div class="collage-name">
+            Maria’s Podar Learn School Nilanga
+        </div>
+
+    </a>
+
+
+    <nav class="navbar">
+
+        <div id="close-navbar"
+             class="close-icon"
+             style="cursor:pointer;">
+
+            <img src="Image/close-icon.gif"
+                 width="50"
+                 alt="Close">
+
+        </div>
+
+
+        <ul class="navbar-links">
+
+            <li class="navbar-dropdown">
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li class="navbar-dropdown">
+
+                <a href="#">
+                    Course
+                </a>
+
+
+                <div class="dropdown">
+
+                    <ul>
+
+
+                        <!-- PRIMARY GROUP -->
+
+                        <li class="course-group">
+
+                            <a href="javascript:void(0);">
+
+                                Primary Group
+
+                                <span class="arrow">
+                                    ›
+                                </span>
+
+                            </a>
+
+
+                            <ul class="dropdown2">
+
+                                <li>
+                                    <a href="nursery.html">
+                                        Nursery to UKG
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="class-1-5.html">
+                                        Class 1st to 5th
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <!-- SECONDARY GROUP -->
+
+                        <li class="course-group">
+
+                            <a href="javascript:void(0);">
+
+                                Secondary Group
+
+                                <span class="arrow">
+                                    ›
+                                </span>
+
+                            </a>
+
+
+                            <ul class="dropdown2">
+
+                                <li>
+                                    <a href="class-6-8.html">
+                                        Class 6th to 8th
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="class-9-10.html">
+                                        Class 9th to 10th
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
                 </div>
-              </li>
+
+            </li>
+
 
             <li class="navbar-dropdown">
-                <a href="admission-form.html" target ="_blank" >Admissions</a> </li>
-                  
-                <li class="navbar-dropdown">
-                  <a href="contact-us.html">Contact us</a> </li>
+
+                <a href="admission-form.html"
+                   target="_blank">
+
+                    Admissions
+
+                </a>
+
+            </li>
+
 
             <li class="navbar-dropdown">
-                <a href="#">Other links</a> </li>
+
+                <a href="careers.html">
+
+                    Careers
+
+                </a>
+
+            </li>
+
+
+            <li class="navbar-dropdown">
+
+                <a href="contact-us.html">
+
+                    Contact us
+
+                </a>
+
+            </li>
+
         </ul>
-         </nav>
-   
-         <div id="menu-btn" class="header-icon"><img src="image/menu-icon.svg" alt="menu-icon" />
-           <img src="image/menu-icon-hover.gif" alt="menu-icon" width="30" class="header-icon-hover" /></div>
-      </div>
-   
-   </header>
-  
+
+    </nav>
 
 
-<!-- course section start -->
+    <!-- LOGIN ICON -->
 
+    <div id="account-btn"
+         class="header-icon"
+         style="cursor:pointer;">
 
- <div class="back-img">
-   
-   <h2>Computer Depatment 
-   <p> Courses > Computer Depart. > BCA </p> </h2>
- </div>
- 
-<div class="page-container">
-  <h2>Bachelor of Computer Application ( BCA )</h2>
-  
-  <p><b>Programme Structure : ( BCA )</b><br>
-      It is a semester based 3-year undergraduate program which comprises of six semesters. The course bridges the gap between institute and industry by emphasizing on latest computer applications.
-      HIM runs this course under affiliation with DCRUST, Murthal. The course provides a foundation in mathematics, computer science and management skills applied to computer science.
-      In this course the students will be exposed to various areas of computer applications including the latest developments keeping abreast with the industry The Institute has well-equipped lab for the department with the latest software and computers.
-  </p>
-  <br>
-  <p>
-     BCA is a 3-year full time degree programme which includes 6 semesters with training (industrial) after 5th semester. The UG degree is awarded by DCRUST, Murthal
-  <br>
+        <img src="Image/avatar-icon.svg"
+             alt="Login">
 
-  <b>Eligibility Criteria : </b> Candidate of any stream (Science, Commerce or Arts)  securing 50% or more (45 % marks only for SC/ST/OBC candidate) at 10+2 class. Student must be required intermediate Knowledge of Computer operator.
-</p>
-  <ol>
-    <li>Reservation of seats is strictly according to the Haryana State Government guidelines.</li>
-    <li>Management Quota/NRI 25% seats have been reserved as the management quota.</li>
-    <li>Admission to these seats will be made at the institute level based on merit.</li>
-  </ol>
-  
-  
-  
-<div class="tab-container">
-  <div class="tab-wrap">
-
-    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-    <label for="tab1">Course info</label>
-
-    <input type="radio" id="tab2" name="tabGroup1" class="tab">
-    <label for="tab2">Q. paper Syllabus</label>
-    
-    <input type="radio" id="tab3" name="tabGroup1" class="tab">
-    <label for="tab3">Fees Structure</label>
-
-   <br>
-    <div class="tab__content">
-      <h3>Course Information</h3>
-      <p> BCA is Full-time Technical UG course. The duration is 3 years ( 6 semester ).</p>
-      <p>BCA subjects include Database Management systems, software engineering, Computer Networking, Operating systems, Web technology and computer languages such as HTML & Css, C, C++, C#, Java.</p>
-       <div class="course-info">
-          <p><b>Course : </b> BCA</p>
-          <p><b>Eligible : </b> 10+2 ( Any Stream )</p>
-          <p><b>Class Start : </b> 20 - August - 2022</p>
-          <p><b>Intake : </b> 60 Seats</p>
-          <p><b>Class Schedule : </b> Monday to Friday</p>
-          <p><b>Class Time : </b> 9:10 AM to 12:30 PM</p>
-      </div>
-    </div>
-
-    <div class="tab__content tab-flex">
-      <h3>BCA Syllabus</h3>
-        <p><b>1st Year Syllabus</b><a href="#">click here</a></p>
-        <p><b>2nd Year Syllabus</b><a href="#">click here</a></p>
-        <p><b>3rd Year Syllabus</b><a href="#">click here</a></p>
-        <p><b>Complete Syllabus</b><a href="#">click here</a></p>
-      <br><br>
-      <h3>BCA Question Paper</h3>
-        <p><b>1st Semester </b><a href="https://www.dcrustedp.in/dcrustpqp/dec2017/BCA201B.pdf">click here</a></p>
-        <p><b>2nd Semester </b><a href="#">click here</a></p>
-        <p><b>3rd Semester </b><a href="#">click here</a></p>
-        <p><b>4th Semester </b><a href="#">click here</a></p>
-        <p><b>5th Semester </b><a href="#">click here</a></p>
-        <p><b>6th Semester </b><a href="#">click here</a></p>
-    </div>  
-    
-    <div class="tab__content">
-      
-<div class="tbl-inner">
-<table>
-    <tbody>
-        <tr class="table-head">
-            <td colspan="3" style="background-color: tomato;" >BCA 1st Year FEE SCHEDULE 2022-23 </td>
-        </tr>
-        <tr>
-          <th>S.NO</th>
-          <th> Particulars </th>
-          <th>BCA 1st Year (in Rs.)</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Annual Tution Fees</td>
-          <td>15000</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Development Fees</td>
-          <td>5000</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Student Fund</td>
-          <td>1500</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>College Security</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td> Other Fees (I. Card, House Exam fees) </td>
-          <td>500</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Accreditation Fees</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Registration Fees</td>
-          <td>1500</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Examination Fees</td>
-          <td>3500</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Development Fees</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Deenbandhu Chhotu Ram Fund</td>
-          <td>75</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Migration Fees</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>NSS Fund</td>
-          <td>100</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>Sports Fund</td>
-          <td>500</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>Youth Welfare Fund</td>
-          <td>250</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Youth Red Cross Subscription</td>
-          <td>60</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>University Admission Exp.</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          
-          <td colspan="2"><strong>Grand Total</strong></td>
-          <td>30985</td>
-        </tr>
-</tbody>
-</table>
-</div>
+        <img src="Image/avatar-icon-hover.gif"
+             alt="Login"
+             width="30"
+             class="header-icon-hover">
 
     </div>
 
-  </div>
- </div>
- 
- <div class="tbl-inner">
-<table>
-<tbody>
-        <tr>
-            <td colspan="3" style="padding:20px; color: tomato;" >
-                  <strong>The annum amount mentioned is to be paid in
-                        Complete / Installments as per details mentioned.
-                  </strong></td>
-        </tr>
-        <tr>
-            <td><strong>BCA 1st year Fees</strong></td>
-            <td><strong>BCA 2nd Year Fees</strong></td>
-            <td><strong>BCA 3nd Year Fees</strong></td>
-        </tr>
-        <tr>
-          <td>RS. 30,985/- Annum</td>
-          <td>RS. 28,235/- Annum</td>
-          <td>RS. 28,735/- Annum</td>
-        </tr>
-        <tr>
-          <td colspan="3"><strong>1st Installment : </strong> In November <br> 10th November, 2022 </td>
-        </tr>
-        <tr>
-          <td colspan="3"><strong>2nd Installment : </strong> In March <br> 15th March, 2023 </td>
-        </tr>
-        
-    </tbody>
-</table>
-</div>
-<br /> <br />
 
-<h3>Course Information</h3>
-<p> </p>
-<div class="tbl-inner">
-<table>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Experience</th>
-      <th>Specialization</th>
-      <th>Qualification</th>
-    </tr>
-    <tr>
-      <td>Ms. Charu Jain</td>
-      <td>16 Years</td>
-      <td>DBMS, Software Engineering, AI<br />D2K, Oracle, C, Data Structure</td>
-      <td>M.C.A.,M.Phil,HTET</td>
-    </tr>
-    <tr>
-      <td>Ms. Poonam Mathur</td>
-      <td>16 Years</td>
-      <td>Computer Architecture,<br />Networking UNIX,<br />C ,Data Warehouse, Programming</td>
-      <td>M.C.A.,M.Phil, HTET</td>
-    </tr>
-    <tr>
-      <td>Ms. Parul Sharma</td>
-      <td>15 Years</td>
-      <td>C,C++,VB,AI,Computer Graphics,E-Commerce, Core Java, HTML, Java Script, VC++, Data Structure</td>
-      <td>M.C.A.,M.Phil</td>
-    </tr>
-    <tr>
-      <td>Mr. Ajay Bajaj</td>
-      <td>14 Years</td>
-      <td><strong>Programming Languages:-</strong><br />(C,C++,VB,VC++,Core Java,ASP.Net ,C#, PhP,XML,JSP,Servlets,Java Beans,RMI,Swings,Python)<br />
-          <strong>DataBase:</strong>&#8211; (Ms Excess,SQL Server 2000,2005,2008,2010,MySql,Oracle)<br />
-          <strong>Web Designing:-</strong>(CSS,HTML 5.0,Photoshop,Coral Draw,Dreamweaver,Web Hosting)<br />
-          <strong>Web Server:-</strong>( Configuration of  Server,IIS Web Server,Apache Tomcat Server,Eclipse,JRun,Web Logic,Web Sphere)<br />
-          <strong>Content Management System(CMS):-</strong>E-Commerce, WordPress, Joomla, Drupal<br />
-          <strong>Scripting :-</strong>Javascript,VBscript,Jquery,Jason</td>
-      <td>M.C.A.</td>
-    </tr>
-    <tr>
-      <td>Ms. Aruna Kapoor Gandhi</td>
-      <td>12 Years</td>
-      <td>Data Structure,Operating System,C,SPM, Core Java, Computer Networks, Network Security,VB, C++</td>
-      <td>MCA, M.Tech, HTET</td>
-    </tr>
-    <tr>
-      <td>Dr. Vandana Jindal</td>
-      <td> 15.8 Years</td>
-      <td> Software Engineering,MicroProcessor,Big Data</td>
-      <td>MCA,M. Phil,Ph. D</td>
-    </tr>
-    <tr>
-      <td>Ms. Vaishali Sharma</td>
-      <td> 2 Years</td>
-      <td> Computer Science &amp; Web Designing</td>
-      <td>B.Tech,M.Tech(Pursuing)</td>
-    </tr>
-</tbody>
-</table>
-</div>
+    <!-- MOBILE MENU -->
 
+    <div id="menu-btn"
+         class="header-icon">
 
- 
- <div class="accordion-content">
-  <h2>FAQ</h2>
+        <img src="image/menu-icon.svg"
+             alt="menu-icon">
 
-  <div class="accordion-item">
-    <header class="item-header">
-      <h4>What type of jobs will be offered after the BCA ?</h4>
-      <div class="item-icon">
-        <i class='bx bx-chevron-down'></i>
-      </div>
-    </header>
-    <div class="item-content">
-      <p>After the BCA student can select the field of  Software development, website designing & developing, digital marketing, software testing, database administrator, BPO, Banking jobs, Government jobs, etc. </p>
-     
+        <img src="image/menu-icon-hover.gif"
+             alt="menu-icon"
+             width="30"
+             class="header-icon-hover">
+
     </div>
-  </div>
-  
-  <div class="accordion-item">
-    <header class="item-header">
-      <h4> What is the admission procedure to take admission in BCA ? </h4>
-      <div class="item-icon">
-        <i class='bx bx-chevron-down'></i>
-      </div>
-    </header>
-    <div class="item-content">
-      <p>Candidate eligible for admission will fill the online application form available on the college website and pay a registration fee of Rs. 1,000/- to take provisional admission.
-       We can not be force to pay complete fees at the time of admission.<p>
-       <p> Candidate can offers to pay annual fees in two installment.
+
+</header>
+
+<!-- ================= HEADER END ================= -->
+
+
+
+<!-- ================= LOGIN FORM START ================= -->
+
+<div class="account-form"
+     id="loginAccountForm">
+
+    <div id="close-form"
+         class="close-icon"
+         style="cursor:pointer;">
+
+        <img src="Image/close-icon.gif"
+             alt="Close"
+             width="50">
+
     </div>
-  </div>
-  
-  <div class="accordion-item">
-    <header class="item-header">
-      <h4>Lorem ipsum dolor sit amet, consectetur?</h4>
-      <div class="item-icon">
-        <i class='bx bx-chevron-down'></i>
-      </div>
-    </header>
-      <div class="item-content">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-  </div>
-  
-  <div class="accordion-item">
-    <header class="item-header">
-      <h4>Lorem ipsum dolor sit amet, consectetur?</h4>
-      <div class="item-icon">
-        <i class='bx bx-chevron-down'></i>
-      </div>
-    </header>
-      <div class="item-content">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-  </div>
-  
-</div>
-<br><br>
-</div>
 
 
-<!-- footer section starts -->
+    <div class="buttons">
+
+        <span class="btn active login-btn">
+            Login
+        </span>
+
+    </div>
+
+
+    <form class="login-form active"
+          id="schoolLoginForm">
+
+        <h3>
+            Login Now
+        </h3>
+
+
+        <input type="email"
+               id="loginEmail"
+               placeholder="Enter your email"
+               class="box"
+               required>
+
+
+        <input type="password"
+               id="loginPassword"
+               placeholder="Enter your password"
+               class="box"
+               required>
+
+
+        <div class="flex">
+
+            <input type="checkbox"
+                   id="remember-me">
+
+            <label for="remember-me">
+                Remember Me
+            </label>
+
+        </div>
+
+
+        <p id="loginMessage"></p>
+
+
+        <button type="submit"
+                class="btn">
+
+            Login Now
+
+        </button>
+
+    </form>
+
+</div>
+
+<!-- ================= LOGIN FORM END ================= -->
+
+
+
+<!-- ================= HERO START ================= -->
+
+<section class="primary-hero">
+
+    <div class="primary-hero-content">
+
+        <span class="primary-badge">
+            PRIMARY GROUP
+        </span>
+
+
+        <h1>
+
+            Class 1st to 5th
+
+            <span>
+                Building Strong Foundations for Lifelong Learning
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            A structured and engaging learning journey designed
+            to help children develop strong academic foundations,
+            communication skills, creativity, confidence and
+            positive learning habits.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= HERO END ================= -->
+
+
+
+<!-- ================= INTRO START ================= -->
+
+<section class="primary-section">
+
+    <div class="primary-intro">
+
+
+        <div class="primary-intro-text">
+
+            <span class="primary-section-heading .small-title"></span>
+
+            <h2>
+                Primary Learning at Maria’s Podar Learn School
+            </h2>
+
+
+            <p>
+
+                The Class 1st to 5th years are an important stage
+                in a child's educational journey. These years help
+                children strengthen their basic concepts while
+                developing curiosity, communication and independent
+                learning habits.
+
+            </p>
+
+
+            <p>
+
+                At Maria’s Podar Learn School Nilanga, the primary
+                learning programme focuses on age-appropriate
+                academic learning along with activities that support
+                creativity, confidence, collaboration and overall
+                development.
+
+            </p>
+
+
+            <p>
+
+                Children are encouraged to ask questions, explore
+                ideas, participate in classroom activities and
+                gradually take greater responsibility for their
+                learning.
+
+            </p>
+
+        </div>
+
+
+        <div class="primary-highlight-box">
+
+            <h3>
+                Key Focus Areas
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Strong foundation in core subjects
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Reading, writing and communication development
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Mathematical thinking and problem solving
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Creativity and activity-based learning
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Social skills and responsible behaviour
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Confidence and independent learning habits
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= INTRO END ================= -->
+
+
+
+<!-- ================= LEARNING AREAS ================= -->
+
+<section class="primary-section">
+
+    <div class="primary-section-heading">
+
+        <span class="small-title">
+            Learning Areas
+        </span>
+
+        <h2>
+            Developing Knowledge, Skills & Curiosity
+        </h2>
+
+        <p>
+
+            The primary years provide opportunities for children
+            to strengthen their academic understanding while
+            exploring different areas of learning.
+
+        </p>
+
+    </div>
+
+
+    <div class="primary-learning-grid">
+
+
+        <div class="primary-learning-card">
+
+            <div class="primary-learning-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+            <h3>
+                Languages
+            </h3>
+
+            <p>
+
+                Development of reading, writing, vocabulary,
+                comprehension and effective communication.
+
+            </p>
+
+        </div>
+
+
+        <div class="primary-learning-card">
+
+            <div class="primary-learning-icon">
+                <i class="fa-solid fa-calculator"></i>
+            </div>
+
+            <h3>
+                Mathematics
+            </h3>
+
+            <p>
+
+                Building number sense, calculation skills,
+                logical thinking and problem-solving abilities.
+
+            </p>
+
+        </div>
+
+
+        <div class="primary-learning-card">
+
+            <div class="primary-learning-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <h3>
+                Environmental Studies
+            </h3>
+
+            <p>
+
+                Encouraging children to understand their
+                surroundings, nature, people and everyday life.
+
+            </p>
+
+        </div>
+
+
+        <div class="primary-learning-card">
+
+            <div class="primary-learning-icon">
+                <i class="fa-solid fa-flask"></i>
+            </div>
+
+            <h3>
+                Science & Exploration
+            </h3>
+
+            <p>
+
+                Developing curiosity through observation,
+                questioning, exploration and simple activities.
+
+            </p>
+
+        </div>
+
+
+        <div class="primary-learning-card">
+
+            <div class="primary-learning-icon">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+
+            <h3>
+                Art & Creativity
+            </h3>
+
+            <p>
+
+                Opportunities for drawing, creative expression,
+                craft and imaginative activities.
+
+            </p>
+
+        </div>
+
+
+        <div class="primary-learning-card">
+
+            <div class="primary-learning-icon">
+                <i class="fa-solid fa-laptop"></i>
+            </div>
+
+            <h3>
+                Digital Awareness
+            </h3>
+
+            <p>
+
+                Introducing age-appropriate digital awareness
+                and responsible use of technology.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LEARNING AREAS END ================= -->
+
+
+
+<!-- ================= CLASS JOURNEY ================= -->
+
+<section class="primary-section">
+
+    <div class="primary-section-heading">
+
+        <span class="small-title">
+            Primary Journey
+        </span>
+
+        <h2>
+            Class 1st to Class 5th
+        </h2>
+
+        <p>
+
+            Each class builds upon previous learning and supports
+            children as they gradually develop greater confidence,
+            knowledge and independence.
+
+        </p>
+
+    </div>
+
+
+    <div class="primary-classes">
+
+
+        <div class="primary-class-card">
+
+            <div class="primary-class-number">
+                01
+            </div>
+
+            <h3>
+                Class 1
+            </h3>
+
+            <p>
+                Strengthening basic literacy, numeracy,
+                classroom routines and learning habits.
+            </p>
+
+        </div>
+
+
+        <div class="primary-class-card">
+
+            <div class="primary-class-number">
+                02
+            </div>
+
+            <h3>
+                Class 2
+            </h3>
+
+            <p>
+                Building reading, writing, mathematics and
+                everyday knowledge through engaging learning.
+            </p>
+
+        </div>
+
+
+        <div class="primary-class-card">
+
+            <div class="primary-class-number">
+                03
+            </div>
+
+            <h3>
+                Class 3
+            </h3>
+
+            <p>
+                Developing stronger concepts, communication,
+                reasoning and independent participation.
+            </p>
+
+        </div>
+
+
+        <div class="primary-class-card">
+
+            <div class="primary-class-number">
+                04
+            </div>
+
+            <h3>
+                Class 4
+            </h3>
+
+            <p>
+                Encouraging deeper understanding, application
+                of concepts and collaborative learning.
+            </p>
+
+        </div>
+
+
+        <div class="primary-class-card">
+
+            <div class="primary-class-number">
+                05
+            </div>
+
+            <h3>
+                Class 5
+            </h3>
+
+            <p>
+                Preparing learners for the next academic stage
+                with confidence, knowledge and responsibility.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CLASS JOURNEY END ================= -->
+
+
+
+<!-- ================= DEVELOPMENT START ================= -->
+
+<section class="primary-section">
+
+    <div class="primary-section-heading">
+
+        <span class="small-title">
+            Child Development
+        </span>
+
+        <h2>
+            Beyond Academic Learning
+        </h2>
+
+        <p>
+
+            Primary education is also about helping children
+            become confident, curious, responsible and
+            collaborative learners.
+
+        </p>
+
+    </div>
+
+
+    <div class="primary-development">
+
+
+        <div class="primary-development-item">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <div>
+
+                <h3>
+                    Communication
+                </h3>
+
+                <p>
+                    Encouraging children to express their ideas,
+                    thoughts and questions clearly.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="primary-development-item">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <div>
+
+                <h3>
+                    Critical Thinking
+                </h3>
+
+                <p>
+                    Developing curiosity, reasoning and the
+                    ability to explore different solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="primary-development-item">
+
+            <i class="fa-solid fa-paintbrush"></i>
+
+            <div>
+
+                <h3>
+                    Creativity
+                </h3>
+
+                <p>
+                    Giving children opportunities to express
+                    themselves through creative activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="primary-development-item">
+
+            <i class="fa-solid fa-people-group"></i>
+
+            <div>
+
+                <h3>
+                    Collaboration
+                </h3>
+
+                <p>
+                    Supporting teamwork, sharing, cooperation
+                    and respectful interaction.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="primary-development-item">
+
+            <i class="fa-solid fa-person-running"></i>
+
+            <div>
+
+                <h3>
+                    Physical Development
+                </h3>
+
+                <p>
+                    Encouraging participation in age-appropriate
+                    physical and activity-based experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="primary-development-item">
+
+            <i class="fa-solid fa-user-check"></i>
+
+            <div>
+
+                <h3>
+                    Independence
+                </h3>
+
+                <p>
+                    Helping children develop responsibility,
+                    confidence and positive learning habits.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= DEVELOPMENT END ================= -->
+
+
+
+<!-- ================= LEARNING ENVIRONMENT ================= -->
+
+<section class="primary-environment">
+
+    <div class="primary-section">
+
+        <div class="primary-section-heading">
+
+            <span class="small-title">
+                School Experience
+            </span>
+
+            <h2>
+                A Positive Learning Environment
+            </h2>
+
+            <p>
+
+                The primary years can be a meaningful period of
+                exploration and growth when children receive
+                encouragement, guidance and opportunities to learn.
+
+            </p>
+
+        </div>
+
+
+        <div class="primary-environment-grid">
+
+
+            <div class="primary-environment-card">
+
+                <i class="fa-solid fa-child-reaching"></i>
+
+                <h3>
+                    Child-Centred Learning
+                </h3>
+
+                <p>
+                    Learning experiences designed around children's
+                    age and stage of development.
+                </p>
+
+            </div>
+
+
+            <div class="primary-environment-card">
+
+                <i class="fa-solid fa-puzzle-piece"></i>
+
+                <h3>
+                    Activity-Based Learning
+                </h3>
+
+                <p>
+                    Activities that encourage participation,
+                    exploration and practical understanding.
+                </p>
+
+            </div>
+
+
+            <div class="primary-environment-card">
+
+                <i class="fa-solid fa-handshake"></i>
+
+                <h3>
+                    Positive Values
+                </h3>
+
+                <p>
+                    Encouraging respect, cooperation,
+                    responsibility and good learning habits.
+                </p>
+
+            </div>
+
+
+            <div class="primary-environment-card">
+
+                <i class="fa-solid fa-house-user"></i>
+
+                <h3>
+                    Parent Partnership
+                </h3>
+
+                <p>
+                    Supporting communication between school
+                    and parents throughout the learning journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LEARNING ENVIRONMENT END ================= -->
+
+
+
+<!-- ================= ADMISSION CTA ================= -->
+
+<section class="primary-section">
+
+    <div class="primary-admission">
+
+        <h2>
+            Begin Your Child’s Primary School Journey
+        </h2>
+
+        <p>
+
+            For admission-related information and the current
+            admission process, please visit the admission form
+            or contact Maria’s Podar Learn School Nilanga.
+
+        </p>
+
+
+        <div class="primary-buttons">
+
+            <a href="admission-form.html"
+               target="_blank"
+               class="primary-btn primary-btn-main">
+
+                <i class="fa-solid fa-file-signature"></i>
+
+                Admission Form
+
+            </a>
+
+
+            <a href="contact-us.html"
+               class="primary-btn primary-btn-outline">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Contact School
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ADMISSION CTA END ================= -->
+
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="primary-section">
+
+    <div class="primary-section-heading">
+
+        <span class="small-title">
+            Frequently Asked Questions
+        </span>
+
+        <h2>
+            Class 1st to 5th – FAQ
+        </h2>
+
+        <p>
+            Some common questions about the primary school programme.
+        </p>
+
+    </div>
+
+
+    <div class="primary-faq">
+
+
+        <!-- FAQ 1 -->
+
+        <div class="primary-faq-item">
+
+            <div class="primary-faq-header">
+
+                <h3>
+                    What does the Class 1st to 5th programme focus on?
+                </h3>
+
+                <div class="primary-faq-icon">
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="primary-faq-content">
+
+                <p>
+
+                    The programme focuses on strengthening core
+                    academic concepts along with communication,
+                    creativity, problem-solving, collaboration and
+                    positive learning habits.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 2 -->
+
+        <div class="primary-faq-item">
+
+            <div class="primary-faq-header">
+
+                <h3>
+                    Which classes are included in the Primary Group?
+                </h3>
+
+                <div class="primary-faq-icon">
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="primary-faq-content">
+
+                <p>
+
+                    This page covers Class 1st, Class 2nd,
+                    Class 3rd, Class 4th and Class 5th.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 3 -->
+
+        <div class="primary-faq-item">
+
+            <div class="primary-faq-header">
+
+                <h3>
+                    What learning areas are covered?
+                </h3>
+
+                <div class="primary-faq-icon">
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="primary-faq-content">
+
+                <p>
+
+                    Learning areas include languages, mathematics,
+                    environmental studies, science and exploration,
+                    art and creativity, and age-appropriate digital
+                    awareness.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 4 -->
+
+        <div class="primary-faq-item">
+
+            <div class="primary-faq-header">
+
+                <h3>
+                    How can parents apply for admission?
+                </h3>
+
+                <div class="primary-faq-icon">
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="primary-faq-content">
+
+                <p>
+
+                    Parents can visit the
+                    <a href="admission-form.html">
+                        Admission Form
+                    </a>
+                    page for the current admission process or
+                    contact the school for further information.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FAQ 5 -->
+
+        <div class="primary-faq-item">
+
+            <div class="primary-faq-header">
+
+                <h3>
+                    How can I contact Maria’s Podar Learn School Nilanga?
+                </h3>
+
+                <div class="primary-faq-icon">
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="primary-faq-content">
+
+                <p>
+
+                    Please visit the
+                    <a href="contact-us.html">
+                        Contact Us
+                    </a>
+                    page for the available school contact information.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FAQ END ================= -->
+
+
+
+<!-- ================= FOOTER START ================= -->
 
 <footer style="background:url(Image/Speedline-50s-1846px.svg)">
-  <div class="content">
-    <div class="top">
-      <div class="logo-details">
-        <span>Hindu Insitute of Management</span>
-      </div>
-      <div class="media-icons">
-        <a href="https://www.facebook.com/him.sonepat/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://directorhimsonepat@gmail.com/compose"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://instagram.com/official._.him" target="_blank" ><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
+
+    <div class="content">
+
+        <div class="top">
+
+            <div class="logo-details">
+
+                <span>
+                    Maria’s Podar Learn School Nilanga
+                </span>
+
+            </div>
+
+
+            <div class="media-icons">
+
+                <a href="https://www.facebook.com/him.sonepat/"
+                   target="_blank">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="https://directorhimsonepat@gmail.com/compose">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <a href="https://instagram.com/mariaspodarschoolnilanga"
+                   target="_blank">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
+                   target="_blank">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="link-boxes">
+
+
+            <!-- ABOUT -->
+
+            <ul class="box">
+
+                <li class="link_name">
+                    About
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact-us.html">
+                        Contact us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        About us
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- QUICK LINKS -->
+
+            <ul class="box">
+
+                <li class="link_name">
+                    Quick Links
+                </li>
+
+                <li>
+                    <a href="admission-form.html">
+                        Admission Form
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        Notice Board
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html">
+                        School Site
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- STUDENT CORNER -->
+
+            <ul class="box">
+
+                <li class="link_name">
+                    Student's Corner
+                </li>
+
+                <li>
+                    <a href="fees-payment.html">
+                        Fees Payment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="complaint.html">
+                        Complaint Section
+                    </a>
+                </li>
+
+                <li>
+                    <a href="careers.html">
+                        Careers
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- ACCOUNT -->
+
+            <ul class="box">
+
+                <li class="link_name">
+                    Account
+                </li>
+
+                <li>
+                    <a href="#"
+                       id="adminLoginLink">
+
+                        Admin Login
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- SUBSCRIBE -->
+
+            <ul class="box input-box">
+
+                <li class="link_name">
+                    Subscribe
+                </li>
+
+                <li>
+
+                    <input type="email"
+                           placeholder="Enter your email">
+
+                </li>
+
+                <li>
+
+                    <input type="button"
+                           value="Subscribe">
+
+                </li>
+
+            </ul>
+
+        </div>
+
     </div>
-    
-    <div class="link-boxes">
-      <ul class="box">
-        <li class="link_name">About</li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact-us.html">Contact us</a></li>
-        <li><a href="#">About us</a></li>
-      </ul>
-      <ul class="box">
-        <li class="link_name">Quick Links</li>
-        <li><a href="admission-form.html">Admission Form</a></li>
-        <li><a href="contact-us.html">Notice Board</a></li>
-        <li><a href="#">University Site</a></li>
-      </ul>
-      <ul class="box">
-       <li class="link_name">Student's Corner</li>
-       <li><a href="fees-payment.html">Fees Payment</a></li>
-       <li><a href="complaint.html">Complaint Section</a></li>
-       <li><a href="#">University Login</a></li>
-       
-     </ul>
-      <ul class="box">
-        <li class="link_name">Account</li>
-        <li><a href="#">Admin Login</a></li>
-        <li><a href="#">My account</a></li>
-      </ul>
-      
-      <ul class="box input-box">
-        <li class="link_name">Subscribe</li>
-        <li><input type="email" placeholder="Enter your email"></li>
-        <li><input type="button" value="Subscribe"></li>
-      </ul>
-    </div>
-  </div>
-  <div class="bottom-details">
-    <div class="bottom_text">
-      <span class="copyright_text">Copyright © 2022 | All rights reserved To Ajeet And Dev</span>
-      <span class="policy_terms">
-        <a href="#">Privacy policy</a>
-        <a href="#">Terms & condition</a>
-      </span>
-    </div>
-  </div>
+
 </footer>
-<!--footer section ends -->
+
+<!-- ================= FOOTER END ================= -->
 
 
- 
+
+<!-- ================= EXISTING SCRIPT ================= -->
 
 <script src="js/script.js"></script>
+
+
+
+<!-- ================= FAQ SCRIPT ================= -->
+
 <script>
-    const accordionBtns = document.querySelectorAll(".item-header");
-    accordionBtns.forEach((accordion) => {
-  accordion.onclick = function () {
-    this.classList.toggle("active");
 
-    let content = this.nextElementSibling;
-    console.log(content);
+document.querySelectorAll(".primary-faq-header").forEach(function(header) {
 
-    if (content.style.maxHeight) {
-      //this is if the accordion is open
-      content.style.maxHeight = null;
-    } else {
-      //if the accordion is currently closed
-      content.style.maxHeight = content.scrollHeight + "px";
-      console.log(content.style.maxHeight);
-    }
-  };
+    header.addEventListener("click", function() {
+
+        const content =
+            this.nextElementSibling;
+
+        const isOpen =
+            this.classList.contains("active");
+
+
+        /* CLOSE ALL */
+
+        document.querySelectorAll(".primary-faq-header")
+            .forEach(function(item) {
+
+                item.classList.remove("active");
+
+            });
+
+
+        document.querySelectorAll(".primary-faq-content")
+            .forEach(function(item) {
+
+                item.style.maxHeight = null;
+
+            });
+
+
+        /* OPEN CURRENT */
+
+        if (!isOpen) {
+
+            this.classList.add("active");
+
+            content.style.maxHeight =
+                content.scrollHeight + "px";
+
+        }
+
+    });
+
 });
+
 </script>
 
+
+
+<!-- ================= LOGIN SCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const accountBtn =
+        document.getElementById("account-btn");
+
+
+    const adminLoginLink =
+        document.getElementById("adminLoginLink");
+
+
+    const loginAccountForm =
+        document.getElementById("loginAccountForm");
+
+
+    const closeForm =
+        document.getElementById("close-form");
+
+
+    const loginForm =
+        document.getElementById("schoolLoginForm");
+
+
+    const loginMessage =
+        document.getElementById("loginMessage");
+
+
+    /* HEADER LOGIN */
+
+    if (accountBtn) {
+
+        accountBtn.addEventListener("click", function () {
+
+            loginAccountForm.classList.add("active");
+
+        });
+
+    }
+
+
+    /* ADMIN LOGIN */
+
+    if (adminLoginLink) {
+
+        adminLoginLink.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            loginAccountForm.classList.add("active");
+
+        });
+
+    }
+
+
+    /* CLOSE */
+
+    if (closeForm) {
+
+        closeForm.addEventListener("click", function () {
+
+            loginAccountForm.classList.remove("active");
+
+        });
+
+    }
+
+
+    /* LOGIN */
+
+    if (loginForm) {
+
+        loginForm.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+
+            const email =
+                document.getElementById("loginEmail")
+                    .value
+                    .trim();
+
+
+            const password =
+                document.getElementById("loginPassword")
+                    .value;
+
+
+            const adminEmail =
+                "admin@school.com";
+
+
+            const adminPassword =
+                "Admin@123";
+
+
+            if (
+                email === adminEmail &&
+                password === adminPassword
+            ) {
+
+
+                loginMessage.innerHTML =
+                    "Login successful!";
+
+
+                loginMessage.style.color =
+                    "green";
+
+
+                setTimeout(function () {
+
+                    window.location.href =
+                        "admin-dashboard.html";
+
+                }, 500);
+
+
+            } else {
+
+
+                loginMessage.innerHTML =
+                    "Invalid email or password!";
+
+
+                loginMessage.style.color =
+                    "red";
+
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- ================= COURSE DROPDOWN SCRIPT ================= -->
+
+<script>
+
+document.querySelectorAll(
+    ".course-group > a"
+).forEach(function(link) {
+
+
+    link.addEventListener(
+        "click",
+        function(e) {
+
+            e.preventDefault();
+
+            e.stopPropagation();
+
+
+            const submenu =
+                this.parentElement
+                    .querySelector(".dropdown2");
+
+
+            document.querySelectorAll(
+                ".course-group .dropdown2"
+            ).forEach(function(menu) {
+
+                if (menu !== submenu) {
+
+                    menu.classList.remove("show");
+
+                }
+
+            });
+
+
+            submenu.classList.toggle("show");
+
+        }
+    );
+
+});
+
+</script>
+
+
 </body>
+
 </html>

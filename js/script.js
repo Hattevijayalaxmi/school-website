@@ -49,18 +49,52 @@ loginBtn.onclick = () =>{
   document.querySelector('.account-form .register-form').classList.remove('active');
 };
 
-let accountForm = document.querySelector('.account-form')
+// Account/Login form
+let accountBtn = document.querySelector('#account-btn');
+let accountForm = document.querySelector('.account-form');
+let closeForm = document.querySelector('#close-form');
 
-document.querySelector('#account-btn').onclick = () =>{
-  accountForm.classList.add('active');
+if (accountBtn && accountForm) {
+    accountBtn.onclick = () => {
+        accountForm.classList.add('active');
+    };
 }
 
-document.querySelector('#close-form').onclick = () =>{
-  accountForm.classList.remove('active');
-};
+if (closeForm && accountForm) {
+    closeForm.onclick = () => {
+        accountForm.classList.remove('active');
+    };
+}
 
+// LOGIN / ACCOUNT BUTTON
+document.addEventListener("DOMContentLoaded", function () {
 
+    const accountBtn = document.getElementById("account-btn");
+    const accountForm = document.querySelector(".account-form");
+    const closeForm = document.getElementById("close-form");
 
+    if (accountBtn && accountForm) {
+
+        accountBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            accountForm.classList.add("active");
+        });
+
+    }
+
+    if (closeForm && accountForm) {
+
+        closeForm.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            accountForm.classList.remove("active");
+        });
+
+    }
+
+});
 
 
 

@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Maria's Podar Learn School Nilanga(CBSE)</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #080022;
+    color: white;
+    padding: 12px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    width: 80px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.collage-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logout {
+    background: #f93;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    padding: 40px;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container > p {
+    color: #666;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 15px
+        rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+.card button {
+    background: #f93;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.card button:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   LIST SECTION
+========================= */
+
+.list-section {
+    display: none;
+
+    margin-top: 40px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 15px
+        rgba(0,0,0,0.1);
+
+    overflow-x: auto;
+}
+
+.list-section.active {
+    display: block;
+}
+
+.list-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+table th {
+    background: #080022;
+
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+
+/* =========================
+   LINK BUTTON
+========================= */
+
+.resume-link {
+    background: #f93;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+.resume-link:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-link {
+    background: #080022;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+.photo-link:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-list {
+    background: #555;
+
+    color: white;
+
+    border: none;
+
+    padding: 8px 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 1000px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        padding: 12px 20px;
+    }
+
+    .collage-name {
+        font-size: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <a href="index.html"
+       class="logo">
+
+        <img src="Image/Logo.jpeg"
+             alt="School logo">
+
+        <div class="collage-name">
+            Maria's Podar Learn School Nilanga
+        </div>
+
+    </a>
+
+
+    <button
+        class="logout"
+        onclick="logout()">
+
+        Logout
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================
+     DASHBOARD
+========================= -->
+
+<div class="container">
+
+    <h1>
+        Welcome Admin 👋
+    </h1>
+
+    <p>
+        School Administration Dashboard
+    </p>
+
+
+    <!-- =========================
+         CARDS
+    ========================= -->
+
+    <div class="cards">
+
+
+        <!-- COMPLAINTS -->
+
+        <div class="card">
+
+            <h3>📢 Complaints</h3>
+
+            <p>
+                View student complaints.
+            </p>
+
+            <button
+                onclick="showList('complaints')">
+
+                View Complaints
+
+            </button>
+
+        </div>
+
+
+        <!-- SUBSCRIBERS -->
+
+        <div class="card">
+
+            <h3>📧 Subscribers</h3>
+
+            <p>
+                View website subscribers.
+            </p>
+
+            <button
+                onclick="showList('subscribers')">
+
+                View Subscribers
+
+            </button>
+
+        </div>
+
+
+        <!-- ADMISSIONS -->
+
+        <div class="card">
+
+            <h3>📝 Admissions</h3>
+
+            <p>
+                View admission information.
+            </p>
+
+            <button
+                onclick="showList('admissions')">
+
+                View Admissions
+
+            </button>
+
+        </div>
+
+
+        <!-- CONTACTS -->
+
+        <div class="card">
+
+            <h3>📞 Contacts</h3>
+
+            <p>
+                View website contact messages.
+            </p>
+
+            <button
+                onclick="showList('contacts')">
+
+                View Contacts
+
+            </button>
+
+        </div>
+
+
+        <!-- FEES -->
+
+        <div class="card">
+
+            <h3>💳 Fees Payment</h3>
+
+            <p>
+                View student fee payment details.
+            </p>
+
+            <button
+                onclick="showList('fees')">
+
+                View Fees
+
+            </button>
+
+        </div>
+
+
+        <!-- CAREERS -->
+
+        <div class="card">
+
+            <h3>💼 Careers</h3>
+
+            <p>
+                View job applications and resumes.
+            </p>
+
+            <button
+                onclick="showList('careers')">
+
+                View Careers
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         COMPLAINTS LIST
+    ========================= -->
+
+    <div id="complaints"
+         class="list-section">
+
+        <h2>
+            📢 Student Complaints
+        </h2>
+
+        <button
+            class="close-list"
+            onclick="closeLists()">
+
+            Close
+
+        </button>
+
+        <div class="table-container">
+
+            <p>
+                Click View Complaints to load data.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         SUBSCRIBERS LIST
+    ========================= -->
+
+    <div id="subscribers"
+         class="list-section">
+
+        <h2>
+            📧 Website Subscribers
+        </h2>
+
+        <button
+            class="close-list"
+            onclick="closeLists()">
+
+            Close
+
+        </button>
+
+        <div class="table-container">
+
+            <p>
+                Click View Subscribers to load data.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         ADMISSIONS LIST
+    ========================= -->
+
+    <div id="admissions"
+         class="list-section">
+
+        <h2>
+            📝 Admission Information
+        </h2>
+
+        <button
+            class="close-list"
+            onclick="closeLists()">
+
+            Close
+
+        </button>
+
+        <div class="table-container">
+
+            <p>
+                Click View Admissions to load data.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CONTACTS LIST
+    ========================= -->
+
+    <div id="contacts"
+         class="list-section">
+
+        <h2>
+            📞 Contact Messages
+        </h2>
+
+        <button
+            class="close-list"
+            onclick="closeLists()">
+
+            Close
+
+        </button>
+
+        <div class="table-container">
+
+            <p>
+                Click View Contacts to load data.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         FEES LIST
+    ========================= -->
+
+    <div id="fees"
+         class="list-section">
+
+        <h2>
+            💳 Student Fees Payment
+        </h2>
+
+        <button
+            class="close-list"
+            onclick="closeLists()">
+
+            Close
+
+        </button>
+
+        <div class="table-container">
+
+            <p>
+                Click View Fees to load data.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CAREERS LIST
+    ========================= -->
+
+    <div id="careers"
+         class="list-section">
+
+        <h2>
+            💼 Career Applications
+        </h2>
+
+        <button
+            class="close-list"
+            onclick="closeLists()">
+
+            Close
+
+        </button>
+
+        <div class="table-container">
+
+            <p>
+                Click View Careers to load data.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+
+/* =====================================
+   GOOGLE APPS SCRIPT URL
+===================================== */
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbylS5dsCtkWqmLzG7-4pJYvxzWyN33PAj-Fbl1VTFgSG8-X5EJNI2UOlrYTsxG0yY7U/exec";
+
+
+
+/* =====================================
+   LOGOUT
+===================================== */
+
+function logout() {
+
+    window.location.href = "index.html";
+
+}
+
+
+
+/* =====================================
+   SHOW LIST
+===================================== */
+
+async function showList(type) {
+
+    closeLists();
+
+    let sheetName = "";
+    let listId = "";
+
+
+    if (type === "complaints") {
+
+        sheetName = "Complaints";
+        listId = "complaints";
+
+    }
+
+    else if (type === "subscribers") {
+
+        sheetName = "Subscribers";
+        listId = "subscribers";
+
+    }
+
+    else if (type === "admissions") {
+
+        sheetName = "Admissions";
+        listId = "admissions";
+
+    }
+
+    else if (type === "contacts") {
+
+        sheetName = "Contacts";
+        listId = "contacts";
+
+    }
+
+    else if (type === "fees") {
+
+        sheetName = "Fees";
+        listId = "fees";
+
+    }
+
+    else if (type === "careers") {
+
+        sheetName = "Careers";
+        listId = "careers";
+
+    }
+
+
+    const list =
+        document.getElementById(listId);
+
+
+    if (!list) {
+
+        return;
+
+    }
+
+
+    list.classList.add("active");
+
+
+    const tableContainer =
+        list.querySelector(".table-container");
+
+
+    tableContainer.innerHTML =
+        "<p>Loading data... ⏳</p>";
+
+
+    try {
+
+        const response = await fetch(
+
+            GOOGLE_SCRIPT_URL +
+            "?sheet=" +
+            encodeURIComponent(sheetName)
+
+        );
+
+
+        const result =
+            await response.json();
+
+
+        console.log(result);
+
+
+        if (!result.success) {
+
+            tableContainer.innerHTML =
+
+                "<p style='color:red;'>" +
+
+                escapeHtml(
+                    result.message
+                ) +
+
+                "</p>";
+
+            return;
+
+        }
+
+
+        createTable(
+
+            tableContainer,
+            result.headers,
+            result.rows
+
+        );
+
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+        tableContainer.innerHTML =
+
+            "<p style='color:red;'>" +
+
+            "Data load nahi ho raha ❌" +
+
+            "</p>";
+
+    }
+
+
+    list.scrollIntoView({
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+
+/* =====================================
+   CREATE TABLE
+===================================== */
+
+function createTable(container, headers, rows) {
+
+
+    if (!headers ||
+        headers.length === 0) {
+
+        container.innerHTML =
+            "<p>No data available.</p>";
+
+        return;
+
+    }
+
+
+    if (!rows ||
+        rows.length === 0) {
+
+        container.innerHTML =
+            "<p>No records available.</p>";
+
+        return;
+
+    }
+
+
+    let html = "<table>";
+
+
+    /* =========================
+       TABLE HEADER
+    ========================= */
+
+    html += "<thead><tr>";
+
+
+    headers.forEach(function(header) {
+
+        html +=
+
+            "<th>" +
+
+            escapeHtml(
+                String(header)
+            ) +
+
+            "</th>";
+
+    });
+
+
+    html += "</tr></thead>";
+
+
+    /* =========================
+       TABLE DATA
+    ========================= */
+
+    html += "<tbody>";
+
+
+    rows.forEach(function(row) {
+
+        html += "<tr>";
+
+
+        headers.forEach(function(header, index) {
+
+
+            let value = row[index];
+
+
+            if (
+                value === null ||
+                value === undefined
+            ) {
+
+                value = "";
+
+            }
+
+
+            let headerName =
+                String(header)
+                    .trim()
+                    .toLowerCase();
+
+
+            let valueString =
+                String(value)
+                    .trim();
+
+
+
+            /* =========================
+               RESUME LINK
+            ========================= */
+
+            if (
+                headerName === "resume" &&
+                valueString.startsWith("http")
+            ) {
+
+                html +=
+
+                    "<td>" +
+
+                    "<a class='resume-link' " +
+
+                    "href='" +
+
+                    escapeHtml(
+                        valueString
+                    ) +
+
+                    "' " +
+
+                    "target='_blank' " +
+
+                    "rel='noopener noreferrer'>" +
+
+                    "📄 View Resume" +
+
+                    "</a>" +
+
+                    "</td>";
+
+            }
+
+
+
+            /* =========================
+               PHOTO / IMAGE
+            ========================= */
+
+            else if (
+                (
+                    headerName === "photo" ||
+                    headerName === "image" ||
+                    headerName === "photo url" ||
+                    headerName === "image url"
+                )
+                &&
+                valueString.startsWith("http")
+            ) {
+
+                html +=
+
+                    "<td>" +
+
+                    "<a class='photo-link' " +
+
+                    "href='" +
+
+                    escapeHtml(
+                        valueString
+                    ) +
+
+                    "' " +
+
+                    "target='_blank' " +
+
+                    "rel='noopener noreferrer'>" +
+
+                    "🖼️ View Photo" +
+
+                    "</a>" +
+
+                    "</td>";
+
+            }
+
+
+
+            /* =========================
+               GOOGLE DRIVE / DOCS LINK
+            ========================= */
+
+            else if (
+                valueString.startsWith(
+                    "https://drive.google.com"
+                )
+                ||
+                valueString.startsWith(
+                    "https://docs.google.com"
+                )
+            ) {
+
+                html +=
+
+                    "<td>" +
+
+                    "<a class='resume-link' " +
+
+                    "href='" +
+
+                    escapeHtml(
+                        valueString
+                    ) +
+
+                    "' " +
+
+                    "target='_blank' " +
+
+                    "rel='noopener noreferrer'>" +
+
+                    "🔗 Open File" +
+
+                    "</a>" +
+
+                    "</td>";
+
+            }
+
+
+
+            /* =========================
+               NORMAL DATA
+            ========================= */
+
+            else {
+
+                html +=
+
+                    "<td>" +
+
+                    escapeHtml(
+                        valueString
+                    ) +
+
+                    "</td>";
+
+            }
+
+        });
+
+
+        html += "</tr>";
+
+    });
+
+
+    html += "</tbody>";
+
+    html += "</table>";
+
+
+    container.innerHTML = html;
+
+}
+
+
+
+/* =====================================
+   SECURITY
+===================================== */
+
+function escapeHtml(text) {
+
+    return text
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+
+/* =====================================
+   CLOSE LISTS
+===================================== */
+
+function closeLists() {
+
+    const lists =
+        document.querySelectorAll(
+            ".list-section"
+        );
+
+
+    lists.forEach(function(list) {
+
+        list.classList.remove(
+            "active"
+        );
+
+    });
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

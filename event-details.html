@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Details - Maria's Podar Learn School Nilanga(CBSE)</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="shortcut icon"
+          href="Image/Logo.jpeg"
+          type="image/png">
+
+
+    <style>
+
+        /* ================= EVENT DETAILS ================= */
+
+        .event-details-page {
+
+            min-height: 100vh;
+
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.65),
+                    rgba(0,0,0,0.65)
+                ),
+                url("Image/Image.png");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .event-details-container {
+
+            width: 100%;
+            max-width: 900px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.25);
+
+        }
+
+
+        .event-details-icon {
+
+            text-align: center;
+
+            font-size: 65px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .event-details-container h1 {
+
+            text-align: center;
+
+            font-size: 38px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .event-category {
+
+            text-align: center;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+
+            color: #f93;
+
+        }
+
+
+        .event-description {
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+
+            text-align: center;
+
+            color: #555;
+
+        }
+
+
+        .event-info-box {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            margin: 25px 0;
+
+        }
+
+
+        .event-info {
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            background: #f5f5f5;
+
+        }
+
+
+        .event-info h3 {
+
+            margin-bottom: 8px;
+
+            font-size: 18px;
+
+        }
+
+
+        .event-info p {
+
+            margin: 0;
+
+            font-size: 16px;
+
+            color: #555;
+
+        }
+
+
+        .back-events {
+
+            display: block;
+
+            width: fit-content;
+
+            margin: 30px auto 0;
+
+            padding: 12px 25px;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            background: #333;
+
+            color: white;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+
+        .back-events:hover {
+
+            transform: translateY(-3px);
+
+            opacity: 0.9;
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            .event-details-container {
+
+                padding: 25px 20px;
+
+            }
+
+
+            .event-details-container h1 {
+
+                font-size: 28px;
+
+            }
+
+
+            .event-info-box {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+                     HEADER START
+===================================================== -->
+
+<header class="header">
+
+
+    <a href="index.html" class="logo">
+
+
+        <img src="Image/Logo.jpeg"
+             alt="School logo"
+             style="width:80px; height:55px;">
+
+
+        <div class="collage-name">
+
+            Maria's Podar Learn School Nilanga
+
+        </div>
+
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+
+        <div id="close-navbar"
+             class="close-icon">
+
+            <img src="Image/close-icon.gif"
+                 width="50"
+                 alt="close">
+
+        </div>
+
+
+
+        <ul class="navbar-links">
+
+
+            <!-- HOME -->
+
+            <li class="navbar-dropdown">
+
+                <a href="index.html">
+
+                    Home
+
+                </a>
+
+            </li>
+
+
+
+            <!-- COURSE -->
+
+            <li class="navbar-dropdown">
+
+                <a href="#">
+
+                    Course
+
+                </a>
+
+
+                <div class="dropdown">
+
+                    <ul>
+
+
+                        <!-- PRIMARY -->
+
+                        <li class="course-group">
+
+                            <a href="javascript:void(0);">
+
+                                Primary Group
+
+                                <span class="arrow">
+
+                                    ›
+
+                                </span>
+
+                            </a>
+
+
+                            <ul class="dropdown2">
+
+                                <li>
+
+                                    <a href="nursery.html">
+
+                                        Nursery to UKG
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="class-1-5.html">
+
+                                        Class 1st to 5th
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- SECONDARY -->
+
+                        <li class="course-group">
+
+                            <a href="javascript:void(0);">
+
+                                Secondary Group
+
+                                <span class="arrow">
+
+                                    ›
+
+                                </span>
+
+                            </a>
+
+
+                            <ul class="dropdown2">
+
+                                <li>
+
+                                    <a href="class-6-8.html">
+
+                                        Class 6th to 8th
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="class-9-10.html">
+
+                                        Class 9th to 10th
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </li>
+
+
+
+            <!-- ADMISSIONS -->
+
+            <li class="navbar-dropdown">
+
+                <a href="admission-form.html"
+                   target="_blank">
+
+                    Admissions
+
+                </a>
+
+            </li>
+
+
+
+            <!-- CAREERS -->
+
+            <li class="navbar-dropdown">
+
+                <a href="careers.html">
+
+                    Careers
+
+                </a>
+
+            </li>
+
+
+
+            <!-- CONTACT -->
+
+            <li class="navbar-dropdown">
+
+                <a href="contact-us.html">
+
+                    Contact us
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= HEADER ICONS ================= -->
+
+    <div class="icons">
+
+
+        <!-- LOGIN -->
+
+        <div id="account-btn"
+             class="header-icon"
+             style="cursor:pointer;">
+
+            <img src="Image/avatar-icon.svg"
+                 alt="Login">
+
+            <img src="Image/avatar-icon-hover.gif"
+                 alt="Login"
+                 width="10"
+                 class="header-icon-hover">
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <div id="menu-btn"
+             class="header-icon">
+
+            <img src="Image/menu-icon.svg"
+                 alt="menu">
+
+            <img src="Image/menu-icon-hover.gif"
+                 alt="menu"
+                 width="30"
+                 class="header-icon-hover">
+
+        </div>
+
+
+    </div>
+
+
+</header>
+
+
+<!-- =====================================================
+                     HEADER END
+===================================================== -->
+
+
+
+<!-- =====================================================
+                 LOGIN FORM START
+===================================================== -->
+
+<div class="account-form"
+     id="loginAccountForm">
+
+
+    <div id="close-form"
+         class="close-icon"
+         style="cursor:pointer;">
+
+        <img src="Image/close-icon.gif"
+             alt="Close"
+             width="50">
+
+    </div>
+
+
+    <div class="buttons">
+
+        <span class="btn active login-btn">
+
+            Login
+
+        </span>
+
+    </div>
+
+
+    <form class="login-form active"
+          id="schoolLoginForm">
+
+
+        <h3>
+
+            Login Now
+
+        </h3>
+
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Enter your email"
+            class="box"
+            required>
+
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+            class="box"
+            required>
+
+
+        <div class="flex">
+
+            <input
+                type="checkbox"
+                id="remember-me">
+
+            <label for="remember-me">
+
+                Remember Me
+
+            </label>
+
+        </div>
+
+
+        <p id="loginMessage"></p>
+
+
+        <button type="submit"
+                class="btn">
+
+            Login Now
+
+        </button>
+
+
+    </form>
+
+</div>
+
+
+<!-- =====================================================
+                  LOGIN FORM END
+===================================================== -->
+
+
+
+<!-- =====================================================
+                  EVENT DETAILS START
+===================================================== -->
+
+<section class="event-details-page">
+
+
+    <div class="event-details-container">
+
+
+        <!-- ICON -->
+
+        <div class="event-details-icon"
+             id="eventIcon">
+
+            🎓
+
+        </div>
+
+
+
+        <!-- TITLE -->
+
+        <h1 id="eventTitle">
+
+            Event Details
+
+        </h1>
+
+
+
+        <!-- CATEGORY -->
+
+        <div class="event-category"
+             id="eventCategory">
+
+            School Event
+
+        </div>
+
+
+
+        <!-- DESCRIPTION -->
+
+        <p class="event-description"
+           id="eventDescription">
+
+            Event information will appear here.
+
+        </p>
+
+
+
+        <!-- INFORMATION -->
+
+        <div class="event-info-box">
+
+
+            <div class="event-info">
+
+                <h3>
+
+                    🕘 Time
+
+                </h3>
+
+                <p id="eventTime">
+
+                    --
+
+                </p>
+
+            </div>
+
+
+
+            <div class="event-info">
+
+                <h3>
+
+                    🎓 Category
+
+                </h3>
+
+                <p id="eventType">
+
+                    --
+
+                </p>
+
+            </div>
+
+
+
+            <div class="event-info">
+
+                <h3>
+
+                    📍 Venue
+
+                </h3>
+
+                <p>
+
+                    School Campus
+
+                </p>
+
+            </div>
+
+
+
+            <div class="event-info">
+
+                <h3>
+
+                    👨‍🎓 Participants
+
+                </h3>
+
+                <p>
+
+                    Students
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- BACK BUTTON -->
+
+        <a href="events.html"
+           class="back-events">
+
+            ← Back to Events
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+                  EVENT DETAILS END
+===================================================== -->
+
+
+
+<!-- =====================================================
+                     FOOTER START
+===================================================== -->
+
+<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+
+
+    <div class="content">
+
+
+        <!-- TOP -->
+
+        <div class="top">
+
+
+            <div class="logo-details">
+
+                <span>
+
+                    Maria’s Podar Learn School Nilanga
+
+                </span>
+
+            </div>
+
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="media-icons">
+
+
+                <a href="https://www.facebook.com/him.sonepat/"
+                   target="_blank">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="mailto:directorhimsonepat@gmail.com">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <a href="https://instagram.com/mariaspodarschoolnilanga"
+                   target="_blank">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LINK BOXES -->
+
+        <div class="link-boxes">
+
+
+            <!-- ABOUT -->
+
+            <ul class="box">
+
+                <li class="link_name">
+
+                    About
+
+                </li>
+
+
+                <li>
+
+                    <a href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="contact-us.html">
+
+                        Contact us
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="About-us.html">
+
+                        About us
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <ul class="box">
+
+                <li class="link_name">
+
+                    Quick Links
+
+                </li>
+
+
+                <li>
+
+                    <a href="admission-form.html">
+
+                        Admission Form
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="index.html#notice-board">
+
+                        Notice Board
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="index.html">
+
+                        School Site
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+
+            <!-- STUDENT CORNER -->
+
+            <ul class="box">
+
+                <li class="link_name">
+
+                    Student's Corner
+
+                </li>
+
+
+                <li>
+
+                    <a href="fees-payment.html">
+
+                        Fees Payment
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="complaint.html">
+
+                        Complaint Section
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="careers.html">
+
+                        Careers
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+
+            <!-- ACCOUNT -->
+
+            <ul class="box">
+
+                <li class="link_name">
+
+                    Account
+
+                </li>
+
+
+                <li>
+
+                    <a href="#"
+                       id="adminLoginLink">
+
+                        Admin Login
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="events.html">
+
+                        Events
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="gallery.html">
+
+                        Gallery
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+
+            <!-- SUBSCRIBE -->
+
+            <ul class="box input-box">
+
+                <li class="link_name">
+
+                    Subscribe
+
+                </li>
+
+
+                <li>
+
+                    <input
+                        type="email"
+                        id="subscribeEmail"
+                        placeholder="Enter your email"
+                        required>
+
+                </li>
+
+
+                <li>
+
+                    <input
+                        type="button"
+                        value="Subscribe"
+                        onclick="subscribeUser()">
+
+                </li>
+
+
+                <li>
+
+                    <p id="subscribeMessage"></p>
+
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+
+
+<!-- =====================================================
+                      FOOTER END
+===================================================== -->
+
+
+
+<!-- =====================================================
+                    SUBSCRIBE SCRIPT
+===================================================== -->
+
+<script>
+
+function subscribeUser() {
+
+
+    const email =
+        document.getElementById("subscribeEmail")
+        .value.trim();
+
+
+    const message =
+        document.getElementById("subscribeMessage");
+
+
+    if (email === "") {
+
+        message.innerHTML =
+            "Please enter your email.";
+
+        message.style.color =
+            "red";
+
+        return;
+
+    }
+
+
+    if (!email.includes("@") ||
+        !email.includes(".")) {
+
+        message.innerHTML =
+            "Please enter a valid email.";
+
+        message.style.color =
+            "red";
+
+        return;
+
+    }
+
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyjcIoO4j8oW90_f8U25qlZY_oCcpa1M4dSHfnrlkK5nsjIAYzFclVpGbgt-IqXl7-6/exec";
+
+
+    message.innerHTML =
+        "Submitting...";
+
+
+    message.style.color =
+        "white";
+
+
+    fetch(scriptURL, {
+
+        method: "POST",
+
+        body: new URLSearchParams({
+
+            email: email
+
+        })
+
+    })
+
+
+    .then(() => {
+
+        message.innerHTML =
+            "Thank you for subscribing! 😊";
+
+        message.style.color =
+            "lightgreen";
+
+
+        document.getElementById(
+            "subscribeEmail"
+        ).value = "";
+
+    })
+
+
+    .catch((error) => {
+
+        console.error(error);
+
+        message.innerHTML =
+            "Something went wrong. Please try again.";
+
+        message.style.color =
+            "red";
+
+    });
+
+}
+
+</script>
+
+
+
+<!-- =====================================================
+                      MAIN JS
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+
+
+<!-- =====================================================
+                       EVENT SCRIPT
+===================================================== -->
+
+<script>
+
+const events = {
+
+
+    ganesh: {
+
+        title: "Ganesh Chaturthi",
+
+        icon: "🪔",
+
+        category: "Festival",
+
+        time: "09:00 AM - 10:00 AM",
+
+        type: "Cultural Event",
+
+        description:
+        "Join us as we celebrate Ganesh Chaturthi with devotion, cultural activities and joyful participation by our students."
+
+    },
+
+
+    marathwada: {
+
+        title: "Marathwada Mukti Sangram Din",
+
+        icon: "🇮🇳",
+
+        category: "Special Day",
+
+        time: "07:00 AM - 08:00 AM",
+
+        type: "School Activity",
+
+        description:
+        "A special day observed by the school to remember the historical significance of Marathwada Mukti Sangram."
+
+    },
+
+
+    exam: {
+
+        title: "Half Yearly Examination",
+
+        icon: "📝",
+
+        category: "Academic",
+
+        time: "09:00 AM - 02:45 PM",
+
+        type: "Examination",
+
+        description:
+        "Half Yearly Examination is an important academic assessment for students to review their learning and progress."
+
+    },
+
+
+    cultural: {
+
+        title: "Cultural Activities",
+
+        icon: "🎨",
+
+        category: "Cultural",
+
+        time: "School Schedule",
+
+        type: "Cultural Program",
+
+        description:
+        "Students get opportunities to participate in creative and cultural activities that encourage confidence and expression."
+
+    },
+
+
+    sports: {
+
+        title: "Sports Activities",
+
+        icon: "🏃",
+
+        category: "Sports",
+
+        time: "School Schedule",
+
+        type: "Sports",
+
+        description:
+        "Sports activities encourage teamwork, discipline, physical fitness and a healthy competitive spirit among students."
+
+    },
+
+
+    academic: {
+
+        title: "Academic Activities",
+
+        icon: "📖",
+
+        category: "Academic",
+
+        time: "School Schedule",
+
+        type: "Academic",
+
+        description:
+        "Various academic activities help students improve their knowledge, creativity, communication and learning skills."
+
+    }
+
+};
+
+
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const eventName =
+    params.get("event");
+
+
+const event =
+    events[eventName];
+
+
+if (event) {
+
+
+    document.getElementById(
+        "eventIcon"
+    ).textContent = event.icon;
+
+
+    document.getElementById(
+        "eventTitle"
+    ).textContent = event.title;
+
+
+    document.getElementById(
+        "eventCategory"
+    ).textContent = event.category;
+
+
+    document.getElementById(
+        "eventDescription"
+    ).textContent = event.description;
+
+
+    document.getElementById(
+        "eventTime"
+    ).textContent = event.time;
+
+
+    document.getElementById(
+        "eventType"
+    ).textContent = event.type;
+
+}
+
+</script>
+
+
+
+<!-- =====================================================
+                      LOGIN SCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const accountBtn =
+            document.getElementById(
+                "account-btn"
+            );
+
+
+        const adminLoginLink =
+            document.getElementById(
+                "adminLoginLink"
+            );
+
+
+        const accountForm =
+            document.getElementById(
+                "loginAccountForm"
+            );
+
+
+        const closeForm =
+            document.getElementById(
+                "close-form"
+            );
+
+
+        /* HEADER LOGIN */
+
+        if (accountBtn && accountForm) {
+
+            accountBtn.addEventListener(
+                "click",
+                function (e) {
+
+                    e.preventDefault();
+
+                    accountForm.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* FOOTER ADMIN LOGIN */
+
+        if (adminLoginLink && accountForm) {
+
+            adminLoginLink.addEventListener(
+                "click",
+                function (e) {
+
+                    e.preventDefault();
+
+                    accountForm.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* CLOSE */
+
+        if (closeForm && accountForm) {
+
+            closeForm.addEventListener(
+                "click",
+                function () {
+
+                    accountForm.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* LOGIN */
+
+        const loginForm =
+            document.getElementById(
+                "schoolLoginForm"
+            );
+
+
+        if (loginForm) {
+
+            loginForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const email =
+                        document.getElementById(
+                            "loginEmail"
+                        ).value.trim();
+
+
+                    const password =
+                        document.getElementById(
+                            "loginPassword"
+                        ).value.trim();
+
+
+                    const message =
+                        document.getElementById(
+                            "loginMessage"
+                        );
+
+
+                    if (
+                        email === "admin@school.com" &&
+                        password === "Admin@123"
+                    ) {
+
+
+                        message.innerHTML =
+                            "Login Successful! ✅";
+
+
+                        message.style.color =
+                            "green";
+
+
+                        setTimeout(
+                            function () {
+
+                                window.location.href =
+                                    "admin-dashboard.html";
+
+                            },
+                            1000
+                        );
+
+
+                    } else {
+
+
+                        message.innerHTML =
+                            "Invalid Email or Password ❌";
+
+
+                        message.style.color =
+                            "red";
+
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,489 +1,2516 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria's Podar Learn School Nilanga(CBSE)</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="Image/Logo.jpeg" type="image/png">
-    
-    <title>Fees-payemnt</title>
-</head>
-<style>
-    form .fields .input-field {
-        width: calc(100% / 2 - 30px);
-     }
 
-</style>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Maria's Podar Learn School Nilanga(CBSE)</title>
+
+
+    <!-- ================= CSS ================= -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/responsive.css">
+
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+    <!-- ================= UNICONS ================= -->
+
+    <link rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+    <!-- ================= FAVICON ================= -->
+
+    <link rel="shortcut icon"
+          href="Image/Logo.jpeg"
+          type="image/png">
+
+
+</head>
+
+
 <body>
 
-     <!-- header section starts  -->
 
-     <header class="header">
+<!-- =====================================================
+     HEADER START
+===================================================== -->
 
-      <a href="index.html" class="logo">
-         <img src="Image/Logo.jpeg" alt="collage logo" style="width: 80px; height: 55px; " /> 
-         <div class="collage-name">Maria’s Podar Learn School Nilanga</div></a>
-   
-         <nav class="navbar">
-            <div id="close-navbar" class="close-icon"><img src="Image/close-icon.gif" width="50" /></div>
+<header class="header">
 
-                <ul class="navbar-links">    
-         <li class="navbar-dropdown">
-            <a href="index.html">Home</a>
-         </li>
-              <li class="navbar-dropdown">
-                <a href="#">Course</a>
-                <div class="dropdown"><ul>
-                  <li><a href="#">Primary Group</a>
-                     <ul class='dropdown2'>
-                <li><a href='nursery.html'>Nursery to UKG</a></li>
-               <li><a href='class-1-5.html'>Class 1st to 5th</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="#">Secondary Group</a>
-                     <ul class='dropdown2'>
-                        <li><a href='class-6-8.html'>Class 6th to 8th</a></li>
-                        <li><a href='class-9-10.html'>Class 9th & 10th</a></li>
-                     </ul>
-                  </li>
-               </ul>
-                </div>
-              </li>
+
+    <!-- ================= LOGO ================= -->
+
+    <a href="index.html"
+       class="logo">
+
+        <img src="Image/Logo.jpeg"
+             alt="School Logo"
+             style="width:80px; height:55px;">
+
+
+        <div class="collage-name">
+
+            Maria's Podar Learn School Nilanga
+
+        </div>
+
+    </a>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+
+        <div id="close-navbar"
+             class="close-icon">
+
+            <img src="Image/close-icon.gif"
+                 width="50"
+                 alt="Close">
+
+        </div>
+
+
+        <ul class="navbar-links">
+
+
+            <!-- HOME -->
 
             <li class="navbar-dropdown">
-                <a href="admission-form.html" target ="_blank" >Admissions</a> </li>
-                  
-                <li class="navbar-dropdown">
-                  <a href="contact-us.html">Contact us</a> </li>
 
-           
-        </ul>
-         </nav>
-   
-         <div id="menu-btn" class="header-icon"><img src="image/menu-icon.svg" alt="menu-icon" />
-           <img src="image/menu-icon-hover.gif" alt="menu-icon" width="30" class="header-icon-hover" /></div>
-      </div>
-   
-   </header>
-  
+                <a href="index.html">
+
+                    Home
+
+                </a>
+
+            </li>
 
 
-    <!-- header section Ends  -->
+            <!-- COURSE -->
 
-  
+            <li class="navbar-dropdown">
 
+                <a href="#">
 
+                    Course
 
-
-  <!--fees-payment form start-->
-
-<div class="form-section">
-    <div class="container">
-        <header>Fees and Payment Structure</header>
-
-        <form method="post" name="fees-sheet" >
-            <div class="form step step-1 active">
-                <div class="details personal">
-                    <span class="title">Personal Details</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Full Name <span class="star">*</span></label>
-                            <input type="text" placeholder="Enter your name" name="Full Name" pattern="[A-z ]+" >
-                        </div>
-
-                        <div class="input-field">
-                            <label>College Roll Number<span class="star">*</span></label>
-                            <input type="tel" placeholder="Enter college roll number" name="Roll no" pattern="[0-9]+" maxlength="11" >
-                        </div>
-
-                        
-                        <div class="input-field">
-                          <label>Course<span class="star">*</span></label>
-                         <select name="Course" required>
-        <option value="" disabled selected>Select Course</option>
-
-        <option value="Nursery">Nursery</option>
-        <option value="LKG">LKG</option>
-        <option value="UKG">UKG</option>
-
-        <option value="Class 1st">Class 1st</option>
-        <option value="Class 2nd">Class 2nd</option>
-        <option value="Class 3rd">Class 3rd</option>
-        <option value="Class 4th">Class 4th</option>
-        <option value="Class 5th">Class 5th</option>
-        <option value="Class 6th">Class 6th</option>
-        <option value="Class 7th">Class 7th</option>
-        <option value="Class 8th">Class 8th</option>
-        <option value="Class 9th">Class 9th</option>
-        <option value="Class 10th">Class 10th</option>
-    </select>
-                      </div>
-                      
-                      
-
-                    </div>                 
-              </div>
+                </a>
 
 
-              <div class="details personal">
-                <span class="title">Invoice Details</span>
+                <div class="dropdown">
 
-                  <div class="fields">
-                      <div class="input-field">
-                          <label>Fees<span class="star">*</span></label>
-                          <input type="number" placeholder="Enter your Fees Amount" name="Fees Amount" pattern="[0-9.]" maxlength="6" >
-                      </div>        
-                  </div>
+                    <ul>
 
-                  <div class="fields">
-                    <div class="input-field">
-                        <label>Installment<span class="star">*</span></label>
-                        <select name="Installment">
-                          <option disabled selected>Select Installment</option>
-                          <option value="1st Installment">1st Installment</option>
-                          <option value="2nd Installment">2nd Installment</option>
-                          <option value="3rd Installment">3rd Installment</option>  
-                      </select>
-                    </div>        
+
+                        <!-- PRIMARY GROUP -->
+
+                        <li class="course-group">
+
+                            <a href="javascript:void(0);">
+
+                                Primary Group
+
+                                <span class="arrow">
+                                    ›
+                                </span>
+
+                            </a>
+
+
+                            <ul class="dropdown2">
+
+
+                                <li>
+
+                                    <a href="nursery.html">
+
+                                        Nursery to UKG
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="class-1-5.html">
+
+                                        Class 1st to 5th
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                        <!-- SECONDARY GROUP -->
+
+                        <li class="course-group">
+
+                            <a href="javascript:void(0);">
+
+                                Secondary Group
+
+                                <span class="arrow">
+                                    ›
+                                </span>
+
+                            </a>
+
+
+                            <ul class="dropdown2">
+
+
+                                <li>
+
+                                    <a href="class-6-8.html">
+
+                                        Class 6th to 8th
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="class-9-10.html">
+
+                                        Class 9th to 10th
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                    </ul>
+
                 </div>
 
-              </div>
-                 <button type="button"  class="next-btn"> Next
-                    <i class="uil uil-navigator"></i>
-                 </button>                
-                
-            </div>
+            </li>
 
-           <div class="form step step-2">
 
-    <div class="details Family">  
-        <span class="title">Account Detail</span>
+            <!-- ADMISSION -->
 
-        <div>
-            <p style="font-size: 18px;">
-                <b>Bank Name : </b> SBI Bank
-            </p>
+            <li class="navbar-dropdown">
 
-            <p style="font-size: 18px;">
-                <b>Account Number : </b> 41518978034
-            </p>
+                <a href="admission-form.html"
+                   target="_blank">
 
-            <p style="font-size: 18px;">
-                <b>IFSC Number : </b> SBIN0020623
-            </p>
-      
-            <p>
-                <b>
-                    After payment, please collect your fees receipt
-                    from the school office.
-                </b>
-            </p>
+                    Admissions
+
+                </a>
+
+            </li>
+
+
+            <!-- CAREERS -->
+
+            <li class="navbar-dropdown">
+
+                <a href="careers.html">
+
+                    Careers
+
+                </a>
+
+            </li>
+
+
+            <!-- CONTACT -->
+
+            <li class="navbar-dropdown">
+
+                <a href="contact-us.html">
+
+                    Contact us
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HEADER ICONS ================= -->
+
+    <div class="icons">
+
+
+        <!-- LOGIN -->
+
+        <div id="account-btn"
+             class="header-icon"
+             style="cursor:pointer;">
+
+
+            <img src="Image/avatar-icon.svg"
+                 alt="Login">
+
+
+            <img src="Image/avatar-icon-hover.gif"
+                 alt="Login"
+                 width="10"
+                 class="header-icon-hover">
+
 
         </div>
 
-        <!-- Photograph -->
-        <div class="input-field">
-            <label>Photograph <span class="star">*</span></label>
-            <input type="file"
-                   name="Photograph"
-                   accept=".png,.jpg,.jpeg">
+
+        <!-- MENU -->
+
+        <div id="menu-btn"
+             class="header-icon">
+
+
+            <img src="Image/menu-icon.svg"
+                 alt="Menu">
+
+
+            <img src="Image/menu-icon-hover.gif"
+                 alt="Menu"
+                 width="30"
+                 class="header-icon-hover">
+
+
         </div>
+
 
     </div>
 
-    <!-- ONLY STEP 2 BUTTONS -->
+
+</header>
+
+
+<!-- =====================================================
+     HEADER END
+===================================================== -->
+
+
+
+<!-- =====================================================
+     ADMIN LOGIN FORM
+===================================================== -->
+
+<div class="account-form"
+     id="loginAccountForm">
+
+
+    <!-- CLOSE -->
+
+    <div id="close-form"
+         class="close-icon"
+         style="cursor:pointer;">
+
+
+        <img src="Image/close-icon.gif"
+             alt="Close"
+             width="50">
+
+
+    </div>
+
+
+    <!-- LOGIN TITLE -->
+
     <div class="buttons">
 
-        <button type="button" class="previous-btn">
-            <i class="uil uil-navigator"></i>
-            Back
-        </button>
+        <span class="btn active login-btn">
 
-        <button type="submit" class="submit-btn" name="submit">
-            Submit
-            <i class="uil uil-navigator"></i>
-        </button>
+            Login
+
+        </span>
 
     </div>
+
+
+    <!-- LOGIN FORM -->
+
+    <form class="login-form active"
+          id="schoolLoginForm">
+
+
+        <h3>
+
+            Login Now
+
+        </h3>
+
+
+        <input type="email"
+               id="loginEmail"
+               placeholder="Enter your email"
+               class="box"
+               required>
+
+
+        <input type="password"
+               id="loginPassword"
+               placeholder="Enter your password"
+               class="box"
+               required>
+
+
+        <div class="flex">
+
+
+            <input type="checkbox"
+                   id="remember-me">
+
+
+            <label for="remember-me">
+
+                Remember Me
+
+            </label>
+
+
+        </div>
+
+
+        <p id="loginMessage"></p>
+
+
+        <button type="submit"
+                class="btn">
+
+            Login Now
+
+        </button>
+
+
+    </form>
+
 
 </div>
 
-                    
+
+<!-- =====================================================
+     FEES FORM START
+===================================================== -->
+
+<div class="form-section">
+
+
+    <div class="container">
+
+
+        <!-- TITLE -->
+
+        <header>
+
+            Fees and Payment Structure
+
+        </header>
+
+
+        <form method="post"
+              name="fees-sheet">
+
+
+            <!-- =================================================
+                 STEP 1
+            ================================================= -->
+
+            <div class="form step step-1 active">
+
+
+                <!-- PERSONAL DETAILS -->
+
+                <div class="details personal">
+
+
+                    <span class="title">
+
+                        Personal Details
+
+                    </span>
+
+
+                    <div class="fields">
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="input-field">
+
+
+                            <label>
+
+                                Full Name
+
+                                <span class="star">*</span>
+
+                            </label>
+
+
+                            <input type="text"
+                                   placeholder="Enter your name"
+                                   name="Full Name"
+                                   pattern="[A-z ]+"
+                                   required>
+
+
+                        </div>
+
+
+                        <!-- ROLL NUMBER -->
+
+                        <div class="input-field">
+
+
+                            <label>
+
+                                College Roll Number
+
+                                <span class="star">*</span>
+
+                            </label>
+
+
+                            <input type="tel"
+                                   placeholder="Enter college roll number"
+                                   name="Roll no"
+                                   pattern="[0-9]+"
+                                   maxlength="11"
+                                   required>
+
+
+                        </div>
+
+
+                        <!-- COURSE -->
+
+                        <div class="input-field">
+
+
+                            <label>
+
+                                Course
+
+                                <span class="star">*</span>
+
+                            </label>
+
+
+                            <select name="Course"
+                                    required>
+
+
+                                <option value=""
+                                        disabled
+                                        selected>
+
+                                    Select Course
+
+                                </option>
+
+
+                                <option value="Nursery">
+                                    Nursery
+                                </option>
+
+
+                                <option value="LKG">
+                                    LKG
+                                </option>
+
+
+                                <option value="UKG">
+                                    UKG
+                                </option>
+
+
+                                <option value="Class 1st">
+                                    Class 1st
+                                </option>
+
+
+                                <option value="Class 2nd">
+                                    Class 2nd
+                                </option>
+
+
+                                <option value="Class 3rd">
+                                    Class 3rd
+                                </option>
+
+
+                                <option value="Class 4th">
+                                    Class 4th
+                                </option>
+
+
+                                <option value="Class 5th">
+                                    Class 5th
+                                </option>
+
+
+                                <option value="Class 6th">
+                                    Class 6th
+                                </option>
+
+
+                                <option value="Class 7th">
+                                    Class 7th
+                                </option>
+
+
+                                <option value="Class 8th">
+                                    Class 8th
+                                </option>
+
+
+                                <option value="Class 9th">
+                                    Class 9th
+                                </option>
+
+
+                                <option value="Class 10th">
+                                    Class 10th
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     INVOICE DETAILS
+                ================================================= -->
+
+                <div class="details personal">
+
+
+                    <span class="title">
+
+                        Invoice Details
+
+                    </span>
+
+
+                    <!-- FEES -->
+
+                    <div class="fields">
+
+
+                        <div class="input-field">
+
+
+                            <label>
+
+                                Fees
+
+                                <span class="star">*</span>
+
+                            </label>
+
+
+                            <input type="number"
+                                   placeholder="Enter your Fees Amount"
+                                   name="Fees Amount"
+                                   required>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- INSTALLMENT -->
+
+                    <div class="fields">
+
+
+                        <div class="input-field">
+
+
+                            <label>
+
+                                Installment
+
+                                <span class="star">*</span>
+
+                            </label>
+
+
+                            <select name="Installment"
+                                    required>
+
+
+                                <option value=""
+                                        disabled
+                                        selected>
+
+                                    Select Installment
+
+                                </option>
+
+
+                                <option value="1st Installment">
+                                    1st Installment
+                                </option>
+
+
+                                <option value="2nd Installment">
+                                    2nd Installment
+                                </option>
+
+
+                                <option value="3rd Installment">
+                                    3rd Installment
+                                </option>
+
+
+                            </select>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- NEXT BUTTON -->
+
+                <button type="button"
+                        class="next-btn">
+
+
+                    Next
+
+
+                    <i class="uil uil-navigator"></i>
+
+
+                </button>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 STEP 2
+            ================================================= -->
+
+            <div class="form step step-2">
+
+
+                <div class="details Family">
+
+
+                    <span class="title">
+
+                        Account Detail
+
+                    </span>
+
+
+                    <!-- BANK DETAILS -->
+
+                    <div>
+
+
+                        <p style="font-size:18px;">
+
+                            <b>Bank Name :</b>
+
+                            SBI Bank
+
+                        </p>
+
+
+                        <p style="font-size:18px;">
+
+                            <b>Account Number :</b>
+
+                            41518978034
+
+                        </p>
+
+
+                        <p style="font-size:18px;">
+
+                            <b>IFSC Number :</b>
+
+                            SBIN0020623
+
+                        </p>
+
+
+                        <p>
+
+                            <b>
+
+                                After payment, please collect your fees
+                                receipt from the school office.
+
+                            </b>
+
+                        </p>
+
+
+                    </div>
+
+
+                    <!-- PHOTO -->
+
+                    <div class="input-field">
+
+
+                        <label>
+
+                            Photograph
+
+                            <span class="star">*</span>
+
+                        </label>
+
+
+                        <input type="file"
+                               name="Photograph"
+                               id="photograph"
+                               accept=".png,.jpg,.jpeg"
+                               required>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="buttons">
+
+
+                    <!-- BACK -->
+
+                    <button type="button"
+                            class="previous-btn">
+
+
+                        <i class="uil uil-navigator"></i>
+
+
+                        Back
+
+
+                    </button>
+
+
+                    <!-- SUBMIT -->
+
+                    <button type="submit"
+                            class="submit-btn"
+                            name="submit">
+
+
+                        Submit
+
+
+                        <i class="uil uil-navigator"></i>
+
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
         </form>
+
+
     </div>
-  </div>
-    
+
+
+</div>
+
+
+<!-- =====================================================
+     FEES FORM END
+===================================================== -->
 
 
 
-<!-- footer section starts -->
+<!-- =====================================================
+     FOOTER START
+===================================================== -->
 
 <footer style="background:url(Image/Speedline-50s-1846px.svg)">
-  <div class="content">
-    <div class="top">
-      <div class="logo-details">
-        <span>Hindu Insitute of Management</span>
-      </div>
-      <div class="media-icons">
-        <a href="https://www.facebook.com/him.sonepat/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://directorhimsonepat@gmail.com/compose"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://instagram.com/official._.him" target="_blank" ><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-    
-    <div class="link-boxes">
-      <ul class="box">
-        <li class="link_name">About</li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact-us.html">Contact us</a></li>
-        <li><a href="#">About us</a></li>
-      </ul>
-      <ul class="box">
-    <li class="link_name">Quick Links</li>
-    <li><a href="admission-form.html">Admission Form</a></li>
-    <li><a href="index.html#notice-board">Notice Board</a></li>
-    <li><a href="index.html">School Site</a></li>
-</ul>
-      <ul class="box">
-       <li class="link_name">Student's Corner</li>
-       <li><a href="fees-payment.html">Fees Payment</a></li>
-       <li><a href="complaint.html">Complaint Section</a></li>
-       <li><a href="#">school Login</a></li>
-       
-     </ul>
-      <ul class="box">
-        <li class="link_name">Account</li>
-        <li><a href="#">Admin Login</a></li>
-        <li><a href="#">My account</a></li>
-      </ul>
-      
-      <ul class="box input-box">
-  <li class="link_name">Subscribe</li>
 
-  <li>
-    <input type="email" id="subscribeEmail"
-           placeholder="Enter your email" required>
-  </li>
 
-  <li>
-    <input type="button"
-           value="Subscribe"
-           onclick="subscribeUser()">
-  </li>
+    <div class="content">
 
-  <li>
-    <p id="subscribeMessage"></p>
-  </li>
-</ul>
+
+        <div class="top">
+
+
+            <!-- SCHOOL NAME -->
+
+            <div class="logo-details">
+
+
+                <span>
+
+                    Maria’s Podar Learn School Nilanga
+
+                </span>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SOCIAL MEDIA ICONS
+            ================================================= -->
+
+            <div class="media-icons">
+
+
+                <!-- FACEBOOK -->
+
+                <a href="https://www.facebook.com/him.sonepat/"
+                   class="facebook"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="Facebook">
+
+
+                    <i class="fab fa-facebook-f"></i>
+
+
+                </a>
+
+
+                <!-- EMAIL -->
+
+                <a href="mailto:directorhimsoneponet@gmail.com"
+                   class="email"
+                   title="Email">
+
+
+                    <i class="fa-solid fa-envelope"></i>
+
+
+                </a>
+
+
+                <!-- INSTAGRAM -->
+
+                <a href="https://instagram.com/mariaspodarschoolnilanga"
+                   class="instagram"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="Instagram">
+
+
+                    <i class="fab fa-instagram"></i>
+
+
+                </a>
+
+
+                <!-- LINKEDIN -->
+
+                <a href="#"
+                   class="linkedin"
+                   title="LinkedIn">
+
+
+                    <i class="fab fa-linkedin-in"></i>
+
+
+                </a>
+
+
+                <!-- YOUTUBE -->
+
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
+                   class="youtube"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="YouTube">
+
+
+                    <i class="fab fa-youtube"></i>
+
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER LINK BOXES
+        ================================================= -->
+
+        <div class="link-boxes">
+
+
+            <!-- ABOUT -->
+
+            <ul class="box">
+
+
+                <li class="link_name">
+
+                    About
+
+                </li>
+
+
+                <li>
+
+                    <a href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="contact-us.html">
+
+                        Contact us
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="About-us.html">
+
+                        About us
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <ul class="box">
+
+
+                <li class="link_name">
+
+                    Quick Links
+
+                </li>
+
+
+                <li>
+
+                    <a href="admission-form.html">
+
+                        Admission Form
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="index.html#notice-board">
+
+                        Notice Board
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="index.html">
+
+                        School Site
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+
+            <!-- STUDENT CORNER -->
+
+            <ul class="box">
+
+
+                <li class="link_name">
+
+                    Student's Corner
+
+                </li>
+
+
+                <li>
+
+                    <a href="fees-payment.html">
+
+                        Fees Payment
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="complaint.html">
+
+                        Complaint Section
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="careers.html">
+
+                        Careers
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+
+            <!-- ACCOUNT -->
+
+            <ul class="box">
+
+
+                <li class="link_name">
+
+                    Account
+
+                </li>
+
+
+                <!-- ADMIN LOGIN -->
+
+                <li>
+
+                    <a href="#"
+                       id="adminLoginLink">
+
+                        Admin Login
+
+                    </a>
+
+                </li>
+
+
+                <!-- EVENTS -->
+
+                <li>
+
+                    <a href="events.html">
+
+                        Events
+
+                    </a>
+
+                </li>
+
+
+                <!-- GALLERY -->
+
+                <li>
+
+                    <a href="gallery.html">
+
+                        Gallery
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+
+            <!-- SUBSCRIBE -->
+
+            <ul class="box input-box">
+
+
+                <li class="link_name">
+
+                    Subscribe
+
+                </li>
+
+
+                <li>
+
+
+                    <input type="email"
+                           id="subscribeEmail"
+                           placeholder="Enter your email"
+                           required>
+
+
+                </li>
+
+
+                <li>
+
+
+                    <input type="button"
+                           value="Subscribe"
+                           onclick="subscribeUser()">
+
+
+                </li>
+
+
+                <li>
+
+
+                    <p id="subscribeMessage"></p>
+
+
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+
     </div>
-  </div>
-  <div class="bottom-details">
-    <div class="bottom_text">
-      <span class="copyright_text">Copyright © 2026 | All rights reserved to Vijayalaxmi</span>
-      <span class="policy_terms">
-        <a href="#">Privacy policy</a>
-        <a href="#">Terms & condition</a>
-      </span>
-    </div>
-  </div>
+
+
 </footer>
-<!--footer section ends -->
 
 
- 
- <script>
-  const steps = Array.from(document.querySelectorAll("form .step"));  
-   const nextBtn = document.querySelectorAll("form .next-btn");  
-   const prevBtn = document.querySelectorAll("form .previous-btn");  
-   const form1 = document.querySelector("form");  
-   
-   nextBtn.forEach((button) => {  
-    button.addEventListener("click", () => {  
-     changeStep("next");  
-    });  
-   });  
-   prevBtn.forEach((button) => {  
-    button.addEventListener("click", () => {  
-     changeStep("prev");  
-    });  
-   });  
-   
-   function changeStep(btn) {  
-    let index = 0;  
-    const active = document.querySelector(".active");  
-    index = steps.indexOf(active);  
-    steps[index].classList.remove("active");  
-    if (btn === "next") {  
-     index++;  
-    } else if (btn === "prev") {  
-     index--;  
-    }  
-    steps[index].classList.add("active");  
-   }  
-  
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbynWQ4PWhtxFeFdJtcB8_rB0P_PDxfP6ykbYs3inwi8BnTpKy_fdLb5-1h7yxyS9zyS/exec' 
-  const form = document.forms['fees-sheet'] 
- 
-  form.addEventListener('submit', e => { 
-    e.preventDefault() 
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)}) 
-      .then(response => alert("Thanks for Fees submission please collect fees reciept from office .....")) 
-      .catch(error => console.error('Error!', error.message)) 
- 
-         
-const inputs = [];   
-form.querySelectorAll("input").forEach((input) => {   
-const { name, value } = input;   
-inputs.push({ name, value });   
-});   
-console.log(inputs);   
-form.reset();   
-       
-  }) 
- 
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const form = document.forms["fees-sheet"];
-
-    if (!form) {
-        console.error("Fees form not found");
-        return;
-    }
-
-    const steps = form.querySelectorAll(".step");
-    const nextButton = form.querySelector(".next-btn");
-    const previousButton = form.querySelector(".previous-btn");
-
-    // NEXT BUTTON
-    nextButton.addEventListener("click", function () {
-
-        const currentStep = form.querySelector(".step.active");
-        const currentIndex = Array.from(steps).indexOf(currentStep);
-
-        if (currentIndex < steps.length - 1) {
-
-            steps[currentIndex].classList.remove("active");
-            steps[currentIndex + 1].classList.add("active");
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    });
+<!-- =====================================================
+     FOOTER END
+===================================================== -->
 
 
-    // BACK BUTTON
-    previousButton.addEventListener("click", function () {
 
-        const currentStep = form.querySelector(".step.active");
-        const currentIndex = Array.from(steps).indexOf(currentStep);
+<!-- =====================================================
+     FEES FORM JAVASCRIPT
+===================================================== -->
 
-        if (currentIndex > 0) {
-
-            steps[currentIndex].classList.remove("active");
-            steps[currentIndex - 1].classList.add("active");
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    });
-
-
-    // GOOGLE APPS SCRIPT URL
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbynWQ4PWhtxFeFdJtcB8_rB0P_PDxfP6ykbYs3inwi8BnTpKy_fdLb5-1h7yxyS9zyS/exec";
-
-
-    // FORM SUBMIT
-    form.addEventListener("submit", async function (e) {
-
-        e.preventDefault();
-
-        const submitButton = form.querySelector(".submit-btn");
-
-        submitButton.disabled = true;
-        submitButton.innerText = "Submitting...";
-
-        try {
-
-            const formData = new FormData(form);
-
-            await fetch(scriptURL, {
-                method: "POST",
-                body: formData,
-                mode: "no-cors"
-            });
-
-            alert(
-                "Fees information submitted successfully! Please collect your fees receipt from the school office."
-            );
-
-            form.reset();
-
-            steps.forEach(function(step) {
-                step.classList.remove("active");
-            });
-
-            steps[0].classList.add("active");
-
-        } catch (error) {
-
-            console.error("Error:", error);
-
-            alert(
-                "Something went wrong. Please try again."
-            );
-
-        } finally {
-
-            submitButton.disabled = false;
-            submitButton.innerText = "Submit";
-
-        }
-
-    });
-
-});
-</script>
 <script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const form =
+            document.forms["fees-sheet"];
+
+
+        if (!form) {
+
+            console.error(
+                "Fees form not found"
+            );
+
+            return;
+
+        }
+
+
+        /* ===============================
+           STEPS
+        =============================== */
+
+        const steps =
+            form.querySelectorAll(".step");
+
+
+        const nextButton =
+            form.querySelector(".next-btn");
+
+
+        const previousButton =
+            form.querySelector(".previous-btn");
+
+
+        /* ===============================
+           NEXT BUTTON
+        =============================== */
+
+        if (nextButton) {
+
+
+            nextButton.addEventListener(
+                "click",
+                function () {
+
+
+                    const currentStep =
+                        form.querySelector(
+                            ".step.active"
+                        );
+
+
+                    const currentIndex =
+                        Array.from(steps)
+                        .indexOf(currentStep);
+
+
+                    const requiredFields =
+                        currentStep.querySelectorAll(
+                            "[required]"
+                        );
+
+
+                    for (
+                        let field of requiredFields
+                    ) {
+
+
+                        if (
+                            !field.checkValidity()
+                        ) {
+
+
+                            field.reportValidity();
+
+                            return;
+
+                        }
+
+                    }
+
+
+                    if (
+                        currentIndex <
+                        steps.length - 1
+                    ) {
+
+
+                        steps[currentIndex]
+                            .classList
+                            .remove("active");
+
+
+                        steps[currentIndex + 1]
+                            .classList
+                            .add("active");
+
+
+                        window.scrollTo({
+
+                            top: 0,
+
+                            behavior: "smooth"
+
+                        });
+
+
+                    }
+
+
+                }
+            );
+
+
+        }
+
+
+        /* ===============================
+           BACK BUTTON
+        =============================== */
+
+        if (previousButton) {
+
+
+            previousButton.addEventListener(
+                "click",
+                function () {
+
+
+                    const currentStep =
+                        form.querySelector(
+                            ".step.active"
+                        );
+
+
+                    const currentIndex =
+                        Array.from(steps)
+                        .indexOf(currentStep);
+
+
+                    if (currentIndex > 0) {
+
+
+                        steps[currentIndex]
+                            .classList
+                            .remove("active");
+
+
+                        steps[currentIndex - 1]
+                            .classList
+                            .add("active");
+
+
+                        window.scrollTo({
+
+                            top: 0,
+
+                            behavior: "smooth"
+
+                        });
+
+
+                    }
+
+
+                }
+            );
+
+
+        }
+
+
+        /* ===============================
+           GOOGLE APPS SCRIPT URL
+        =============================== */
+
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbyBgVjIUwulnS12s53W4o01KIfqTfdDLVS8u6S5Ppz2DwzoPiNfJfn6FPthC84OaZ2y/exec";
+
+
+        /* ===============================
+           FORM SUBMIT
+        =============================== */
+
+        form.addEventListener(
+            "submit",
+            async function (e) {
+
+
+                e.preventDefault();
+
+
+                const submitButton =
+                    form.querySelector(
+                        ".submit-btn"
+                    );
+
+
+                /* ===============================
+                   PHOTO INPUT
+                =============================== */
+
+                const photoInput =
+                    document.getElementById(
+                        "photograph"
+                    );
+
+
+                if (
+                    !photoInput ||
+                    !photoInput.files.length
+                ) {
+
+
+                    alert(
+                        "Please select your photograph."
+                    );
+
+
+                    return;
+
+                }
+
+
+                const photoFile =
+                    photoInput.files[0];
+
+
+                /* ===============================
+                   PHOTO TYPE
+                =============================== */
+
+                const allowedTypes = [
+
+                    "image/jpeg",
+
+                    "image/jpg",
+
+                    "image/png"
+
+                ];
+
+
+                if (
+                    !allowedTypes.includes(
+                        photoFile.type
+                    )
+                ) {
+
+
+                    alert(
+                        "Please select JPG, JPEG or PNG image."
+                    );
+
+
+                    return;
+
+                }
+
+
+                /* ===============================
+                   PHOTO SIZE
+                =============================== */
+
+                if (
+                    photoFile.size >
+                    5 * 1024 * 1024
+                ) {
+
+
+                    alert(
+                        "Photo size should be less than 5 MB."
+                    );
+
+
+                    return;
+
+                }
+
+
+                /* ===============================
+                   DISABLE SUBMIT
+                =============================== */
+
+                if (submitButton) {
+
+
+                    submitButton.disabled =
+                        true;
+
+
+                    submitButton.innerText =
+                        "Compressing Photo...";
+
+
+                }
+
+
+                try {
+
+
+                    /* ===============================
+                       COMPRESS PHOTO
+                    =============================== */
+
+                    const photoBase64 =
+                        await fileToBase64(
+                            photoFile
+                        );
+
+
+                    console.log(
+                        "Final photo size:",
+                        Math.round(
+                            photoBase64.length / 1024
+                        ),
+                        "KB"
+                    );
+
+
+                    if (submitButton) {
+
+
+                        submitButton.innerText =
+                            "Uploading Photo...";
+
+
+                    }
+
+
+                    /* ===============================
+                       FORM DATA
+                    =============================== */
+
+                    const formData =
+                        new URLSearchParams();
+
+
+                    formData.append(
+                        "Full Name",
+                        form.elements[
+                            "Full Name"
+                        ].value
+                    );
+
+
+                    formData.append(
+                        "Roll no",
+                        form.elements[
+                            "Roll no"
+                        ].value
+                    );
+
+
+                    formData.append(
+                        "Course",
+                        form.elements[
+                            "Course"
+                        ].value
+                    );
+
+
+                    formData.append(
+                        "Fees Amount",
+                        form.elements[
+                            "Fees Amount"
+                        ].value
+                    );
+
+
+                    formData.append(
+                        "Installment",
+                        form.elements[
+                            "Installment"
+                        ].value
+                    );
+
+
+                    formData.append(
+                        "Photograph",
+                        photoBase64
+                    );
+
+
+                    /* ===============================
+                       SEND DATA
+                    =============================== */
+
+                    await fetch(
+                        scriptURL,
+                        {
+
+                            method: "POST",
+
+                            body: formData,
+
+                            mode: "no-cors"
+
+                        }
+                    );
+
+
+                    /* ===============================
+                       SUCCESS
+                    =============================== */
+
+                    alert(
+                        "Fees information and photograph submitted successfully! Please collect your fees receipt from the school office."
+                    );
+
+
+                    form.reset();
+
+
+                    steps.forEach(
+                        function (step) {
+
+
+                            step.classList
+                                .remove("active");
+
+
+                        }
+                    );
+
+
+                    steps[0]
+                        .classList
+                        .add("active");
+
+
+                }
+
+
+                catch (error) {
+
+
+                    console.error(
+                        "Submission Error:",
+                        error
+                    );
+
+
+                    alert(
+                        "Something went wrong. Please try again."
+                    );
+
+
+                }
+
+
+                finally {
+
+
+                    if (submitButton) {
+
+
+                        submitButton.disabled =
+                            false;
+
+
+                        submitButton.innerText =
+                            "Submit";
+
+
+                    }
+
+
+                }
+
+
+            }
+        );
+
+
+        /* =================================================
+           PHOTO TO BASE64 + COMPRESSION
+        ================================================= */
+
+        function fileToBase64(file) {
+
+
+            return new Promise(
+                function (resolve, reject) {
+
+
+                    const reader =
+                        new FileReader();
+
+
+                    reader.onload =
+                        function () {
+
+
+                            const img =
+                                new Image();
+
+
+                            img.onload =
+                                function () {
+
+
+                                    const canvas =
+                                        document.createElement(
+                                            "canvas"
+                                        );
+
+
+                                    const maxSize =
+                                        300;
+
+
+                                    let width =
+                                        img.width;
+
+
+                                    let height =
+                                        img.height;
+
+
+                                    /* =========================
+                                       RESIZE
+                                    ========================= */
+
+                                    if (
+                                        width >
+                                        height
+                                    ) {
+
+
+                                        if (
+                                            width >
+                                            maxSize
+                                        ) {
+
+
+                                            height =
+                                                Math.round(
+                                                    height *
+                                                    maxSize /
+                                                    width
+                                                );
+
+
+                                            width =
+                                                maxSize;
+
+
+                                        }
+
+
+                                    }
+
+
+                                    else {
+
+
+                                        if (
+                                            height >
+                                            maxSize
+                                        ) {
+
+
+                                            width =
+                                                Math.round(
+                                                    width *
+                                                    maxSize /
+                                                    height
+                                                );
+
+
+                                            height =
+                                                maxSize;
+
+
+                                        }
+
+
+                                    }
+
+
+                                    canvas.width =
+                                        width;
+
+
+                                    canvas.height =
+                                        height;
+
+
+                                    /* =========================
+                                       CANVAS
+                                    ========================= */
+
+                                    const ctx =
+                                        canvas.getContext(
+                                            "2d"
+                                        );
+
+
+                                    ctx.drawImage(
+                                        img,
+                                        0,
+                                        0,
+                                        width,
+                                        height
+                                    );
+
+
+                                    /* =========================
+                                       JPEG COMPRESSION
+                                    ========================= */
+
+                                    let quality =
+                                        0.5;
+
+
+                                    let base64 =
+                                        canvas.toDataURL(
+                                            "image/jpeg",
+                                            quality
+                                        );
+
+
+                                    while (
+                                        base64.length >
+                                        80000 &&
+                                        quality >
+                                        0.2
+                                    ) {
+
+
+                                        quality -=
+                                            0.05;
+
+
+                                        base64 =
+                                            canvas.toDataURL(
+                                                "image/jpeg",
+                                                quality
+                                            );
+
+
+                                    }
+
+
+                                    console.log(
+                                        "Photo quality:",
+                                        quality
+                                    );
+
+
+                                    console.log(
+                                        "Photo Base64 length:",
+                                        base64.length
+                                    );
+
+
+                                    console.log(
+                                        "Photo size:",
+                                        Math.round(
+                                            base64.length /
+                                            1024
+                                        ),
+                                        "KB"
+                                    );
+
+
+                                    /* =========================
+                                       SAFETY CHECK
+                                    ========================= */
+
+                                    if (
+                                        base64.length >
+                                        100000
+                                    ) {
+
+
+                                        reject(
+                                            new Error(
+                                                "Photo is still too large. Please select a smaller photo."
+                                            )
+                                        );
+
+
+                                        return;
+
+                                    }
+
+
+                                    resolve(
+                                        base64
+                                    );
+
+
+                                };
+
+
+                            img.onerror =
+                                function () {
+
+
+                                    reject(
+                                        new Error(
+                                            "Image could not be loaded."
+                                        )
+                                    );
+
+
+                                };
+
+
+                            img.src =
+                                reader.result;
+
+
+                        };
+
+
+                    reader.onerror =
+                        function () {
+
+
+                            reject(
+                                new Error(
+                                    "Photo could not be read."
+                                )
+                            );
+
+
+                        };
+
+
+                    reader.readAsDataURL(
+                        file
+                    );
+
+
+                }
+            );
+
+        }
+
+
+    }
+);
+
+</script>
+
+
+
+<!-- =====================================================
+     SUBSCRIBE SCRIPT
+===================================================== -->
+
+<script>
+
 function subscribeUser() {
 
-    const email = document.getElementById("subscribeEmail").value.trim();
-    const message = document.getElementById("subscribeMessage");
+
+    const email =
+        document.getElementById(
+            "subscribeEmail"
+        ).value.trim();
+
+
+    const message =
+        document.getElementById(
+            "subscribeMessage"
+        );
+
+
+    /* ===============================
+       EMPTY EMAIL
+    =============================== */
 
     if (email === "") {
-        message.innerHTML = "Please enter your email.";
-        message.style.color = "red";
+
+
+        message.innerHTML =
+            "Please enter your email.";
+
+
+        message.style.color =
+            "red";
+
+
         return;
+
     }
 
-    if (!email.includes("@") || !email.includes(".")) {
-        message.innerHTML = "Please enter a valid email.";
-        message.style.color = "red";
+
+    /* ===============================
+       EMAIL VALIDATION
+    =============================== */
+
+    if (
+        !email.includes("@") ||
+        !email.includes(".")
+    ) {
+
+
+        message.innerHTML =
+            "Please enter a valid email.";
+
+
+        message.style.color =
+            "red";
+
+
         return;
+
     }
 
-    message.innerHTML = "Thank you for subscribing! 😊";
-    message.style.color = "lightgreen";
 
-    document.getElementById("subscribeEmail").value = "";
+    /* ===============================
+       GOOGLE APPS SCRIPT URL
+    =============================== */
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyjcIoO4j8oW90_f8U25qlZY_oCcpa1M4dSHfnrlkK5nsjIAYzFclVpGbgt-IqXl7-6/exec";
+
+
+    message.innerHTML =
+        "Submitting...";
+
+
+    message.style.color =
+        "white";
+
+
+    fetch(
+        scriptURL,
+        {
+
+            method: "POST",
+
+            body:
+                new URLSearchParams({
+
+                    email: email
+
+                })
+
+        }
+    )
+
+
+    .then(
+        function () {
+
+
+            message.innerHTML =
+                "Thank you for subscribing! 😊";
+
+
+            message.style.color =
+                "lightgreen";
+
+
+            document
+                .getElementById(
+                    "subscribeEmail"
+                )
+                .value = "";
+
+
+        }
+    )
+
+
+    .catch(
+        function (error) {
+
+
+            console.error(
+                "Subscribe Error:",
+                error
+            );
+
+
+            message.innerHTML =
+                "Something went wrong. Please try again.";
+
+
+            message.style.color =
+                "red";
+
+
+        }
+    );
+
+
 }
+
 </script>
-</script> 
- 
-</body> 
-</html> 
- 
+
+
+
+<!-- =====================================================
+     COURSE DROPDOWN
+===================================================== -->
+
+<script>
+
+document.querySelectorAll(
+    ".course-group > a"
+).forEach(
+    function (link) {
+
+
+        link.addEventListener(
+            "click",
+            function (e) {
+
+
+                e.preventDefault();
+
+                e.stopPropagation();
+
+
+                const submenu =
+                    this.parentElement
+                    .querySelector(
+                        ".dropdown2"
+                    );
+
+
+                document.querySelectorAll(
+                    ".course-group .dropdown2"
+                ).forEach(
+                    function (menu) {
+
+
+                        if (
+                            menu !== submenu
+                        ) {
+
+
+                            menu.classList.remove(
+                                "show"
+                            );
+
+
+                        }
+
+
+                    }
+                );
+
+
+                submenu.classList.toggle(
+                    "show"
+                );
+
+
+            }
+        );
+
+
+    }
+);
+
+</script>
+
+
+
+<!-- =====================================================
+     ADMIN LOGIN SCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =========================
+           ELEMENTS
+        ========================= */
+
+        const accountBtn =
+            document.getElementById(
+                "account-btn"
+            );
+
+
+        const adminLoginLink =
+            document.getElementById(
+                "adminLoginLink"
+            );
+
+
+        const accountForm =
+            document.getElementById(
+                "loginAccountForm"
+            );
+
+
+        const closeForm =
+            document.getElementById(
+                "close-form"
+            );
+
+
+        const loginForm =
+            document.getElementById(
+                "schoolLoginForm"
+            );
+
+
+        const loginMessage =
+            document.getElementById(
+                "loginMessage"
+            );
+
+
+        /* =========================
+           HEADER LOGIN
+        ========================= */
+
+        if (
+            accountBtn &&
+            accountForm
+        ) {
+
+
+            accountBtn.addEventListener(
+                "click",
+                function (e) {
+
+
+                    e.preventDefault();
+
+                    e.stopPropagation();
+
+
+                    accountForm.classList.add(
+                        "active"
+                    );
+
+
+                    window.scrollTo({
+
+                        top: 0,
+
+                        behavior: "smooth"
+
+                    });
+
+
+                }
+            );
+
+
+        }
+
+
+        /* =========================
+           FOOTER LOGIN
+        ========================= */
+
+        if (
+            adminLoginLink &&
+            accountForm
+        ) {
+
+
+            adminLoginLink.addEventListener(
+                "click",
+                function (e) {
+
+
+                    e.preventDefault();
+
+                    e.stopPropagation();
+
+
+                    accountForm.classList.add(
+                        "active"
+                    );
+
+
+                    window.scrollTo({
+
+                        top: 0,
+
+                        behavior: "smooth"
+
+                    });
+
+
+                }
+            );
+
+
+        }
+
+
+        /* =========================
+           CLOSE LOGIN
+        ========================= */
+
+        if (
+            closeForm &&
+            accountForm
+        ) {
+
+
+            closeForm.addEventListener(
+                "click",
+                function (e) {
+
+
+                    e.preventDefault();
+
+                    e.stopPropagation();
+
+
+                    accountForm.classList.remove(
+                        "active"
+                    );
+
+
+                }
+            );
+
+
+        }
+
+
+        /* =========================
+           LOGIN SUBMIT
+        ========================= */
+
+        if (loginForm) {
+
+
+            loginForm.addEventListener(
+                "submit",
+                function (event) {
+
+
+                    event.preventDefault();
+
+
+                    const email =
+                        document.getElementById(
+                            "loginEmail"
+                        )
+                        .value
+                        .trim();
+
+
+                    const password =
+                        document.getElementById(
+                            "loginPassword"
+                        )
+                        .value
+                        .trim();
+
+
+                    /* =========================
+                       CORRECT LOGIN
+                    ========================= */
+
+                    if (
+                        email ===
+                        "admin@school.com"
+                        &&
+                        password ===
+                        "Admin@123"
+                    ) {
+
+
+                        loginMessage.innerHTML =
+                            "Login Successful! ✅";
+
+
+                        loginMessage.style.color =
+                            "green";
+
+
+                        setTimeout(
+                            function () {
+
+
+                                window.location.href =
+                                    "admin-dashboard.html";
+
+
+                            },
+                            1000
+                        );
+
+
+                    }
+
+
+                    /* =========================
+                       WRONG LOGIN
+                    ========================= */
+
+                    else {
+
+
+                        loginMessage.innerHTML =
+                            "Invalid Email or Password ❌";
+
+
+                        loginMessage.style.color =
+                            "red";
+
+
+                    }
+
+
+                }
+            );
+
+
+        }
+
+
+    }
+);
+
+</script>
+
+
+
+<!-- ================= MAIN JS ================= -->
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
