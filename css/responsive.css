@@ -8660,3 +8660,3245 @@ VERY SMALL MOBILE
         height: auto !important;
     }
 }
+/* =====================================================
+   MOBILE CLICK / TOUCH FIX
+===================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Make interactive elements clickable */
+a,
+button,
+input,
+select,
+textarea,
+label,
+.header-icon,
+.close-icon,
+.course-group {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+/* Header should stay above page content */
+.header {
+    position: relative;
+    z-index: 9999;
+}
+
+/* Navbar above all other sections */
+.navbar {
+    position: relative;
+    z-index: 99999;
+}
+
+.navbar-links {
+    position: relative;
+    z-index: 99999;
+}
+
+/* Dropdown above other content */
+.dropdown,
+.dropdown2 {
+    position: absolute;
+    z-index: 100000;
+}
+
+/* Login form above everything */
+.account-form {
+    z-index: 999999 !important;
+}
+
+/* Career sections should not block clicks */
+.career-hero,
+.career-intro,
+.job-section,
+.why-career,
+.application-section,
+.career-info,
+footer {
+    position: relative;
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"] {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        position: relative;
+        z-index: 9999;
+    }
+
+    .icons {
+        position: relative;
+        z-index: 100000;
+    }
+
+    .header-icon {
+        position: relative;
+        z-index: 100001;
+        cursor: pointer;
+    }
+
+    #menu-btn,
+    #account-btn {
+        pointer-events: auto !important;
+    }
+
+    /* Mobile navbar */
+    .navbar {
+        z-index: 99999;
+    }
+
+    .navbar-links {
+        z-index: 100000;
+    }
+
+    .navbar-links li,
+    .navbar-links li a {
+        pointer-events: auto !important;
+    }
+
+    /* Course dropdown */
+    .dropdown {
+        z-index: 100001;
+    }
+
+    .dropdown2 {
+        z-index: 100002;
+    }
+
+    .course-group > a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 100003;
+        pointer-events: auto !important;
+    }
+
+    .dropdown2.show {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    /* Application form */
+    .application-section {
+        position: relative;
+        z-index: 1;
+    }
+
+    .application-box,
+    .application-form {
+        position: relative;
+        z-index: 2;
+    }
+
+    .application-form input,
+    .application-form select,
+    .application-form textarea,
+    .application-form button {
+        position: relative;
+        z-index: 5;
+        pointer-events: auto !important;
+    }
+
+    .application-form button {
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+
+    /* Resume upload */
+    #careerResume {
+        position: relative;
+        z-index: 10;
+        pointer-events: auto !important;
+    }
+
+    /* Footer */
+    footer {
+        position: relative;
+        z-index: 1;
+    }
+
+    footer a,
+    footer input,
+    footer button {
+        position: relative;
+        z-index: 10;
+        pointer-events: auto !important;
+    }
+}
+/* =========================================================
+   CLASS 1st TO 5th
+   COMPLETE RESPONSIVE CSS
+========================================================= */
+
+
+/* ================= GLOBAL ================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: relative !important;
+    z-index: 99999 !important;
+}
+
+.logo {
+    position: relative;
+    z-index: 100000;
+}
+
+.icons,
+.header-icon,
+#account-btn,
+#menu-btn {
+    position: relative !important;
+    z-index: 100001 !important;
+    pointer-events: auto !important;
+}
+
+#account-btn,
+#menu-btn {
+    cursor: pointer !important;
+    touch-action: manipulation;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: relative;
+    z-index: 99998 !important;
+}
+
+.navbar-links {
+    position: relative;
+    z-index: 99999 !important;
+}
+
+.navbar-links li,
+.navbar-links li a {
+    pointer-events: auto !important;
+    touch-action: manipulation;
+}
+
+
+/* =========================================================
+   COURSE DROPDOWN
+========================================================= */
+
+.dropdown {
+    z-index: 100000 !important;
+}
+
+.course-group {
+    position: relative !important;
+    z-index: 100001 !important;
+}
+
+.course-group > a {
+    position: relative !important;
+    z-index: 100002 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer !important;
+
+    pointer-events: auto !important;
+    touch-action: manipulation;
+}
+
+.dropdown2 {
+    z-index: 100003 !important;
+}
+
+.dropdown2 li,
+.dropdown2 li a {
+    pointer-events: auto !important;
+}
+
+.dropdown2.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+========================================================= */
+
+.account-form {
+    position: fixed !important;
+    z-index: 999999 !important;
+}
+
+.account-form input,
+.account-form button,
+.account-form label,
+#close-form {
+    pointer-events: auto !important;
+}
+
+
+/* =========================================================
+   ALL CLICKABLE ELEMENTS
+========================================================= */
+
+a,
+button,
+input,
+select,
+textarea,
+label {
+    pointer-events: auto;
+}
+
+a,
+button {
+    touch-action: manipulation;
+}
+
+
+/* =========================================================
+   PRIMARY HERO
+========================================================= */
+
+.primary-hero {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.primary-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PRIMARY SECTIONS
+========================================================= */
+
+.primary-section {
+    width: 100%;
+    max-width: 1180px;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.primary-faq {
+    position: relative;
+    z-index: 2;
+}
+
+.primary-faq-item {
+    position: relative;
+}
+
+.primary-faq-header {
+    position: relative;
+    z-index: 5;
+
+    cursor: pointer !important;
+
+    pointer-events: auto !important;
+    touch-action: manipulation;
+}
+
+.primary-faq-icon {
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-buttons {
+    position: relative;
+    z-index: 5;
+}
+
+.primary-btn {
+    position: relative;
+    z-index: 6;
+
+    cursor: pointer !important;
+
+    pointer-events: auto !important;
+
+    touch-action: manipulation;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+footer a,
+footer input,
+footer button {
+    position: relative;
+    z-index: 20;
+
+    pointer-events: auto !important;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .primary-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .primary-learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .primary-classes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .primary-development {
+        grid-template-columns: 1fr;
+    }
+
+    .primary-environment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+    /* ================= BODY ================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header {
+        width: 100% !important;
+        position: relative !important;
+        z-index: 99999 !important;
+    }
+
+    .logo {
+        max-width: calc(100% - 100px);
+        position: relative;
+        z-index: 100000;
+    }
+
+    .collage-name {
+        font-size: 15px !important;
+        line-height: 1.2;
+    }
+
+
+    .header-icon {
+        position: relative !important;
+
+        z-index: 100001 !important;
+
+        min-width: 35px;
+        min-height: 35px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer !important;
+
+        pointer-events: auto !important;
+    }
+
+
+    #account-btn,
+    #menu-btn {
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+
+        touch-action: manipulation;
+    }
+
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+        position: relative;
+        z-index: 99998 !important;
+    }
+
+    .navbar-links {
+        position: relative;
+        z-index: 99999 !important;
+    }
+
+    .navbar-links li {
+        position: relative;
+        z-index: 100000;
+    }
+
+    .navbar-links li a {
+        position: relative;
+
+        z-index: 100001;
+
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+
+        touch-action: manipulation;
+    }
+
+
+    /* ================= COURSE ================= */
+
+    .dropdown {
+        z-index: 100002 !important;
+    }
+
+    .course-group {
+        position: relative !important;
+        z-index: 100003 !important;
+    }
+
+    .course-group > a {
+        min-height: 45px;
+
+        display: flex !important;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        position: relative !important;
+
+        z-index: 100004 !important;
+
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+    }
+
+    .dropdown2 {
+        position: relative !important;
+
+        width: 100%;
+
+        z-index: 100005 !important;
+    }
+
+    .dropdown2.show {
+        display: block !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        height: auto !important;
+
+        max-height: 500px !important;
+
+        overflow: visible !important;
+
+        pointer-events: auto !important;
+    }
+
+    .dropdown2 li {
+        position: relative;
+
+        z-index: 100006;
+    }
+
+    .dropdown2 li a {
+        position: relative;
+
+        z-index: 100007;
+
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+    }
+
+
+    /* ================= LOGIN ================= */
+
+    .account-form {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        z-index: 999999 !important;
+    }
+
+    #close-form {
+        position: relative;
+
+        z-index: 1000001;
+
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+    }
+
+    .login-form {
+        position: relative;
+
+        z-index: 1000000;
+    }
+
+    .login-form input,
+    .login-form button {
+        position: relative;
+
+        z-index: 1000001;
+
+        pointer-events: auto !important;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .primary-hero {
+        width: 100%;
+
+        min-height: 450px;
+
+        padding: 120px 18px 70px;
+
+        position: relative;
+
+        z-index: 1;
+
+        background-position: center;
+    }
+
+    .primary-hero-content {
+        width: 100%;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+    .primary-badge {
+        font-size: 12px;
+
+        padding: 8px 16px;
+    }
+
+    .primary-hero h1 {
+        font-size: clamp(32px, 9vw, 48px);
+
+        line-height: 1.15;
+    }
+
+    .primary-hero h1 span {
+        font-size: 20px;
+
+        line-height: 1.4;
+    }
+
+    .primary-hero p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ================= SECTION ================= */
+
+    .primary-section {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding: 55px 16px !important;
+    }
+
+    .primary-section-heading {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-bottom: 30px;
+    }
+
+    .primary-section-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.3;
+    }
+
+    .primary-section-heading p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ================= INTRO ================= */
+
+    .primary-intro {
+        grid-template-columns: 1fr !important;
+
+        gap: 30px;
+
+        width: 100%;
+    }
+
+    .primary-intro-text {
+        width: 100%;
+    }
+
+    .primary-intro-text h2 {
+        font-size: 28px;
+
+        line-height: 1.3;
+    }
+
+    .primary-intro-text p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .primary-highlight-box {
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+
+    .primary-highlight-box li {
+        font-size: 14px;
+    }
+
+
+    /* ================= LEARNING ================= */
+
+    .primary-learning-grid {
+        grid-template-columns: 1fr !important;
+
+        gap: 18px;
+
+        width: 100%;
+    }
+
+    .primary-learning-card {
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+
+    .primary-learning-card h3 {
+        font-size: 19px;
+    }
+
+    .primary-learning-card p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ================= CLASS CARDS ================= */
+
+    .primary-classes {
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 12px;
+
+        width: 100%;
+    }
+
+    .primary-class-card {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 22px 12px;
+    }
+
+    .primary-class-number {
+        width: 48px;
+        height: 48px;
+
+        font-size: 15px;
+    }
+
+    .primary-class-card h3 {
+        font-size: 17px;
+    }
+
+    .primary-class-card p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    /* ================= DEVELOPMENT ================= */
+
+    .primary-development {
+        grid-template-columns: 1fr !important;
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .primary-development-item {
+        width: 100%;
+
+        padding: 20px 17px;
+    }
+
+    .primary-development-item h3 {
+        font-size: 17px;
+    }
+
+    .primary-development-item p {
+        font-size: 14px;
+    }
+
+
+    /* ================= ENVIRONMENT ================= */
+
+    .primary-environment {
+        width: 100%;
+    }
+
+    .primary-environment-grid {
+        grid-template-columns: 1fr !important;
+
+        gap: 15px;
+
+        width: 100%;
+    }
+
+    .primary-environment-card {
+        width: 100%;
+
+        padding: 25px 18px;
+    }
+
+
+    /* ================= ADMISSION ================= */
+
+    .primary-admission {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 10px 0 45px !important;
+
+        padding: 38px 18px !important;
+
+        border-radius: 18px;
+    }
+
+    .primary-admission h2 {
+        font-size: 26px;
+
+        line-height: 1.3;
+    }
+
+    .primary-admission p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .primary-buttons {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .primary-btn {
+        width: 100%;
+
+        min-height: 48px;
+
+        padding: 13px 18px;
+    }
+
+
+    /* ================= FAQ ================= */
+
+    .primary-faq {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .primary-faq-item {
+        width: 100%;
+    }
+
+    .primary-faq-header {
+        width: 100%;
+
+        padding: 17px 15px;
+
+        gap: 10px;
+
+        cursor: pointer;
+    }
+
+    .primary-faq-header h3 {
+        font-size: 15px;
+
+        line-height: 1.5;
+    }
+
+    .primary-faq-icon {
+        min-width: 30px;
+
+        width: 30px;
+
+        height: 30px;
+
+        flex-shrink: 0;
+    }
+
+    .primary-faq-content p {
+        padding: 0 15px 18px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+        width: 100% !important;
+
+        overflow: hidden;
+    }
+
+    footer .content {
+        width: 100% !important;
+
+        max-width: 100% !important;
+    }
+
+    footer .top {
+        width: 100%;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    footer .logo-details {
+        max-width: 100%;
+    }
+
+    footer .logo-details span {
+        font-size: 18px;
+
+        line-height: 1.4;
+    }
+
+    footer .media-icons {
+        flex-wrap: wrap;
+    }
+
+    footer .link-boxes {
+        width: 100%;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 25px 15px;
+    }
+
+    footer .box {
+        min-width: 0 !important;
+
+        width: 100% !important;
+    }
+
+    footer .input-box {
+        grid-column: 1 / -1;
+    }
+
+    footer .input-box input {
+        max-width: 100% !important;
+    }
+
+    footer a {
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .collage-name {
+        font-size: 13px !important;
+    }
+
+    .primary-hero {
+        min-height: 420px;
+
+        padding: 110px 15px 55px;
+    }
+
+    .primary-hero h1 {
+        font-size: 30px;
+    }
+
+    .primary-hero h1 span {
+        font-size: 18px;
+    }
+
+    .primary-hero p {
+        font-size: 14px;
+    }
+
+    .primary-section {
+        padding: 45px 13px !important;
+    }
+
+    .primary-section-heading h2 {
+        font-size: 25px;
+    }
+
+    .primary-intro-text h2 {
+        font-size: 25px;
+    }
+
+    .primary-classes {
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 10px;
+    }
+
+    .primary-class-card {
+        padding: 20px 10px;
+    }
+
+    .primary-class-card h3 {
+        font-size: 16px;
+    }
+
+    .primary-class-card p {
+        font-size: 12px;
+    }
+
+    .primary-admission {
+        padding: 30px 15px !important;
+    }
+
+    .primary-admission h2 {
+        font-size: 23px;
+    }
+
+    footer .link-boxes {
+        grid-template-columns: 1fr !important;
+    }
+
+    footer .input-box {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .collage-name {
+        font-size: 12px !important;
+    }
+
+    .primary-hero h1 {
+        font-size: 27px;
+    }
+
+    .primary-hero h1 span {
+        font-size: 17px;
+    }
+
+    .primary-classes {
+        grid-template-columns: 1fr !important;
+    }
+
+    .primary-btn {
+        font-size: 14px;
+    }
+
+    .primary-faq-header h3 {
+        font-size: 14px;
+    }
+
+}
+/* =========================================================
+   MARIA'S PODAR LEARN SCHOOL
+   CLASS 9TH TO 10TH - RESPONSIVE CSS
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESPONSIVE FIX
+========================================================= */
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    z-index: 99999;
+}
+
+.header .logo {
+    max-width: 100%;
+}
+
+.collage-name {
+    white-space: nowrap;
+}
+
+#menu-btn,
+#account-btn {
+    cursor: pointer;
+    z-index: 100000;
+}
+
+
+/* =========================================================
+   NAVIGATION / COURSE DROPDOWN
+========================================================= */
+
+.navbar {
+    z-index: 99999;
+}
+
+.navbar-links {
+    z-index: 99999;
+}
+
+.dropdown {
+    z-index: 100000;
+}
+
+.course-group {
+    position: relative;
+}
+
+.dropdown2 {
+    z-index: 100001;
+}
+
+.dropdown2.show {
+    display: block !important;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+========================================================= */
+
+.account-form {
+    z-index: 1000000;
+}
+
+.account-form.active {
+    display: block;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.secondary-hero {
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.secondary-hero-content {
+    width: 100%;
+}
+
+.secondary-hero h1,
+.secondary-hero h2,
+.secondary-hero p {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   COMMON SECTIONS
+========================================================= */
+
+.secondary-section,
+.secondary-journey {
+    width: 100%;
+}
+
+.secondary-heading {
+    width: 100%;
+}
+
+.secondary-heading h2,
+.secondary-intro-text h2 {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.secondary-intro {
+    width: 100%;
+}
+
+.secondary-intro-text,
+.secondary-focus-box {
+    min-width: 0;
+}
+
+.secondary-focus-list {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SUBJECT CARDS
+========================================================= */
+
+.secondary-card-grid {
+    width: 100%;
+}
+
+.secondary-card {
+    min-width: 0;
+}
+
+.secondary-card h3,
+.secondary-card p {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.secondary-journey-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.secondary-journey-grid {
+    width: 100%;
+}
+
+.secondary-journey-card {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.secondary-skill-grid {
+    width: 100%;
+}
+
+.secondary-skill {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PREPARATION
+========================================================= */
+
+.secondary-preparation {
+    width: 100%;
+    overflow: hidden;
+}
+
+.secondary-preparation-grid {
+    width: 100%;
+}
+
+.secondary-preparation-card {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   OUTCOMES
+========================================================= */
+
+.secondary-outcome-box {
+    width: 100%;
+}
+
+.secondary-outcome-list {
+    width: 100%;
+}
+
+.secondary-outcome-list li {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.secondary-cta {
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.secondary-cta-buttons {
+    width: 100%;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.secondary-faq {
+    width: 100%;
+}
+
+.secondary-faq-item {
+    width: 100%;
+}
+
+.secondary-faq-header h3 {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   TABLET
+   901px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .secondary-hero {
+        padding: 130px 25px 80px;
+    }
+
+    .secondary-hero h1 {
+        font-size: 50px;
+    }
+
+    .secondary-hero h2 {
+        font-size: 23px;
+    }
+
+    .secondary-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .secondary-journey {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .secondary-preparation-grid {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   <= 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- HERO ---------- */
+
+    .secondary-hero {
+        min-height: 500px;
+        padding: 120px 25px 75px;
+    }
+
+    .secondary-hero-content {
+        max-width: 750px;
+    }
+
+    .secondary-hero h1 {
+        font-size: 44px;
+    }
+
+    .secondary-hero h2 {
+        font-size: 22px;
+    }
+
+    .secondary-hero p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .secondary-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    /* ---------- SUBJECTS ---------- */
+
+    .secondary-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- JOURNEY ---------- */
+
+    .secondary-journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- SKILLS ---------- */
+
+    .secondary-skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- PREPARATION ---------- */
+
+    .secondary-preparation-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    /* ---------- OUTCOMES ---------- */
+
+    .secondary-outcome-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- HEADINGS ---------- */
+
+    .secondary-heading h2 {
+        font-size: 32px;
+    }
+
+    .secondary-intro-text h2 {
+        font-size: 32px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    footer .content {
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       BODY
+    ===================================================== */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .header {
+        width: 100%;
+        min-height: 70px;
+    }
+
+    .header .logo {
+        display: flex;
+        align-items: center;
+        max-width: calc(100% - 110px);
+    }
+
+    .header .logo img {
+        width: 65px !important;
+        height: 48px !important;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .collage-name {
+        font-size: 14px;
+        line-height: 1.2;
+        white-space: normal;
+        margin-left: 7px;
+    }
+
+    #menu-btn,
+    #account-btn {
+        flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .secondary-hero {
+        min-height: 480px;
+        padding: 95px 18px 60px;
+    }
+
+    .secondary-hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .secondary-eyebrow {
+        font-size: 12px;
+        padding: 7px 14px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    .secondary-hero h1 {
+        font-size: 38px;
+        line-height: 1.15;
+        margin-bottom: 15px;
+    }
+
+    .secondary-hero h2 {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .secondary-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* Decorative circles */
+
+    .secondary-hero::before {
+        width: 260px;
+        height: 260px;
+        top: -110px;
+        right: -100px;
+    }
+
+    .secondary-hero::after {
+        width: 210px;
+        height: 210px;
+        bottom: -100px;
+        left: -100px;
+    }
+
+
+    /* =====================================================
+       COMMON SECTION
+    ===================================================== */
+
+    .secondary-section {
+        padding: 55px 18px;
+    }
+
+    .secondary-journey {
+        padding: 55px 18px;
+    }
+
+    .secondary-heading {
+        margin-bottom: 32px;
+    }
+
+    .secondary-heading span {
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+
+    .secondary-heading h2,
+    .secondary-intro-text h2 {
+        font-size: 29px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .secondary-heading p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .secondary-intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .secondary-intro-text p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .secondary-focus-box {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .secondary-focus-box h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .secondary-focus-list li {
+        font-size: 14px;
+        padding: 11px 0;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       SUBJECT CARDS
+    ===================================================== */
+
+    .secondary-card-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .secondary-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .secondary-card h3 {
+        font-size: 20px;
+    }
+
+    .secondary-card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .secondary-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+
+    /* =====================================================
+       CLASS JOURNEY
+    ===================================================== */
+
+    .secondary-journey-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .secondary-journey-card {
+        padding: 28px 22px;
+        border-radius: 15px;
+    }
+
+    .secondary-number {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .secondary-journey-card h3 {
+        font-size: 22px;
+    }
+
+    .secondary-journey-card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       SKILLS
+    ===================================================== */
+
+    .secondary-skill-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .secondary-skill {
+        padding: 18px;
+        font-size: 15px;
+        border-radius: 11px;
+    }
+
+    .secondary-skill i {
+        font-size: 19px;
+    }
+
+
+    /* =====================================================
+       PREPARATION
+    ===================================================== */
+
+    .secondary-preparation-grid {
+        grid-template-columns: 1fr;
+        padding: 0 18px 55px;
+        gap: 16px;
+    }
+
+    .secondary-preparation-card {
+        padding: 25px 18px;
+        border-radius: 14px;
+    }
+
+    .secondary-preparation-card i {
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+
+    .secondary-preparation-card h3 {
+        font-size: 18px;
+    }
+
+    .secondary-preparation-card p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       OUTCOMES
+    ===================================================== */
+
+    .secondary-outcome-box {
+        padding: 22px 16px;
+        border-radius: 16px;
+    }
+
+    .secondary-outcome-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .secondary-outcome-list li {
+        padding: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .secondary-cta {
+        width: calc(100% - 36px);
+        margin: 5px 18px 50px;
+        padding: 38px 18px;
+        border-radius: 18px;
+    }
+
+    .secondary-cta h2 {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+
+    .secondary-cta p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .secondary-cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .secondary-cta-buttons .secondary-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 18px;
+    }
+
+
+    /* =====================================================
+       FAQ
+    ===================================================== */
+
+    .secondary-faq {
+        width: 100%;
+    }
+
+    .secondary-faq-item {
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .secondary-faq-header {
+        padding: 16px 15px;
+        gap: 10px;
+    }
+
+    .secondary-faq-header h3 {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .secondary-faq-header i {
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .secondary-faq-content p {
+        padding: 0 15px 17px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       LOGIN FORM
+    ===================================================== */
+
+    .account-form {
+        width: calc(100% - 30px) !important;
+        max-width: 400px;
+        left: 50% !important;
+        transform: translateX(-50%);
+        padding: 25px 18px !important;
+        box-sizing: border-box;
+    }
+
+    .account-form .box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .account-form .btn {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    footer .content {
+        width: 100%;
+        padding: 0 18px;
+        box-sizing: border-box;
+    }
+
+    footer .top {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .logo-details {
+        text-align: center;
+    }
+
+    footer .media-icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    footer .link-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 20px;
+    }
+
+    footer .box {
+        min-width: 0;
+    }
+
+    footer .box .link_name {
+        font-size: 16px;
+    }
+
+    footer .box li a {
+        font-size: 14px;
+    }
+
+    footer .input-box {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    footer .input-box input[type="email"],
+    footer .input-box input[type="button"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* ---------- HEADER ---------- */
+
+    .header {
+        min-height: 65px;
+    }
+
+    .header .logo {
+        max-width: calc(100% - 95px);
+    }
+
+    .header .logo img {
+        width: 55px !important;
+        height: 43px !important;
+    }
+
+    .collage-name {
+        font-size: 12px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .secondary-hero {
+        min-height: 455px;
+        padding: 85px 15px 55px;
+    }
+
+    .secondary-eyebrow {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .secondary-hero h1 {
+        font-size: 31px;
+    }
+
+    .secondary-hero h2 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .secondary-hero p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .secondary-section {
+        padding: 48px 15px;
+    }
+
+    .secondary-journey {
+        padding: 48px 15px;
+    }
+
+    .secondary-heading h2,
+    .secondary-intro-text h2 {
+        font-size: 26px;
+    }
+
+
+    /* ---------- FOCUS ---------- */
+
+    .secondary-focus-box {
+        padding: 22px 16px;
+    }
+
+
+    /* ---------- CARDS ---------- */
+
+    .secondary-card {
+        padding: 22px 17px;
+    }
+
+    .secondary-card h3 {
+        font-size: 19px;
+    }
+
+
+    /* ---------- JOURNEY ---------- */
+
+    .secondary-journey-card {
+        padding: 25px 18px;
+    }
+
+    .secondary-journey-card h3 {
+        font-size: 21px;
+    }
+
+
+    /* ---------- PREPARATION ---------- */
+
+    .secondary-preparation-grid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .secondary-cta {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 32px 16px;
+    }
+
+    .secondary-cta h2 {
+        font-size: 24px;
+    }
+
+
+    /* ---------- FAQ ---------- */
+
+    .secondary-faq-header {
+        padding: 15px 13px;
+    }
+
+    .secondary-faq-header h3 {
+        font-size: 14px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer .content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    footer .link-boxes {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    footer .input-box {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   <= 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .collage-name {
+        font-size: 11px;
+    }
+
+    .secondary-hero {
+        min-height: 440px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .secondary-hero h1 {
+        font-size: 28px;
+    }
+
+    .secondary-hero h2 {
+        font-size: 17px;
+    }
+
+    .secondary-hero p {
+        font-size: 13px;
+    }
+
+    .secondary-section,
+    .secondary-journey {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .secondary-heading h2,
+    .secondary-intro-text h2 {
+        font-size: 24px;
+    }
+
+    .secondary-cta {
+        width: calc(100% - 24px);
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .secondary-faq-header h3 {
+        font-size: 13px;
+    }
+
+}
+/* =========================================================
+   MARIA'S PODAR LEARN SCHOOL
+   NURSERY TO UKG - RESPONSIVE CSS
+   Desktop design remains unchanged
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL MOBILE SAFETY
+========================================================= */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: relative;
+    z-index: 99999;
+}
+
+.logo {
+    max-width: 100%;
+}
+
+.collage-name {
+    line-height: 1.2;
+}
+
+
+/* Make header icons clickable */
+#menu-btn,
+#account-btn {
+    cursor: pointer;
+    position: relative;
+    z-index: 100000;
+}
+
+
+/* =========================================================
+   COURSE DROPDOWN
+========================================================= */
+
+.navbar {
+    z-index: 99999;
+}
+
+.dropdown {
+    z-index: 999999;
+}
+
+.dropdown2 {
+    z-index: 999999;
+}
+
+.dropdown2.show {
+    display: block !important;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+========================================================= */
+
+.account-form {
+    z-index: 999999;
+}
+
+.account-form.active {
+    display: block;
+}
+
+
+/* =========================================================
+   NURSERY HERO
+========================================================= */
+
+.nursery-hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.nursery-hero-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+.nursery-hero h1 {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.nursery-hero p {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.nursery-section {
+    width: 100%;
+}
+
+.nursery-container {
+    width: 100%;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.nursery-intro {
+    width: 100%;
+}
+
+.nursery-intro-text,
+.nursery-highlight {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LEARNING CARDS
+========================================================= */
+
+.nursery-learning-grid {
+    width: 100%;
+}
+
+.nursery-learning-card {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.nursery-learning-card h3 {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   PROGRAMME JOURNEY
+========================================================= */
+
+.nursery-journey {
+    width: 100%;
+}
+
+.nursery-level {
+    min-width: 0;
+}
+
+.nursery-level h3,
+.nursery-level p {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   DEVELOPMENT
+========================================================= */
+
+.nursery-development {
+    width: 100%;
+}
+
+.nursery-development-item {
+    min-width: 0;
+}
+
+.nursery-development-item > div {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   ENVIRONMENT
+========================================================= */
+
+.nursery-environment {
+    width: 100%;
+}
+
+.nursery-environment-grid {
+    width: 100%;
+}
+
+.nursery-environment-card {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   LEARNING OUTCOMES
+========================================================= */
+
+.nursery-learning-box {
+    width: 100%;
+}
+
+.nursery-info-box {
+    min-width: 0;
+}
+
+.nursery-info-box li {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   ADMISSION
+========================================================= */
+
+.nursery-admission {
+    width: 100%;
+    max-width: 950px;
+}
+
+.nursery-admission-buttons {
+    width: 100%;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.nursery-faq {
+    width: 100%;
+}
+
+.nursery-faq-item {
+    width: 100%;
+}
+
+.nursery-faq-header h3 {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+    overflow: hidden;
+}
+
+footer .content {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+footer .link-boxes {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+   901px - 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nursery-container {
+        max-width: 94%;
+    }
+
+    .nursery-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   MAX 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- HERO ---------- */
+
+    .nursery-hero {
+        min-height: 500px;
+        padding: 135px 25px 80px;
+    }
+
+    .nursery-hero-content {
+        max-width: 750px;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .nursery-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    /* ---------- LEARNING ---------- */
+
+    .nursery-learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    /* ---------- JOURNEY ---------- */
+
+    .nursery-journey {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    /* ---------- DEVELOPMENT ---------- */
+
+    .nursery-development {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    /* ---------- ENVIRONMENT ---------- */
+
+    .nursery-environment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    /* ---------- LEARNING OUTCOME ---------- */
+
+    .nursery-learning-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer .link-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   MAX 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .header {
+        width: 100%;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .logo img {
+        flex-shrink: 0;
+    }
+
+    .collage-name {
+        font-size: 14px;
+        max-width: 190px;
+        line-height: 1.2;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .nursery-hero {
+        min-height: 500px;
+        padding: 120px 18px 65px;
+        background-position: center center;
+    }
+
+    .nursery-hero-content {
+        max-width: 100%;
+    }
+
+    .nursery-badge {
+        font-size: 11px;
+        padding: 8px 16px;
+        letter-spacing: 1.5px;
+        margin-bottom: 16px;
+    }
+
+    .nursery-hero h1 {
+        font-size: 42px;
+        line-height: 1.12;
+        margin-bottom: 18px;
+    }
+
+    .nursery-hero h1 span {
+        font-size: 20px;
+        line-height: 1.35;
+        margin-top: 12px;
+    }
+
+    .nursery-hero p {
+        font-size: 15px;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
+
+    .nursery-section {
+        padding: 55px 16px;
+    }
+
+    .nursery-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       HEADINGS
+    ===================================================== */
+
+    .nursery-heading {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .nursery-heading .small-title {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
+    .nursery-heading h2 {
+        font-size: 29px;
+        line-height: 1.25;
+    }
+
+    .nursery-heading p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .nursery-intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .nursery-intro-text h2 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .nursery-intro-text p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .nursery-highlight {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .nursery-highlight h3 {
+        font-size: 21px;
+    }
+
+    .nursery-highlight li {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+
+    /* =====================================================
+       LEARNING AREAS
+    ===================================================== */
+
+    .nursery-learning-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .nursery-learning-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+
+    .nursery-learning-card h3 {
+        font-size: 20px;
+    }
+
+    .nursery-learning-card p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .nursery-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+
+    /* =====================================================
+       PROGRAMME JOURNEY
+    ===================================================== */
+
+    .nursery-journey {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .nursery-level {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .nursery-level-number {
+        font-size: 45px;
+        right: 15px;
+        top: 12px;
+    }
+
+    .nursery-level-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+
+    .nursery-level h3 {
+        font-size: 23px;
+    }
+
+    .nursery-level p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       DEVELOPMENT
+    ===================================================== */
+
+    .nursery-development {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .nursery-development-item {
+        padding: 20px;
+        gap: 15px;
+        border-radius: 14px;
+    }
+
+    .nursery-development-item > i {
+        min-width: 45px;
+        width: 45px;
+        height: 45px;
+        font-size: 19px;
+    }
+
+    .nursery-development-item h3 {
+        font-size: 19px;
+    }
+
+    .nursery-development-item p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       ENVIRONMENT
+    ===================================================== */
+
+    .nursery-environment {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nursery-environment-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .nursery-environment-card {
+        padding: 25px 18px;
+        border-radius: 14px;
+    }
+
+    .nursery-environment-card i {
+        font-size: 27px;
+    }
+
+    .nursery-environment-card h3 {
+        font-size: 18px;
+    }
+
+    .nursery-environment-card p {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       LEARNING OUTCOMES
+    ===================================================== */
+
+    .nursery-learning-box {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .nursery-info-box {
+        padding: 23px 20px;
+        border-radius: 15px;
+    }
+
+    .nursery-info-box h3 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .nursery-info-box li {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+
+    /* =====================================================
+       ADMISSION CTA
+    ===================================================== */
+
+    .nursery-admission {
+        padding: 38px 18px;
+        border-radius: 18px;
+    }
+
+    .nursery-admission h2 {
+        font-size: 29px;
+        line-height: 1.25;
+    }
+
+    .nursery-admission p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .nursery-admission-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nursery-admission-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 13px 18px;
+    }
+
+
+    /* =====================================================
+       FAQ
+    ===================================================== */
+
+    .nursery-faq {
+        width: 100%;
+    }
+
+    .nursery-faq-item {
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .nursery-faq-header {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .nursery-faq-header h3 {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .nursery-faq-icon {
+        min-width: 32px;
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    .nursery-faq-content p {
+        padding: 0 16px 18px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        width: 100%;
+    }
+
+    footer .content {
+        width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    footer .top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+    }
+
+    footer .logo-details {
+        text-align: center;
+    }
+
+    footer .logo-details span {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    footer .media-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer .link-boxes {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    footer .box {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .box .link_name {
+        margin-bottom: 12px;
+    }
+
+    footer .input-box input[type="email"] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    footer .input-box input[type="button"] {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #subscribeMessage {
+        font-size: 13px;
+        word-break: break-word;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   MAX 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* ---------- HEADER ---------- */
+
+    .collage-name {
+        font-size: 12px;
+        max-width: 145px;
+    }
+
+    .logo img {
+        width: 65px !important;
+        height: 48px !important;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .nursery-hero {
+        min-height: 510px;
+        padding: 115px 15px 60px;
+    }
+
+    .nursery-badge {
+        font-size: 10px;
+        padding: 7px 13px;
+    }
+
+    .nursery-hero h1 {
+        font-size: 36px;
+    }
+
+    .nursery-hero h1 span {
+        font-size: 18px;
+    }
+
+    .nursery-hero p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .nursery-section {
+        padding: 45px 13px;
+    }
+
+    .nursery-heading h2 {
+        font-size: 26px;
+    }
+
+    .nursery-heading p {
+        font-size: 14px;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .nursery-intro-text h2 {
+        font-size: 27px;
+    }
+
+    .nursery-highlight {
+        padding: 22px 17px;
+    }
+
+
+    /* ---------- CARDS ---------- */
+
+    .nursery-learning-card {
+        padding: 22px 18px;
+    }
+
+    .nursery-level {
+        padding: 25px 18px;
+    }
+
+    .nursery-development-item {
+        padding: 18px;
+    }
+
+    .nursery-info-box {
+        padding: 20px 17px;
+    }
+
+
+    /* ---------- ADMISSION ---------- */
+
+    .nursery-admission {
+        padding: 32px 15px;
+    }
+
+    .nursery-admission h2 {
+        font-size: 26px;
+    }
+
+    .nursery-admission-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* ---------- FAQ ---------- */
+
+    .nursery-faq-header {
+        padding: 14px;
+    }
+
+    .nursery-faq-header h3 {
+        font-size: 14px;
+    }
+
+    .nursery-faq-icon {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer .content {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   MAX 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .collage-name {
+        font-size: 11px;
+        max-width: 125px;
+    }
+
+    .logo img {
+        width: 60px !important;
+        height: 45px !important;
+    }
+
+    .nursery-hero {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .nursery-hero h1 {
+        font-size: 32px;
+    }
+
+    .nursery-hero h1 span {
+        font-size: 17px;
+    }
+
+    .nursery-section {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .nursery-heading h2 {
+        font-size: 24px;
+    }
+
+    .nursery-admission h2 {
+        font-size: 24px;
+    }
+
+    .nursery-faq-header {
+        gap: 8px;
+    }
+
+    .nursery-faq-header h3 {
+        font-size: 13px;
+    }
+
+}

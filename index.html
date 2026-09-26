@@ -1719,40 +1719,47 @@ function subscribeUser() {
 
 function talk() {
 
-    const input =
-        document.getElementById("userBox");
+    const input = document.getElementById("userBox");
+    const chatLog = document.getElementById("chatLog");
 
-    const chatLog =
-        document.getElementById("chatLog");
-
-
-    const message =
-        input.value.trim().toLowerCase();
-
+    const originalMessage = input.value.trim();
+    const message = originalMessage.toLowerCase();
 
     if (!message) {
         return;
     }
 
-
     let answer = "";
 
+
+    /* =========================
+       1. GREETING
+    ========================== */
 
     if (
         message.includes("hello") ||
         message.includes("hi") ||
-        message.includes("hey")
+        message.includes("hey") ||
+        message.includes("namaste") ||
+        message.includes("good morning") ||
+        message.includes("good afternoon") ||
+        message.includes("good evening")
     ) {
 
         answer =
-            "Hello! 👋 Welcome to Maria’s Podar Learn School. How can I help you?";
+            "Hello! 👋 Welcome to Maria’s Podar Learn School, Nilanga. How can I help you?";
 
     }
 
 
+    /* =========================
+       2. HOW ARE YOU
+    ========================== */
+
     else if (
         message.includes("how are you") ||
-        message.includes("how r you")
+        message.includes("how r you") ||
+        message.includes("how are u")
     ) {
 
         answer =
@@ -1761,9 +1768,14 @@ function talk() {
     }
 
 
+    /* =========================
+       3. SCHOOL NAME
+    ========================== */
+
     else if (
         message.includes("school name") ||
-        message.includes("which school")
+        message.includes("which school") ||
+        message.includes("name of school")
     ) {
 
         answer =
@@ -1772,18 +1784,82 @@ function talk() {
     }
 
 
-    else if (message.includes("principal")) {
+    /* =========================
+       4. LOCATION
+    ========================== */
+
+    else if (
+        message.includes("where is the school") ||
+        message.includes("school location") ||
+        message.includes("where is school") ||
+        message.includes("location of school") ||
+        message.includes("where is maria")
+    ) {
 
         answer =
-            "The Principal of Maria’s Podar Learn School, Nilanga is Mr. Vishnu Raj.";
+            "Maria’s Podar Learn School is located in Nilanga, Latur District, Maharashtra.";
 
     }
 
 
+    /* =========================
+       5. BOARD / CBSE
+    ========================== */
+
     else if (
-        message.includes("class") ||
-        message.includes("classes") ||
-        message.includes("grade")
+        message.includes("which board") ||
+        message.includes("board") ||
+        message.includes("cbse")
+    ) {
+
+        answer =
+            "Maria’s Podar Learn School, Nilanga is affiliated with the CBSE board.";
+
+    }
+
+
+    /* =========================
+       6. CBSE AFFILIATION NUMBER
+    ========================== */
+
+    else if (
+        message.includes("affiliation") ||
+        message.includes("affiliation number") ||
+        message.includes("cbse affiliation")
+    ) {
+
+        answer =
+            "The CBSE Affiliation Number of Maria’s Podar Learn School, Nilanga is 1131276.";
+
+    }
+
+
+    /* =========================
+       7. SCHOOL CODE
+    ========================== */
+
+    else if (
+        message.includes("school code") ||
+        message.includes("school id")
+    ) {
+
+        answer =
+            "The school code of Maria’s Podar Learn School, Nilanga is 31263.";
+
+    }
+
+
+    /* =========================
+       8. CLASSES AVAILABLE
+    ========================== */
+
+    else if (
+        message.includes("which classes") ||
+        message.includes("classes available") ||
+        message.includes("classes offered") ||
+        message.includes("what classes") ||
+        message.includes("which grade") ||
+        message.includes("grades available")
     ) {
 
         answer =
@@ -1792,91 +1868,541 @@ function talk() {
     }
 
 
-    else if (message.includes("cbse")) {
-
-        answer =
-            "Maria’s Podar Learn School, Nilanga is a CBSE-affiliated school. Affiliation No.: 1131276.";
-
-    }
-
-
-    else if (
-        message.includes("school code") ||
-        message.includes("code")
-    ) {
-
-        answer =
-            "The school code is 31263.";
-
-    }
-
+    /* =========================
+       9. ADMISSION
+    ========================== */
 
     else if (
         message.includes("admission") ||
-        message.includes("admissions")
+        message.includes("admissions") ||
+        message.includes("admission open") ||
+        message.includes("admission process")
     ) {
 
         answer =
-            "For admission-related information, please contact the school office.";
+            "Admissions are subject to seat availability. For the latest admission information and the admission process, please contact the school office.";
 
     }
 
+
+    /* =========================
+       10. ADMISSION DOCUMENTS
+    ========================== */
 
     else if (
-        message.includes("fee") ||
-        message.includes("fees")
+        message.includes("documents required") ||
+        message.includes("documents for admission") ||
+        message.includes("admission documents") ||
+        message.includes("required documents")
     ) {
 
         answer =
-            "For the latest fee information, please contact the school office.";
+            "Common admission documents may include the student's birth certificate, previous school records or report card, Transfer Certificate where applicable, Aadhaar or identity proof, passport-size photographs, and other documents requested by the school.";
 
     }
 
+
+    /* =========================
+       11. FEE STRUCTURE
+    ========================== */
+
+    else if (
+        message.includes("fee structure") ||
+        message.includes("school fees") ||
+        message.includes("school fee") ||
+        message.includes("fees") ||
+        message.includes("fee")
+    ) {
+
+        answer =
+            "The fee structure may vary depending on the class and school policy. Please contact the school office for the latest fee details.";
+
+    }
+
+
+    /* =========================
+       12. SCHOOL TIMINGS
+    ========================== */
+
+    else if (
+        message.includes("school timing") ||
+        message.includes("school timings") ||
+        message.includes("school time") ||
+        message.includes("timing of school") ||
+        message.includes("when does school start")
+    ) {
+
+        answer =
+            "School timings may vary according to the class and daily schedule. Please contact the school office for the current timings.";
+
+    }
+
+
+    /* =========================
+       13. TRANSPORT
+    ========================== */
+
+    else if (
+        message.includes("transport") ||
+        message.includes("school bus") ||
+        message.includes("bus facility") ||
+        message.includes("transportation")
+    ) {
+
+        answer =
+            "School transportation availability depends on the current routes and arrangements. Please contact the school office for transport-related information.";
+
+    }
+
+
+    /* =========================
+       14. FACILITIES
+    ========================== */
+
+    else if (
+        message.includes("facilities") ||
+        message.includes("school facilities") ||
+        message.includes("facility")
+    ) {
+
+        answer =
+            "The school provides facilities that support academic, physical and creative development, including classrooms, library facilities, computer lab, science laboratory, mathematics laboratory, sports facilities, art and activity facilities, and digital learning resources.";
+
+    }
+
+
+    /* =========================
+       15. SMART CLASSROOM
+    ========================== */
+
+    else if (
+        message.includes("smart classroom") ||
+        message.includes("smart classrooms") ||
+        message.includes("digital classroom") ||
+        message.includes("digital learning")
+    ) {
+
+        answer =
+            "Yes. The school supports smart and digital learning through technology-enabled educational resources.";
+
+    }
+
+
+    /* =========================
+       16. LABORATORIES
+    ========================== */
+
+    else if (
+        message.includes("laboratories") ||
+        message.includes("laboratory") ||
+        message.includes("labs") ||
+        message.includes("lab")
+    ) {
+
+        answer =
+            "The school provides practical learning facilities including a Computer Laboratory, Science Laboratory and Mathematics Laboratory.";
+
+    }
+
+
+    /* =========================
+       17. EXTRACURRICULAR ACTIVITIES
+    ========================== */
+
+    else if (
+        message.includes("extracurricular") ||
+        message.includes("extra curricular") ||
+        message.includes("activities") ||
+        message.includes("co curricular") ||
+        message.includes("co-curricular")
+    ) {
+
+        answer =
+            "The school offers various extracurricular and co-curricular activities including sports, dance, art, music, cultural activities, competitions, celebrations and other student development activities.";
+
+    }
+
+
+    /* =========================
+       18. SPORTS / DANCE / ART / MUSIC
+    ========================== */
+
+    else if (
+        message.includes("sports") ||
+        message.includes("dance") ||
+        message.includes("art") ||
+        message.includes("music")
+    ) {
+
+        answer =
+            "Yes. Sports, dance, art and music activities are part of the school's extracurricular and co-curricular activities.";
+
+    }
+
+
+    /* =========================
+       19. ACADEMIC PROGRESS
+    ========================== */
+
+    else if (
+        message.includes("academic progress") ||
+        message.includes("child progress") ||
+        message.includes("student progress") ||
+        message.includes("parent informed") ||
+        message.includes("parents informed")
+    ) {
+
+        answer =
+            "Parents are informed about their child's academic progress through Parent–Teacher Meetings, academic reports, school communication and teacher updates.";
+
+    }
+
+
+    /* =========================
+       20. PARENT TEACHER MEETING
+    ========================== */
+
+    else if (
+        message.includes("ptm") ||
+        message.includes("parent teacher meeting") ||
+        message.includes("parent-teacher meeting") ||
+        message.includes("parents meeting")
+    ) {
+
+        answer =
+            "Parent–Teacher Meetings are conducted periodically during the academic year to discuss students' academic progress and overall development.";
+
+    }
+
+
+    /* =========================
+       21. EXAMINATION / REVISION
+    ========================== */
+
+    else if (
+        message.includes("examination") ||
+        message.includes("exams") ||
+        message.includes("exam") ||
+        message.includes("revision worksheet") ||
+        message.includes("revision") ||
+        message.includes("worksheets")
+    ) {
+
+        answer =
+            "Students are supported through regular classroom assessments, revision worksheets, practice activities and scheduled examinations.";
+
+    }
+
+
+    /* =========================
+       22. CONTACT NUMBER
+    ========================== */
+
+    else if (
+        message.includes("contact number") ||
+        message.includes("phone number") ||
+        message.includes("contact no") ||
+        message.includes("mobile number") ||
+        message.includes("school number")
+    ) {
+
+        answer =
+            "For the school's latest contact number, please visit the Contact Us page or contact the school office.";
+
+    }
+
+
+    /* =========================
+       23. WHATSAPP
+    ========================== */
+
+    else if (
+        message.includes("whatsapp") ||
+        message.includes("whatsapp number") ||
+        message.includes("contact through whatsapp")
+    ) {
+
+        answer =
+            "For WhatsApp communication details, please contact the school office or visit the Contact Us page.";
+
+    }
+
+
+    /* =========================
+       24. TEACHING VACANCIES
+    ========================== */
+
+    else if (
+        message.includes("teaching vacancy") ||
+        message.includes("teaching vacancies") ||
+        message.includes("teacher vacancy") ||
+        message.includes("teacher job") ||
+        message.includes("vacancy") ||
+        message.includes("vacancies")
+    ) {
+
+        answer =
+            "Teaching vacancies depend on the school's current staffing requirements. Please check the Careers section or contact the school for current vacancy information.";
+
+    }
+
+
+    /* =========================
+       25. HOW TO APPLY FOR JOB
+    ========================== */
+
+    else if (
+        message.includes("how can i apply") ||
+        message.includes("apply for job") ||
+        message.includes("job application") ||
+        message.includes("how to apply") ||
+        message.includes("career") ||
+        message.includes("careers")
+    ) {
+
+        answer =
+            "To apply for a job, please visit the Careers section of our website and follow the application instructions provided for available positions.";
+
+    }
+
+
+    /* =========================
+       26. WHY CHOOSE SCHOOL
+    ========================== */
+
+    else if (
+        message.includes("why should parents choose") ||
+        message.includes("why choose") ||
+        message.includes("why this school") ||
+        message.includes("why maria") ||
+        message.includes("advantages of school")
+    ) {
+
+        answer =
+            "Maria’s Podar Learn School focuses on quality education, academic development, student-centred learning, individual attention, discipline, value-based education, co-curricular activities and overall development of students.";
+
+    }
+
+
+    /* =========================
+       27. PRINCIPAL
+    ========================== */
+
+    else if (
+        message.includes("principal") ||
+        message.includes("who is the principal")
+    ) {
+
+        answer =
+            "The Principal of Maria’s Podar Learn School, Nilanga is Mr. Vishnu Raj.";
+
+    }
+
+
+    /* =========================
+       28. DIRECTOR
+    ========================== */
+
+    else if (
+        message.includes("director") ||
+        message.includes("who is the director")
+    ) {
+
+        answer =
+            "The Director of Maria’s Podar Learn School, Nilanga is Mrs. Anjum Samir Patel.";
+
+    }
+
+
+    /* =========================
+       29. LIBRARY
+    ========================== */
+
+    else if (
+        message.includes("library") ||
+        message.includes("reading facility") ||
+        message.includes("reading facilities")
+    ) {
+
+        answer =
+            "The school provides library and reading facilities to encourage students to develop reading habits and broaden their knowledge.";
+
+    }
+
+
+    /* =========================
+       30. COMPUTER LAB
+    ========================== */
+
+    else if (
+        message.includes("computer lab") ||
+        message.includes("computer laboratory")
+    ) {
+
+        answer =
+            "The school has a well-equipped Computer Lab to support students' digital learning and computer education.";
+
+    }
+
+
+    /* =========================
+       31. SPORTS FACILITY
+    ========================== */
+
+    else if (
+        message.includes("sports facility") ||
+        message.includes("sports room") ||
+        message.includes("sport facility")
+    ) {
+
+        answer =
+            "The school provides sports facilities and opportunities for students to participate in physical activities and sports.";
+
+    }
+
+
+    /* =========================
+       32. AFFORDABLE EDUCATION
+    ========================== */
+
+    else if (
+        message.includes("affordable") ||
+        message.includes("cost of education") ||
+        message.includes("education cost")
+    ) {
+
+        answer =
+            "The school aims to provide quality education with an affordable approach. For the current fee structure, please contact the school office.";
+
+    }
+
+
+    /* =========================
+       33. ENGLISH COMMUNICATION
+    ========================== */
+
+    else if (
+        message.includes("english communication") ||
+        message.includes("communication skills") ||
+        message.includes("english")
+    ) {
+
+        answer =
+            "The school supports students in developing strong English communication and overall communication skills.";
+
+    }
+
+
+    /* =========================
+       34. STUDENT DEVELOPMENT
+    ========================== */
+
+    else if (
+        message.includes("student development") ||
+        message.includes("overall development") ||
+        message.includes("personality development")
+    ) {
+
+        answer =
+            "The school focuses on students' overall development through academics, sports, arts, cultural activities, communication, discipline, creativity, confidence and leadership skills.";
+
+    }
+
+
+    /* =========================
+       35. ACHIEVEMENTS
+    ========================== */
+
+    else if (
+        message.includes("achievements") ||
+        message.includes("school achievements") ||
+        message.includes("achievement")
+    ) {
+
+        answer =
+            "The school encourages achievements in academics, sports, art and craft, dance and cultural activities, Olympiads, competitions, inter-school activities, personality development and leadership.";
+
+    }
+
+
+    /* =========================
+       36. PRINCIPAL / SCHOOL MANAGEMENT
+    ========================== */
+
+    else if (
+        message.includes("school management") ||
+        message.includes("management")
+    ) {
+
+        answer =
+            "The school management works towards providing quality education, discipline, student development and a supportive learning environment.";
+
+    }
+
+
+    /* =========================
+       37. THANK YOU
+    ========================== */
 
     else if (
         message.includes("thank you") ||
-        message.includes("thanks")
+        message.includes("thanks") ||
+        message.includes("thankyou")
     ) {
 
         answer =
-            "You're welcome! 😊";
+            "You're welcome! 😊 If you have any other questions about Maria’s Podar Learn School, feel free to ask.";
 
     }
 
+
+    /* =========================
+       38. BYE
+    ========================== */
 
     else if (
         message.includes("bye") ||
-        message.includes("goodbye")
+        message.includes("goodbye") ||
+        message.includes("see you")
     ) {
 
         answer =
-            "Goodbye! 👋 Have a great day!";
+            "Goodbye! 👋 Have a great day! We look forward to welcoming you to Maria’s Podar Learn School.";
 
     }
 
+
+    /* =========================
+       DEFAULT ANSWER
+    ========================== */
 
     else {
 
         answer =
-            "I'm sorry, I don't have information about that yet. Please contact the school office for more information.";
+            "I'm sorry, I don't have information about that yet. 😊 Please contact the school office or ask me another question about Maria’s Podar Learn School.";
 
     }
 
 
+    /* =========================
+       SHOW CHAT
+    ========================== */
+
     chatLog.innerHTML =
         "<b>You:</b> " +
-        input.value +
+        originalMessage +
         "<br><br>" +
         "<b>Bot:</b> " +
         answer;
 
+
+    /* CLEAR INPUT */
 
     input.value = "";
 
 }
 
 </script>
-
 
 
 <!-- ================= COURSE DROPDOWN SCRIPT ================= -->
