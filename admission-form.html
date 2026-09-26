@@ -616,14 +616,11 @@
 
                 <!-- NEXT BUTTON -->
 
-                <button type="button"
-                        class="next-btn">
+                
+                   <button type="button"  class="next-btn"> Next
+                        <i class="uil uil-navigator"></i>
+                    </button>
 
-                    Next
-
-                    <i class="uil uil-navigator"></i>
-
-                </button>
 
             </div>
 
@@ -961,80 +958,115 @@
 
 <script>
 
-const steps =
-    document.querySelectorAll(".step");
+document.addEventListener("DOMContentLoaded", function () {
 
-const nextButtons =
-    document.querySelectorAll(".next-btn");
+    const form = document.getElementById("admissionForm");
 
-const previousButtons =
-    document.querySelectorAll(".previous-btn");
+    const steps = document.querySelectorAll(".step");
 
+    const nextButtons = document.querySelectorAll(".next-btn");
 
-nextButtons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-        const currentStep =
-            document.querySelector(".step.active");
-
-        const currentIndex =
-            Array.from(steps).indexOf(currentStep);
+    const previousButtons = document.querySelectorAll(".previous-btn");
 
 
-        if (currentIndex < steps.length - 1) {
+    /* ================= NEXT BUTTON ================= */
 
-            steps[currentIndex]
-                .classList.remove("active");
+    nextButtons.forEach(function (button) {
 
-            steps[currentIndex + 1]
-                .classList.add("active");
+        button.addEventListener("click", function () {
+
+            const currentStep =
+                this.closest(".step");
+
+            /* Validate Step 1 before going to Step 2 */
+
+            const requiredFields =
+                currentStep.querySelectorAll(
+                    "input[required], select[required]"
+                );
+
+            let valid = true;
 
 
-            window.scrollTo({
+            requiredFields.forEach(function (field) {
 
-                top: 0,
+                if (!field.checkValidity()) {
 
-                behavior: "smooth"
+                    field.reportValidity();
+
+                    valid = false;
+
+                }
 
             });
 
-        }
+
+            if (!valid) {
+                return;
+            }
+
+
+            const currentIndex =
+                Array.from(steps).indexOf(currentStep);
+
+
+            if (currentIndex < steps.length - 1) {
+
+                steps[currentIndex]
+                    .classList.remove("active");
+
+                steps[currentIndex + 1]
+                    .classList.add("active");
+
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+
+        });
 
     });
 
-});
+
+    /* ================= BACK BUTTON ================= */
+
+    previousButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const currentStep =
+                this.closest(".step");
+
+            const currentIndex =
+                Array.from(steps).indexOf(currentStep);
 
 
-previousButtons.forEach(function(button) {
+            if (currentIndex > 0) {
 
-    button.addEventListener("click", function() {
+                steps[currentIndex]
+                    .classList.remove("active");
 
-        const currentStep =
-            document.querySelector(".step.active");
-
-        const currentIndex =
-            Array.from(steps).indexOf(currentStep);
+                steps[currentIndex - 1]
+                    .classList.add("active");
 
 
-        if (currentIndex > 0) {
+                window.scrollTo({
 
-            steps[currentIndex]
-                .classList.remove("active");
+                    top: 0,
 
-            steps[currentIndex - 1]
-                .classList.add("active");
+                    behavior: "smooth"
 
+                });
 
-            window.scrollTo({
+            }
 
-                top: 0,
-
-                behavior: "smooth"
-
-            });
-
-        }
+        });
 
     });
 
@@ -1325,7 +1357,7 @@ function subscribeUser() {
 
 
     const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyjcIoO4j8oW90_f8U25qlZY_oCcpa1M4dSHfnrlkK5nsjIAYzFclVpGbgt-IqXl7-6/exec";
+        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
     message.innerHTML =
@@ -1779,6 +1811,8 @@ document.addEventListener(
 );
 
 </script>
+
+
 
 
 </body>

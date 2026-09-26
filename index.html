@@ -1574,35 +1574,48 @@
 
 function subscribeUser() {
 
+
     const email =
-        document.getElementById("subscribeEmail")
-        .value.trim();
+        document.getElementById(
+            "subscribeEmail"
+        ).value.trim();
+
 
     const message =
-        document.getElementById("subscribeMessage");
+        document.getElementById(
+            "subscribeMessage"
+        );
 
 
     if (email === "") {
 
+
         message.innerHTML =
             "Please enter your email.";
 
+
         message.style.color =
             "red";
+
 
         return;
 
     }
 
 
-    if (!email.includes("@") ||
-        !email.includes(".")) {
+    if (
+        !email.includes("@") ||
+        !email.includes(".")
+    ) {
+
 
         message.innerHTML =
             "Please enter a valid email.";
 
+
         message.style.color =
             "red";
+
 
         return;
 
@@ -1610,60 +1623,79 @@ function subscribeUser() {
 
 
     const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyjcIoO4j8oW90_f8U25qlZY_oCcpa1M4dSHfnrlkK5nsjIAYzFclVpGbgt-IqXl7-6/exec";
+        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
     message.innerHTML =
         "Submitting...";
 
+
     message.style.color =
         "white";
 
 
-    fetch(scriptURL, {
+    fetch(
+        scriptURL,
+        {
 
-        method: "POST",
+            method: "POST",
 
-        body: new URLSearchParams({
+            body:
+                new URLSearchParams({
 
-            email: email
+                    email: email
 
-        })
+                })
 
-    })
-
-
-    .then(() => {
-
-        message.innerHTML =
-            "Thank you for subscribing! 😊";
-
-        message.style.color =
-            "lightgreen";
+        }
+    )
 
 
-        document.getElementById(
-            "subscribeEmail"
-        ).value = "";
-
-    })
+    .then(
+        function() {
 
 
-    .catch((error) => {
+            message.innerHTML =
+                "Thank you for subscribing! 😊";
 
-        console.error(error);
 
-        message.innerHTML =
-            "Something went wrong. Please try again.";
+            message.style.color =
+                "lightgreen";
 
-        message.style.color =
-            "red";
 
-    });
+            document.getElementById(
+                "subscribeEmail"
+            ).value = "";
+
+
+        }
+    )
+
+
+    .catch(
+        function(error) {
+
+
+            console.error(error);
+
+
+            message.innerHTML =
+                "Something went wrong. Please try again.";
+
+
+            message.style.color =
+                "red";
+
+
+        }
+    );
+
 
 }
 
 </script>
+
+
 
 
 

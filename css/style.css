@@ -1030,12 +1030,16 @@ footer .bottom-details .bottom_text{
 .container form{
     position: relative;
     margin-top: 15px;
-    min-height: 600px;
+    min-height: auto;
+    height: auto;
     background-color: #fff;
-    overflow: hidden;
+    overflow: visible;
 }
+
 .container form .form{
-    position: absolute;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .container form .title{
@@ -3827,4 +3831,85 @@ footer .media-icons a:hover {
     .paralex-head {
         background-attachment: scroll;
     }
+}
+
+/* ================= NEXT BUTTON FIX ================= */
+
+.next-btn {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    position: relative !important;
+    z-index: 100 !important;
+
+    width: auto !important;
+    min-width: 130px !important;
+    padding: 12px 25px !important;
+
+    margin: 25px auto !important;
+
+    cursor: pointer !important;
+
+    border: none !important;
+    border-radius: 6px !important;
+
+    background: #4070f4 !important;
+    color: #ffffff !important;
+
+    font-size: 16px !important;
+    font-weight: 600 !important;
+
+    text-align: center !important;
+}
+
+.next-btn:hover {
+    opacity: 0.9 !important;
+}
+
+.step-1 .next-btn {
+    display: block !important;
+}
+
+/* =========================================
+   STEP SHOW / HIDE
+========================================= */
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block !important;
+}
+
+/* STEP 1 - WHITE FORM HEIGHT FIX */
+.form-section .step-1 {
+    min-height: 700px;
+    padding-bottom: 50px;
+}
+
+/* NEXT BUTTON VISIBLE */
+.step-1 .next-btn {
+    display: flex !important;
+    position: relative;
+    z-index: 10;
+    margin: 30px auto 10px;
+}
+
+/* Course section spacing */
+.step-1 .details.Family {
+    margin-bottom: 20px;
+}
+
+.form-section {
+    padding-bottom: 80px;
+}
+
+.container {
+    overflow: visible !important;
+}
+
+.step {
+    overflow: visible !important;
 }

@@ -416,21 +416,7 @@ flex-direction:column;
 
                 <!-- NAME -->
 
-                <div class="inputBox">
-
-                    <input type="text"
-                           name="Name"
-                           placeholder=" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ( Name or Type Anonymous )"
-                           required="required"
-                           pattern="[A-z ]+">
-
-                    <span>
-
-                        Name or Anonymous
-
-                    </span>
-
-                </div>
+              <div class="inputBox"> <input type="text" name="Name" required="required" pattern="[A-Za-z ]+" title="Please enter letters only"> <span>Name or Anonymous</span> </div>
 
 
                 <!-- COURSE -->
@@ -927,7 +913,7 @@ function subscribeUser() {
 
 
     const scriptURL =
-        "https://script.google.com/macros/s/AKfycby9OkaePM6LJIOpjAk-Y6KK1pOrkTw8xAXYgR1l3B5DAAHOa4gGyuIewkDQPmyoqfcI0w/exec";
+        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
     message.innerHTML =
@@ -1005,106 +991,105 @@ function subscribeUser() {
      COMPLAINT FORM
 ===================================================== -->
 
+<!-- =====================================================
+     COMPLAINT FORM
+===================================================== -->
+
 <script>
 
-const scriptURL =
-    "https://script.google.com/macros/s/AKfycby9OkaePM6LJIOpjAk-Y6KK1pOrkTw8xAXYgR1l3B5DAAHOa4gGyuIewkDQPmyoqfcI0w/exec";
+const complaintScriptURL =
+    "https://script.google.com/macros/s/AKfycbxhPpG-e6uM56rjoD6rO3GwsHqRnuK1ILEGNqYZx3Rucjs80WlzanimIT4zmMDhbRUa/exec";
 
 
-const form =
+const complaintForm =
     document.forms["complain-sheet"];
 
 
-form.addEventListener(
-    "submit",
-    function (e) {
+if (complaintForm) {
+
+    complaintForm.addEventListener(
+        "submit",
+        function (e) {
+
+            e.preventDefault();
 
 
-        e.preventDefault();
+            const submitButton =
+                complaintForm.querySelector(
+                    'input[type="submit"]'
+                );
 
 
-        const submitButton =
-            form.querySelector(
-                'input[type="submit"]'
+            submitButton.value =
+                "Sending...";
+
+            submitButton.disabled =
+                true;
+
+
+            fetch(
+                complaintScriptURL,
+                {
+                    method: "POST",
+
+                    body:
+                        new FormData(
+                            complaintForm
+                        ),
+
+                    mode: "no-cors"
+                }
+            )
+
+            .then(
+                function () {
+
+                    alert(
+                        "Thanks for your complaint or feedback! We will try to solve it as soon as possible."
+                    );
+
+
+                    complaintForm.reset();
+
+
+                    submitButton.value =
+                        "Send Complain";
+
+
+                    submitButton.disabled =
+                        false;
+
+                }
+            )
+
+            .catch(
+                function (error) {
+
+                    console.error(
+                        "Complaint Error:",
+                        error
+                    );
+
+
+                    alert(
+                        "Something went wrong. Please try again."
+                    );
+
+
+                    submitButton.value =
+                        "Send Complain";
+
+
+                    submitButton.disabled =
+                        false;
+
+                }
             );
 
+        }
+    );
 
-        submitButton.value =
-            "Sending...";
-
-
-        submitButton.disabled =
-            true;
-
-
-        fetch(
-            scriptURL,
-            {
-
-                method: "POST",
-
-                body:
-                    new FormData(form),
-
-                mode: "no-cors"
-
-            }
-        )
-
-
-        .then(
-            function () {
-
-
-                alert(
-                    "Thanks for your complaint or feedback! We will try to solve it as soon as possible."
-                );
-
-
-                form.reset();
-
-
-                submitButton.value =
-                    "Send Complain";
-
-
-                submitButton.disabled =
-                    false;
-
-
-            }
-        )
-
-
-        .catch(
-            function (error) {
-
-
-                console.error(
-                    "Error!",
-                    error
-                );
-
-
-                alert(
-                    "Something went wrong. Please try again."
-                );
-
-
-                submitButton.value =
-                    "Send Complain";
-
-
-                submitButton.disabled =
-                    false;
-
-
-            }
-        );
-
-
-    }
-);
+}
 
 </script>
 

@@ -2439,6 +2439,132 @@ document.querySelectorAll(
 
 </script>
 
+<script>
+
+function subscribeUser() {
+
+
+    const email =
+        document.getElementById(
+            "subscribeEmail"
+        ).value.trim();
+
+
+    const message =
+        document.getElementById(
+            "subscribeMessage"
+        );
+
+
+    if (email === "") {
+
+
+        message.innerHTML =
+            "Please enter your email.";
+
+
+        message.style.color =
+            "red";
+
+
+        return;
+
+    }
+
+
+    if (
+        !email.includes("@") ||
+        !email.includes(".")
+    ) {
+
+
+        message.innerHTML =
+            "Please enter a valid email.";
+
+
+        message.style.color =
+            "red";
+
+
+        return;
+
+    }
+
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
+
+
+    message.innerHTML =
+        "Submitting...";
+
+
+    message.style.color =
+        "white";
+
+
+    fetch(
+        scriptURL,
+        {
+
+            method: "POST",
+
+            body:
+                new URLSearchParams({
+
+                    email: email
+
+                })
+
+        }
+    )
+
+
+    .then(
+        function() {
+
+
+            message.innerHTML =
+                "Thank you for subscribing! 😊";
+
+
+            message.style.color =
+                "lightgreen";
+
+
+            document.getElementById(
+                "subscribeEmail"
+            ).value = "";
+
+
+        }
+    )
+
+
+    .catch(
+        function(error) {
+
+
+            console.error(error);
+
+
+            message.innerHTML =
+                "Something went wrong. Please try again.";
+
+
+            message.style.color =
+                "red";
+
+
+        }
+    );
+
+
+}
+
+</script>
+
+
 
 </body>
 
