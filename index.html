@@ -1714,7 +1714,6 @@ function subscribeUser() {
 
 
 <!-- ================= CHATBOT SCRIPT ================= -->
-
 <script>
 
 function talk() {
@@ -1723,31 +1722,44 @@ function talk() {
     const chatLog = document.getElementById("chatLog");
 
     const originalMessage = input.value.trim();
-    const message = originalMessage.toLowerCase();
 
-    if (!message) {
+    if (!originalMessage) {
         return;
     }
+
+    /* =========================
+       CLEAN USER QUESTION
+    ========================== */
+
+    const message = originalMessage
+        .toLowerCase()
+        .replace(/[?!.]/g, "")
+        .replace(/[’‘]/g, "'")
+        .replace(/\s+/g, " ")
+        .trim();
 
     let answer = "";
 
 
     /* =========================
        1. GREETING
+       Exact word matching
     ========================== */
 
+    const words = message.split(" ");
+
     if (
-        message.includes("hello") ||
-        message.includes("hi") ||
-        message.includes("hey") ||
-        message.includes("namaste") ||
-        message.includes("good morning") ||
-        message.includes("good afternoon") ||
-        message.includes("good evening")
+        words.includes("hello") ||
+        words.includes("hi") ||
+        words.includes("hey") ||
+        words.includes("namaste") ||
+        message === "good morning" ||
+        message === "good afternoon" ||
+        message === "good evening"
     ) {
 
         answer =
-            "Hello! 👋 Welcome to Maria’s Podar Learn School, Nilanga. How can I help you?";
+            "Hello! 👋 Welcome to Maria’s Podar Learn School. How can I help you?";
 
     }
 
@@ -1757,9 +1769,9 @@ function talk() {
     ========================== */
 
     else if (
-        message.includes("how are you") ||
-        message.includes("how r you") ||
-        message.includes("how are u")
+        message === "how are you" ||
+        message === "how r you" ||
+        message === "how are u"
     ) {
 
         answer =
@@ -1773,9 +1785,10 @@ function talk() {
     ========================== */
 
     else if (
-        message.includes("school name") ||
-        message.includes("which school") ||
-        message.includes("name of school")
+        message === "what is the school name" ||
+        message === "what is your school name" ||
+        message === "school name" ||
+        message === "which school"
     ) {
 
         answer =
@@ -1785,15 +1798,15 @@ function talk() {
 
 
     /* =========================
-       4. LOCATION
+       4. SCHOOL LOCATION
     ========================== */
 
     else if (
-        message.includes("where is the school") ||
-        message.includes("school location") ||
-        message.includes("where is school") ||
-        message.includes("location of school") ||
-        message.includes("where is maria")
+        message === "where is maria's podar learn school located" ||
+        message === "where is the school located" ||
+        message === "where is the school" ||
+        message === "school location" ||
+        message === "where is maria's podar learn school"
     ) {
 
         answer =
@@ -1803,13 +1816,14 @@ function talk() {
 
 
     /* =========================
-       5. BOARD / CBSE
+       5. SCHOOL BOARD
     ========================== */
 
     else if (
-        message.includes("which board") ||
-        message.includes("board") ||
-        message.includes("cbse")
+        message === "which board is the school affiliated with" ||
+        message === "which board is the school affiliated to" ||
+        message === "which board is your school affiliated with" ||
+        message === "which board is the school"
     ) {
 
         answer =
@@ -1819,13 +1833,31 @@ function talk() {
 
 
     /* =========================
-       6. CBSE AFFILIATION NUMBER
+       6. CBSE
     ========================== */
 
     else if (
-        message.includes("affiliation") ||
-        message.includes("affiliation number") ||
-        message.includes("cbse affiliation")
+        message === "is the school cbse" ||
+        message === "is your school cbse" ||
+        message === "is the school affiliated with cbse"
+    ) {
+
+        answer =
+            "Yes. Maria’s Podar Learn School, Nilanga is affiliated with the CBSE board.";
+
+    }
+
+
+    /* =========================
+       7. AFFILIATION NUMBER
+    ========================== */
+
+    else if (
+        message === "what is the school's cbse affiliation number" ||
+        message === "what is the school cbse affiliation number" ||
+        message === "what is the cbse affiliation number" ||
+        message === "what is the affiliation number" ||
+        message === "cbse affiliation number"
     ) {
 
         answer =
@@ -1835,12 +1867,14 @@ function talk() {
 
 
     /* =========================
-       7. SCHOOL CODE
+       8. SCHOOL CODE
     ========================== */
 
     else if (
-        message.includes("school code") ||
-        message.includes("school id")
+        message === "what is the school code" ||
+        message === "what is your school code" ||
+        message === "school code" ||
+        message === "what is the code of the school"
     ) {
 
         answer =
@@ -1850,16 +1884,16 @@ function talk() {
 
 
     /* =========================
-       8. CLASSES AVAILABLE
+       9. CLASSES
     ========================== */
 
     else if (
-        message.includes("which classes") ||
-        message.includes("classes available") ||
-        message.includes("classes offered") ||
-        message.includes("what classes") ||
-        message.includes("which grade") ||
-        message.includes("grades available")
+        message === "which classes are available at the school" ||
+        message === "which classes are available" ||
+        message === "what classes are available at the school" ||
+        message === "what classes are available" ||
+        message === "which classes does the school offer" ||
+        message === "what classes does the school offer"
     ) {
 
         answer =
@@ -1869,31 +1903,33 @@ function talk() {
 
 
     /* =========================
-       9. ADMISSION
+       10. ADMISSION OPEN
     ========================== */
 
     else if (
-        message.includes("admission") ||
-        message.includes("admissions") ||
-        message.includes("admission open") ||
-        message.includes("admission process")
+        message === "are admissions currently open" ||
+        message === "are admissions open" ||
+        message === "is admission open" ||
+        message === "is admission currently open" ||
+        message === "are admissions currently available"
     ) {
 
         answer =
-            "Admissions are subject to seat availability. For the latest admission information and the admission process, please contact the school office.";
+            "Admissions are subject to seat availability. For the latest admission status and admission process, please contact the school office.";
 
     }
 
 
     /* =========================
-       10. ADMISSION DOCUMENTS
+       11. ADMISSION DOCUMENTS
     ========================== */
 
     else if (
-        message.includes("documents required") ||
-        message.includes("documents for admission") ||
-        message.includes("admission documents") ||
-        message.includes("required documents")
+        message === "what documents are required for admission" ||
+        message === "which documents are required for admission" ||
+        message === "what documents do i need for admission" ||
+        message === "documents required for admission" ||
+        message === "admission documents"
     ) {
 
         answer =
@@ -1903,15 +1939,15 @@ function talk() {
 
 
     /* =========================
-       11. FEE STRUCTURE
+       12. FEE STRUCTURE
     ========================== */
 
     else if (
-        message.includes("fee structure") ||
-        message.includes("school fees") ||
-        message.includes("school fee") ||
-        message.includes("fees") ||
-        message.includes("fee")
+        message === "what is the school fee structure" ||
+        message === "what is the fee structure" ||
+        message === "what are the school fees" ||
+        message === "how much is the school fee" ||
+        message === "school fee structure"
     ) {
 
         answer =
@@ -1921,15 +1957,15 @@ function talk() {
 
 
     /* =========================
-       12. SCHOOL TIMINGS
+       13. SCHOOL TIMINGS
     ========================== */
 
     else if (
-        message.includes("school timing") ||
-        message.includes("school timings") ||
-        message.includes("school time") ||
-        message.includes("timing of school") ||
-        message.includes("when does school start")
+        message === "what are the school timings" ||
+        message === "what is the school timing" ||
+        message === "what are your school timings" ||
+        message === "school timings" ||
+        message === "what time does school start"
     ) {
 
         answer =
@@ -1939,14 +1975,15 @@ function talk() {
 
 
     /* =========================
-       13. TRANSPORT
+       14. TRANSPORTATION
     ========================== */
 
     else if (
-        message.includes("transport") ||
-        message.includes("school bus") ||
-        message.includes("bus facility") ||
-        message.includes("transportation")
+        message === "is school transportation available" ||
+        message === "is transportation available" ||
+        message === "is school transport available" ||
+        message === "does the school provide transportation" ||
+        message === "is school bus available"
     ) {
 
         answer =
@@ -1956,30 +1993,31 @@ function talk() {
 
 
     /* =========================
-       14. FACILITIES
+       15. FACILITIES
     ========================== */
 
     else if (
-        message.includes("facilities") ||
-        message.includes("school facilities") ||
-        message.includes("facility")
+        message === "what facilities are available at the school" ||
+        message === "what facilities does the school have" ||
+        message === "what facilities are available" ||
+        message === "school facilities"
     ) {
 
         answer =
-            "The school provides facilities that support academic, physical and creative development, including classrooms, library facilities, computer lab, science laboratory, mathematics laboratory, sports facilities, art and activity facilities, and digital learning resources.";
+            "The school provides facilities including classrooms, library, Computer Lab, Science Laboratory, Mathematics Laboratory, sports facilities, art and activity facilities, and smart and digital learning resources.";
 
     }
 
 
     /* =========================
-       15. SMART CLASSROOM
+       16. SMART CLASSROOMS
     ========================== */
 
     else if (
-        message.includes("smart classroom") ||
-        message.includes("smart classrooms") ||
-        message.includes("digital classroom") ||
-        message.includes("digital learning")
+        message === "does the school have smart classrooms" ||
+        message === "does the school have smart classroom" ||
+        message === "are smart classrooms available" ||
+        message === "smart classrooms"
     ) {
 
         answer =
@@ -1989,14 +2027,15 @@ function talk() {
 
 
     /* =========================
-       16. LABORATORIES
+       17. LABORATORIES
     ========================== */
 
     else if (
-        message.includes("laboratories") ||
-        message.includes("laboratory") ||
-        message.includes("labs") ||
-        message.includes("lab")
+        message === "what laboratories are available" ||
+        message === "what labs are available" ||
+        message === "which laboratories are available" ||
+        message === "which labs are available" ||
+        message === "what laboratories does the school have"
     ) {
 
         answer =
@@ -2006,50 +2045,48 @@ function talk() {
 
 
     /* =========================
-       17. EXTRACURRICULAR ACTIVITIES
+       18. EXTRACURRICULAR ACTIVITIES
     ========================== */
 
     else if (
-        message.includes("extracurricular") ||
-        message.includes("extra curricular") ||
-        message.includes("activities") ||
-        message.includes("co curricular") ||
-        message.includes("co-curricular")
+        message === "what extracurricular activities does the school offer" ||
+        message === "what extracurricular activities are available" ||
+        message === "what extracurricular activities does the school have" ||
+        message === "what extra curricular activities does the school offer"
     ) {
 
         answer =
-            "The school offers various extracurricular and co-curricular activities including sports, dance, art, music, cultural activities, competitions, celebrations and other student development activities.";
+            "The school offers extracurricular and co-curricular activities including sports, dance, art, music, cultural activities, competitions, celebrations and other student development activities.";
 
     }
 
 
     /* =========================
-       18. SPORTS / DANCE / ART / MUSIC
+       19. SPORTS DANCE ART MUSIC
     ========================== */
 
     else if (
-        message.includes("sports") ||
-        message.includes("dance") ||
-        message.includes("art") ||
-        message.includes("music")
+        message === "are sports dance art and music activities available" ||
+        message === "are sports dance art and music available" ||
+        message === "are sports activities available" ||
+        message === "are dance art and music activities available"
     ) {
 
         answer =
-            "Yes. Sports, dance, art and music activities are part of the school's extracurricular and co-curricular activities.";
+            "Yes. Sports, dance, art and music activities are available as part of the school's extracurricular and co-curricular activities.";
 
     }
 
 
     /* =========================
-       19. ACADEMIC PROGRESS
+       20. ACADEMIC PROGRESS
     ========================== */
 
     else if (
-        message.includes("academic progress") ||
-        message.includes("child progress") ||
-        message.includes("student progress") ||
-        message.includes("parent informed") ||
-        message.includes("parents informed")
+        message === "how are parents informed about their child's academic progress" ||
+        message === "how are parents informed about academic progress" ||
+        message === "how do parents know about their child's progress" ||
+        message === "how are parents informed about student progress"
     ) {
 
         answer =
@@ -2059,14 +2096,14 @@ function talk() {
 
 
     /* =========================
-       20. PARENT TEACHER MEETING
+       21. PTM
     ========================== */
 
     else if (
-        message.includes("ptm") ||
-        message.includes("parent teacher meeting") ||
-        message.includes("parent-teacher meeting") ||
-        message.includes("parents meeting")
+        message === "how often are parent teacher meetings conducted" ||
+        message === "how often are ptms conducted" ||
+        message === "how often is ptm conducted" ||
+        message === "when are parent teacher meetings conducted"
     ) {
 
         answer =
@@ -2076,16 +2113,14 @@ function talk() {
 
 
     /* =========================
-       21. EXAMINATION / REVISION
+       22. EXAMINATIONS
     ========================== */
 
     else if (
-        message.includes("examination") ||
-        message.includes("exams") ||
-        message.includes("exam") ||
-        message.includes("revision worksheet") ||
-        message.includes("revision") ||
-        message.includes("worksheets")
+        message === "how are examinations and revision worksheets conducted" ||
+        message === "how are examinations conducted" ||
+        message === "how are revision worksheets conducted" ||
+        message === "how are exams conducted"
     ) {
 
         answer =
@@ -2095,15 +2130,14 @@ function talk() {
 
 
     /* =========================
-       22. CONTACT NUMBER
+       23. CONTACT NUMBER
     ========================== */
 
     else if (
-        message.includes("contact number") ||
-        message.includes("phone number") ||
-        message.includes("contact no") ||
-        message.includes("mobile number") ||
-        message.includes("school number")
+        message === "what is the school's contact number" ||
+        message === "what is the school contact number" ||
+        message === "school contact number" ||
+        message === "contact number"
     ) {
 
         answer =
@@ -2113,13 +2147,14 @@ function talk() {
 
 
     /* =========================
-       23. WHATSAPP
+       24. WHATSAPP
     ========================== */
 
     else if (
-        message.includes("whatsapp") ||
-        message.includes("whatsapp number") ||
-        message.includes("contact through whatsapp")
+        message === "can i contact the school through whatsapp" ||
+        message === "can i contact the school on whatsapp" ||
+        message === "can i contact school through whatsapp" ||
+        message === "is whatsapp available"
     ) {
 
         answer =
@@ -2129,16 +2164,15 @@ function talk() {
 
 
     /* =========================
-       24. TEACHING VACANCIES
+       25. TEACHING VACANCIES
     ========================== */
 
     else if (
-        message.includes("teaching vacancy") ||
-        message.includes("teaching vacancies") ||
-        message.includes("teacher vacancy") ||
-        message.includes("teacher job") ||
-        message.includes("vacancy") ||
-        message.includes("vacancies")
+        message === "are there any teaching vacancies" ||
+        message === "are there teaching vacancies" ||
+        message === "are there any teacher vacancies" ||
+        message === "is there any teaching vacancy" ||
+        message === "any teaching vacancies"
     ) {
 
         answer =
@@ -2148,16 +2182,14 @@ function talk() {
 
 
     /* =========================
-       25. HOW TO APPLY FOR JOB
+       26. JOB APPLICATION
     ========================== */
 
     else if (
-        message.includes("how can i apply") ||
-        message.includes("apply for job") ||
-        message.includes("job application") ||
-        message.includes("how to apply") ||
-        message.includes("career") ||
-        message.includes("careers")
+        message === "how can i apply for a job at the school" ||
+        message === "how can i apply for a job" ||
+        message === "how do i apply for a job at the school" ||
+        message === "how can i apply for school job"
     ) {
 
         answer =
@@ -2167,15 +2199,14 @@ function talk() {
 
 
     /* =========================
-       26. WHY CHOOSE SCHOOL
+       27. WHY CHOOSE SCHOOL
     ========================== */
 
     else if (
-        message.includes("why should parents choose") ||
-        message.includes("why choose") ||
-        message.includes("why this school") ||
-        message.includes("why maria") ||
-        message.includes("advantages of school")
+        message === "why should parents choose maria's podar learn school" ||
+        message === "why should parents choose this school" ||
+        message === "why should i choose this school" ||
+        message === "why choose maria's podar learn school"
     ) {
 
         answer =
@@ -2185,12 +2216,13 @@ function talk() {
 
 
     /* =========================
-       27. PRINCIPAL
+       28. PRINCIPAL
     ========================== */
 
     else if (
-        message.includes("principal") ||
-        message.includes("who is the principal")
+        message === "who is the principal" ||
+        message === "who is principal" ||
+        message === "principal of the school"
     ) {
 
         answer =
@@ -2200,12 +2232,13 @@ function talk() {
 
 
     /* =========================
-       28. DIRECTOR
+       29. DIRECTOR
     ========================== */
 
     else if (
-        message.includes("director") ||
-        message.includes("who is the director")
+        message === "who is the director" ||
+        message === "who is director" ||
+        message === "director of the school"
     ) {
 
         answer =
@@ -2215,13 +2248,13 @@ function talk() {
 
 
     /* =========================
-       29. LIBRARY
+       30. LIBRARY
     ========================== */
 
     else if (
-        message.includes("library") ||
-        message.includes("reading facility") ||
-        message.includes("reading facilities")
+        message === "does the school have a library" ||
+        message === "does the school have library" ||
+        message === "library facility"
     ) {
 
         answer =
@@ -2231,12 +2264,13 @@ function talk() {
 
 
     /* =========================
-       30. COMPUTER LAB
+       31. COMPUTER LAB
     ========================== */
 
     else if (
-        message.includes("computer lab") ||
-        message.includes("computer laboratory")
+        message === "does the school have a computer lab" ||
+        message === "computer lab" ||
+        message === "computer laboratory"
     ) {
 
         answer =
@@ -2246,13 +2280,13 @@ function talk() {
 
 
     /* =========================
-       31. SPORTS FACILITY
+       32. SPORTS FACILITY
     ========================== */
 
     else if (
-        message.includes("sports facility") ||
-        message.includes("sports room") ||
-        message.includes("sport facility")
+        message === "does the school have sports facilities" ||
+        message === "sports facility" ||
+        message === "sports room"
     ) {
 
         answer =
@@ -2262,92 +2296,13 @@ function talk() {
 
 
     /* =========================
-       32. AFFORDABLE EDUCATION
+       33. THANK YOU
     ========================== */
 
     else if (
-        message.includes("affordable") ||
-        message.includes("cost of education") ||
-        message.includes("education cost")
-    ) {
-
-        answer =
-            "The school aims to provide quality education with an affordable approach. For the current fee structure, please contact the school office.";
-
-    }
-
-
-    /* =========================
-       33. ENGLISH COMMUNICATION
-    ========================== */
-
-    else if (
-        message.includes("english communication") ||
-        message.includes("communication skills") ||
-        message.includes("english")
-    ) {
-
-        answer =
-            "The school supports students in developing strong English communication and overall communication skills.";
-
-    }
-
-
-    /* =========================
-       34. STUDENT DEVELOPMENT
-    ========================== */
-
-    else if (
-        message.includes("student development") ||
-        message.includes("overall development") ||
-        message.includes("personality development")
-    ) {
-
-        answer =
-            "The school focuses on students' overall development through academics, sports, arts, cultural activities, communication, discipline, creativity, confidence and leadership skills.";
-
-    }
-
-
-    /* =========================
-       35. ACHIEVEMENTS
-    ========================== */
-
-    else if (
-        message.includes("achievements") ||
-        message.includes("school achievements") ||
-        message.includes("achievement")
-    ) {
-
-        answer =
-            "The school encourages achievements in academics, sports, art and craft, dance and cultural activities, Olympiads, competitions, inter-school activities, personality development and leadership.";
-
-    }
-
-
-    /* =========================
-       36. PRINCIPAL / SCHOOL MANAGEMENT
-    ========================== */
-
-    else if (
-        message.includes("school management") ||
-        message.includes("management")
-    ) {
-
-        answer =
-            "The school management works towards providing quality education, discipline, student development and a supportive learning environment.";
-
-    }
-
-
-    /* =========================
-       37. THANK YOU
-    ========================== */
-
-    else if (
-        message.includes("thank you") ||
-        message.includes("thanks") ||
-        message.includes("thankyou")
+        message === "thank you" ||
+        message === "thanks" ||
+        message === "thankyou"
     ) {
 
         answer =
@@ -2357,35 +2312,35 @@ function talk() {
 
 
     /* =========================
-       38. BYE
+       34. BYE
     ========================== */
 
     else if (
-        message.includes("bye") ||
-        message.includes("goodbye") ||
-        message.includes("see you")
+        message === "bye" ||
+        message === "goodbye" ||
+        message === "see you"
     ) {
 
         answer =
-            "Goodbye! 👋 Have a great day! We look forward to welcoming you to Maria’s Podar Learn School.";
+            "Goodbye! 👋 Have a great day!";
 
     }
 
 
     /* =========================
-       DEFAULT ANSWER
+       DEFAULT
     ========================== */
 
     else {
 
         answer =
-            "I'm sorry, I don't have information about that yet. 😊 Please contact the school office or ask me another question about Maria’s Podar Learn School.";
+            "I'm sorry, I don't have information about that yet. 😊 Please ask me one of the questions related to Maria’s Podar Learn School.";
 
     }
 
 
     /* =========================
-       SHOW CHAT
+       DISPLAY CHAT
     ========================== */
 
     chatLog.innerHTML =
@@ -2395,14 +2350,12 @@ function talk() {
         "<b>Bot:</b> " +
         answer;
 
-
-    /* CLEAR INPUT */
-
     input.value = "";
 
 }
 
 </script>
+
 
 
 <!-- ================= COURSE DROPDOWN SCRIPT ================= -->
