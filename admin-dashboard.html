@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +13,10 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,8 +24,13 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #f5f5f5;
+    overflow-x: hidden;
 }
 
 
@@ -36,6 +46,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    min-height: 80px;
 }
 
 .logo {
@@ -45,27 +57,47 @@ body {
 
     text-decoration: none;
     color: white;
+
+    min-width: 0;
 }
 
 .logo img {
     width: 80px;
     height: 55px;
+
     object-fit: contain;
     border-radius: 5px;
+
+    flex-shrink: 0;
 }
 
 .collage-name {
     font-size: 22px;
     font-weight: bold;
+    line-height: 1.3;
 }
 
 .logout {
     background: #f93;
     color: white;
+
     border: none;
+
     padding: 10px 20px;
+
     border-radius: 5px;
+
     cursor: pointer;
+
+    font-size: 15px;
+
+    flex-shrink: 0;
+
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #e88200;
 }
 
 
@@ -74,15 +106,22 @@ body {
 ========================= */
 
 .container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+
     padding: 40px;
 }
 
 .container h1 {
     margin-bottom: 10px;
+    font-size: 32px;
 }
 
 .container > p {
     color: #666;
+    font-size: 16px;
 }
 
 
@@ -111,16 +150,29 @@ body {
     box-shadow:
         0 3px 15px
         rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.15);
 }
 
 .card h3 {
     margin-bottom: 10px;
+    font-size: 19px;
 }
 
 .card p {
     color: #666;
 
     margin-bottom: 20px;
+
+    line-height: 1.5;
 }
 
 .card button {
@@ -135,6 +187,10 @@ body {
     border-radius: 5px;
 
     cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
 }
 
 .card button:hover {
@@ -161,7 +217,7 @@ body {
         0 3px 15px
         rgba(0,0,0,0.1);
 
-    overflow-x: auto;
+    width: 100%;
 }
 
 .list-section.active {
@@ -170,6 +226,27 @@ body {
 
 .list-section h2 {
     margin-bottom: 20px;
+
+    font-size: 24px;
+
+    color: #080022;
+}
+
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+
+    border-radius: 5px;
 }
 
 
@@ -177,18 +254,14 @@ body {
    TABLE
 ========================= */
 
-.table-container {
-    width: 100%;
-
-    overflow-x: auto;
-}
-
 table {
     width: 100%;
 
     min-width: 700px;
 
     border-collapse: collapse;
+
+    background: white;
 }
 
 table th,
@@ -200,16 +273,30 @@ table td {
     text-align: left;
 
     white-space: nowrap;
+
+    font-size: 14px;
 }
 
 table th {
     background: #080022;
 
     color: white;
+
+    font-weight: bold;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1;
 }
 
 table tr:nth-child(even) {
     background: #f5f5f5;
+}
+
+table tr:hover {
+    background: #eeeeee;
 }
 
 
@@ -231,6 +318,8 @@ table tr:nth-child(even) {
     display: inline-block;
 
     cursor: pointer;
+
+    font-size: 13px;
 }
 
 .resume-link:hover {
@@ -256,6 +345,8 @@ table tr:nth-child(even) {
     display: inline-block;
 
     cursor: pointer;
+
+    font-size: 13px;
 }
 
 .photo-link:hover {
@@ -281,6 +372,112 @@ table tr:nth-child(even) {
     cursor: pointer;
 
     margin-bottom: 20px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.close-list:hover {
+    background: #333;
+}
+
+
+/* =========================
+   TABLE SCROLLBAR
+========================= */
+
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #eeeeee;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #080022;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 12px 20px;
+    }
+
+    .logo {
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 48px;
+    }
+
+    .collage-name {
+        font-size: 17px;
+    }
+
+    .logout {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    .container h1 {
+        font-size: 27px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card h3 {
+        font-size: 17px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .list-section {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .list-section h2 {
+        font-size: 21px;
+    }
+
 }
 
 
@@ -288,32 +485,191 @@ table tr:nth-child(even) {
    MOBILE
 ========================= */
 
-@media(max-width: 1000px) {
+@media (max-width: 600px) {
+
+    .header {
+        padding: 10px 15px;
+
+        min-height: 70px;
+    }
+
+    .logo {
+        gap: 8px;
+        max-width: calc(100% - 90px);
+    }
+
+    .logo img {
+        width: 55px;
+        height: 42px;
+    }
+
+    .collage-name {
+        font-size: 14px;
+
+        line-height: 1.25;
+    }
+
+    .logout {
+        padding: 8px 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* CONTAINER */
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .container h1 {
+        font-size: 23px;
+
+        line-height: 1.3;
+    }
+
+    .container > p {
+        font-size: 14px;
+    }
+
+
+    /* CARDS */
 
     .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+
+        margin-bottom: 15px;
+    }
+
+    .card button {
+        width: 100%;
+
+        padding: 11px;
+
+        font-size: 14px;
+    }
+
+
+    /* LIST */
+
+    .list-section {
+        padding: 15px;
+
+        margin-top: 25px;
+
+        border-radius: 8px;
+    }
+
+    .list-section h2 {
+        font-size: 19px;
+
+        line-height: 1.4;
+
+        margin-bottom: 15px;
+    }
+
+
+    /* TABLE */
+
+    .table-container {
+        width: 100%;
+
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* BUTTONS */
+
+    .close-list {
+        padding: 8px 14px;
+
+        font-size: 13px;
     }
 
 }
 
-@media(max-width: 600px) {
 
-    .cards {
-        grid-template-columns: 1fr;
-    }
+/* =========================
+   VERY SMALL MOBILE
+========================= */
 
-    .container {
-        padding: 20px;
-    }
+@media (max-width: 400px) {
 
     .header {
-        padding: 12px 20px;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 38px;
     }
 
     .collage-name {
-        font-size: 16px;
+        font-size: 12px;
     }
 
+    .logout {
+        padding: 7px 9px;
+
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 15px 10px;
+    }
+
+    .container h1 {
+        font-size: 21px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .list-section {
+        padding: 12px;
+    }
+
+}
+
+
+/* =========================
+   LOADING TEXT
+========================= */
+
+.table-container p {
+    color: #666;
+
+    padding: 10px 0;
+
+    line-height: 1.6;
 }
 
 </style>
@@ -500,16 +856,12 @@ table tr:nth-child(even) {
 
 
 
-    <!-- =========================
-         COMPLAINTS LIST
-    ========================= -->
+    <!-- COMPLAINTS -->
 
     <div id="complaints"
          class="list-section">
 
-        <h2>
-            📢 Student Complaints
-        </h2>
+        <h2>📢 Student Complaints</h2>
 
         <button
             class="close-list"
@@ -531,16 +883,12 @@ table tr:nth-child(even) {
 
 
 
-    <!-- =========================
-         SUBSCRIBERS LIST
-    ========================= -->
+    <!-- SUBSCRIBERS -->
 
     <div id="subscribers"
          class="list-section">
 
-        <h2>
-            📧 Website Subscribers
-        </h2>
+        <h2>📧 Website Subscribers</h2>
 
         <button
             class="close-list"
@@ -562,16 +910,12 @@ table tr:nth-child(even) {
 
 
 
-    <!-- =========================
-         ADMISSIONS LIST
-    ========================= -->
+    <!-- ADMISSIONS -->
 
     <div id="admissions"
          class="list-section">
 
-        <h2>
-            📝 Admission Information
-        </h2>
+        <h2>📝 Admission Information</h2>
 
         <button
             class="close-list"
@@ -593,16 +937,12 @@ table tr:nth-child(even) {
 
 
 
-    <!-- =========================
-         CONTACTS LIST
-    ========================= -->
+    <!-- CONTACTS -->
 
     <div id="contacts"
          class="list-section">
 
-        <h2>
-            📞 Contact Messages
-        </h2>
+        <h2>📞 Contact Messages</h2>
 
         <button
             class="close-list"
@@ -624,16 +964,12 @@ table tr:nth-child(even) {
 
 
 
-    <!-- =========================
-         FEES LIST
-    ========================= -->
+    <!-- FEES -->
 
     <div id="fees"
          class="list-section">
 
-        <h2>
-            💳 Student Fees Payment
-        </h2>
+        <h2>💳 Student Fees Payment</h2>
 
         <button
             class="close-list"
@@ -655,16 +991,12 @@ table tr:nth-child(even) {
 
 
 
-    <!-- =========================
-         CAREERS LIST
-    ========================= -->
+    <!-- CAREERS -->
 
     <div id="careers"
          class="list-section">
 
-        <h2>
-            💼 Career Applications
-        </h2>
+        <h2>💼 Career Applications</h2>
 
         <button
             class="close-list"
@@ -691,14 +1023,12 @@ table tr:nth-child(even) {
 
 <script>
 
-
 /* =====================================
    GOOGLE APPS SCRIPT URL
 ===================================== */
 
 const GOOGLE_SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbxYouPIOdGb-C0WQutBGNDucWCB3Elk9ZQM_-D3Vt59sXx0drTuO1wT-_QQkgnjwFNJnA/exec";
-
 
 
 /* =====================================
@@ -710,7 +1040,6 @@ function logout() {
     window.location.href = "index.html";
 
 }
-
 
 
 /* =====================================
@@ -801,6 +1130,15 @@ async function showList(type) {
         );
 
 
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP Error: " + response.status
+            );
+
+        }
+
+
         const result =
             await response.json();
 
@@ -815,7 +1153,8 @@ async function showList(type) {
                 "<p style='color:red;'>" +
 
                 escapeHtml(
-                    result.message
+                    result.message ||
+                    "Data load failed."
                 ) +
 
                 "</p>";
@@ -838,7 +1177,10 @@ async function showList(type) {
 
     catch (error) {
 
-        console.error(error);
+        console.error(
+            "Dashboard Error:",
+            error
+        );
 
         tableContainer.innerHTML =
 
@@ -846,30 +1188,41 @@ async function showList(type) {
 
             "Data load nahi ho raha ❌" +
 
-            "</p>";
+            "<br><small>" +
+
+            escapeHtml(
+                error.message
+            ) +
+
+            "</small></p>";
 
     }
 
 
     list.scrollIntoView({
 
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
 
     });
 
 }
 
 
-
 /* =====================================
    CREATE TABLE
 ===================================== */
 
-function createTable(container, headers, rows) {
+function createTable(
+    container,
+    headers,
+    rows
+) {
 
-
-    if (!headers ||
-        headers.length === 0) {
+    if (
+        !headers ||
+        headers.length === 0
+    ) {
 
         container.innerHTML =
             "<p>No data available.</p>";
@@ -879,8 +1232,10 @@ function createTable(container, headers, rows) {
     }
 
 
-    if (!rows ||
-        rows.length === 0) {
+    if (
+        !rows ||
+        rows.length === 0
+    ) {
 
         container.innerHTML =
             "<p>No records available.</p>";
@@ -893,9 +1248,7 @@ function createTable(container, headers, rows) {
     let html = "<table>";
 
 
-    /* =========================
-       TABLE HEADER
-    ========================= */
+    /* TABLE HEADER */
 
     html += "<thead><tr>";
 
@@ -918,9 +1271,7 @@ function createTable(container, headers, rows) {
     html += "</tr></thead>";
 
 
-    /* =========================
-       TABLE DATA
-    ========================= */
+    /* TABLE DATA */
 
     html += "<tbody>";
 
@@ -930,175 +1281,181 @@ function createTable(container, headers, rows) {
         html += "<tr>";
 
 
-        headers.forEach(function(header, index) {
+        headers.forEach(
+            function(header, index) {
+
+                let value =
+                    row[index];
 
 
-            let value = row[index];
+                if (
+                    value === null ||
+                    value === undefined
+                ) {
+
+                    value = "";
+
+                }
 
 
-            if (
-                value === null ||
-                value === undefined
-            ) {
+                let headerName =
+                    String(header)
+                        .trim()
+                        .toLowerCase();
 
-                value = "";
+
+                let valueString =
+                    String(value)
+                        .trim();
+
+
+                /* =========================
+                   RESUME
+                ========================= */
+
+                if (
+                    headerName === "resume" &&
+                    valueString.startsWith("http")
+                ) {
+
+                    html +=
+
+                        "<td>" +
+
+                        "<a class='resume-link' " +
+
+                        "href='" +
+
+                        escapeHtml(
+                            valueString
+                        ) +
+
+                        "' " +
+
+                        "target='_blank' " +
+
+                        "rel='noopener noreferrer'>" +
+
+                        "📄 View Resume" +
+
+                        "</a>" +
+
+                        "</td>";
+
+                }
+
+
+                /* =========================
+                   PHOTO / IMAGE
+                ========================= */
+
+                else if (
+
+                    (
+                        headerName === "photo" ||
+                        headerName === "image" ||
+                        headerName === "photo url" ||
+                        headerName === "image url"
+                    )
+
+                    &&
+
+                    valueString.startsWith("http")
+
+                ) {
+
+                    html +=
+
+                        "<td>" +
+
+                        "<a class='photo-link' " +
+
+                        "href='" +
+
+                        escapeHtml(
+                            valueString
+                        ) +
+
+                        "' " +
+
+                        "target='_blank' " +
+
+                        "rel='noopener noreferrer'>" +
+
+                        "🖼️ View Photo" +
+
+                        "</a>" +
+
+                        "</td>";
+
+                }
+
+
+                /* =========================
+                   GOOGLE DRIVE / DOCS
+                ========================= */
+
+                else if (
+
+                    valueString.startsWith(
+                        "https://drive.google.com"
+                    )
+
+                    ||
+
+                    valueString.startsWith(
+                        "https://docs.google.com"
+                    )
+
+                ) {
+
+                    html +=
+
+                        "<td>" +
+
+                        "<a class='resume-link' " +
+
+                        "href='" +
+
+                        escapeHtml(
+                            valueString
+                        ) +
+
+                        "' " +
+
+                        "target='_blank' " +
+
+                        "rel='noopener noreferrer'>" +
+
+                        "🔗 Open File" +
+
+                        "</a>" +
+
+                        "</td>";
+
+                }
+
+
+                /* =========================
+                   NORMAL DATA
+                ========================= */
+
+                else {
+
+                    html +=
+
+                        "<td>" +
+
+                        escapeHtml(
+                            valueString
+                        ) +
+
+                        "</td>";
+
+                }
 
             }
-
-
-            let headerName =
-                String(header)
-                    .trim()
-                    .toLowerCase();
-
-
-            let valueString =
-                String(value)
-                    .trim();
-
-
-
-            /* =========================
-               RESUME LINK
-            ========================= */
-
-            if (
-                headerName === "resume" &&
-                valueString.startsWith("http")
-            ) {
-
-                html +=
-
-                    "<td>" +
-
-                    "<a class='resume-link' " +
-
-                    "href='" +
-
-                    escapeHtml(
-                        valueString
-                    ) +
-
-                    "' " +
-
-                    "target='_blank' " +
-
-                    "rel='noopener noreferrer'>" +
-
-                    "📄 View Resume" +
-
-                    "</a>" +
-
-                    "</td>";
-
-            }
-
-
-
-            /* =========================
-               PHOTO / IMAGE
-            ========================= */
-
-            else if (
-                (
-                    headerName === "photo" ||
-                    headerName === "image" ||
-                    headerName === "photo url" ||
-                    headerName === "image url"
-                )
-                &&
-                valueString.startsWith("http")
-            ) {
-
-                html +=
-
-                    "<td>" +
-
-                    "<a class='photo-link' " +
-
-                    "href='" +
-
-                    escapeHtml(
-                        valueString
-                    ) +
-
-                    "' " +
-
-                    "target='_blank' " +
-
-                    "rel='noopener noreferrer'>" +
-
-                    "🖼️ View Photo" +
-
-                    "</a>" +
-
-                    "</td>";
-
-            }
-
-
-
-            /* =========================
-               GOOGLE DRIVE / DOCS LINK
-            ========================= */
-
-            else if (
-                valueString.startsWith(
-                    "https://drive.google.com"
-                )
-                ||
-                valueString.startsWith(
-                    "https://docs.google.com"
-                )
-            ) {
-
-                html +=
-
-                    "<td>" +
-
-                    "<a class='resume-link' " +
-
-                    "href='" +
-
-                    escapeHtml(
-                        valueString
-                    ) +
-
-                    "' " +
-
-                    "target='_blank' " +
-
-                    "rel='noopener noreferrer'>" +
-
-                    "🔗 Open File" +
-
-                    "</a>" +
-
-                    "</td>";
-
-            }
-
-
-
-            /* =========================
-               NORMAL DATA
-            ========================= */
-
-            else {
-
-                html +=
-
-                    "<td>" +
-
-                    escapeHtml(
-                        valueString
-                    ) +
-
-                    "</td>";
-
-            }
-
-        });
+        );
 
 
         html += "</tr>";
@@ -1116,14 +1473,13 @@ function createTable(container, headers, rows) {
 }
 
 
-
 /* =====================================
    SECURITY
 ===================================== */
 
 function escapeHtml(text) {
 
-    return text
+    return String(text)
 
         .replace(
             /&/g,
@@ -1153,7 +1509,6 @@ function escapeHtml(text) {
 }
 
 
-
 /* =====================================
    CLOSE LISTS
 ===================================== */
@@ -1176,10 +1531,10 @@ function closeLists() {
 
 }
 
-
 </script>
 
 
 </body>
 
 </html>
+
