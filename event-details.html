@@ -7,116 +7,235 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Event Details - Maria's Podar Learn School Nilanga(CBSE)</title>
+    <title>Event Details | Maria's Podar Learn School Nilanga(CBSE)</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    <!-- Favicon -->
     <link rel="shortcut icon"
           href="Image/Logo.jpeg"
           type="image/png">
 
 
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         EVENT DETAILS CSS
+    ====================================================== -->
+
     <style>
 
-        /* ================= EVENT DETAILS ================= */
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+
+
+        /* =====================================================
+           EVENT DETAILS HERO
+        ===================================================== */
 
         .event-details-page {
 
-            min-height: 100vh;
+            position: relative;
 
-            padding: 80px 20px;
+            width: 100%;
+            min-height: 650px;
 
-            background:
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 90px 20px;
+
+            background-image:
+
                 linear-gradient(
-                    rgba(0,0,0,0.65),
-                    rgba(0,0,0,0.65)
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.68)
                 ),
+
                 url("Image/Image.png");
 
             background-size: cover;
+
             background-position: center;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
+            background-repeat: no-repeat;
         }
 
+
+
+        /* =====================================================
+           EVENT CONTAINER
+        ===================================================== */
 
         .event-details-container {
 
-            width: 100%;
-            max-width: 900px;
+            position: relative;
 
-            background: white;
+            width: 90%;
 
-            border-radius: 15px;
+            max-width: 950px;
 
-            padding: 40px;
+            padding: 50px 45px;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            border-radius: 18px;
+
+            text-align: center;
 
             box-shadow:
-                0 10px 35px rgba(0,0,0,0.25);
-
+                0 15px 40px rgba(0,0,0,0.25);
         }
 
+
+
+        /* =====================================================
+           EVENT ICON
+        ===================================================== */
 
         .event-details-icon {
 
-            text-align: center;
+            width: 105px;
+            height: 105px;
 
-            font-size: 65px;
+            margin: 0 auto 20px;
 
-            margin-bottom: 10px;
+            display: flex;
 
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f39c12;
+
+            font-size: 50px;
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.15);
         }
 
 
-        .event-details-container h1 {
 
-            text-align: center;
-
-            font-size: 38px;
-
-            margin-bottom: 12px;
-
-        }
-
+        /* =====================================================
+           EVENT CATEGORY
+        ===================================================== */
 
         .event-category {
 
-            text-align: center;
+            display: inline-block;
 
-            font-size: 15px;
+            padding: 8px 20px;
 
-            font-weight: bold;
+            margin-bottom: 15px;
 
-            text-transform: uppercase;
+            border-radius: 30px;
 
-            margin-bottom: 25px;
+            background: #122b49;
 
-            color: #f93;
+            color: #ffffff;
 
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
         }
 
 
+
+        /* =====================================================
+           EVENT TITLE
+        ===================================================== */
+
+        .event-details-container h1 {
+
+            margin: 5px 0 15px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 40px;
+
+            line-height: 1.3;
+
+            font-weight: 700;
+
+            color: #122b49;
+        }
+
+
+
+        /* =====================================================
+           DESCRIPTION
+        ===================================================== */
+
         .event-description {
+
+            max-width: 760px;
+
+            margin: 0 auto 35px;
+
+            font-family: 'Quicksand', sans-serif;
 
             font-size: 17px;
 
             line-height: 1.8;
 
-            margin-bottom: 25px;
-
-            text-align: center;
-
-            color: #555;
-
+            color: #555555;
         }
 
+
+
+        /* =====================================================
+           EVENT INFORMATION
+        ===================================================== */
 
         .event-info-box {
 
@@ -127,89 +246,190 @@
 
             gap: 20px;
 
-            margin: 25px 0;
-
+            margin-top: 30px;
         }
+
 
 
         .event-info {
 
-            padding: 20px;
+            display: flex;
 
-            border-radius: 10px;
+            align-items: center;
 
-            background: #f5f5f5;
+            gap: 17px;
 
+            padding: 22px;
+
+            text-align: left;
+
+            background: #f7f9fc;
+
+            border-radius: 12px;
+
+            border: 1px solid #e7e7e7;
+
+            transition: 0.3s ease;
         }
+
+
+
+        .event-info:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.10);
+        }
+
+
+
+        .event-info-icon {
+
+            flex-shrink: 0;
+
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #122b49;
+
+            color: #ffffff;
+
+            font-size: 21px;
+        }
+
 
 
         .event-info h3 {
 
-            margin-bottom: 8px;
+            margin: 0 0 6px;
+
+            font-family: 'Poppins', sans-serif;
 
             font-size: 18px;
 
+            color: #122b49;
         }
+
 
 
         .event-info p {
 
             margin: 0;
 
-            font-size: 16px;
+            font-family: 'Quicksand', sans-serif;
 
-            color: #555;
+            font-size: 15px;
 
+            color: #555555;
         }
+
+
+
+        /* =====================================================
+           BACK BUTTON
+        ===================================================== */
+
+        .event-back-wrapper {
+
+            margin-top: 35px;
+        }
+
 
 
         .back-events {
 
-            display: block;
+            display: inline-flex;
 
-            width: fit-content;
+            align-items: center;
 
-            margin: 30px auto 0;
+            gap: 10px;
 
-            padding: 12px 25px;
+            padding: 13px 25px;
 
-            border-radius: 6px;
+            border-radius: 30px;
+
+            background: #f39c12;
+
+            color: #ffffff;
 
             text-decoration: none;
 
-            background: #333;
+            font-family: 'Poppins', sans-serif;
 
-            color: white;
+            font-size: 15px;
 
-            font-weight: bold;
+            font-weight: 600;
 
-            transition: 0.3s;
-
+            transition: 0.3s ease;
         }
+
 
 
         .back-events:hover {
 
-            transform: translateY(-3px);
+            background: #122b49;
 
-            opacity: 0.9;
-
+            transform: translateY(-2px);
         }
 
 
-        @media(max-width: 600px) {
+
+        /* =====================================================
+           EVENT MOBILE 768px
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .event-details-page {
+
+                min-height: 550px;
+
+                padding: 60px 15px;
+
+                background-position: center;
+
+                background-attachment: scroll;
+            }
+
 
             .event-details-container {
 
-                padding: 25px 20px;
+                width: 94%;
 
+                padding: 38px 25px;
+
+                border-radius: 15px;
+            }
+
+
+            .event-details-icon {
+
+                width: 85px;
+                height: 85px;
+
+                font-size: 40px;
             }
 
 
             .event-details-container h1 {
 
-                font-size: 28px;
+                font-size: 31px;
+            }
 
+
+            .event-description {
+
+                font-size: 15px;
+
+                line-height: 1.7;
             }
 
 
@@ -217,6 +437,144 @@
 
                 grid-template-columns: 1fr;
 
+                gap: 15px;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           EVENT MOBILE 480px
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            html,
+            body {
+
+                width: 100%;
+
+                max-width: 100%;
+
+                overflow-x: hidden;
+            }
+
+
+            .event-details-page {
+
+                min-height: 500px;
+
+                padding: 40px 10px;
+            }
+
+
+            .event-details-container {
+
+                width: 96%;
+
+                padding: 30px 17px;
+            }
+
+
+            .event-details-icon {
+
+                width: 75px;
+                height: 75px;
+
+                font-size: 35px;
+
+                margin-bottom: 15px;
+            }
+
+
+            .event-category {
+
+                padding: 7px 15px;
+
+                font-size: 11px;
+            }
+
+
+            .event-details-container h1 {
+
+                font-size: 24px;
+
+                line-height: 1.35;
+            }
+
+
+            .event-description {
+
+                font-size: 14px;
+
+                line-height: 1.7;
+
+                margin-bottom: 25px;
+            }
+
+
+            .event-info {
+
+                padding: 16px;
+
+                gap: 12px;
+            }
+
+
+            .event-info-icon {
+
+                width: 45px;
+                height: 45px;
+
+                font-size: 17px;
+            }
+
+
+            .event-info h3 {
+
+                font-size: 15px;
+            }
+
+
+            .event-info p {
+
+                font-size: 13px;
+            }
+
+
+            .back-events {
+
+                padding: 11px 18px;
+
+                font-size: 13px;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           EVENT MOBILE 360px
+        ===================================================== */
+
+        @media (max-width: 360px) {
+
+            .event-details-container {
+
+                padding: 25px 13px;
+            }
+
+
+            .event-details-container h1 {
+
+                font-size: 21px;
+            }
+
+
+            .event-description {
+
+                font-size: 13px;
             }
 
         }
@@ -226,22 +584,25 @@
 </head>
 
 
+
 <body>
 
 
+
 <!-- =====================================================
-                     HEADER START
+     HEADER - SAME AS ABOUT PAGE
 ===================================================== -->
 
 <header class="header">
 
 
+    <!-- LOGO -->
+
     <a href="index.html" class="logo">
 
 
         <img src="Image/Logo.jpeg"
-             alt="School logo"
-             style="width:80px; height:55px;">
+             alt="Maria's Podar Learn School Logo">
 
 
         <div class="collage-name">
@@ -255,7 +616,9 @@
 
 
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- =================================================
+         NAVBAR
+    ================================================== -->
 
     <nav class="navbar">
 
@@ -263,9 +626,11 @@
         <div id="close-navbar"
              class="close-icon">
 
+
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="close">
+                 alt="Close Menu">
+
 
         </div>
 
@@ -276,59 +641,62 @@
 
             <!-- HOME -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="index.html">
-
                     Home
-
                 </a>
 
             </li>
 
 
 
-            <!-- COURSE -->
+            <!-- =================================================
+                 COURSE
+            ================================================== -->
 
             <li class="navbar-dropdown">
 
-                <a href="#">
+
+                <a href="#"
+                   class="course-main-link">
 
                     Course
 
                 </a>
 
 
+
                 <div class="dropdown">
+
 
                     <ul>
 
 
-                        <!-- PRIMARY -->
+                        <!-- PRIMARY GROUP -->
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Primary Group
 
                                 <span class="arrow">
-
                                     ›
-
                                 </span>
 
                             </a>
 
 
+
                             <ul class="dropdown2">
+
 
                                 <li>
 
                                     <a href="nursery.html">
-
                                         Nursery to UKG
-
                                     </a>
 
                                 </li>
@@ -337,44 +705,43 @@
                                 <li>
 
                                     <a href="class-1-5.html">
-
                                         Class 1st to 5th
-
                                     </a>
 
                                 </li>
 
+
                             </ul>
+
 
                         </li>
 
 
 
-                        <!-- SECONDARY -->
+                        <!-- SECONDARY GROUP -->
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Secondary Group
 
                                 <span class="arrow">
-
                                     ›
-
                                 </span>
 
                             </a>
 
 
+
                             <ul class="dropdown2">
+
 
                                 <li>
 
                                     <a href="class-6-8.html">
-
                                         Class 6th to 8th
-
                                     </a>
 
                                 </li>
@@ -383,20 +750,23 @@
                                 <li>
 
                                     <a href="class-9-10.html">
-
                                         Class 9th to 10th
-
                                     </a>
 
                                 </li>
 
+
                             </ul>
+
 
                         </li>
 
+
                     </ul>
 
+
                 </div>
+
 
             </li>
 
@@ -404,10 +774,9 @@
 
             <!-- ADMISSIONS -->
 
-            <li class="navbar-dropdown">
+            <li>
 
-                <a href="admission-form.html"
-                   target="_blank">
+                <a href="admission-form.html">
 
                     Admissions
 
@@ -419,12 +788,10 @@
 
             <!-- CAREERS -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="careers.html">
-
                     Careers
-
                 </a>
 
             </li>
@@ -433,12 +800,10 @@
 
             <!-- CONTACT -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="contact-us.html">
-
                     Contact us
-
                 </a>
 
             </li>
@@ -446,28 +811,32 @@
 
         </ul>
 
+
     </nav>
 
 
 
-    <!-- ================= HEADER ICONS ================= -->
+    <!-- =================================================
+         HEADER ICONS
+    ================================================== -->
 
     <div class="icons">
 
 
-        <!-- LOGIN -->
+        <!-- ACCOUNT -->
 
         <div id="account-btn"
-             class="header-icon"
-             style="cursor:pointer;">
+             class="header-icon">
+
 
             <img src="Image/avatar-icon.svg"
                  alt="Login">
 
+
             <img src="Image/avatar-icon-hover.gif"
                  alt="Login"
-                 width="10"
                  class="header-icon-hover">
+
 
         </div>
 
@@ -478,13 +847,15 @@
         <div id="menu-btn"
              class="header-icon">
 
+
             <img src="Image/menu-icon.svg"
-                 alt="menu">
+                 alt="Menu">
+
 
             <img src="Image/menu-icon-hover.gif"
-                 alt="menu"
-                 width="30"
+                 alt="Menu"
                  class="header-icon-hover">
+
 
         </div>
 
@@ -495,14 +866,9 @@
 </header>
 
 
-<!-- =====================================================
-                     HEADER END
-===================================================== -->
-
-
 
 <!-- =====================================================
-                 LOGIN FORM START
+     ADMIN LOGIN
 ===================================================== -->
 
 <div class="account-form"
@@ -510,25 +876,30 @@
 
 
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
+         class="close-icon">
+
 
         <img src="Image/close-icon.gif"
              alt="Close"
              width="50">
 
+
     </div>
+
 
 
     <div class="buttons">
 
+
         <span class="btn active login-btn">
 
-            Login
+            Admin Login
 
         </span>
 
+
     </div>
+
 
 
     <form class="login-form active"
@@ -536,39 +907,37 @@
 
 
         <h3>
-
-            Login Now
-
+            Admin Login
         </h3>
 
 
-        <input
-            type="email"
-            id="loginEmail"
-            placeholder="Enter your email"
-            class="box"
-            required>
+        <input type="email"
+               id="loginEmail"
+               placeholder="Enter your email"
+               class="box"
+               autocomplete="email"
+               required>
 
 
-        <input
-            type="password"
-            id="loginPassword"
-            placeholder="Enter your password"
-            class="box"
-            required>
+        <input type="password"
+               id="loginPassword"
+               placeholder="Enter your password"
+               class="box"
+               autocomplete="current-password"
+               required>
 
 
         <div class="flex">
 
-            <input
-                type="checkbox"
-                id="remember-me">
+
+            <input type="checkbox"
+                   id="remember-me">
+
 
             <label for="remember-me">
-
                 Remember Me
-
             </label>
+
 
         </div>
 
@@ -577,7 +946,7 @@
 
 
         <button type="submit"
-                class="btn">
+                class="btn login-submit">
 
             Login Now
 
@@ -586,17 +955,13 @@
 
     </form>
 
+
 </div>
 
 
-<!-- =====================================================
-                  LOGIN FORM END
-===================================================== -->
-
-
 
 <!-- =====================================================
-                  EVENT DETAILS START
+     EVENT DETAILS
 ===================================================== -->
 
 <section class="event-details-page">
@@ -605,18 +970,29 @@
     <div class="event-details-container">
 
 
-        <!-- ICON -->
+        <!-- EVENT ICON -->
 
         <div class="event-details-icon"
              id="eventIcon">
 
-            🎓
+            🎉
 
         </div>
 
 
 
-        <!-- TITLE -->
+        <!-- EVENT CATEGORY -->
+
+        <div class="event-category"
+             id="eventCategory">
+
+            SCHOOL EVENT
+
+        </div>
+
+
+
+        <!-- EVENT TITLE -->
 
         <h1 id="eventTitle">
 
@@ -626,100 +1002,99 @@
 
 
 
-        <!-- CATEGORY -->
-
-        <div class="event-category"
-             id="eventCategory">
-
-            School Event
-
-        </div>
-
-
-
         <!-- DESCRIPTION -->
 
         <p class="event-description"
            id="eventDescription">
 
-            Event information will appear here.
+            Welcome to Maria's Podar Learn School.
 
         </p>
 
 
 
-        <!-- INFORMATION -->
+        <!-- EVENT INFORMATION -->
 
         <div class="event-info-box">
 
 
+            <!-- INFORMATION 1 -->
+
             <div class="event-info">
 
-                <h3>
 
-                    🕘 Time
+                <div class="event-info-icon">
 
-                </h3>
 
-                <p id="eventTime">
+                    <i class="fas fa-clock"
+                       id="infoIcon1">
+                    </i>
 
-                    --
 
-                </p>
+                </div>
+
+
+
+                <div>
+
+
+                    <h3 id="infoTitle1">
+
+                        Time
+
+                    </h3>
+
+
+                    <p id="eventInfo1">
+
+                        School Schedule
+
+                    </p>
+
+
+                </div>
+
 
             </div>
 
 
 
-            <div class="event-info">
-
-                <h3>
-
-                    🎓 Category
-
-                </h3>
-
-                <p id="eventType">
-
-                    --
-
-                </p>
-
-            </div>
-
-
+            <!-- INFORMATION 2 -->
 
             <div class="event-info">
 
-                <h3>
 
-                    📍 Venue
+                <div class="event-info-icon">
 
-                </h3>
 
-                <p>
+                    <i class="fas fa-graduation-cap"
+                       id="infoIcon2">
+                    </i>
 
-                    School Campus
 
-                </p>
-
-            </div>
+                </div>
 
 
 
-            <div class="event-info">
+                <div>
 
-                <h3>
 
-                    👨‍🎓 Participants
+                    <h3 id="infoTitle2">
 
-                </h3>
+                        Category
 
-                <p>
+                    </h3>
 
-                    Students
 
-                </p>
+                    <p id="eventInfo2">
+
+                        School Event
+
+                    </p>
+
+
+                </div>
+
 
             </div>
 
@@ -728,14 +1103,25 @@
 
 
 
-        <!-- BACK BUTTON -->
+        <!-- BACK TO EVENTS -->
 
-        <a href="events.html"
-           class="back-events">
+        <div class="event-back-wrapper">
 
-            ← Back to Events
 
-        </a>
+            <a href="events.html"
+               class="back-events">
+
+
+                <i class="fas fa-arrow-left"></i>
+
+
+                Back to Events
+
+
+            </a>
+
+
+        </div>
 
 
     </div>
@@ -744,28 +1130,24 @@
 </section>
 
 
-<!-- =====================================================
-                  EVENT DETAILS END
-===================================================== -->
-
-
 
 <!-- =====================================================
-                     FOOTER START
+     FOOTER - SAME STRUCTURE AS ABOUT PAGE
 ===================================================== -->
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+<footer>
 
 
     <div class="content">
 
 
-        <!-- TOP -->
+        <!-- TOP FOOTER -->
 
         <div class="top">
 
 
             <div class="logo-details">
+
 
                 <span>
 
@@ -773,33 +1155,42 @@
 
                 </span>
 
+
             </div>
 
 
 
-            <!-- SOCIAL ICONS -->
+            <!-- SOCIAL MEDIA -->
 
             <div class="media-icons">
 
 
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
+
                 <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
                 </a>
+
 
 
                 <a href="#">
@@ -809,8 +1200,10 @@
                 </a>
 
 
+
                 <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
@@ -824,7 +1217,7 @@
 
 
 
-        <!-- LINK BOXES -->
+        <!-- FOOTER LINKS -->
 
         <div class="link-boxes">
 
@@ -833,19 +1226,16 @@
 
             <ul class="box">
 
+
                 <li class="link_name">
-
                     About
-
                 </li>
 
 
                 <li>
 
                     <a href="index.html">
-
                         Home
-
                     </a>
 
                 </li>
@@ -854,9 +1244,7 @@
                 <li>
 
                     <a href="contact-us.html">
-
                         Contact us
-
                     </a>
 
                 </li>
@@ -865,12 +1253,11 @@
                 <li>
 
                     <a href="About-us.html">
-
                         About us
-
                     </a>
 
                 </li>
+
 
             </ul>
 
@@ -880,19 +1267,16 @@
 
             <ul class="box">
 
+
                 <li class="link_name">
-
                     Quick Links
-
                 </li>
 
 
                 <li>
 
                     <a href="admission-form.html">
-
                         Admission Form
-
                     </a>
 
                 </li>
@@ -901,9 +1285,7 @@
                 <li>
 
                     <a href="index.html#notice-board">
-
                         Notice Board
-
                     </a>
 
                 </li>
@@ -912,34 +1294,30 @@
                 <li>
 
                     <a href="index.html">
-
                         School Site
-
                     </a>
 
                 </li>
+
 
             </ul>
 
 
 
-            <!-- STUDENT CORNER -->
+            <!-- STUDENT -->
 
             <ul class="box">
 
+
                 <li class="link_name">
-
                     Student's Corner
-
                 </li>
 
 
                 <li>
 
                     <a href="fees-payment.html">
-
                         Fees Payment
-
                     </a>
 
                 </li>
@@ -948,9 +1326,7 @@
                 <li>
 
                     <a href="complaint.html">
-
                         Complaint Section
-
                     </a>
 
                 </li>
@@ -959,12 +1335,11 @@
                 <li>
 
                     <a href="careers.html">
-
                         Careers
-
                     </a>
 
                 </li>
+
 
             </ul>
 
@@ -974,10 +1349,9 @@
 
             <ul class="box">
 
+
                 <li class="link_name">
-
                     Account
-
                 </li>
 
 
@@ -996,9 +1370,7 @@
                 <li>
 
                     <a href="events.html">
-
                         Events
-
                     </a>
 
                 </li>
@@ -1007,12 +1379,11 @@
                 <li>
 
                     <a href="gallery.html">
-
                         Gallery
-
                     </a>
 
                 </li>
+
 
             </ul>
 
@@ -1022,39 +1393,45 @@
 
             <ul class="box input-box">
 
+
                 <li class="link_name">
-
                     Subscribe
+                </li>
+
+
+                <li>
+
+
+                    <input type="email"
+                           id="subscribeEmail"
+                           placeholder="Enter your email">
+
 
                 </li>
 
 
                 <li>
 
-                    <input
-                        type="email"
-                        id="subscribeEmail"
-                        placeholder="Enter your email"
-                        required>
+
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
+
 
                 </li>
 
 
                 <li>
 
-                    <input
-                        type="button"
-                        value="Subscribe"
-                        onclick="subscribeUser()">
-
-                </li>
-
-
-                <li>
 
                     <p id="subscribeMessage"></p>
 
+
                 </li>
+
 
             </ul>
 
@@ -1068,118 +1445,19 @@
 </footer>
 
 
-<!-- =====================================================
-                      FOOTER END
-===================================================== -->
-
-
 
 <!-- =====================================================
-                    SUBSCRIBE SCRIPT
+     TIDIO
 ===================================================== -->
 
-<script>
-
-function subscribeUser() {
-
-
-    const email =
-        document.getElementById("subscribeEmail")
-        .value.trim();
-
-
-    const message =
-        document.getElementById("subscribeMessage");
-
-
-    if (email === "") {
-
-        message.innerHTML =
-            "Please enter your email.";
-
-        message.style.color =
-            "red";
-
-        return;
-
-    }
-
-
-    if (!email.includes("@") ||
-        !email.includes(".")) {
-
-        message.innerHTML =
-            "Please enter a valid email.";
-
-        message.style.color =
-            "red";
-
-        return;
-
-    }
-
-
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
-
-
-    message.innerHTML =
-        "Submitting...";
-
-
-    message.style.color =
-        "white";
-
-
-    fetch(scriptURL, {
-
-        method: "POST",
-
-        body: new URLSearchParams({
-
-            email: email
-
-        })
-
-    })
-
-
-    .then(() => {
-
-        message.innerHTML =
-            "Thank you for subscribing! 😊";
-
-        message.style.color =
-            "lightgreen";
-
-
-        document.getElementById(
-            "subscribeEmail"
-        ).value = "";
-
-    })
-
-
-    .catch((error) => {
-
-        console.error(error);
-
-        message.innerHTML =
-            "Something went wrong. Please try again.";
-
-        message.style.color =
-            "red";
-
-    });
-
-}
-
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
 </script>
 
 
 
 <!-- =====================================================
-                      MAIN JS
+     MAIN JS
 ===================================================== -->
 
 <script src="js/script.js"></script>
@@ -1187,118 +1465,171 @@ function subscribeUser() {
 
 
 <!-- =====================================================
-                       EVENT SCRIPT
+     EVENT + LOGIN + SUBSCRIBE JAVASCRIPT
 ===================================================== -->
 
 <script>
+
+
+/* =====================================================
+   EVENT DATA
+===================================================== */
 
 const events = {
 
 
     ganesh: {
 
-        title: "Ganesh Chaturthi",
-
         icon: "🪔",
 
-        category: "Festival",
+        category: "FESTIVAL",
 
-        time: "09:00 AM - 10:00 AM",
-
-        type: "Cultural Event",
+        title: "Ganesh Chaturthi",
 
         description:
-        "Join us as we celebrate Ganesh Chaturthi with devotion, cultural activities and joyful participation by our students."
+            "Join us as we celebrate Ganesh Chaturthi with devotion, cultural activities and joyful participation by our students.",
+
+        infoTitle1: "Time",
+
+        info1: "09:00 AM - 10:00 AM",
+
+        infoIcon1: "fa-clock",
+
+        infoTitle2: "Category",
+
+        info2: "Cultural Event",
+
+        infoIcon2: "fa-masks-theater"
 
     },
 
 
     marathwada: {
 
-        title: "Marathwada Mukti Sangram Din",
-
         icon: "🇮🇳",
 
-        category: "Special Day",
+        category: "SPECIAL DAY",
 
-        time: "07:00 AM - 08:00 AM",
-
-        type: "School Activity",
+        title: "Marathwada Mukti Sangram Din",
 
         description:
-        "A special day observed by the school to remember the historical significance of Marathwada Mukti Sangram."
+            "A special day observed by the school to remember the historical significance of Marathwada Mukti Sangram.",
+
+        infoTitle1: "Time",
+
+        info1: "07:00 AM - 08:00 AM",
+
+        infoIcon1: "fa-clock",
+
+        infoTitle2: "Category",
+
+        info2: "School Activity",
+
+        infoIcon2: "fa-flag"
 
     },
 
 
     exam: {
 
-        title: "Half Yearly Examination",
-
         icon: "📝",
 
-        category: "Academic",
+        category: "ACADEMIC",
 
-        time: "09:00 AM - 02:45 PM",
-
-        type: "Examination",
+        title: "Half Yearly Examination",
 
         description:
-        "Half Yearly Examination is an important academic assessment for students to review their learning and progress."
+            "Half Yearly Examination is an important academic assessment for students to review their learning and progress.",
+
+        infoTitle1: "Time",
+
+        info1: "09:00 AM - 02:45 PM",
+
+        infoIcon1: "fa-clock",
+
+        infoTitle2: "Category",
+
+        info2: "Examination",
+
+        infoIcon2: "fa-book"
 
     },
 
 
     cultural: {
 
-        title: "Cultural Activities",
-
         icon: "🎨",
 
-        category: "Cultural",
+        category: "CULTURAL",
 
-        time: "School Schedule",
-
-        type: "Cultural Program",
+        title: "Cultural Activities",
 
         description:
-        "Students get opportunities to participate in creative and cultural activities that encourage confidence and expression."
+            "Students get opportunities to participate in creative and cultural activities that encourage confidence and expression.",
+
+        infoTitle1: "Activity",
+
+        info1: "Cultural Program",
+
+        infoIcon1: "fa-palette",
+
+        infoTitle2: "Participants",
+
+        info2: "Students",
+
+        infoIcon2: "fa-users"
 
     },
 
 
     sports: {
 
-        title: "Sports Activities",
-
         icon: "🏃",
 
-        category: "Sports",
+        category: "SPORTS",
 
-        time: "School Schedule",
-
-        type: "Sports",
+        title: "Sports Activities",
 
         description:
-        "Sports activities encourage teamwork, discipline, physical fitness and a healthy competitive spirit among students."
+            "Sports activities encourage teamwork, discipline, physical fitness and a healthy competitive spirit among students.",
+
+        infoTitle1: "Activity",
+
+        info1: "Sports",
+
+        infoIcon1: "fa-running",
+
+        infoTitle2: "Participants",
+
+        info2: "Students",
+
+        infoIcon2: "fa-users"
 
     },
 
 
     academic: {
 
-        title: "Academic Activities",
-
         icon: "📖",
 
-        category: "Academic",
+        category: "ACADEMIC",
 
-        time: "School Schedule",
-
-        type: "Academic",
+        title: "Academic Activities",
 
         description:
-        "Various academic activities help students improve their knowledge, creativity, communication and learning skills."
+            "Various academic activities help students improve their knowledge, creativity, communication and learning skills.",
+
+        infoTitle1: "Category",
+
+        info1: "Academic",
+
+        infoIcon1: "fa-book-open",
+
+        infoTitle2: "For",
+
+        info2: "Students",
+
+        infoIcon2: "fa-user-graduate"
 
     }
 
@@ -1306,225 +1637,530 @@ const events = {
 
 
 
-const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-
-const eventName =
-    params.get("event");
-
-
-const event =
-    events[eventName];
-
-
-if (event) {
-
-
-    document.getElementById(
-        "eventIcon"
-    ).textContent = event.icon;
-
-
-    document.getElementById(
-        "eventTitle"
-    ).textContent = event.title;
-
-
-    document.getElementById(
-        "eventCategory"
-    ).textContent = event.category;
-
-
-    document.getElementById(
-        "eventDescription"
-    ).textContent = event.description;
-
-
-    document.getElementById(
-        "eventTime"
-    ).textContent = event.time;
-
-
-    document.getElementById(
-        "eventType"
-    ).textContent = event.type;
-
-}
-
-</script>
-
-
-
-<!-- =====================================================
-                      LOGIN SCRIPT
-===================================================== -->
-
-<script>
+/* =====================================================
+   LOAD EVENT FROM URL
+===================================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
-    function () {
+    function() {
 
 
-        const accountBtn =
-            document.getElementById(
-                "account-btn"
+        const urlParams =
+            new URLSearchParams(
+                window.location.search
             );
 
 
-        const adminLoginLink =
-            document.getElementById(
-                "adminLoginLink"
-            );
+        const eventName =
+            urlParams.get("event");
 
 
-        const accountForm =
-            document.getElementById(
-                "loginAccountForm"
-            );
+        const event =
+            events[eventName];
 
 
-        const closeForm =
-            document.getElementById(
-                "close-form"
-            );
+        if (!event) {
 
-
-        /* HEADER LOGIN */
-
-        if (accountBtn && accountForm) {
-
-            accountBtn.addEventListener(
-                "click",
-                function (e) {
-
-                    e.preventDefault();
-
-                    accountForm.classList.add(
-                        "active"
-                    );
-
-                }
-            );
+            return;
 
         }
 
 
-        /* FOOTER ADMIN LOGIN */
 
-        if (adminLoginLink && accountForm) {
+        /* EVENT ICON */
 
-            adminLoginLink.addEventListener(
-                "click",
-                function (e) {
+        const eventIcon =
+            document.getElementById("eventIcon");
 
-                    e.preventDefault();
 
-                    accountForm.classList.add(
-                        "active"
-                    );
+        if (eventIcon) {
 
-                }
-            );
+            eventIcon.textContent =
+                event.icon;
 
         }
 
 
-        /* CLOSE */
 
-        if (closeForm && accountForm) {
+        /* CATEGORY */
 
-            closeForm.addEventListener(
-                "click",
-                function () {
+        const eventCategory =
+            document.getElementById("eventCategory");
 
-                    accountForm.classList.remove(
-                        "active"
-                    );
 
-                }
-            );
+        if (eventCategory) {
+
+            eventCategory.textContent =
+                event.category;
 
         }
 
 
-        /* LOGIN */
 
-        const loginForm =
+        /* TITLE */
+
+        const eventTitle =
+            document.getElementById("eventTitle");
+
+
+        if (eventTitle) {
+
+            eventTitle.textContent =
+                event.title;
+
+        }
+
+
+
+        /* DESCRIPTION */
+
+        const eventDescription =
             document.getElementById(
-                "schoolLoginForm"
+                "eventDescription"
             );
 
 
-        if (loginForm) {
+        if (eventDescription) {
 
-            loginForm.addEventListener(
-                "submit",
-                function (event) {
+            eventDescription.textContent =
+                event.description;
 
-                    event.preventDefault();
-
-
-                    const email =
-                        document.getElementById(
-                            "loginEmail"
-                        ).value.trim();
+        }
 
 
-                    const password =
-                        document.getElementById(
-                            "loginPassword"
-                        ).value.trim();
 
+        /* INFORMATION 1 */
 
-                    const message =
-                        document.getElementById(
-                            "loginMessage"
-                        );
-
-
-                    if (
-                        email === "admin@school.com" &&
-                        password === "Admin@123"
-                    ) {
-
-
-                        message.innerHTML =
-                            "Login Successful! ✅";
-
-
-                        message.style.color =
-                            "green";
-
-
-                        setTimeout(
-                            function () {
-
-                                window.location.href =
-                                    "admin-dashboard.html";
-
-                            },
-                            1000
-                        );
-
-
-                    } else {
-
-
-                        message.innerHTML =
-                            "Invalid Email or Password ❌";
-
-
-                        message.style.color =
-                            "red";
-
-                    }
-
-                }
+        const infoTitle1 =
+            document.getElementById(
+                "infoTitle1"
             );
+
+
+        const eventInfo1 =
+            document.getElementById(
+                "eventInfo1"
+            );
+
+
+        const infoIcon1 =
+            document.getElementById(
+                "infoIcon1"
+            );
+
+
+        if (infoTitle1) {
+
+            infoTitle1.textContent =
+                event.infoTitle1;
+
+        }
+
+
+        if (eventInfo1) {
+
+            eventInfo1.textContent =
+                event.info1;
+
+        }
+
+
+        if (infoIcon1) {
+
+            infoIcon1.className =
+                "fas " + event.infoIcon1;
+
+        }
+
+
+
+        /* INFORMATION 2 */
+
+        const infoTitle2 =
+            document.getElementById(
+                "infoTitle2"
+            );
+
+
+        const eventInfo2 =
+            document.getElementById(
+                "eventInfo2"
+            );
+
+
+        const infoIcon2 =
+            document.getElementById(
+                "infoIcon2"
+            );
+
+
+        if (infoTitle2) {
+
+            infoTitle2.textContent =
+                event.infoTitle2;
+
+        }
+
+
+        if (eventInfo2) {
+
+            eventInfo2.textContent =
+                event.info2;
+
+        }
+
+
+        if (infoIcon2) {
+
+            infoIcon2.className =
+                "fas " + event.infoIcon2;
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   ADMIN LOGIN - FOOTER
+===================================================== */
+
+const adminLoginLink =
+    document.getElementById(
+        "adminLoginLink"
+    );
+
+
+if (adminLoginLink) {
+
+    adminLoginLink.addEventListener(
+        "click",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   ADMIN LOGIN - HEADER ICON
+===================================================== */
+
+const accountBtn =
+    document.getElementById(
+        "account-btn"
+    );
+
+
+if (accountBtn) {
+
+    accountBtn.addEventListener(
+        "click",
+        function() {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   CLOSE LOGIN
+===================================================== */
+
+const closeForm =
+    document.getElementById(
+        "close-form"
+    );
+
+
+if (closeForm) {
+
+    closeForm.addEventListener(
+        "click",
+        function() {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   ADMIN LOGIN FORM
+===================================================== */
+
+const schoolLoginForm =
+    document.getElementById(
+        "schoolLoginForm"
+    );
+
+
+if (schoolLoginForm) {
+
+    schoolLoginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const email =
+                document.getElementById(
+                    "loginEmail"
+                ).value.trim();
+
+
+            const password =
+                document.getElementById(
+                    "loginPassword"
+                ).value.trim();
+
+
+            const message =
+                document.getElementById(
+                    "loginMessage"
+                );
+
+
+
+            if (
+                email === "admin@school.com" &&
+                password === "Admin@123"
+            ) {
+
+
+                message.textContent =
+                    "Login successful!";
+
+
+                message.style.color =
+                    "green";
+
+
+                setTimeout(
+                    function() {
+
+                        window.location.href =
+                            "admin-dashboard.html";
+
+                    },
+                    700
+                );
+
+            }
+
+            else {
+
+
+                message.textContent =
+                    "Invalid email or password.";
+
+
+                message.style.color =
+                    "red";
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   SUBSCRIBE
+===================================================== */
+
+function subscribeUser() {
+
+
+    const emailInput =
+        document.getElementById(
+            "subscribeEmail"
+        );
+
+
+    const message =
+        document.getElementById(
+            "subscribeMessage"
+        );
+
+
+    if (!emailInput || !message) {
+
+        return;
+
+    }
+
+
+    const email =
+        emailInput.value.trim();
+
+
+    if (email === "") {
+
+
+        message.textContent =
+            "Please enter your email.";
+
+
+        message.style.color =
+            "red";
+
+
+        return;
+
+    }
+
+
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
+
+
+
+    const formData =
+        new FormData();
+
+
+    formData.append(
+        "email",
+        email
+    );
+
+
+
+    fetch(
+        scriptURL,
+        {
+            method: "POST",
+
+            body: formData,
+
+            mode: "no-cors"
+        }
+    )
+
+
+    .then(
+        function() {
+
+
+            message.textContent =
+                "Thank you for subscribing!";
+
+
+            message.style.color =
+                "green";
+
+
+            emailInput.value =
+                "";
+
+        }
+    )
+
+
+    .catch(
+        function() {
+
+
+            message.textContent =
+                "Something went wrong. Please try again.";
+
+
+            message.style.color =
+                "red";
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   ESCAPE KEY - CLOSE LOGIN
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+
+        if (
+            event.key === "Escape"
+        ) {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+            }
 
         }
 
@@ -1532,6 +2168,7 @@ document.addEventListener(
 );
 
 </script>
+
 
 
 </body>

@@ -45,25 +45,34 @@
 .secondary-hero {
     min-height: 500px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            text-align: center;
+    text-align: center;
 
-            padding: 150px 20px 90px;
+    padding: 150px 20px 90px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(5, 31, 58, .88),
-                    rgba(7, 100, 125, .72)
-                ),
-                url("Image/Image.png");
+    /*
+       CLEAR BACKGROUND IMAGE
+       Sirf light transparent overlay rakha gaya hai
+       taaki Image/Image.png clearly visible rahe.
+    */
 
-            background-size: cover;
-            background-position: center;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5, 31, 58, 0.18),
+            rgba(7, 100, 125, 0.10)
+        ),
+        url("Image/Image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
 
 .secondary-hero::before {
     content: "";
@@ -96,13 +105,15 @@
 .secondary-eyebrow {
     display: inline-block;
     padding: 8px 18px;
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.7);
     border-radius: 30px;
     color: #ffffff;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1.5px;
     margin-bottom: 20px;
+
+    background: rgba(0,0,0,0.12);
 }
 
 .secondary-hero h1 {
@@ -111,6 +122,8 @@
     line-height: 1.15;
     margin: 0 0 18px;
     font-weight: 800;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
 }
 
 .secondary-hero h2 {
@@ -118,14 +131,18 @@
     font-size: 25px;
     margin-bottom: 18px;
     font-weight: 600;
+
+    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
 .secondary-hero p {
     max-width: 800px;
     margin: auto;
-    color: rgba(255,255,255,0.90);
+    color: #ffffff;
     font-size: 18px;
     line-height: 1.8;
+
+    text-shadow: 0 2px 6px rgba(0,0,0,0.40);
 }
 
 .secondary-hero-buttons {
@@ -569,6 +586,7 @@
 
 }
 
+
 @media (max-width: 600px) {
 
     .secondary-hero {
@@ -916,8 +934,6 @@
             readiness.
         </p>
 
-
-
     </div>
 
 </section>
@@ -929,13 +945,11 @@
 
     <div class="secondary-intro">
 
-
         <div class="secondary-intro-text">
 
             <h2>
                 Secondary Education at Maria’s Podar Learn School
             </h2>
-
 
             <p>
                 Classes 9th and 10th are important stages of
@@ -944,14 +958,12 @@
                 academic discipline and independent study habits.
             </p>
 
-
             <p>
                 The learning journey focuses on understanding
                 concepts, applying knowledge, practising regularly
                 and developing the confidence required to approach
                 academic challenges.
             </p>
-
 
             <p>
                 Students are encouraged to develop analytical
@@ -968,7 +980,6 @@
             <h3>
                 Key Focus Areas
             </h3>
-
 
             <ul class="secondary-focus-list">
 
@@ -1033,7 +1044,6 @@
 
 
     <div class="secondary-card-grid">
-
 
         <div class="secondary-card">
 
@@ -1155,7 +1165,6 @@
 
     <div class="secondary-journey">
 
-
         <div class="secondary-heading">
 
             <span>Secondary School Journey</span>
@@ -1174,7 +1183,6 @@
 
 
         <div class="secondary-journey-grid">
-
 
             <div class="secondary-journey-card">
 
@@ -1246,58 +1254,34 @@
 
     <div class="secondary-skill-grid">
 
-
         <div class="secondary-skill">
-
             <i class="fas fa-brain"></i>
-
             Analytical Thinking
-
         </div>
 
-
         <div class="secondary-skill">
-
             <i class="fas fa-comments"></i>
-
             Communication
-
         </div>
 
-
         <div class="secondary-skill">
-
             <i class="fas fa-puzzle-piece"></i>
-
             Problem Solving
-
         </div>
 
-
         <div class="secondary-skill">
-
             <i class="fas fa-book"></i>
-
             Study Skills
-
         </div>
 
-
         <div class="secondary-skill">
-
             <i class="fas fa-clock"></i>
-
             Time Management
-
         </div>
 
-
         <div class="secondary-skill">
-
             <i class="fas fa-user-check"></i>
-
             Self Management
-
         </div>
 
     </div>
@@ -1331,7 +1315,6 @@
 
 
     <div class="secondary-preparation-grid">
-
 
         <div class="secondary-preparation-card">
 
@@ -1426,36 +1409,30 @@
 
         <ul class="secondary-outcome-list">
 
-
             <li>
                 <i class="fas fa-circle-check"></i>
                 Strong academic foundations
             </li>
-
 
             <li>
                 <i class="fas fa-circle-check"></i>
                 Better conceptual understanding
             </li>
 
-
             <li>
                 <i class="fas fa-circle-check"></i>
                 Improved problem-solving ability
             </li>
-
 
             <li>
                 <i class="fas fa-circle-check"></i>
                 Greater confidence in communication
             </li>
 
-
             <li>
                 <i class="fas fa-circle-check"></i>
                 Better study and revision habits
             </li>
-
 
             <li>
                 <i class="fas fa-circle-check"></i>
@@ -1691,348 +1668,219 @@
      FOOTER
 ===================================================== -->
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+<footer>
 
-<div class="content">
+    <div class="content">
 
-<div class="top">
+        <div class="top">
 
-<div class="logo-details">
+            <div class="logo-details">
 
-<span>
-    Maria’s Podar Learn School Nilanga
-</span>
+                <span>
+                    Maria’s Podar Learn School Nilanga
+                </span>
 
-</div>
+            </div>
 
 
-<div class="media-icons">
+            <div class="media-icons">
 
-<a href="https://www.facebook.com/him.sonepat/"
-   target="_blank">
+                <a href="https://www.facebook.com/him.sonepat/"
+                   target="_blank"
+                   rel="noopener">
 
-<i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-facebook-f"></i>
 
-</a>
+                </a>
 
 
-<a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                <a href="mailto:principal.mpls@podar.org">
 
-<a href="https://instagram.com/mariaspodarschoolnilanga"
-   target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
 
-<i class="fab fa-instagram"></i>
+                </a>
 
-</a>
 
+                <a href="https://instagram.com/mariaspodarschoolnilanga"
+                   target="_blank"
+                   rel="noopener">
 
-<a href="#">
-<i class="fab fa-linkedin-in"></i>
-</a>
+                    <i class="fab fa-instagram"></i>
 
+                </a>
 
-<a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-   target="_blank">
 
-<i class="fab fa-youtube"></i>
+                <a href="#">
 
-</a>
+                    <i class="fab fa-linkedin-in"></i>
 
-</div>
+                </a>
 
-</div>
 
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank"
+                   rel="noopener">
 
-<div class="link-boxes">
+                    <i class="fab fa-youtube"></i>
 
+                </a>
 
-<ul class="box">
+            </div>
 
-<li class="link_name">
-    About
-</li>
+        </div>
 
-<li>
-    <a href="index.html">Home</a>
-</li>
 
-<li>
-    <a href="contact-us.html">Contact us</a>
-</li>
+        <div class="link-boxes">
 
-<li>
-    <a href="#">About us</a>
-</li>
 
-</ul>
+            <ul class="box">
 
+                <li class="link_name">
+                    About
+                </li>
 
-<ul class="box">
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
 
-<li class="link_name">
-    Quick Links
-</li>
+                <li>
+                    <a href="contact-us.html">
+                        Contact us
+                    </a>
+                </li>
 
-<li>
-    <a href="admission-form.html">
-        Admission Form
-    </a>
-</li>
+                <li>
+                    <a href="About-us.html">
+                        About us
+                    </a>
+                </li>
 
-<li>
-    <a href="index.html">
-        Notice Board
-    </a>
-</li>
+            </ul>
 
-<li>
-    <a href="index.html">
-        School Site
-    </a>
-</li>
 
-</ul>
+            <ul class="box">
 
+                <li class="link_name">
+                    Quick Links
+                </li>
 
-<ul class="box">
+                <li>
+                    <a href="admission-form.html">
+                        Admission Form
+                    </a>
+                </li>
 
-<li class="link_name">
-    Student's Corner
-</li>
+                <li>
+                    <a href="index.html#notice-board">
+                        Notice Board
+                    </a>
+                </li>
 
-<li>
-    <a href="fees-payment.html">
-        Fees Payment
-    </a>
-</li>
+                <li>
+                    <a href="index.html">
+                        School Site
+                    </a>
+                </li>
 
-<li>
-    <a href="complaint.html">
-        Complaint Section
-    </a>
-</li>
+            </ul>
 
-<li>
-    <a href="careers.html">
-        Careers
-    </a>
-</li>
 
-</ul>
+            <ul class="box">
 
+                <li class="link_name">
+                    Student's Corner
+                </li>
 
-<ul class="box">
+                <li>
+                    <a href="fees-payment.html">
+                        Fees Payment
+                    </a>
+                </li>
 
-<li class="link_name">
-    Account
-</li>
+                <li>
+                    <a href="complaint.html">
+                        Complaint Section
+                    </a>
+                </li>
 
-<li>
-    <a href="#" id="adminLoginLink">
-        Admin Login
-    </a>
-</li>
+                <li>
+                    <a href="careers.html">
+                        Careers
+                    </a>
+                </li>
 
-<li>
-    <a href="events.html">
-        Events
-    </a>
-</li>
+            </ul>
 
-<li>
-    <a href="gallery.html">
-        Gallery
-    </a>
-</li>
 
-</ul>
+            <ul class="box">
 
+                <li class="link_name">
+                    Account
+                </li>
 
-<ul class="box input-box">
+                <li>
+                    <a href="#"
+                       id="adminLoginLink">
+                        Admin Login
+                    </a>
+                </li>
 
-<li class="link_name">
-    Subscribe
-</li>
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
 
-<li>
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
 
-<input type="email"
-       id="subscribeEmail"
-       placeholder="Enter your email">
+            </ul>
 
-</li>
 
-<li>
+            <ul class="box input-box">
 
-<input type="button"
-       value="Subscribe"
-       onclick="subscribeUser()">
+                <li class="link_name">
+                    Subscribe
+                </li>
 
-</li>
+                <li>
 
-<li>
+                    <input type="email"
+                           id="subscribeEmail"
+                           placeholder="Enter your email">
 
-<p id="subscribeMessage"></p>
+                </li>
 
-</li>
+                <li>
 
-</ul>
+                    <button type="button"
+                            onclick="subscribeUser()">
 
+                        Subscribe
 
-</div>
+                    </button>
 
-</div>
+                </li>
+
+                <li>
+
+                    <p id="subscribeMessage"></p>
+
+                </li>
+
+            </ul>
+
+
+        </div>
+
+    </div>
 
 </footer>
-
-
-<!-- =====================================================
-     SCRIPTS
-===================================================== -->
-
-<script src="js/script.js"></script>
-
-
-<!-- ================= FAQ SCRIPT ================= -->
-
-<script>
-
-document.querySelectorAll(".secondary-faq-header").forEach(function(header) {
-
-    header.addEventListener("click", function() {
-
-        const item = this.parentElement;
-        const content = this.nextElementSibling;
-
-
-        document.querySelectorAll(".secondary-faq-item").forEach(function(otherItem) {
-
-            if (otherItem !== item) {
-
-                otherItem.classList.remove("active");
-
-                const otherContent =
-                    otherItem.querySelector(".secondary-faq-content");
-
-                otherContent.style.maxHeight = null;
-
-            }
-
-        });
-
-
-        item.classList.toggle("active");
-
-
-        if (item.classList.contains("active")) {
-
-            content.style.maxHeight =
-                content.scrollHeight + "px";
-
-        } else {
-
-            content.style.maxHeight = null;
-
-        }
-
-    });
-
-});
-
-</script>
-
-
-<!-- ================= SUBSCRIBE SCRIPT ================= -->
-
-<script>
-
-function subscribeUser() {
-
-    const email =
-        document.getElementById("subscribeEmail").value.trim();
-
-    const message =
-        document.getElementById("subscribeMessage");
-
-
-    if (email === "") {
-
-        message.innerHTML =
-            "Please enter your email.";
-
-        message.style.color = "red";
-
-        return;
-
-    }
-
-
-    if (!email.includes("@") ||
-        !email.includes(".")) {
-
-        message.innerHTML =
-            "Please enter a valid email.";
-
-        message.style.color = "red";
-
-        return;
-
-    }
-
-
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
-
-
-    message.innerHTML =
-        "Submitting...";
-
-    message.style.color = "white";
-
-
-    fetch(scriptURL, {
-
-        method: "POST",
-
-        body: new URLSearchParams({
-
-            email: email
-
-        })
-
-    })
-
-    .then(function() {
-
-        message.innerHTML =
-            "Thank you for subscribing! 😊";
-
-        message.style.color =
-            "lightgreen";
-
-        document.getElementById(
-            "subscribeEmail"
-        ).value = "";
-
-    })
-
-    .catch(function(error) {
-
-        console.error(error);
-
-        message.innerHTML =
-            "Something went wrong. Please try again.";
-
-        message.style.color =
-            "red";
-
-    });
-
-}
-
-</script>
 
 
 <!-- ================= ADMIN LOGIN SCRIPT ================= -->

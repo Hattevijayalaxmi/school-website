@@ -5,7 +5,8 @@
 
     <meta charset="UTF-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
@@ -13,32 +14,974 @@
     <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
 
-    <!-- MAIN CSS -->
+    <!-- =====================================================
+                         FAVICON
+    ====================================================== -->
+
+    <link rel="shortcut icon"
+          href="Image/Logo.jpeg"
+          type="image/png">
+
+
+    <!-- =====================================================
+                         MAIN CSS
+    ====================================================== -->
 
     <link rel="stylesheet"
           href="css/style.css">
-
-
-    <!-- RESPONSIVE CSS -->
 
     <link rel="stylesheet"
           href="css/responsive.css">
 
 
-    <!-- FONT AWESOME -->
+    <!-- =====================================================
+                       FONT AWESOME
+    ====================================================== -->
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- FAVICON -->
+    <!-- =====================================================
+                         GOOGLE FONTS
+    ====================================================== -->
 
-    <link rel="shortcut icon"
-          href="Image/Logo.jpeg"
-          type="image/png">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+                         CAREER CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+                            RESET
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+                         CAREER HERO
+        ====================================================== */
+
+        .career-hero {
+            position: relative;
+            width: 100%;
+            min-height: 560px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,0.30),
+                    rgba(0,0,0,0.65)
+                ),
+                url("Image/Image.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        .career-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1000px;
+            padding: 30px 20px;
+        }
+
+
+        .career-hero-content h1 {
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.2;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 4px 12px rgba(0,0,0,0.60);
+        }
+
+
+        .career-hero-content h1 span {
+            color: #f39c12;
+        }
+
+
+        .career-hero-content p {
+            margin: 20px auto 0;
+            max-width: 850px;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 21px;
+            font-weight: 600;
+            line-height: 1.7;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 3px 8px rgba(0,0,0,0.60);
+        }
+
+
+        /* =====================================================
+                         CAREER INTRO
+        ====================================================== */
+
+        .career-intro {
+            width: 100%;
+            padding: 70px 20px;
+
+            text-align: center;
+
+            background: #f7f9fc;
+        }
+
+
+        .career-intro h2 {
+            margin: 0 0 20px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 35px;
+
+            color: #122b49;
+        }
+
+
+        .career-intro h2 span {
+            color: #f39c12;
+        }
+
+
+        .career-intro p {
+            max-width: 850px;
+            margin: auto;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+                         JOB SECTION
+        ====================================================== */
+
+        .job-section {
+            width: 100%;
+            padding: 70px 5%;
+
+            background: #ffffff;
+        }
+
+
+        .job-section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+
+        .job-section-title h2 {
+            margin: 0 0 12px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 35px;
+
+            color: #122b49;
+        }
+
+
+        .job-section-title h2 span {
+            color: #f39c12;
+        }
+
+
+        .job-section-title p {
+            margin: 0;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 17px;
+
+            color: #666;
+        }
+
+
+        /* =====================================================
+                         JOB CONTAINER
+        ====================================================== */
+
+        .job-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =====================================================
+                         JOB CARD
+        ====================================================== */
+
+        .job-card {
+            padding: 35px 30px;
+
+            border-radius: 15px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            border-top: 4px solid #f39c12;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .job-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.13);
+        }
+
+
+        .job-card-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 50%;
+
+            background: #122b49;
+        }
+
+
+        .job-card-icon i {
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+
+        .job-card h3 {
+            margin: 0 0 12px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+
+            color: #122b49;
+        }
+
+
+        .job-card > p {
+            margin: 0 0 20px;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+
+        .job-details {
+            padding-top: 15px;
+
+            border-top: 1px solid #eeeeee;
+        }
+
+
+        .job-details p {
+            margin: 10px 0;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 15px;
+
+            color: #555;
+        }
+
+
+        .job-details i {
+            width: 22px;
+            color: #f39c12;
+        }
+
+
+        /* =====================================================
+                         WHY JOIN US
+        ====================================================== */
+
+        .why-career {
+            width: 100%;
+            padding: 70px 5%;
+
+            background: #f7f9fc;
+        }
+
+
+        .why-career-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+
+        .why-career-title h2 {
+            margin: 0 0 12px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 35px;
+
+            color: #122b49;
+        }
+
+
+        .why-career-title h2 span {
+            color: #f39c12;
+        }
+
+
+        .why-career-title p {
+            margin: 0;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 17px;
+
+            color: #666;
+        }
+
+
+        .why-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .why-card {
+            padding: 30px 25px;
+
+            text-align: center;
+
+            background: #ffffff;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.07);
+
+            transition: 0.3s ease;
+        }
+
+
+        .why-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 13px 30px rgba(0,0,0,0.12);
+        }
+
+
+        .why-card i {
+            margin-bottom: 15px;
+
+            font-size: 38px;
+
+            color: #f39c12;
+        }
+
+
+        .why-card h3 {
+            margin: 0 0 10px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 19px;
+
+            color: #122b49;
+        }
+
+
+        .why-card p {
+            margin: 0;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+                       APPLICATION SECTION
+        ====================================================== */
+
+        .application-section {
+            width: 100%;
+            padding: 75px 5%;
+
+            background: #ffffff;
+        }
+
+
+        .application-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+
+        .application-title h2 {
+            margin: 0 0 12px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 35px;
+
+            color: #122b49;
+        }
+
+
+        .application-title h2 span {
+            color: #f39c12;
+        }
+
+
+        .application-title p {
+            max-width: 750px;
+            margin: auto;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+
+            color: #666;
+        }
+
+
+        .application-box {
+            max-width: 1000px;
+            margin: auto;
+
+            padding: 40px;
+
+            border-radius: 16px;
+
+            background: #f7f9fc;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.08);
+        }
+
+
+        .application-form {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+
+        .form-group label {
+            margin-bottom: 8px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+
+            color: #122b49;
+        }
+
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            padding: 13px 15px;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            background: #ffffff;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 15px;
+
+            color: #333;
+
+            transition: 0.3s ease;
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #f39c12;
+
+            box-shadow:
+                0 0 0 3px rgba(243,156,18,0.12);
+        }
+
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+
+        .form-note {
+            margin-top: 7px;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 13px;
+
+            color: #777;
+        }
+
+
+        .application-submit {
+            grid-column: 1 / -1;
+
+            text-align: center;
+
+            padding-top: 5px;
+        }
+
+
+        .application-submit button {
+            padding: 14px 28px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: #122b49;
+
+            color: #ffffff;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+
+        .application-submit button:hover {
+            background: #f39c12;
+        }
+
+
+        .application-submit button i {
+            margin-right: 8px;
+        }
+
+
+        #careerMessage {
+            margin: 15px 0 0;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+                         CAREER INFO
+                 BACKGROUND COMPLETELY REMOVED
+        ====================================================== */
+
+        .career-info {
+            width: 100%;
+
+            padding: 70px 20px;
+
+            text-align: center;
+
+            background: #ffffff !important;
+            background-image: none !important;
+
+            box-shadow: none;
+
+            border: none;
+        }
+
+
+        .career-info h2 {
+            margin: 0 0 15px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 35px;
+
+            color: #122b49;
+        }
+
+
+        .career-info h2 span {
+            color: #f39c12;
+        }
+
+
+        .career-info p {
+            max-width: 800px;
+            margin: auto;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 17px;
+            line-height: 1.8;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+                        CAREER MOBILE 768px
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .career-hero {
+                min-height: 450px;
+            }
+
+
+            .career-hero-content h1 {
+                font-size: 43px;
+            }
+
+
+            .career-hero-content p {
+                font-size: 18px;
+            }
+
+
+            .career-intro {
+                padding: 50px 20px;
+            }
+
+
+            .career-intro h2,
+            .job-section-title h2,
+            .why-career-title h2,
+            .application-title h2,
+            .career-info h2 {
+                font-size: 28px;
+            }
+
+
+            .job-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            .why-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .application-box {
+                padding: 30px 25px;
+            }
+
+        }
+
+
+        /* =====================================================
+                        CAREER MOBILE 480px
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+
+            .career-hero {
+                min-height: 410px;
+                background-position: center;
+            }
+
+
+            .career-hero-content {
+                width: 95%;
+                padding: 20px 10px;
+            }
+
+
+            .career-hero-content h1 {
+                font-size: 32px;
+                line-height: 1.3;
+            }
+
+
+            .career-hero-content p {
+                margin-top: 15px;
+
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+
+            .career-intro {
+                padding: 40px 15px;
+            }
+
+
+            .career-intro h2,
+            .job-section-title h2,
+            .why-career-title h2,
+            .application-title h2,
+            .career-info h2 {
+                font-size: 24px;
+                line-height: 1.4;
+            }
+
+
+            .career-intro p,
+            .application-title p,
+            .career-info p {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+
+            .job-section,
+            .why-career,
+            .application-section {
+                padding: 45px 15px;
+            }
+
+
+            .job-section-title,
+            .why-career-title,
+            .application-title {
+                margin-bottom: 30px;
+            }
+
+
+            .job-card {
+                padding: 28px 20px;
+            }
+
+
+            .job-card h3 {
+                font-size: 19px;
+            }
+
+
+            .job-card > p {
+                font-size: 14px;
+            }
+
+
+            .job-details p {
+                font-size: 13px;
+            }
+
+
+            .why-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+
+            .why-card {
+                padding: 25px 18px;
+            }
+
+
+            .why-card i {
+                font-size: 32px;
+            }
+
+
+            .why-card h3 {
+                font-size: 18px;
+            }
+
+
+            .why-card p {
+                font-size: 13px;
+            }
+
+
+            .application-box {
+                padding: 25px 18px;
+                border-radius: 12px;
+            }
+
+
+            .application-form {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+
+            .application-submit {
+                grid-column: auto;
+            }
+
+
+            .application-submit button {
+                width: 100%;
+
+                padding: 13px 18px;
+
+                font-size: 14px;
+            }
+
+
+            .career-info {
+                padding: 45px 18px;
+
+                background: #ffffff !important;
+                background-image: none !important;
+            }
+
+        }
+
+
+        /* =====================================================
+                         EXTRA SMALL 360px
+        ====================================================== */
+
+        @media (max-width: 360px) {
+
+            .career-hero {
+                min-height: 380px;
+            }
+
+
+            .career-hero-content h1 {
+                font-size: 28px;
+            }
+
+
+            .career-hero-content p {
+                font-size: 14px;
+            }
+
+
+            .career-intro h2,
+            .job-section-title h2,
+            .why-career-title h2,
+            .application-title h2,
+            .career-info h2 {
+                font-size: 21px;
+            }
+
+
+            .career-intro p,
+            .application-title p,
+            .career-info p {
+                font-size: 13px;
+            }
+
+
+            .job-card {
+                padding: 23px 16px;
+            }
+
+
+            .why-card {
+                padding: 22px 15px;
+            }
+
+
+            .application-box {
+                padding: 20px 14px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -52,85 +995,57 @@
 
 <header class="header">
 
-
     <a href="index.html"
        class="logo">
 
-
         <img src="Image/Logo.jpeg"
-             alt="School logo"
-             style="width:55px; height:55px; object-fit:contain;">
-
+             alt="Maria's Podar Learn School Logo">
 
         <div class="collage-name">
-
             Maria's Podar Learn School Nilanga
-
         </div>
-
 
     </a>
 
 
-
     <nav class="navbar">
-
 
         <div id="close-navbar"
              class="close-icon">
 
-
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="Close">
-
+                 alt="Close Menu">
 
         </div>
 
 
-
         <ul class="navbar-links">
 
-
-            <!-- HOME -->
-
-            <li class="navbar-dropdown">
-
+            <li>
                 <a href="index.html">
-
                     Home
-
                 </a>
-
             </li>
 
 
-
-            <!-- COURSE -->
-
             <li class="navbar-dropdown">
 
-
-                <a href="#">
+                <a href="#"
+                   class="course-main-link">
 
                     Course
 
                 </a>
 
 
-
                 <div class="dropdown">
-
 
                     <ul>
 
-
-                        <!-- PRIMARY -->
-
                         <li class="course-group">
 
-
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Primary Group
 
@@ -141,45 +1056,28 @@
                             </a>
 
 
-
                             <ul class="dropdown2">
 
-
                                 <li>
-
                                     <a href="nursery.html">
-
                                         Nursery to UKG
-
                                     </a>
-
                                 </li>
-
 
                                 <li>
-
                                     <a href="class-1-5.html">
-
                                         Class 1st to 5th
-
                                     </a>
-
                                 </li>
-
 
                             </ul>
-
 
                         </li>
 
 
-
-                        <!-- SECONDARY -->
-
                         <li class="course-group">
 
-
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Secondary Group
 
@@ -190,268 +1088,174 @@
                             </a>
 
 
-
                             <ul class="dropdown2">
 
-
                                 <li>
-
                                     <a href="class-6-8.html">
-
                                         Class 6th to 8th
-
                                     </a>
-
                                 </li>
-
 
                                 <li>
-
                                     <a href="class-9-10.html">
-
                                         Class 9th to 10th
-
                                     </a>
-
                                 </li>
-
 
                             </ul>
 
-
                         </li>
-
 
                     </ul>
 
-
                 </div>
 
-
             </li>
 
 
-
-            <!-- ADMISSION -->
-
-            <li class="navbar-dropdown">
-
-
-                <a href="admission-form.html"
-                   target="_blank">
-
+            <li>
+                <a href="admission-form.html">
                     Admissions
-
                 </a>
-
-
             </li>
 
 
-
-            <!-- CAREERS -->
-
-            <li class="navbar-dropdown">
-
-
+            <li>
                 <a href="careers.html">
-
                     Careers
-
                 </a>
-
-
             </li>
 
 
-
-            <!-- CONTACT -->
-
-            <li class="navbar-dropdown">
-
-
+            <li>
                 <a href="contact-us.html">
-
                     Contact us
-
                 </a>
-
-
             </li>
-
 
         </ul>
-
 
     </nav>
 
 
-
-    <!-- HEADER ICONS -->
-
     <div class="icons">
 
-
-        <!-- LOGIN -->
-
         <div id="account-btn"
-             class="header-icon"
-             style="cursor:pointer;">
-
+             class="header-icon">
 
             <img src="Image/avatar-icon.svg"
                  alt="Login">
 
-
             <img src="Image/avatar-icon-hover.gif"
                  alt="Login"
-                 width="10"
                  class="header-icon-hover">
-
 
         </div>
 
-
-
-        <!-- MENU -->
 
         <div id="menu-btn"
              class="header-icon">
 
-
             <img src="Image/menu-icon.svg"
                  alt="Menu">
 
-
             <img src="Image/menu-icon-hover.gif"
                  alt="Menu"
-                 width="30"
                  class="header-icon-hover">
-
 
         </div>
 
-
     </div>
-
 
 </header>
 
 
 
 <!-- =====================================================
-                       LOGIN FORM
+                     ADMIN LOGIN
 ===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
 
-
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
-
+         class="close-icon">
 
         <img src="Image/close-icon.gif"
              alt="Close"
              width="50">
 
-
     </div>
-
 
 
     <div class="buttons">
 
-
         <span class="btn active login-btn">
-
-            Login
-
+            Admin Login
         </span>
 
-
     </div>
-
 
 
     <form class="login-form active"
           id="schoolLoginForm">
 
-
         <h3>
-
             Admin Login
-
         </h3>
 
 
-
-        <input
-            type="email"
-            id="loginEmail"
-            placeholder="Enter your email"
-            class="box"
-            required>
-
+        <input type="email"
+               id="loginEmail"
+               placeholder="Enter your email"
+               class="box"
+               autocomplete="email"
+               required>
 
 
-        <input
-            type="password"
-            id="loginPassword"
-            placeholder="Enter your password"
-            class="box"
-            required>
-
+        <input type="password"
+               id="loginPassword"
+               placeholder="Enter your password"
+               class="box"
+               autocomplete="current-password"
+               required>
 
 
         <div class="flex">
 
-
-            <input
-                type="checkbox"
-                id="remember-me">
-
+            <input type="checkbox"
+                   id="remember-me">
 
             <label for="remember-me">
-
                 Remember Me
-
             </label>
 
-
         </div>
-
 
 
         <p id="loginMessage"></p>
 
 
-
         <button type="submit"
-                class="btn">
+                class="btn login-submit">
 
             Login Now
 
         </button>
 
-
     </form>
-
 
 </div>
 
 
 
 <!-- =====================================================
-                     CAREER HERO
+                       CAREER HERO
 ===================================================== -->
 
 <section class="career-hero">
 
-
     <div class="career-hero-content">
-
 
         <h1>
 
@@ -475,20 +1279,17 @@
 
         </p>
 
-
     </div>
-
 
 </section>
 
 
 
 <!-- =====================================================
-                     CAREER INTRO
+                       CAREER INTRO
 ===================================================== -->
 
 <section class="career-intro">
-
 
     <h2>
 
@@ -514,20 +1315,17 @@
 
     </p>
 
-
 </section>
 
 
 
 <!-- =====================================================
-                     JOB OPENINGS
+                       JOB OPENINGS
 ===================================================== -->
 
 <section class="job-section">
 
-
     <div class="job-section-title">
-
 
         <h2>
 
@@ -541,14 +1339,10 @@
 
 
         <p>
-
             Explore opportunities available at our school.
-
         </p>
 
-
     </div>
-
 
 
     <div class="job-container">
@@ -558,18 +1352,13 @@
 
         <div class="job-card">
 
-
             <div class="job-card-icon">
-
                 <i class="fa-solid fa-chalkboard-user"></i>
-
             </div>
 
 
             <h3>
-
                 Primary Teacher
-
             </h3>
 
 
@@ -584,36 +1373,24 @@
 
             <div class="job-details">
 
-
                 <p>
-
                     <i class="fa-solid fa-graduation-cap"></i>
-
                     Qualification: D.El.Ed / B.Ed
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-briefcase"></i>
-
                     Experience: Freshers / Experienced
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-location-dot"></i>
-
                     Location: Nilanga, Maharashtra
-
                 </p>
-
 
             </div>
-
 
         </div>
 
@@ -623,18 +1400,13 @@
 
         <div class="job-card">
 
-
             <div class="job-card-icon">
-
                 <i class="fa-solid fa-book-open"></i>
-
             </div>
 
 
             <h3>
-
                 Secondary Teacher
-
             </h3>
 
 
@@ -649,36 +1421,24 @@
 
             <div class="job-details">
 
-
                 <p>
-
                     <i class="fa-solid fa-graduation-cap"></i>
-
                     Qualification: Graduate / B.Ed
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-briefcase"></i>
-
                     Experience: Freshers / Experienced
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-location-dot"></i>
-
                     Location: Nilanga, Maharashtra
-
                 </p>
-
 
             </div>
-
 
         </div>
 
@@ -688,18 +1448,13 @@
 
         <div class="job-card">
 
-
             <div class="job-card-icon">
-
                 <i class="fa-solid fa-computer"></i>
-
             </div>
 
 
             <h3>
-
                 Computer Teacher
-
             </h3>
 
 
@@ -714,36 +1469,24 @@
 
             <div class="job-details">
 
-
                 <p>
-
                     <i class="fa-solid fa-graduation-cap"></i>
-
                     Qualification: BCA / B.Sc / B.Tech / MCA
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-briefcase"></i>
-
                     Experience: Freshers / Experienced
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-location-dot"></i>
-
                     Location: Nilanga, Maharashtra
-
                 </p>
-
 
             </div>
-
 
         </div>
 
@@ -753,18 +1496,13 @@
 
         <div class="job-card">
 
-
             <div class="job-card-icon">
-
                 <i class="fa-solid fa-user-tie"></i>
-
             </div>
 
 
             <h3>
-
                 Administrative Staff
-
             </h3>
 
 
@@ -779,56 +1517,40 @@
 
             <div class="job-details">
 
-
                 <p>
-
                     <i class="fa-solid fa-graduation-cap"></i>
-
                     Qualification: Graduate
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-briefcase"></i>
-
                     Experience: Freshers / Experienced
-
                 </p>
 
 
                 <p>
-
                     <i class="fa-solid fa-location-dot"></i>
-
                     Location: Nilanga, Maharashtra
-
                 </p>
-
 
             </div>
 
-
         </div>
 
-
     </div>
-
 
 </section>
 
 
 
 <!-- =====================================================
-                     WHY JOIN US
+                       WHY JOIN US
 ===================================================== -->
 
 <section class="why-career">
 
-
     <div class="why-career-title">
-
 
         <h2>
 
@@ -842,14 +1564,10 @@
 
 
         <p>
-
             Grow professionally while contributing to education.
-
         </p>
 
-
     </div>
-
 
 
     <div class="why-container">
@@ -860,21 +1578,16 @@
             <i class="fa-solid fa-users"></i>
 
             <h3>
-
                 Supportive Environment
-
             </h3>
 
             <p>
-
                 Work with a dedicated and
                 collaborative team in a positive
                 school environment.
-
             </p>
 
         </div>
-
 
 
         <div class="why-card">
@@ -882,21 +1595,16 @@
             <i class="fa-solid fa-chart-line"></i>
 
             <h3>
-
                 Professional Growth
-
             </h3>
 
             <p>
-
                 Opportunities to improve your
                 teaching, communication and
                 professional skills.
-
             </p>
 
         </div>
-
 
 
         <div class="why-card">
@@ -904,20 +1612,15 @@
             <i class="fa-solid fa-child-reaching"></i>
 
             <h3>
-
                 Make a Difference
-
             </h3>
 
             <p>
-
                 Help students develop academically,
                 socially and personally.
-
             </p>
 
         </div>
-
 
 
         <div class="why-card">
@@ -925,20 +1628,15 @@
             <i class="fa-solid fa-lightbulb"></i>
 
             <h3>
-
                 Innovative Learning
-
             </h3>
 
             <p>
-
                 Encourage creativity, technology
                 and modern learning practices.
-
             </p>
 
         </div>
-
 
 
         <div class="why-card">
@@ -946,20 +1644,15 @@
             <i class="fa-solid fa-heart"></i>
 
             <h3>
-
                 Meaningful Work
-
             </h3>
 
             <p>
-
                 Be part of an organization focused
                 on education and student development.
-
             </p>
 
         </div>
-
 
 
         <div class="why-card">
@@ -967,37 +1660,29 @@
             <i class="fa-solid fa-school"></i>
 
             <h3>
-
                 School Community
-
             </h3>
 
             <p>
-
                 Become a valuable member of our
                 growing school community.
-
             </p>
 
         </div>
 
-
     </div>
-
 
 </section>
 
 
 
 <!-- =====================================================
-                 APPLICATION SECTION
+                     APPLICATION
 ===================================================== -->
 
 <section class="application-section">
 
-
     <div class="application-title">
-
 
         <h2>
 
@@ -1018,280 +1703,182 @@
 
         </p>
 
-
     </div>
-
 
 
     <div class="application-box">
 
+        <form id="careerApplicationForm"
+              class="application-form">
 
-        <form
-            id="careerApplicationForm"
-            class="application-form">
-
-
-            <!-- FULL NAME -->
 
             <div class="form-group">
 
                 <label>
-
                     Full Name *
-
                 </label>
 
-
-                <input
-                    type="text"
-                    name="Full Name"
-                    placeholder="Enter your full name"
-                    required>
+                <input type="text"
+                       name="Full Name"
+                       placeholder="Enter your full name"
+                       required>
 
             </div>
 
 
-
-            <!-- EMAIL -->
-
             <div class="form-group">
 
                 <label>
-
                     Email Address *
-
                 </label>
 
-
-                <input
-                    type="email"
-                    name="Email"
-                    placeholder="Enter your email"
-                    required>
+                <input type="email"
+                       name="Email"
+                       placeholder="Enter your email"
+                       required>
 
             </div>
 
 
-
-            <!-- MOBILE -->
-
             <div class="form-group">
 
                 <label>
-
                     Mobile Number *
-
                 </label>
 
-
-                <input
-                    type="tel"
-                    name="Mobile"
-                    placeholder="Enter your mobile number"
-                    pattern="[0-9]{10}"
-                    maxlength="10"
-                    required>
+                <input type="tel"
+                       name="Mobile"
+                       placeholder="Enter your mobile number"
+                       pattern="[0-9]{10}"
+                       maxlength="10"
+                       required>
 
             </div>
 
 
-
-            <!-- POSITION -->
-
             <div class="form-group">
 
                 <label>
-
                     Applying For *
-
                 </label>
 
-
-                <select
-                    name="Position"
-                    required>
-
+                <select name="Position"
+                        required>
 
                     <option value="">
-
                         Select Position
-
                     </option>
-
 
                     <option value="Primary Teacher">
-
                         Primary Teacher
-
                     </option>
-
 
                     <option value="Secondary Teacher">
-
                         Secondary Teacher
-
                     </option>
-
 
                     <option value="Computer Teacher">
-
                         Computer Teacher
-
                     </option>
-
 
                     <option value="Administrative Staff">
-
                         Administrative Staff
-
                     </option>
-
 
                     <option value="Other">
-
                         Other
-
                     </option>
-
 
                 </select>
 
             </div>
 
 
-
-            <!-- QUALIFICATION -->
-
             <div class="form-group">
 
                 <label>
-
                     Qualification *
-
                 </label>
 
-
-                <input
-                    type="text"
-                    name="Qualification"
-                    placeholder="e.g. B.Ed, BCA, B.Tech"
-                    required>
+                <input type="text"
+                       name="Qualification"
+                       placeholder="e.g. B.Ed, BCA, B.Tech"
+                       required>
 
             </div>
 
 
-
-            <!-- EXPERIENCE -->
-
             <div class="form-group">
 
                 <label>
-
                     Experience
-
                 </label>
 
-
-                <input
-                    type="text"
-                    name="Experience"
-                    placeholder="e.g. Fresher / 2 Years">
+                <input type="text"
+                       name="Experience"
+                       placeholder="e.g. Fresher / 2 Years">
 
             </div>
 
 
-
-            <!-- CITY -->
-
             <div class="form-group">
 
                 <label>
-
                     City *
-
                 </label>
 
-
-                <input
-                    type="text"
-                    name="City"
-                    placeholder="Enter your city"
-                    required>
+                <input type="text"
+                       name="City"
+                       placeholder="Enter your city"
+                       required>
 
             </div>
 
-
-
-            <!-- DOB -->
 
             <div class="form-group">
 
                 <label>
-
                     Date of Birth
-
                 </label>
 
-
-                <input
-                    type="date"
-                    name="Date of Birth">
+                <input type="date"
+                       name="Date of Birth">
 
             </div>
 
-
-
-            <!-- RESUME -->
 
             <div class="form-group full">
 
                 <label>
-
                     Upload Resume *
-
                 </label>
 
-
-                <input
-                    type="file"
-                    id="careerResume"
-                    accept=".pdf,.doc,.docx"
-                    required>
-
+                <input type="file"
+                       id="careerResume"
+                       accept=".pdf,.doc,.docx"
+                       required>
 
                 <span class="form-note">
-
-                    PDF, DOC or DOCX. Maximum size: 2 MB.
-
+                    PDF, DOC or DOCX.
+                    Maximum size: 2 MB.
                 </span>
 
             </div>
 
 
-
-            <!-- COVER LETTER -->
-
             <div class="form-group full">
 
                 <label>
-
                     Cover Letter / Message
-
                 </label>
 
-
-                <textarea
-                    name="Message"
-                    placeholder="Write a short message about yourself..."></textarea>
+                <textarea name="Message"
+                          placeholder="Write a short message about yourself..."></textarea>
 
             </div>
 
 
-
-            <!-- SUBMIT -->
-
             <div class="application-submit">
-
 
                 <button type="submit">
 
@@ -1304,9 +1891,7 @@
 
                 <p id="careerMessage"></p>
 
-
             </div>
-
 
         </form>
 
@@ -1317,11 +1902,11 @@
 
 
 <!-- =====================================================
-                     CAREER INFO
+                       CAREER INFO
+                  NO BACKGROUND IMAGE
 ===================================================== -->
 
 <section class="career-info">
-
 
     <h2>
 
@@ -1346,56 +1931,50 @@
 
     </p>
 
-
 </section>
 
 
 
 <!-- =====================================================
-                         FOOTER
+                          FOOTER
 ===================================================== -->
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
-
+<footer>
 
     <div class="content">
 
-
         <div class="top">
-
 
             <div class="logo-details">
 
-
                 <span>
-
                     Maria’s Podar Learn School Nilanga
-
                 </span>
-
 
             </div>
 
 
-
             <div class="media-icons">
 
-
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
-              <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                <a href="mailto:principal.mpls@podar.org">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
 
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
@@ -1410,18 +1989,16 @@
 
 
                 <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
                 </a>
 
-
             </div>
 
-
         </div>
-
 
 
         <div class="link-boxes">
@@ -1435,41 +2012,25 @@
                     About
                 </li>
 
-
                 <li>
-
                     <a href="index.html">
-
                         Home
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="contact-us.html">
-
                         Contact us
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="About-us.html">
-
                         About us
-
                     </a>
-
                 </li>
 
             </ul>
-
 
 
             <!-- QUICK LINKS -->
@@ -1480,88 +2041,54 @@
                     Quick Links
                 </li>
 
-
                 <li>
-
                     <a href="admission-form.html">
-
                         Admission Form
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="index.html#notice-board">
-
                         Notice Board
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="index.html">
-
                         School Site
-
                     </a>
-
                 </li>
 
             </ul>
 
 
-
-            <!-- STUDENT CORNER -->
+            <!-- STUDENT'S CORNER -->
 
             <ul class="box">
 
                 <li class="link_name">
-
                     Student's Corner
-
                 </li>
 
-
                 <li>
-
                     <a href="fees-payment.html">
-
                         Fees Payment
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="complaint.html">
-
                         Complaint Section
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="careers.html">
-
                         Careers
-
                     </a>
-
                 </li>
 
             </ul>
-
 
 
             <!-- ACCOUNT -->
@@ -1569,81 +2096,57 @@
             <ul class="box">
 
                 <li class="link_name">
-
                     Account
-
                 </li>
 
-
                 <li>
-
                     <a href="#"
                        id="adminLoginLink">
-
                         Admin Login
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="events.html">
-
                         Events
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="gallery.html">
-
                         Gallery
-
                     </a>
-
                 </li>
 
             </ul>
-
 
 
             <!-- SUBSCRIBE -->
 
             <ul class="box input-box">
 
-
                 <li class="link_name">
-
                     Subscribe
-
                 </li>
-
 
                 <li>
 
-                    <input
-                        type="email"
-                        id="subscribeEmail"
-                        placeholder="Enter your email"
-                        required>
+                    <input type="email"
+                           id="subscribeEmail"
+                           placeholder="Enter your email">
 
                 </li>
-
 
                 <li>
 
-                    <input
-                        type="button"
-                        value="Subscribe"
-                        onclick="subscribeUser()">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
-
 
                 <li>
 
@@ -1651,45 +2154,54 @@
 
                 </li>
 
-
             </ul>
-
 
         </div>
 
-
     </div>
-
 
 </footer>
 
 
 
 <!-- =====================================================
-                    CAREER APPLICATION SCRIPT
+                           TIDIO
+===================================================== -->
+
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
+
+
+
+<!-- =====================================================
+                         MAIN JS
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+
+
+<!-- =====================================================
+                    CAREER APPLICATION
 ===================================================== -->
 
 <script>
 
 document.getElementById(
     "careerApplicationForm"
-)
-.addEventListener(
+).addEventListener(
     "submit",
     async function(event) {
 
-
         event.preventDefault();
 
-
         const form = this;
-
 
         const message =
             document.getElementById(
                 "careerMessage"
             );
-
 
         const resume =
             document.getElementById(
@@ -1699,21 +2211,14 @@ document.getElementById(
 
         if (!resume) {
 
-
             message.innerHTML =
                 "Please upload your resume.";
-
 
             message.style.color =
                 "red";
 
-
             return;
-
         }
-
-
-        /* MAX 2 MB */
 
 
         if (
@@ -1721,30 +2226,24 @@ document.getElementById(
             2 * 1024 * 1024
         ) {
 
-
             message.innerHTML =
                 "Resume size must be less than 2 MB.";
-
 
             message.style.color =
                 "red";
 
-
             return;
-
         }
 
 
         message.innerHTML =
             "Submitting application...";
 
-
         message.style.color =
-            "#f93";
+            "#f39c12";
 
 
         try {
-
 
             const reader =
                 new FileReader();
@@ -1752,7 +2251,6 @@ document.getElementById(
 
             reader.onload =
                 async function() {
-
 
                     const base64 =
                         reader.result;
@@ -1771,9 +2269,7 @@ document.getElementById(
                     fields.forEach(
                         function(field) {
 
-
                             if (field.name) {
-
 
                                 formData.append(
                                     field.name,
@@ -1805,15 +2301,11 @@ document.getElementById(
                     );
 
 
-                    /* CAREERS GOOGLE APPS SCRIPT URL */
-
-
                     const CAREER_SCRIPT_URL =
                         "https://script.google.com/macros/s/AKfycbyqZSFQ9LBO277BWzj0HTDLOgoVdK2GqljG5FFlIamdB6kq5BvmDruQL2gOgSx_hn7I/exec";
 
 
                     try {
-
 
                         await fetch(
                             CAREER_SCRIPT_URL,
@@ -1828,32 +2320,23 @@ document.getElementById(
                         message.innerHTML =
                             "Application submitted successfully! ✅";
 
-
                         message.style.color =
                             "green";
 
-
                         form.reset();
-
 
                     }
 
-
                     catch(error) {
 
-
                         console.error(error);
-
 
                         message.innerHTML =
                             "Unable to submit application. Please try again.";
 
-
                         message.style.color =
                             "red";
-
                     }
-
 
                 };
 
@@ -1861,10 +2344,8 @@ document.getElementById(
             reader.onerror =
                 function() {
 
-
                     message.innerHTML =
                         "Unable to read resume.";
-
 
                     message.style.color =
                         "red";
@@ -1872,27 +2353,23 @@ document.getElementById(
                 };
 
 
-            reader.readAsDataURL(resume);
-
+            reader.readAsDataURL(
+                resume
+            );
 
         }
 
-
         catch(error) {
-
 
             console.error(error);
 
-
             message.innerHTML =
                 "Something went wrong.";
-
 
             message.style.color =
                 "red";
 
         }
-
 
     }
 );
@@ -1902,18 +2379,17 @@ document.getElementById(
 
 
 <!-- =====================================================
-                    SUBSCRIBE SCRIPT
+                         SUBSCRIBE
 ===================================================== -->
 
 <script>
 
 function subscribeUser() {
 
-
-    const email =
+    const emailInput =
         document.getElementById(
             "subscribeEmail"
-        ).value.trim();
+        );
 
 
     const message =
@@ -1922,19 +2398,24 @@ function subscribeUser() {
         );
 
 
+    if (!emailInput || !message) {
+        return;
+    }
+
+
+    const email =
+        emailInput.value.trim();
+
+
     if (email === "") {
 
-
-        message.innerHTML =
+        message.textContent =
             "Please enter your email.";
-
 
         message.style.color =
             "red";
 
-
         return;
-
     }
 
 
@@ -1943,17 +2424,13 @@ function subscribeUser() {
         !email.includes(".")
     ) {
 
-
-        message.innerHTML =
+        message.textContent =
             "Please enter a valid email.";
-
 
         message.style.color =
             "red";
 
-
         return;
-
     }
 
 
@@ -1961,7 +2438,17 @@ function subscribeUser() {
         "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
-    message.innerHTML =
+    const formData =
+        new FormData();
+
+
+    formData.append(
+        "email",
+        email
+    );
+
+
+    message.textContent =
         "Submitting...";
 
 
@@ -1972,16 +2459,9 @@ function subscribeUser() {
     fetch(
         scriptURL,
         {
-
             method: "POST",
-
-            body:
-                new URLSearchParams({
-
-                    email: email
-
-                })
-
+            body: formData,
+            mode: "no-cors"
         }
     )
 
@@ -1989,42 +2469,29 @@ function subscribeUser() {
     .then(
         function() {
 
-
-            message.innerHTML =
+            message.textContent =
                 "Thank you for subscribing! 😊";
-
 
             message.style.color =
                 "lightgreen";
 
-
-            document.getElementById(
-                "subscribeEmail"
-            ).value = "";
-
+            emailInput.value = "";
 
         }
     )
 
 
     .catch(
-        function(error) {
+        function() {
 
-
-            console.error(error);
-
-
-            message.innerHTML =
+            message.textContent =
                 "Something went wrong. Please try again.";
-
 
             message.style.color =
                 "red";
 
-
         }
     );
-
 
 }
 
@@ -2033,15 +2500,7 @@ function subscribeUser() {
 
 
 <!-- =====================================================
-                         MAIN JS
-===================================================== -->
-
-<script src="js/script.js"></script>
-
-
-
-<!-- =====================================================
-                  COURSE DROPDOWN SCRIPT
+                       COURSE DROPDOWN
 ===================================================== -->
 
 <script>
@@ -2052,20 +2511,17 @@ document.querySelectorAll(
 .forEach(
     function(link) {
 
-
         link.addEventListener(
             "click",
-            function(e) {
+            function(event) {
 
+                event.preventDefault();
 
-                e.preventDefault();
-
-                e.stopPropagation();
+                event.stopPropagation();
 
 
                 const submenu =
-                    this.parentElement
-                    .querySelector(
+                    this.parentElement.querySelector(
                         ".dropdown2"
                     );
 
@@ -2076,11 +2532,9 @@ document.querySelectorAll(
                 .forEach(
                     function(menu) {
 
-
                         if (
                             menu !== submenu
                         ) {
-
 
                             menu.classList.remove(
                                 "show"
@@ -2092,14 +2546,16 @@ document.querySelectorAll(
                 );
 
 
-                submenu.classList.toggle(
-                    "show"
-                );
+                if (submenu) {
 
+                    submenu.classList.toggle(
+                        "show"
+                    );
+
+                }
 
             }
         );
-
 
     }
 );
@@ -2109,7 +2565,7 @@ document.querySelectorAll(
 
 
 <!-- =====================================================
-                         LOGIN SCRIPT
+                         ADMIN LOGIN
 ===================================================== -->
 
 <script>
@@ -2119,15 +2575,15 @@ document.addEventListener(
     function() {
 
 
-        const accountBtn =
-            document.getElementById(
-                "account-btn"
-            );
-
-
         const adminLoginLink =
             document.getElementById(
                 "adminLoginLink"
+            );
+
+
+        const accountBtn =
+            document.getElementById(
+                "account-btn"
             );
 
 
@@ -2143,79 +2599,22 @@ document.addEventListener(
             );
 
 
-
-        /* HEADER LOGIN */
-
-
-        if (
-            accountBtn &&
-            accountForm
-        ) {
-
-
-            accountBtn.addEventListener(
-                "click",
-                function(e) {
-
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-
-                    accountForm.classList.add(
-                        "active"
-                    );
-
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: "smooth"
-
-                    });
-
-
-                }
-            );
-
-        }
-
-
-
-        /* FOOTER ADMIN LOGIN */
-
+        /* FOOTER LOGIN */
 
         if (
             adminLoginLink &&
             accountForm
         ) {
 
-
             adminLoginLink.addEventListener(
                 "click",
-                function(e) {
+                function(event) {
 
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
+                    event.preventDefault();
 
                     accountForm.classList.add(
                         "active"
                     );
-
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: "smooth"
-
-                    });
-
 
                 }
             );
@@ -2223,30 +2622,41 @@ document.addEventListener(
         }
 
 
+        /* HEADER LOGIN */
+
+        if (
+            accountBtn &&
+            accountForm
+        ) {
+
+            accountBtn.addEventListener(
+                "click",
+                function() {
+
+                    accountForm.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
 
         /* CLOSE LOGIN */
-
 
         if (
             closeForm &&
             accountForm
         ) {
 
-
             closeForm.addEventListener(
                 "click",
-                function(e) {
-
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
+                function() {
 
                     accountForm.classList.remove(
                         "active"
                     );
-
 
                 }
             );
@@ -2254,23 +2664,19 @@ document.addEventListener(
         }
 
 
+        /* LOGIN FORM */
 
-        /* LOGIN */
-
-
-        const loginForm =
+        const schoolLoginForm =
             document.getElementById(
                 "schoolLoginForm"
             );
 
 
-        if (loginForm) {
+        if (schoolLoginForm) {
 
-
-            loginForm.addEventListener(
+            schoolLoginForm.addEventListener(
                 "submit",
                 function(event) {
-
 
                     event.preventDefault();
 
@@ -2278,13 +2684,17 @@ document.addEventListener(
                     const email =
                         document.getElementById(
                             "loginEmail"
-                        ).value.trim();
+                        )
+                        .value
+                        .trim();
 
 
                     const password =
                         document.getElementById(
                             "loginPassword"
-                        ).value.trim();
+                        )
+                        .value
+                        .trim();
 
 
                     const message =
@@ -2301,10 +2711,8 @@ document.addEventListener(
                         "Admin@123"
                     ) {
 
-
-                        message.innerHTML =
-                            "Login Successful! ✅";
-
+                        message.textContent =
+                            "Login successful!";
 
                         message.style.color =
                             "green";
@@ -2313,38 +2721,67 @@ document.addEventListener(
                         setTimeout(
                             function() {
 
-
                                 window.location.href =
                                     "admin-dashboard.html";
 
-
                             },
-                            1000
+                            700
                         );
-
 
                     }
 
-
                     else {
 
-
-                        message.innerHTML =
-                            "Invalid Email or Password ❌";
-
+                        message.textContent =
+                            "Invalid email or password.";
 
                         message.style.color =
                             "red";
 
-
                     }
-
 
                 }
             );
 
         }
 
+    }
+);
+
+</script>
+
+
+
+<!-- =====================================================
+                         ESCAPE KEY
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
 
     }
 );

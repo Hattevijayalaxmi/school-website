@@ -5,546 +5,1223 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
-
-    <link rel="stylesheet"
-          href="css/responsive.css">
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
-
+    <!-- Favicon -->
     <link rel="shortcut icon"
           href="Image/Logo.jpeg"
           type="image/png">
 
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- =========================
-         ABOUT PAGE RESPONSIVE CSS
-    ========================== -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
+
 
     <style>
 
-        /* =========================
-           ABOUT CONTENT
-        ========================= */
+        /* =====================================================
+           RESET
+        ===================================================== */
 
-        .about-page-content {
-
-            width: 100%;
-
-            max-width: 1400px;
-
-            margin: 50px auto;
-
-            padding: 0 50px;
-
-            min-height: 400px;
-
-            font-size: 17px;
-
-            line-height: 1.7;
-
+        * {
             box-sizing: border-box;
+        }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #ffffff;
         }
 
 
-        .about-page-content h1 {
-
-            font-size: 36px;
-
-            line-height: 1.3;
-
-            margin-bottom: 20px;
-
-        }
-
-
-        .about-page-content h2 {
-
-            font-size: 28px;
-
-            line-height: 1.4;
-
-            margin-top: 30px;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .about-page-content p {
-
-            margin-bottom: 18px;
-
-            line-height: 1.7;
-
-        }
-
-
-        .about-page-content ul {
-
-            padding-left: 30px;
-
-            margin-bottom: 20px;
-
-        }
-
-
-        .about-page-content li {
-
-            margin-bottom: 8px;
-
-            line-height: 1.6;
-
-        }
-
-
-
-        /* =========================
-           TABLET
-        ========================== */
-
-        @media (max-width: 991px) {
-
-            .about-page-content {
-
-                margin: 40px auto;
-
-                padding: 0 40px;
-
-                font-size: 17px;
-
-            }
-
-
-            .about-page-content h1 {
-
-                font-size: 32px;
-
-            }
-
-
-            .about-page-content h2 {
-
-                font-size: 25px;
-
-            }
-
-        }
-
-
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media (max-width: 768px) {
-
-            body {
-
-                overflow-x: hidden;
-
-            }
-
-
-            .about-page-content {
-
-                width: 100%;
-
-                min-height: auto;
-
-                margin: 30px 0;
-
-                padding: 0 20px;
-
-                font-size: 16px;
-
-                line-height: 1.7;
-
-                box-sizing: border-box;
-
-            }
-
-
-            .about-page-content h1 {
-
-                font-size: 27px;
-
-                line-height: 1.35;
-
-                margin-bottom: 20px;
-
-            }
-
-
-            .about-page-content h2 {
-
-                font-size: 23px;
-
-                line-height: 1.4;
-
-                margin-top: 28px;
-
-                margin-bottom: 12px;
-
-            }
-
-
-            .about-page-content p {
-
-                font-size: 15px;
-
-                line-height: 1.7;
-
-                margin-bottom: 18px;
-
-                text-align: left;
-
-                word-wrap: break-word;
-
-            }
-
-
-            .about-page-content ul {
-
-                padding-left: 25px;
-
-                margin-bottom: 20px;
-
-            }
-
-
-            .about-page-content li {
-
-                font-size: 15px;
-
-                line-height: 1.6;
-
-                margin-bottom: 8px;
-
-                word-wrap: break-word;
-
-            }
-
-        }
-
-
-
-        /* =========================
-           SMALL MOBILE
-        ========================== */
-
-        @media (max-width: 480px) {
-
-            .about-page-content {
-
-                margin: 20px 0;
-
-                padding: 0 15px;
-
-                font-size: 15px;
-
-            }
-
-
-            .about-page-content h1 {
-
-                font-size: 23px;
-
-                line-height: 1.35;
-
-            }
-
-
-            .about-page-content h2 {
-
-                font-size: 20px;
-
-                line-height: 1.4;
-
-                margin-top: 25px;
-
-            }
-
-
-            .about-page-content p {
-
-                font-size: 14px;
-
-                line-height: 1.7;
-
-            }
-
-
-            .about-page-content li {
-
-                font-size: 14px;
-
-                line-height: 1.6;
-
-            }
-
-        }
-
-
-
-        /* =========================
-           SOCIAL ICONS
-        ========================== */
-
-        .media-icons {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 12px;
-
-            flex-wrap: wrap;
-
-        }
-
-
-        .media-icons a {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            width: 42px;
-
-            height: 42px;
-
-            border-radius: 50%;
-
-            text-decoration: none;
-
-            color: white;
-
-            font-size: 20px;
-
-            cursor: pointer;
-
-            transition: 0.3s ease;
+        /* =====================================================
+           ABOUT HERO
+        ===================================================== */
+
+        .about-page-hero {
 
             position: relative;
 
-            z-index: 100;
+            width: 100%;
+            min-height: 560px;
 
-            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
+            text-align: center;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.30),
+                    rgba(0, 0, 0, 0.62)
+                ),
+                url("Image/Image.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
 
-        .media-icons a i {
+        .about-page-hero-content {
+
+            position: relative;
+            z-index: 2;
+
+            width: 90%;
+            max-width: 1000px;
+
+            padding: 30px 20px;
+        }
+
+
+        .about-page-hero-content h1 {
+
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 60px;
+            font-weight: 700;
+
+            line-height: 1.2;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 4px 12px rgba(0,0,0,0.60);
+        }
+
+
+        .about-page-hero-content p {
+
+            margin: 18px 0 0;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 25px;
+            font-weight: 600;
+
+            line-height: 1.5;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 3px 8px rgba(0,0,0,0.60);
+        }
+
+
+        /* =====================================================
+           ABOUT MAIN
+        ===================================================== */
+
+        .about-main {
+
+            width: 100%;
+
+            background: #f7f9fc;
+
+            padding: 70px 0;
+        }
+
+
+        .about-wrapper {
+
+            width: 90%;
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .about-intro {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .about-intro h2 {
+
+            margin: 0 0 15px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 35px;
+            font-weight: 700;
+
+            color: #122b49;
+        }
+
+
+        .about-intro .line {
+
+            width: 75px;
+            height: 4px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 10px;
+
+            background: #f39c12;
+        }
+
+
+        .about-intro p {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 18px;
+            line-height: 1.8;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+           SCHOOL INFORMATION
+        ===================================================== */
+
+        .school-info-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-bottom: 55px;
+        }
+
+
+        .school-info-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 35px 25px;
+
+            background: #ffffff;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .school-info-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.13);
+        }
+
+
+        .school-info-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: #f39c12;
+        }
+
+
+        .school-info-card i {
 
             display: block;
 
+            margin-bottom: 18px;
+
+            font-size: 42px;
+
+            color: #f39c12;
+        }
+
+
+        .school-info-card h3 {
+
+            margin: 0 0 10px;
+
+            font-family: 'Poppins', sans-serif;
+
             font-size: 20px;
 
-            line-height: 1;
-
+            color: #122b49;
         }
 
 
-        .media-icons a:hover {
+        .school-info-card p {
 
-            transform: translateY(-4px);
+            margin: 0;
 
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 16px;
+
+            color: #666;
         }
 
 
-        .media-icons a:nth-child(1) {
+        /* =====================================================
+           WHITE CONTENT BOX
+        ===================================================== */
 
-            background: #1877f2;
+        .about-box {
 
+            margin-bottom: 30px;
+
+            padding: 40px;
+
+            background: #ffffff;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.07);
         }
 
 
-        .media-icons a:nth-child(2) {
+        .about-box h2 {
 
-            background: #ea4335;
+            position: relative;
 
+            margin: 0 0 25px;
+
+            padding-bottom: 13px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 29px;
+            font-weight: 700;
+
+            color: #122b49;
         }
 
 
-        .media-icons a:nth-child(3) {
+        .about-box h2::after {
 
-            background: #e1306c;
+            content: "";
 
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 65px;
+            height: 4px;
+
+            border-radius: 10px;
+
+            background: #f39c12;
         }
 
 
-        .media-icons a:nth-child(4) {
+        .about-box p {
 
-            background: #0077b5;
+            margin: 0 0 18px;
 
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.85;
+
+            color: #555;
         }
 
 
-        .media-icons a:nth-child(5) {
+        .about-box p:last-child {
 
-            background: #ff0000;
-
+            margin-bottom: 0;
         }
 
 
+        /* =====================================================
+           PRINCIPAL
+        ===================================================== */
 
-        /* =========================
-           MOBILE SOCIAL ICONS
-        ========================== */
+        .principal-content {
 
-        @media (max-width: 600px) {
+            display: flex;
 
-            .media-icons {
+            align-items: center;
 
-                gap: 9px;
-
-                justify-content: center;
-
-                flex-wrap: wrap;
-
-            }
-
-
-            .media-icons a {
-
-                width: 40px;
-
-                height: 40px;
-
-                font-size: 18px;
-
-            }
-
-
-            .media-icons a i {
-
-                font-size: 18px;
-
-            }
-
+            gap: 28px;
         }
 
 
+        .principal-image {
 
-        /* =========================
-           FOOTER MOBILE
-        ========================== */
+            min-width: 100px;
+
+            width: 100px;
+            height: 100px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #122b49,
+                    #1e4b78
+                );
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.12);
+        }
+
+
+        .principal-image i {
+
+            font-size: 43px;
+
+            color: #ffffff;
+        }
+
+
+        .principal-details h3 {
+
+            margin: 0 0 8px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 23px;
+
+            color: #122b49;
+        }
+
+
+        .principal-details .qualification {
+
+            margin-bottom: 10px;
+
+            font-weight: 700;
+
+            color: #f39c12;
+        }
+
+
+        /* =====================================================
+           TEACHING TEAM
+        ===================================================== */
+
+        .teacher-section {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .teacher-card {
+
+            padding: 30px;
+
+            background: #ffffff;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.07);
+        }
+
+
+        .teacher-card i {
+
+            margin-bottom: 15px;
+
+            font-size: 38px;
+
+            color: #f39c12;
+        }
+
+
+        .teacher-card h3 {
+
+            margin: 0 0 10px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 21px;
+
+            color: #122b49;
+        }
+
+
+        .teacher-card p {
+
+            margin: 0;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+           EDUCATION LIST
+        ===================================================== */
+
+        .education-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px 25px;
+        }
+
+
+        .education-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 15px 17px;
+
+            border-radius: 9px;
+
+            background: #f7f9fc;
+        }
+
+
+        .education-item i {
+
+            flex-shrink: 0;
+
+            font-size: 19px;
+
+            color: #f39c12;
+        }
+
+
+        .education-item span {
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            line-height: 1.5;
+
+            color: #444;
+        }
+
+
+        /* =====================================================
+           VISION
+        ===================================================== */
+
+        .vision-section {
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            margin-bottom: 30px;
+
+            padding: 45px;
+
+            border-radius: 16px;
+
+            background-image:
+                linear-gradient(
+                    rgba(18,43,73,0.91),
+                    rgba(18,43,73,0.91)
+                ),
+                url("Image/Photo2.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.10);
+        }
+
+
+        .vision-icon {
+
+            min-width: 85px;
+
+            width: 85px;
+            height: 85px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f39c12;
+        }
+
+
+        .vision-icon i {
+
+            font-size: 38px;
+
+            color: #ffffff;
+        }
+
+
+        .vision-content h2 {
+
+            margin: 0 0 12px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 30px;
+
+            color: #ffffff;
+        }
+
+
+        .vision-content p {
+
+            margin: 0;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           COMMITMENT
+        ===================================================== */
+
+        .commitment-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .commitment-card {
+
+            padding: 28px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            background: #f7f9fc;
+
+            transition: 0.3s ease;
+        }
+
+
+        .commitment-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.08);
+        }
+
+
+        .commitment-card i {
+
+            margin-bottom: 13px;
+
+            font-size: 34px;
+
+            color: #f39c12;
+        }
+
+
+        .commitment-card h3 {
+
+            margin: 0 0 10px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 19px;
+
+            color: #122b49;
+        }
+
+
+        .commitment-card p {
+
+            margin: 0;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+           ABOUT MOBILE 768px
+        ===================================================== */
 
         @media (max-width: 768px) {
 
-            footer {
+            .about-page-hero {
 
-                overflow-x: hidden;
+                min-height: 450px;
 
+                background-position: center;
             }
 
 
-            footer .content {
+            .about-page-hero-content h1 {
 
-                width: 100%;
-
+                font-size: 43px;
             }
 
 
-            footer .top {
+            .about-page-hero-content p {
 
-                flex-wrap: wrap;
-
-                gap: 20px;
-
+                font-size: 20px;
             }
 
 
-            footer .logo-details {
+            .about-main {
 
-                max-width: 100%;
-
+                padding: 50px 0;
             }
 
 
-            footer .link-boxes {
+            .about-wrapper {
 
-                flex-wrap: wrap;
-
-                gap: 25px;
-
+                width: 92%;
             }
 
 
-            footer .box {
+            .school-info-grid {
 
-                min-width: 140px;
+                grid-template-columns: 1fr;
 
+                gap: 18px;
+            }
+
+
+            .teacher-section {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .education-list {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .commitment-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-box {
+
+                padding: 30px 25px;
             }
 
         }
 
 
+        /* =====================================================
+           ABOUT MOBILE 480px
+        ===================================================== */
+
         @media (max-width: 480px) {
 
-            footer .top {
+            html,
+            body {
+
+                width: 100%;
+                max-width: 100%;
+
+                overflow-x: hidden;
+            }
+
+
+            .about-page-hero {
+
+                min-height: 410px;
+
+                background-position: center;
+            }
+
+
+            .about-page-hero-content {
+
+                width: 95%;
+
+                padding: 20px 10px;
+            }
+
+
+            .about-page-hero-content h1 {
+
+                font-size: 32px;
+
+                line-height: 1.25;
+            }
+
+
+            .about-page-hero-content p {
+
+                margin-top: 12px;
+
+                font-size: 17px;
+
+                line-height: 1.5;
+            }
+
+
+            .about-main {
+
+                padding: 38px 0;
+            }
+
+
+            .about-wrapper {
+
+                width: 94%;
+            }
+
+
+            .about-intro {
+
+                margin-bottom: 30px;
+            }
+
+
+            .about-intro h2 {
+
+                font-size: 24px;
+
+                line-height: 1.4;
+            }
+
+
+            .about-intro p {
+
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+
+            .school-info-grid {
+
+                gap: 15px;
+
+                margin-bottom: 30px;
+            }
+
+
+            .school-info-card {
+
+                padding: 28px 18px;
+            }
+
+
+            .school-info-card i {
+
+                font-size: 35px;
+
+                margin-bottom: 13px;
+            }
+
+
+            .school-info-card h3 {
+
+                font-size: 18px;
+            }
+
+
+            .school-info-card p {
+
+                font-size: 14px;
+            }
+
+
+            .about-box {
+
+                padding: 24px 18px;
+
+                margin-bottom: 20px;
+
+                border-radius: 12px;
+            }
+
+
+            .about-box h2 {
+
+                font-size: 22px;
+
+                line-height: 1.4;
+
+                margin-bottom: 20px;
+            }
+
+
+            .about-box p {
+
+                font-size: 14px;
+
+                line-height: 1.75;
+            }
+
+
+            .principal-content {
 
                 flex-direction: column;
 
-                align-items: center;
-
                 text-align: center;
 
+                gap: 18px;
             }
 
 
-            footer .logo-details {
+            .principal-image {
 
-                text-align: center;
+                min-width: 78px;
 
+                width: 78px;
+                height: 78px;
             }
 
 
-            footer .link-boxes {
+            .principal-image i {
+
+                font-size: 32px;
+            }
+
+
+            .principal-details h3 {
+
+                font-size: 19px;
+            }
+
+
+            .principal-details p {
+
+                font-size: 14px;
+            }
+
+
+            .teacher-section {
+
+                gap: 15px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .teacher-card {
+
+                padding: 22px 18px;
+            }
+
+
+            .teacher-card i {
+
+                font-size: 30px;
+            }
+
+
+            .teacher-card h3 {
+
+                font-size: 18px;
+            }
+
+
+            .teacher-card p {
+
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+
+            .education-list {
+
+                gap: 10px;
+            }
+
+
+            .education-item {
+
+                padding: 12px;
+
+                gap: 10px;
+
+                align-items: flex-start;
+            }
+
+
+            .education-item i {
+
+                margin-top: 2px;
+
+                font-size: 16px;
+            }
+
+
+            .education-item span {
+
+                font-size: 13px;
+
+                line-height: 1.5;
+            }
+
+
+            .vision-section {
 
                 flex-direction: column;
 
-                align-items: center;
-
                 text-align: center;
 
-                gap: 25px;
+                gap: 17px;
 
+                padding: 30px 18px;
+
+                margin-bottom: 20px;
             }
 
 
-            footer .box {
+            .vision-icon {
 
-                width: 100%;
+                min-width: 72px;
 
-                min-width: 0;
-
+                width: 72px;
+                height: 72px;
             }
 
 
-            footer .input-box {
+            .vision-icon i {
 
-                width: 100%;
+                font-size: 30px;
+            }
 
+
+            .vision-content h2 {
+
+                font-size: 24px;
+            }
+
+
+            .vision-content p {
+
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+
+            .commitment-grid {
+
+                gap: 12px;
+            }
+
+
+            .commitment-card {
+
+                padding: 22px 15px;
+            }
+
+
+            .commitment-card i {
+
+                font-size: 29px;
+            }
+
+
+            .commitment-card h3 {
+
+                font-size: 17px;
+            }
+
+
+            .commitment-card p {
+
+                font-size: 13px;
+
+                line-height: 1.6;
+            }
+
+        }
+
+
+        /* =====================================================
+           EXTRA SMALL MOBILE 360px
+        ===================================================== */
+
+        @media (max-width: 360px) {
+
+            .about-page-hero {
+
+                min-height: 380px;
+            }
+
+
+            .about-page-hero-content h1 {
+
+                font-size: 28px;
+            }
+
+
+            .about-page-hero-content p {
+
+                font-size: 15px;
+            }
+
+
+            .about-wrapper {
+
+                width: 93%;
+            }
+
+
+            .about-intro h2 {
+
+                font-size: 21px;
+            }
+
+
+            .about-intro p {
+
+                font-size: 13px;
+            }
+
+
+            .about-box {
+
+                padding: 20px 15px;
+            }
+
+
+            .about-box h2 {
+
+                font-size: 20px;
+            }
+
+
+            .about-box p {
+
+                font-size: 13px;
+
+                line-height: 1.7;
+            }
+
+
+            .education-item span {
+
+                font-size: 12px;
+            }
+
+
+            .vision-section {
+
+                padding: 25px 15px;
+            }
+
+
+            .vision-content h2 {
+
+                font-size: 22px;
+            }
+
+
+            .vision-content p {
+
+                font-size: 13px;
             }
 
         }
@@ -557,24 +1234,22 @@
 <body>
 
 
-<!-- ================= HEADER START ================= -->
+<!-- =====================================================
+     HEADER - EXACT INDEX STYLE
+===================================================== -->
 
 <header class="header">
 
 
-    <a href="index.html"
-       class="logo">
+    <a href="index.html" class="logo">
 
 
         <img src="Image/Logo.jpeg"
-             alt="School logo"
-             style="width:80px;height:55px;">
+             alt="Maria's Podar Learn School Logo">
 
 
         <div class="collage-name">
-
-            Maria’s Podar Learn School Nilanga
-
+            Maria's Podar Learn School Nilanga
         </div>
 
 
@@ -590,9 +1265,11 @@
         <div id="close-navbar"
              class="close-icon">
 
+
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="Close menu">
+                 alt="Close Menu">
+
 
         </div>
 
@@ -601,9 +1278,7 @@
         <ul class="navbar-links">
 
 
-            <!-- HOME -->
-
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="index.html">
                     Home
@@ -618,8 +1293,11 @@
             <li class="navbar-dropdown">
 
 
-                <a href="#">
+                <a href="#"
+                   class="course-main-link">
+
                     Course
+
                 </a>
 
 
@@ -634,7 +1312,7 @@
                         <li class="course-group">
 
 
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Primary Group
 
@@ -668,6 +1346,7 @@
 
                             </ul>
 
+
                         </li>
 
 
@@ -677,7 +1356,7 @@
                         <li class="course-group">
 
 
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Secondary Group
 
@@ -711,12 +1390,15 @@
 
                             </ul>
 
+
                         </li>
 
 
                     </ul>
 
+
                 </div>
+
 
             </li>
 
@@ -724,10 +1406,9 @@
 
             <!-- ADMISSIONS -->
 
-            <li class="navbar-dropdown">
+            <li>
 
-                <a href="admission-form.html"
-                   target="_blank">
+                <a href="admission-form.html">
 
                     Admissions
 
@@ -739,12 +1420,10 @@
 
             <!-- CAREERS -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="careers.html">
-
                     Careers
-
                 </a>
 
             </li>
@@ -753,12 +1432,10 @@
 
             <!-- CONTACT -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="contact-us.html">
-
                     Contact us
-
                 </a>
 
             </li>
@@ -771,41 +1448,46 @@
 
 
 
-    <!-- MENU BUTTON -->
+    <!-- HEADER ICONS -->
 
-    <div id="menu-btn"
-         class="header-icon">
-
-
-        <img src="Image/menu-icon.svg"
-             alt="Menu">
+    <div class="icons">
 
 
-        <img src="Image/menu-icon-hover.gif"
-             alt="Menu"
-             width="30"
-             class="header-icon-hover">
+        <!-- ACCOUNT -->
+
+        <div id="account-btn"
+             class="header-icon">
 
 
-    </div>
+            <img src="Image/avatar-icon.svg"
+                 alt="Login">
+
+
+            <img src="Image/avatar-icon-hover.gif"
+                 alt="Login"
+                 class="header-icon-hover">
+
+
+        </div>
 
 
 
-    <!-- ADMIN LOGIN -->
+        <!-- MENU -->
 
-    <div id="account-btn"
-         class="header-icon"
-         style="cursor:pointer;">
-
-
-        <img src="Image/avatar-icon.svg"
-             alt="Login">
+        <div id="menu-btn"
+             class="header-icon">
 
 
-        <img src="Image/avatar-icon-hover.gif"
-             alt="Login"
-             width="30"
-             class="header-icon-hover">
+            <img src="Image/menu-icon.svg"
+                 alt="Menu">
+
+
+            <img src="Image/menu-icon-hover.gif"
+                 alt="Menu"
+                 class="header-icon-hover">
+
+
+        </div>
 
 
     </div>
@@ -814,19 +1496,17 @@
 </header>
 
 
-<!-- ================= HEADER END ================= -->
 
-
-
-<!-- ================= LOGIN FORM ================= -->
+<!-- =====================================================
+     LOGIN / ADMIN FORM
+===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
 
 
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
+         class="close-icon">
 
 
         <img src="Image/close-icon.gif"
@@ -840,9 +1520,11 @@
 
     <div class="buttons">
 
+
         <span class="btn active login-btn">
-            Login
+            Admin Login
         </span>
+
 
     </div>
 
@@ -853,7 +1535,7 @@
 
 
         <h3>
-            Login Now
+            Admin Login
         </h3>
 
 
@@ -861,6 +1543,7 @@
                id="loginEmail"
                placeholder="Enter your email"
                class="box"
+               autocomplete="email"
                required>
 
 
@@ -868,6 +1551,7 @@
                id="loginPassword"
                placeholder="Enter your password"
                class="box"
+               autocomplete="current-password"
                required>
 
 
@@ -890,7 +1574,7 @@
 
 
         <button type="submit"
-                class="btn">
+                class="btn login-submit">
 
             Login Now
 
@@ -903,271 +1587,589 @@
 </div>
 
 
-<!-- ================= LOGIN FORM END ================= -->
 
+<!-- =====================================================
+     ABOUT HERO
+===================================================== -->
 
+<section class="about-page-hero">
 
-<!-- ================= ABOUT CONTENT ================= -->
 
-<div class="about-page-content">
+    <div class="about-page-hero-content">
 
 
-    <h1>
-        MARIA’S PODAR LEARN SCHOOL, NILANGA
-    </h1>
+        <h1>
+            About Our School
+        </h1>
 
 
-    <h2>
-        Quality Education, Wherever We Go
-    </h2>
+        <p>
+            Quality Education, Wherever We Go
+        </p>
 
 
-    <p>
+    </div>
 
-        <strong>
-            CBSE Affiliation No.:
-        </strong>
 
-        1131276
+</section>
 
-    </p>
 
 
-    <p>
+<!-- =====================================================
+     ABOUT MAIN
+===================================================== -->
 
-        <strong>
-            School Code:
-        </strong>
+<section class="about-main">
 
-        31263
 
-    </p>
+    <div class="about-wrapper">
 
 
-    <p>
+        <!-- INTRO -->
 
-        <strong>
-            Classes Offered:
-        </strong>
+        <div class="about-intro">
 
-        Nursery to Grade X
 
-    </p>
+            <h2>
+                MARIA'S PODAR LEARN SCHOOL, NILANGA
+            </h2>
 
 
+            <div class="line"></div>
 
-    <h2>
-        About Our School
-    </h2>
 
+            <p>
 
-    <p>
+                We believe that every child has the potential
+                to learn, grow and achieve. Our school provides
+                a supportive environment where students can
+                develop knowledge, confidence, creativity and
+                strong values.
 
-        Maria’s Podar Learn School, Nilanga is a CBSE-affiliated school located in
-        Nilanga, Latur District, Maharashtra. As a school associated with the Podar
-        educational network, we are committed to providing students with a structured,
-        progressive and quality-oriented learning environment.
+            </p>
 
-    </p>
 
+        </div>
 
-    <p>
 
-        At Maria’s Podar Learn School, we believe that there can be no compromise when
-        it comes to the quality of a child’s education. Our focus extends beyond
-        academic achievement to the overall development of every student through
-        discipline, communication skills, values, creativity, sports, cultural
-        activities and character building.
 
-    </p>
+        <!-- SCHOOL INFORMATION -->
 
+        <div class="school-info-grid">
 
 
-    <h2>
-        Our Leadership
-    </h2>
+            <div class="school-info-card">
 
 
-    <p>
+                <i class="fas fa-award"></i>
 
-        The school is led by Principal Mr. Vishnu Raj, an education professional from
-        Kerala with qualifications in M.A. English Language &amp; Literature and B.Ed.
-        His leadership philosophy emphasizes academic discipline, effective
-        communication, teacher development, student-centred learning and continuous
-        improvement in educational standards.
 
-    </p>
+                <h3>
+                    CBSE Affiliation
+                </h3>
 
 
-    <p>
+                <p>
+                    Affiliation No. 1131276
+                </p>
 
-        The Principal, academic team and management work together to maintain a
-        positive and professionally organised school environment where every child
-        receives appropriate guidance, encouragement and opportunities to grow.
 
-    </p>
+            </div>
 
 
 
-    <h2>
-        Our Teaching Team
-    </h2>
+            <div class="school-info-card">
 
 
-    <p>
+                <i class="fas fa-school"></i>
 
-        Our strength lies in our dedicated team of qualified and committed teachers.
-        Our educators strive to make classroom learning meaningful, interactive and
-        accessible while giving individual attention to students according to their
-        learning needs.
 
-    </p>
+                <h3>
+                    School Code
+                </h3>
 
 
-    <p>
+                <p>
+                    31263
+                </p>
 
-        Along with academics, the school gives importance to Physical Education and
-        Sports under experienced guidance, encouraging students to develop fitness,
-        confidence, discipline, teamwork and sportsmanship.
 
-    </p>
+            </div>
 
 
 
-    <h2>
-        Education Without Compromise
-    </h2>
+            <div class="school-info-card">
 
 
-    <p>
+                <i class="fas fa-graduation-cap"></i>
 
-        At Maria’s Podar Learn School, quality education is our priority, not an option.
-        We continuously work towards maintaining high standards in:
 
-    </p>
+                <h3>
+                    Classes Offered
+                </h3>
 
 
-    <ul>
+                <p>
+                    Nursery to Grade X
+                </p>
 
-        <li>
-            Academic excellence and conceptual learning
-        </li>
 
-        <li>
-            English communication and language development
-        </li>
+            </div>
 
-        <li>
-            Discipline and character formation
-        </li>
 
-        <li>
-            Sports and physical education
-        </li>
+        </div>
 
-        <li>
-            Cultural and co-curricular activities
-        </li>
 
-        <li>
-            Student safety and well-being
-        </li>
 
-        <li>
-            Technology-supported learning
-        </li>
+        <!-- ABOUT SCHOOL -->
 
-        <li>
-            Regular assessment and academic monitoring
-        </li>
+        <div class="about-box">
 
-        <li>
-            Parent-school communication
-        </li>
 
-        <li>
-            Holistic personality development
-        </li>
+            <h2>
+                About Our School
+            </h2>
 
-    </ul>
 
+            <p>
 
-    <p>
+                Maria's Podar Learn School, Nilanga is committed
+                to providing quality education in a safe, caring
+                and encouraging environment. We believe that
+                education is not only about academic achievement
+                but also about developing confidence, discipline,
+                creativity and strong values in every child.
 
-        Our aim is not merely to prepare children for examinations but to prepare them
-        to become confident, responsible, knowledgeable and compassionate individuals
-        capable of succeeding in a changing world.
+            </p>
 
-    </p>
 
+            <p>
 
+                Our school provides students with opportunities
+                to learn, explore, participate and grow. We
+                encourage every student to discover their strengths
+                and develop the skills required for a successful
+                and responsible future.
 
-    <h2>
-        Our Vision
-    </h2>
+            </p>
 
 
-    <p>
+        </div>
 
-        To create a learning environment where every child receives quality education,
-        discovers their potential and develops the knowledge, confidence, discipline
-        and values required for a successful future.
 
-    </p>
 
+        <!-- LEADERSHIP -->
 
+        <div class="about-box">
 
-    <h2>
-        Our Commitment
-    </h2>
 
+            <h2>
+                Our Leadership
+            </h2>
 
-    <p>
-        <strong>
-            No compromise on education.
-        </strong>
-    </p>
 
+            <div class="principal-content">
 
-    <p>
-        <strong>
-            No compromise on discipline.
-        </strong>
-    </p>
 
+                <div class="principal-image">
 
-    <p>
-        <strong>
-            No compromise on student development.
-        </strong>
-    </p>
+                    <i class="fas fa-user-tie"></i>
 
+                </div>
 
-    <p>
-        <strong>
-            No compromise on quality.
-        </strong>
-    </p>
 
+                <div class="principal-details">
 
-    <p>
 
-        At Maria’s Podar Learn School, Nilanga, we believe that every child deserves
-        an education that creates opportunities for a lifetime.
+                    <h3>
+                        Principal Mr. Vishnu Raj
+                    </h3>
 
-    </p>
 
+                    <p class="qualification">
 
-</div>
+                        M.A. English Language & Literature
+                        and B.Ed.
 
+                    </p>
 
-<!-- ================= ABOUT CONTENT END ================= -->
 
+                    <p>
 
+                        Under strong and supportive leadership,
+                        our school continuously works towards
+                        creating a positive learning environment
+                        where students can achieve their academic
+                        and personal goals.
 
-<!-- ================= FOOTER ================= -->
+                    </p>
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- TEACHING TEAM -->
+
+        <div class="about-box">
+
+
+            <h2>
+                Our Teaching Team
+            </h2>
+
+
+            <div class="teacher-section">
+
+
+                <div class="teacher-card">
+
+
+                    <i class="fas fa-chalkboard-user"></i>
+
+
+                    <h3>
+                        Dedicated Teachers
+                    </h3>
+
+
+                    <p>
+
+                        Our teachers are dedicated to understanding
+                        the individual needs of students and helping
+                        them learn with confidence.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="teacher-card">
+
+
+                    <i class="fas fa-lightbulb"></i>
+
+
+                    <h3>
+                        Meaningful Learning
+                    </h3>
+
+
+                    <p>
+
+                        Through activities, innovative teaching
+                        methods and continuous guidance, we make
+                        learning meaningful and enjoyable.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- EDUCATION WITHOUT COMPROMISE -->
+
+        <div class="about-box">
+
+
+            <h2>
+                Education Without Compromise
+            </h2>
+
+
+            <div class="education-list">
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Quality education for every child
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Safe and positive learning environment
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Experienced and dedicated teachers
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Focus on academic development
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Creativity and innovation
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Confidence and communication development
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Discipline and strong values
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Individual attention to students
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Co-curricular activities
+                    </span>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <i class="fas fa-check-circle"></i>
+
+                    <span>
+                        Preparing students for a bright future
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- VISION -->
+
+        <div class="vision-section">
+
+
+            <div class="vision-icon">
+
+                <i class="fas fa-eye"></i>
+
+            </div>
+
+
+            <div class="vision-content">
+
+
+                <h2>
+                    Our Vision
+                </h2>
+
+
+                <p>
+
+                    To create confident, responsible and lifelong
+                    learners who are equipped with knowledge, skills
+                    and values to contribute positively to society.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COMMITMENT -->
+
+        <div class="about-box">
+
+
+            <h2>
+                Our Commitment
+            </h2>
+
+
+            <div class="commitment-grid">
+
+
+                <div class="commitment-card">
+
+
+                    <i class="fas fa-star"></i>
+
+
+                    <h3>
+                        No Compromise on Quality
+                    </h3>
+
+
+                    <p>
+
+                        We are committed to maintaining quality
+                        in education and student development.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="commitment-card">
+
+
+                    <i class="fas fa-heart"></i>
+
+
+                    <h3>
+                        No Compromise on Care
+                    </h3>
+
+
+                    <p>
+
+                        Every child deserves care, respect
+                        and encouragement.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="commitment-card">
+
+
+                    <i class="fas fa-lightbulb"></i>
+
+
+                    <h3>
+                        No Compromise on Learning
+                    </h3>
+
+
+                    <p>
+
+                        We encourage curiosity, creativity
+                        and continuous learning.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="commitment-card">
+
+
+                    <i class="fas fa-users"></i>
+
+
+                    <h3>
+                        No Compromise on Values
+                    </h3>
+
+
+                    <p>
+
+                        We help students develop discipline,
+                        responsibility and strong moral values.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER - EXACT INDEX STYLE
+===================================================== -->
+
+<footer>
 
 
     <div class="content">
@@ -1191,46 +2193,39 @@
 
                 <a href="https://www.facebook.com/him.sonepat/"
                    target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Facebook">
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
-                <a href="mailto:principal.mpls@podar.org"
-                   aria-label="Email">
+                <a href="mailto:principal.mpls@podar.org">
 
                     <i class="fa-solid fa-envelope"></i>
 
                 </a>
 
 
-                <!-- CORRECT INSTAGRAM -->
-
-                <a href="https://www.instagram.com/mariaspodarnilanga"
+                <a href="https://instagram.com/mariaspodarschoolnilanga"
                    target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Instagram">
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
                 </a>
 
 
-                <a href="#"
-                   aria-label="LinkedIn">
+                <a href="#">
 
                     <i class="fab fa-linkedin-in"></i>
 
                 </a>
 
 
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
                    target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="YouTube">
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
@@ -1309,7 +2304,7 @@
 
                 <li>
 
-                    <a href="index.html">
+                    <a href="index.html#notice-board">
                         Notice Board
                     </a>
 
@@ -1329,7 +2324,7 @@
 
 
 
-            <!-- STUDENT CORNER -->
+            <!-- STUDENT -->
 
             <ul class="box">
 
@@ -1428,17 +2423,19 @@
 
                     <input type="email"
                            id="subscribeEmail"
-                           placeholder="Enter your email"
-                           required>
+                           placeholder="Enter your email">
 
                 </li>
 
 
                 <li>
 
-                    <input type="button"
-                           value="Subscribe"
-                           onclick="subscribeUser()">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
 
@@ -1462,56 +2459,225 @@
 </footer>
 
 
-<!-- ================= FOOTER END ================= -->
+
+<!-- =====================================================
+     TIDIO
+===================================================== -->
+
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
 
 
 
-<!-- ================= SCRIPT ================= -->
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
 
 <script src="js/script.js"></script>
 
 
 
-<!-- ================= SUBSCRIBE ================= -->
+<!-- =====================================================
+     ABOUT PAGE JAVASCRIPT
+===================================================== -->
 
 <script>
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+const adminLoginLink =
+    document.getElementById("adminLoginLink");
+
+
+if (adminLoginLink) {
+
+    adminLoginLink.addEventListener(
+        "click",
+        function(event) {
+
+            event.preventDefault();
+
+            const accountForm =
+                document.getElementById("loginAccountForm");
+
+            if (accountForm) {
+
+                accountForm.classList.add("active");
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   DIRECT ADMIN LOGIN ICON
+===================================================== */
+
+const accountBtn =
+    document.getElementById("account-btn");
+
+
+if (accountBtn) {
+
+    accountBtn.addEventListener(
+        "click",
+        function() {
+
+            const accountForm =
+                document.getElementById("loginAccountForm");
+
+            if (accountForm) {
+
+                accountForm.classList.add("active");
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   CLOSE ADMIN LOGIN
+===================================================== */
+
+const closeForm =
+    document.getElementById("close-form");
+
+
+if (closeForm) {
+
+    closeForm.addEventListener(
+        "click",
+        function() {
+
+            const accountForm =
+                document.getElementById("loginAccountForm");
+
+            if (accountForm) {
+
+                accountForm.classList.remove("active");
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+const schoolLoginForm =
+    document.getElementById("schoolLoginForm");
+
+
+if (schoolLoginForm) {
+
+    schoolLoginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const email =
+                document.getElementById("loginEmail")
+                .value
+                .trim();
+
+
+            const password =
+                document.getElementById("loginPassword")
+                .value
+                .trim();
+
+
+            const message =
+                document.getElementById("loginMessage");
+
+
+            if (
+                email === "admin@school.com" &&
+                password === "Admin@123"
+            ) {
+
+                message.textContent =
+                    "Login successful!";
+
+                message.style.color =
+                    "green";
+
+
+                setTimeout(function() {
+
+                    window.location.href =
+                        "admin-dashboard.html";
+
+                }, 700);
+
+            }
+
+            else {
+
+                message.textContent =
+                    "Invalid email or password.";
+
+                message.style.color =
+                    "red";
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   SUBSCRIBE
+===================================================== */
 
 function subscribeUser() {
 
 
-    const email =
-        document
-        .getElementById("subscribeEmail")
-        .value
-        .trim();
+    const emailInput =
+        document.getElementById("subscribeEmail");
 
 
     const message =
-        document.getElementById(
-            "subscribeMessage"
-        );
+        document.getElementById("subscribeMessage");
 
 
-    if (email === "") {
-
-        message.innerHTML =
-            "Please enter your email.";
-
-        message.style.color =
-            "red";
+    if (!emailInput || !message) {
 
         return;
 
     }
 
 
-    if (
-        !email.includes("@") ||
-        !email.includes(".")
-    ) {
+    const email =
+        emailInput.value.trim();
 
-        message.innerHTML =
-            "Please enter a valid email.";
+
+    if (email === "") {
+
+        message.textContent =
+            "Please enter your email.";
 
         message.style.color =
             "red";
@@ -1525,346 +2691,71 @@ function subscribeUser() {
         "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
-    message.innerHTML =
-        "Submitting...";
+    const formData =
+        new FormData();
 
 
-    message.style.color =
-        "white";
+    formData.append(
+        "email",
+        email
+    );
 
 
     fetch(
         scriptURL,
         {
-
             method: "POST",
-
-            body: new URLSearchParams({
-
-                email: email
-
-            })
-
+            body: formData,
+            mode: "no-cors"
         }
     )
 
-
     .then(function() {
 
-
-        message.innerHTML =
-            "Thank you for subscribing! 😊";
-
+        message.textContent =
+            "Thank you for subscribing!";
 
         message.style.color =
-            "lightgreen";
+            "green";
 
 
-        document
-            .getElementById(
-                "subscribeEmail"
-            )
-            .value = "";
-
+        emailInput.value = "";
 
     })
 
+    .catch(function() {
 
-    .catch(function(error) {
-
-
-        console.error(error);
-
-
-        message.innerHTML =
+        message.textContent =
             "Something went wrong. Please try again.";
-
 
         message.style.color =
             "red";
-
 
     });
 
 }
 
-</script>
 
 
-
-<!-- ================= COURSE DROPDOWN ================= -->
-
-<script>
-
-document
-    .querySelectorAll(
-        ".course-group > a"
-    )
-    .forEach(
-        function(link) {
-
-
-            link.addEventListener(
-                "click",
-                function(e) {
-
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-
-                    const submenu =
-                        this.parentElement
-                        .querySelector(
-                            ".dropdown2"
-                        );
-
-
-                    if (!submenu) {
-                        return;
-                    }
-
-
-                    document
-                        .querySelectorAll(
-                            ".course-group .dropdown2"
-                        )
-                        .forEach(
-                            function(menu) {
-
-
-                                if (
-                                    menu !== submenu
-                                ) {
-
-                                    menu.classList
-                                        .remove(
-                                            "show"
-                                        );
-
-                                }
-
-                            }
-                        );
-
-
-                    submenu.classList.toggle(
-                        "show"
-                    );
-
-
-                }
-            );
-
-        }
-    );
-
-</script>
-
-
-
-<!-- ================= ADMIN LOGIN ================= -->
-
-<script>
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
 
 document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+    "keydown",
+    function(event) {
 
+        if (event.key === "Escape") {
 
-        const accountBtn =
-            document.getElementById(
-                "account-btn"
-            );
+            const accountForm =
+                document.getElementById("loginAccountForm");
 
 
-        const adminLoginLink =
-            document.getElementById(
-                "adminLoginLink"
-            );
+            if (accountForm) {
 
+                accountForm.classList.remove("active");
 
-        const loginAccountForm =
-            document.getElementById(
-                "loginAccountForm"
-            );
-
-
-        const closeForm =
-            document.getElementById(
-                "close-form"
-            );
-
-
-        const loginForm =
-            document.getElementById(
-                "schoolLoginForm"
-            );
-
-
-        const loginMessage =
-            document.getElementById(
-                "loginMessage"
-            );
-
-
-
-        /* =========================
-           OPEN FROM HEADER
-        ========================== */
-
-        if (
-            accountBtn &&
-            loginAccountForm
-        ) {
-
-            accountBtn.addEventListener(
-                "click",
-                function () {
-
-                    loginAccountForm.classList.add(
-                        "active"
-                    );
-
-                }
-            );
-
-        }
-
-
-
-        /* =========================
-           OPEN FROM FOOTER
-        ========================== */
-
-        if (
-            adminLoginLink &&
-            loginAccountForm
-        ) {
-
-            adminLoginLink.addEventListener(
-                "click",
-                function (e) {
-
-                    e.preventDefault();
-
-                    loginAccountForm.classList.add(
-                        "active"
-                    );
-
-                }
-            );
-
-        }
-
-
-
-        /* =========================
-           CLOSE LOGIN
-        ========================== */
-
-        if (
-            closeForm &&
-            loginAccountForm
-        ) {
-
-            closeForm.addEventListener(
-                "click",
-                function () {
-
-                    loginAccountForm.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
-
-        }
-
-
-
-        /* =========================
-           LOGIN
-        ========================== */
-
-        if (loginForm) {
-
-            loginForm.addEventListener(
-                "submit",
-                function (e) {
-
-
-                    e.preventDefault();
-
-
-                    const email =
-                        document.getElementById(
-                            "loginEmail"
-                        ).value.trim();
-
-
-                    const password =
-                        document.getElementById(
-                            "loginPassword"
-                        ).value;
-
-
-                    const adminEmail =
-                        "admin@school.com";
-
-
-                    const adminPassword =
-                        "Admin@123";
-
-
-                    if (
-                        email === adminEmail &&
-                        password === adminPassword
-                    ) {
-
-
-                        if (loginMessage) {
-
-                            loginMessage.innerHTML =
-                                "Login successful!";
-
-                            loginMessage.style.color =
-                                "green";
-
-                        }
-
-
-                        setTimeout(
-                            function () {
-
-                                window.location.href =
-                                    "admin-dashboard.html";
-
-                            },
-                            500
-                        );
-
-
-                    }
-
-                    else {
-
-
-                        if (loginMessage) {
-
-                            loginMessage.innerHTML =
-                                "Invalid email or password!";
-
-                            loginMessage.style.color =
-                                "red";
-
-                        }
-
-                    }
-
-                }
-            );
+            }
 
         }
 
@@ -1877,4 +2768,3 @@ document.addEventListener(
 </body>
 
 </html>
-

@@ -14,8 +14,13 @@
     <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
 
-    <!-- ================= CSS ================= -->
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+          href="Image/Logo.jpeg"
+          type="image/png">
 
+
+    <!-- Main CSS -->
     <link rel="stylesheet"
           href="css/style.css">
 
@@ -23,24 +28,1208 @@
           href="css/responsive.css">
 
 
-    <!-- ================= FONT AWESOME ================= -->
-
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- ================= UNICONS ================= -->
-
+    <!-- Unicons -->
     <link rel="stylesheet"
           href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 
-    <!-- ================= FAVICON ================= -->
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link rel="shortcut icon"
-          href="Image/Logo.jpeg"
-          type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   FEES HERO
+===================================================== */
+
+.fees-page-hero {
+
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background-image:
+
+        linear-gradient(
+            rgba(12, 38, 75, 0.55),
+            rgba(0, 0, 0, 0.70)
+        ),
+
+        url("Image/Image.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.fees-page-hero-content {
+
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.fees-page-hero-content h1 {
+
+    margin: 0 0 15px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 58px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 4px 12px rgba(0,0,0,0.65);
+}
+
+
+.fees-page-hero-content p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.65);
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.fees-main {
+
+    width: 100%;
+
+    padding: 70px 0;
+
+    background: #f7f9fc;
+}
+
+
+.fees-wrapper {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   FEE STRUCTURE
+===================================================== */
+
+.fee-structure {
+
+    width: 100%;
+
+    margin-bottom: 40px;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+}
+
+
+.fee-structure h2 {
+
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #122b49;
+}
+
+
+.fee-structure .school-name {
+
+    margin: 0 0 5px;
+
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+
+.fee-structure .academic-year {
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #f39c12;
+}
+
+
+/* =====================================================
+   FEE TABLE
+===================================================== */
+
+.fee-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.fee-table {
+
+    width: 100%;
+
+    min-width: 750px;
+
+    border-collapse: collapse;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.fee-table th {
+
+    padding: 15px 12px;
+
+    background: #122b49;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    border: 1px solid #122b49;
+}
+
+
+.fee-table td {
+
+    padding: 14px 12px;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    border: 1px solid #dddddd;
+}
+
+
+.fee-table tr:nth-child(even) td {
+
+    background: #f7f9fc;
+}
+
+
+.fee-table tr:hover td {
+
+    background: #fff7e8;
+}
+
+
+.fee-table td:first-child {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 700;
+
+    color: #122b49;
+}
+
+
+/* =====================================================
+   FEE PAYMENT FORM
+===================================================== */
+
+.fees-form-container {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.10);
+}
+
+
+.fees-form-container > header {
+
+    margin-bottom: 35px;
+
+    padding-bottom: 15px;
+
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #122b49;
+
+    border-bottom: 3px solid #f39c12;
+}
+
+
+/* =====================================================
+   FORM STEP
+===================================================== */
+
+.fees-form-container .step {
+
+    display: none;
+}
+
+
+.fees-form-container .step.active {
+
+    display: block;
+}
+
+
+/* =====================================================
+   DETAILS
+===================================================== */
+
+.fees-form-container .details {
+
+    margin-bottom: 30px;
+
+    padding: 30px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+
+.fees-form-container .title {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 10px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #122b49;
+
+    border-bottom: 2px solid #f39c12;
+}
+
+
+/* =====================================================
+   FIELDS
+===================================================== */
+
+.fees-form-container .fields {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.fees-form-container .input-field {
+
+    width: 100%;
+}
+
+
+.fees-form-container .input-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+
+.fees-form-container .star {
+
+    color: red;
+
+    font-weight: 700;
+}
+
+
+.fees-form-container .input-field input,
+.fees-form-container .input-field select {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 15px;
+
+    color: #333;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+}
+
+
+.fees-form-container .input-field input:focus,
+.fees-form-container .input-field select:focus {
+
+    border-color: #f39c12;
+
+    box-shadow:
+        0 0 0 3px rgba(243,156,18,0.12);
+}
+
+
+/* =====================================================
+   ACCOUNT DETAIL
+===================================================== */
+
+.account-details-content {
+
+    padding: 10px 0;
+}
+
+
+.account-details-content p {
+
+    margin: 12px 0;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #444;
+}
+
+
+.account-details-content p b {
+
+    color: #122b49;
+}
+
+
+.receipt-note {
+
+    margin-top: 25px !important;
+
+    padding: 15px;
+
+    border-left: 4px solid #f39c12;
+
+    background: #fff7e8;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+.fees-form-container input[type="file"] {
+
+    padding: 12px;
+
+    height: auto;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FORM BUTTONS
+===================================================== */
+
+.fees-form-container .next-btn,
+.fees-form-container .previous-btn,
+.fees-form-container .submit-btn {
+
+    min-width: 130px;
+
+    min-height: 48px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.fees-form-container .next-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-left: auto;
+
+    background: #f39c12;
+
+    color: #ffffff;
+}
+
+
+.fees-form-container .next-btn:hover {
+
+    background: #d98200;
+
+    transform: translateY(-2px);
+}
+
+
+.fees-form-container .buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.fees-form-container .previous-btn {
+
+    background: #122b49;
+
+    color: #ffffff;
+}
+
+
+.fees-form-container .previous-btn:hover {
+
+    background: #0b1d32;
+
+    transform: translateY(-2px);
+}
+
+
+.fees-form-container .submit-btn {
+
+    background: #f39c12;
+
+    color: #ffffff;
+}
+
+
+.fees-form-container .submit-btn:hover {
+
+    background: #d98200;
+
+    transform: translateY(-2px);
+}
+
+
+.fees-form-container button:disabled {
+
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+.account-form {
+
+    position: fixed;
+
+    top: 0;
+
+    right: -100%;
+
+    width: 400px;
+
+    max-width: 100%;
+
+    height: 100vh;
+
+    padding: 80px 30px 30px;
+
+    background: #ffffff;
+
+    z-index: 9999;
+
+    overflow-y: auto;
+
+    box-shadow:
+        -5px 0 20px rgba(0,0,0,0.15);
+
+    transition: 0.4s ease;
+}
+
+
+.account-form.active {
+
+    right: 0;
+}
+
+
+.account-form .close-icon {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    cursor: pointer;
+}
+
+
+.account-form .close-icon img {
+
+    width: 40px;
+
+    height: 40px;
+
+    object-fit: contain;
+}
+
+
+.account-form .buttons {
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+
+.account-form .btn {
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.account-form .login-btn {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #122b49;
+}
+
+
+.account-form .login-form h3 {
+
+    margin-bottom: 20px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 26px;
+
+    color: #122b49;
+
+    text-align: center;
+}
+
+
+.account-form .box {
+
+    width: 100%;
+
+    height: 48px;
+
+    margin-bottom: 15px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 15px;
+}
+
+
+.account-form .box:focus {
+
+    border-color: #f39c12;
+}
+
+
+.account-form .flex {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.account-form #loginMessage {
+
+    min-height: 22px;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.account-form .login-form button {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #f39c12;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MOBILE 768px
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .fees-page-hero {
+
+        min-height: 430px;
+
+        padding: 90px 20px;
+    }
+
+
+    .fees-page-hero-content h1 {
+
+        font-size: 43px;
+    }
+
+
+    .fees-page-hero-content p {
+
+        font-size: 18px;
+    }
+
+
+    .fees-main {
+
+        padding: 50px 0;
+    }
+
+
+    .fees-wrapper {
+
+        width: 92%;
+    }
+
+
+    .fee-structure {
+
+        padding: 30px 20px;
+    }
+
+
+    .fee-structure h2 {
+
+        font-size: 26px;
+    }
+
+
+    .fee-structure .school-name {
+
+        font-size: 18px;
+    }
+
+
+    .fee-structure .academic-year {
+
+        font-size: 16px;
+    }
+
+
+    .fee-table th,
+    .fee-table td {
+
+        padding: 13px 10px;
+
+        font-size: 14px;
+    }
+
+
+    .fees-form-container {
+
+        padding: 30px 25px;
+    }
+
+
+    .fees-form-container .fields {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .fees-form-container .details {
+
+        padding: 25px 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+    html,
+    body {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow-x: hidden;
+    }
+
+
+    .fees-page-hero {
+
+        min-height: 400px;
+
+        padding: 80px 15px;
+    }
+
+
+    .fees-page-hero-content {
+
+        width: 96%;
+    }
+
+
+    .fees-page-hero-content h1 {
+
+        font-size: 32px;
+
+        line-height: 1.25;
+    }
+
+
+    .fees-page-hero-content p {
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    .fees-main {
+
+        padding: 38px 0;
+    }
+
+
+    .fees-wrapper {
+
+        width: 94%;
+    }
+
+
+    .fee-structure {
+
+        padding: 25px 15px;
+
+        border-radius: 12px;
+    }
+
+
+    .fee-structure h2 {
+
+        font-size: 23px;
+    }
+
+
+    .fee-structure .school-name {
+
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+
+    .fee-structure .academic-year {
+
+        font-size: 15px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .fee-table {
+
+        min-width: 700px;
+    }
+
+
+    .fee-table th,
+    .fee-table td {
+
+        padding: 12px 10px;
+
+        font-size: 13px;
+    }
+
+
+    .fees-form-container {
+
+        width: 100%;
+
+        padding: 25px 15px;
+
+        border-radius: 12px;
+    }
+
+
+    .fees-form-container > header {
+
+        font-size: 23px;
+
+        line-height: 1.4;
+
+        margin-bottom: 25px;
+    }
+
+
+    .fees-form-container .details {
+
+        padding: 20px 15px;
+
+        border-radius: 10px;
+    }
+
+
+    .fees-form-container .title {
+
+        font-size: 19px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .fees-form-container .input-field label {
+
+        font-size: 13px;
+    }
+
+
+    .fees-form-container .input-field input,
+    .fees-form-container .input-field select {
+
+        height: 46px;
+
+        font-size: 14px;
+    }
+
+
+    .account-details-content p {
+
+        font-size: 15px;
+
+        word-break: break-word;
+    }
+
+
+    .fees-form-container .buttons {
+
+        flex-direction: row;
+
+        gap: 10px;
+    }
+
+
+    .fees-form-container .previous-btn,
+    .fees-form-container .submit-btn,
+    .fees-form-container .next-btn {
+
+        min-width: 0;
+
+        flex: 1;
+
+        padding: 11px 15px;
+
+        font-size: 13px;
+    }
+
+
+    .account-form {
+
+        width: 100%;
+
+        padding: 75px 20px 25px;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL 360px
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .fees-page-hero {
+
+        min-height: 370px;
+    }
+
+
+    .fees-page-hero-content h1 {
+
+        font-size: 28px;
+    }
+
+
+    .fees-page-hero-content p {
+
+        font-size: 14px;
+    }
+
+
+    .fees-wrapper {
+
+        width: 93%;
+    }
+
+
+    .fee-structure {
+
+        padding: 22px 12px;
+    }
+
+
+    .fee-structure h2 {
+
+        font-size: 21px;
+    }
+
+
+    .fee-structure .school-name {
+
+        font-size: 15px;
+    }
+
+
+    .fee-table {
+
+        min-width: 680px;
+    }
+
+
+    .fees-form-container {
+
+        padding: 20px 12px;
+    }
+
+
+    .fees-form-container > header {
+
+        font-size: 21px;
+    }
+
+
+    .fees-form-container .details {
+
+        padding: 18px 12px;
+    }
+
+
+    .fees-form-container .title {
+
+        font-size: 18px;
+    }
+
+
+    .account-details-content p {
+
+        font-size: 14px;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -49,20 +1238,18 @@
 
 
 <!-- =====================================================
-     HEADER START
+     HEADER
 ===================================================== -->
 
 <header class="header">
 
 
-    <!-- ================= LOGO ================= -->
-
     <a href="index.html"
        class="logo">
 
+
         <img src="Image/Logo.jpeg"
-             alt="School Logo"
-             style="width:80px; height:55px;">
+             alt="Maria's Podar Learn School Logo">
 
 
         <div class="collage-name">
@@ -71,10 +1258,11 @@
 
         </div>
 
+
     </a>
 
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
 
     <nav class="navbar">
 
@@ -84,7 +1272,7 @@
 
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="Close">
+                 alt="Close Menu">
 
         </div>
 
@@ -92,14 +1280,10 @@
         <ul class="navbar-links">
 
 
-            <!-- HOME -->
-
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="index.html">
-
                     Home
-
                 </a>
 
             </li>
@@ -109,7 +1293,9 @@
 
             <li class="navbar-dropdown">
 
-                <a href="#">
+
+                <a href="#"
+                   class="course-main-link">
 
                     Course
 
@@ -118,14 +1304,14 @@
 
                 <div class="dropdown">
 
+
                     <ul>
 
 
-                        <!-- PRIMARY GROUP -->
-
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Primary Group
 
@@ -142,9 +1328,7 @@
                                 <li>
 
                                     <a href="nursery.html">
-
                                         Nursery to UKG
-
                                     </a>
 
                                 </li>
@@ -153,9 +1337,7 @@
                                 <li>
 
                                     <a href="class-1-5.html">
-
                                         Class 1st to 5th
-
                                     </a>
 
                                 </li>
@@ -163,14 +1345,14 @@
 
                             </ul>
 
+
                         </li>
 
 
-                        <!-- SECONDARY GROUP -->
-
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Secondary Group
 
@@ -187,9 +1369,7 @@
                                 <li>
 
                                     <a href="class-6-8.html">
-
                                         Class 6th to 8th
-
                                     </a>
 
                                 </li>
@@ -198,9 +1378,7 @@
                                 <li>
 
                                     <a href="class-9-10.html">
-
                                         Class 9th to 10th
-
                                     </a>
 
                                 </li>
@@ -208,51 +1386,41 @@
 
                             </ul>
 
+
                         </li>
 
 
                     </ul>
 
+
                 </div>
 
+
             </li>
 
 
-            <!-- ADMISSION -->
+            <li>
 
-            <li class="navbar-dropdown">
-
-                <a href="admission-form.html"
-                   target="_blank">
-
+                <a href="admission-form.html">
                     Admissions
-
                 </a>
 
             </li>
 
 
-            <!-- CAREERS -->
-
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="careers.html">
-
                     Careers
-
                 </a>
 
             </li>
 
 
-            <!-- CONTACT -->
-
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="contact-us.html">
-
                     Contact us
-
                 </a>
 
             </li>
@@ -260,49 +1428,37 @@
 
         </ul>
 
+
     </nav>
 
 
-    <!-- ================= HEADER ICONS ================= -->
+    <!-- HEADER ICONS -->
 
     <div class="icons">
 
 
-        <!-- LOGIN -->
-
         <div id="account-btn"
-             class="header-icon"
-             style="cursor:pointer;">
-
+             class="header-icon">
 
             <img src="Image/avatar-icon.svg"
                  alt="Login">
 
-
             <img src="Image/avatar-icon-hover.gif"
                  alt="Login"
-                 width="10"
                  class="header-icon-hover">
-
 
         </div>
 
 
-        <!-- MENU -->
-
         <div id="menu-btn"
              class="header-icon">
-
 
             <img src="Image/menu-icon.svg"
                  alt="Menu">
 
-
             <img src="Image/menu-icon-hover.gif"
                  alt="Menu"
-                 width="30"
                  class="header-icon-hover">
-
 
         </div>
 
@@ -313,14 +1469,9 @@
 </header>
 
 
-<!-- =====================================================
-     HEADER END
-===================================================== -->
-
-
 
 <!-- =====================================================
-     ADMIN LOGIN FORM
+     ADMIN LOGIN
 ===================================================== -->
 
 <div class="account-form"
@@ -346,11 +1497,13 @@
 
     <div class="buttons">
 
+
         <span class="btn active login-btn">
 
             Login
 
         </span>
+
 
     </div>
 
@@ -416,572 +1569,370 @@
 </div>
 
 
+
 <!-- =====================================================
-     FEES FORM START
+     HERO
 ===================================================== -->
 
-<div class="form-section">
+<section class="fees-page-hero">
 
 
-    <div class="container">
+    <div class="fees-page-hero-content">
 
 
-        <!-- TITLE -->
+        <h1>
 
-        <header>
+            Fees Payment
+
+        </h1>
+
+
+        <p>
 
             Fees and Payment Structure
 
-        </header>
-
-
-        <form method="post"
-              name="fees-sheet">
-
-
-            <!-- =================================================
-                 STEP 1
-            ================================================= -->
-
-            <div class="form step step-1 active">
-
-
-                <!-- PERSONAL DETAILS -->
-
-                <div class="details personal">
-
-
-                    <span class="title">
-
-                        Personal Details
-
-                    </span>
-
-
-                    <div class="fields">
-
-
-                        <!-- FULL NAME -->
-
-                        <div class="input-field">
-
-
-                            <label>
-
-                                Full Name
-
-                                <span class="star">*</span>
-
-                            </label>
-
-
-                            <input type="text"
-                                   placeholder="Enter your name"
-                                   name="Full Name"
-                                   pattern="[A-z ]+"
-                                   required>
-
-
-                        </div>
-
-
-                        <!-- ROLL NUMBER -->
-
-                        <div class="input-field">
-
-
-                            <label>
-
-                                College Roll Number
-
-                                <span class="star">*</span>
-
-                            </label>
-
-
-                            <input type="tel"
-                                   placeholder="Enter college roll number"
-                                   name="Roll no"
-                                   pattern="[0-9]+"
-                                   maxlength="11"
-                                   required>
-
-
-                        </div>
-
-
-                        <!-- COURSE -->
-
-                        <div class="input-field">
-
-
-                            <label>
-
-                                Course
-
-                                <span class="star">*</span>
-
-                            </label>
-
-
-                            <select name="Course"
-                                    required>
-
-
-                                <option value=""
-                                        disabled
-                                        selected>
-
-                                    Select Course
-
-                                </option>
-
-
-                                <option value="Nursery">
-                                    Nursery
-                                </option>
-
-
-                                <option value="LKG">
-                                    LKG
-                                </option>
-
-
-                                <option value="UKG">
-                                    UKG
-                                </option>
-
-
-                                <option value="Class 1st">
-                                    Class 1st
-                                </option>
-
-
-                                <option value="Class 2nd">
-                                    Class 2nd
-                                </option>
-
-
-                                <option value="Class 3rd">
-                                    Class 3rd
-                                </option>
-
-
-                                <option value="Class 4th">
-                                    Class 4th
-                                </option>
-
-
-                                <option value="Class 5th">
-                                    Class 5th
-                                </option>
-
-
-                                <option value="Class 6th">
-                                    Class 6th
-                                </option>
-
-
-                                <option value="Class 7th">
-                                    Class 7th
-                                </option>
-
-
-                                <option value="Class 8th">
-                                    Class 8th
-                                </option>
-
-
-                                <option value="Class 9th">
-                                    Class 9th
-                                </option>
-
-
-                                <option value="Class 10th">
-                                    Class 10th
-                                </option>
-
-
-                            </select>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- =================================================
-                     INVOICE DETAILS
-                ================================================= -->
-
-                <div class="details personal">
-
-
-                    <span class="title">
-
-                        Invoice Details
-
-                    </span>
-
-
-                    <!-- FEES -->
-
-                    <div class="fields">
-
-
-                        <div class="input-field">
-
-
-                            <label>
-
-                                Fees
-
-                                <span class="star">*</span>
-
-                            </label>
-
-
-                            <input type="number"
-                                   placeholder="Enter your Fees Amount"
-                                   name="Fees Amount"
-                                   required>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- INSTALLMENT -->
-
-                    <div class="fields">
-
-
-                        <div class="input-field">
-
-
-                            <label>
-
-                                Installment
-
-                                <span class="star">*</span>
-
-                            </label>
-
-
-                            <select name="Installment"
-                                    required>
-
-
-                                <option value=""
-                                        disabled
-                                        selected>
-
-                                    Select Installment
-
-                                </option>
-
-
-                                <option value="1st Installment">
-                                    1st Installment
-                                </option>
-
-
-                                <option value="2nd Installment">
-                                    2nd Installment
-                                </option>
-
-
-                                <option value="3rd Installment">
-                                    3rd Installment
-                                </option>
-
-
-                            </select>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-
-                <!-- NEXT BUTTON -->
-
-                <button type="button"
-                        class="next-btn">
-
-
-                    Next
-
-
-                    <i class="uil uil-navigator"></i>
-
-
-                </button>
-
-
-            </div>
-
-
-            <!-- =================================================
-                 STEP 2
-            ================================================= -->
-
-            <div class="form step step-2">
-
-
-                <div class="details Family">
-
-
-                    <span class="title">
-
-                        Account Detail
-
-                    </span>
-
-
-                    <!-- BANK DETAILS -->
-
-                    <div>
-
-
-                        <p style="font-size:18px;">
-
-                            <b>Bank Name :</b>
-
-                            SBI Bank
-
-                        </p>
-
-
-                        <p style="font-size:18px;">
-
-                            <b>Account Number :</b>
-
-                            41518978034
-
-                        </p>
-
-
-                        <p style="font-size:18px;">
-
-                            <b>IFSC Number :</b>
-
-                            SBIN0020623
-
-                        </p>
-
-
-                        <p>
-
-                            <b>
-
-                                After payment, please collect your fees
-                                receipt from the school office.
-
-                            </b>
-
-                        </p>
-
-
-                    </div>
-
-
-                    <!-- PHOTO -->
-
-                    <div class="input-field">
-
-
-                        <label>
-
-                            Photograph
-
-                            <span class="star">*</span>
-
-                        </label>
-
-
-                        <input type="file"
-                               name="Photograph"
-                               id="photograph"
-                               accept=".png,.jpg,.jpeg"
-                               required>
-
-
-                    </div>
-
-
-                </div>
-
-
-                <!-- BUTTONS -->
-
-                <div class="buttons">
-
-
-                    <!-- BACK -->
-
-                    <button type="button"
-                            class="previous-btn">
-
-
-                        <i class="uil uil-navigator"></i>
-
-
-                        Back
-
-
-                    </button>
-
-
-                    <!-- SUBMIT -->
-
-                    <button type="submit"
-                            class="submit-btn"
-                            name="submit">
-
-
-                        Submit
-
-
-                        <i class="uil uil-navigator"></i>
-
-
-                    </button>
-
-
-                </div>
-
-
-            </div>
-
-
-        </form>
+        </p>
 
 
     </div>
 
 
-</div>
-
-
-<!-- =====================================================
-     FEES FORM END
-===================================================== -->
+</section>
 
 
 
 <!-- =====================================================
-     FOOTER START
+     MAIN
 ===================================================== -->
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+<section class="fees-main">
 
 
-    <div class="content">
+    <div class="fees-wrapper">
 
 
-        <div class="top">
+        <!-- =================================================
+             FEE STRUCTURE
+        ================================================= -->
+
+        <div class="fee-structure">
 
 
-            <!-- SCHOOL NAME -->
+            <h2>
 
-            <div class="logo-details">
+                Fee Structure
 
-
-                <span>
-
-                    Maria’s Podar Learn School Nilanga
-
-                </span>
+            </h2>
 
 
-            </div>
+            <p class="school-name">
+
+                Maria's Podar Learn School, Nilanga
+
+            </p>
 
 
+            <p class="academic-year">
 
-            <!-- =================================================
-                 SOCIAL MEDIA ICONS
-            ================================================= -->
+                Fees Structure = 2026-27
 
-            <div class="media-icons">
-
-
-                <!-- FACEBOOK -->
-
-                <a href="https://www.facebook.com/him.sonepat/"
-                   class="facebook"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   title="Facebook">
+            </p>
 
 
-                    <i class="fab fa-facebook-f"></i>
+            <div class="fee-table-wrapper">
 
 
-                </a>
+                <table class="fee-table">
 
 
-                <!-- EMAIL -->
-
-               <a href="mailto:principal.mpls@podar.org" 
-               class="email" 
-               title="Email">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                    <thead>
 
 
-                <!-- INSTAGRAM -->
+                        <tr>
 
-                <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   class="instagram"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   title="Instagram">
+                            <th>
+                                Grade
+                            </th>
 
+                            <th>
+                                Fees
+                            </th>
 
-                    <i class="fab fa-instagram"></i>
+                            <th>
+                                1st Instalment
+                            </th>
 
+                            <th>
+                                2nd Instalment
+                            </th>
 
-                </a>
+                            <th>
+                                3rd Instalment
+                            </th>
 
-
-                <!-- LINKEDIN -->
-
-                <a href="#"
-                   class="linkedin"
-                   title="LinkedIn">
-
-
-                    <i class="fab fa-linkedin-in"></i>
-
-
-                </a>
+                        </tr>
 
 
-                <!-- YOUTUBE -->
-
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-                   class="youtube"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   title="YouTube">
+                    </thead>
 
 
-                    <i class="fab fa-youtube"></i>
+                    <tbody>
 
 
-                </a>
+                        <tr>
+
+                            <td>
+                                Grade 1st
+                            </td>
+
+                            <td>
+                                ₹40,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹4,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 2nd
+                            </td>
+
+                            <td>
+                                ₹40,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹4,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 3rd
+                            </td>
+
+                            <td>
+                                ₹40,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹4,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 4th
+                            </td>
+
+                            <td>
+                                ₹40,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹18,000
+                            </td>
+
+                            <td>
+                                ₹4,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 5th
+                            </td>
+
+                            <td>
+                                ₹45,000
+                            </td>
+
+                            <td>
+                                ₹20,000
+                            </td>
+
+                            <td>
+                                ₹20,000
+                            </td>
+
+                            <td>
+                                ₹5,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 6th
+                            </td>
+
+                            <td>
+                                ₹45,000
+                            </td>
+
+                            <td>
+                                ₹20,000
+                            </td>
+
+                            <td>
+                                ₹20,000
+                            </td>
+
+                            <td>
+                                ₹5,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 7th
+                            </td>
+
+                            <td>
+                                ₹45,000
+                            </td>
+
+                            <td>
+                                ₹20,000
+                            </td>
+
+                            <td>
+                                ₹20,000
+                            </td>
+
+                            <td>
+                                ₹5,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 8th
+                            </td>
+
+                            <td>
+                                ₹55,000
+                            </td>
+
+                            <td>
+                                ₹24,000
+                            </td>
+
+                            <td>
+                                ₹24,000
+                            </td>
+
+                            <td>
+                                ₹7,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 9th
+                            </td>
+
+                            <td>
+                                ₹55,000
+                            </td>
+
+                            <td>
+                                ₹24,000
+                            </td>
+
+                            <td>
+                                ₹24,000
+                            </td>
+
+                            <td>
+                                ₹7,000
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Grade 10th
+                            </td>
+
+                            <td>
+                                ₹55,000
+                            </td>
+
+                            <td>
+                                ₹24,000
+                            </td>
+
+                            <td>
+                                ₹24,000
+                            </td>
+
+                            <td>
+                                ₹7,000
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
 
 
             </div>
@@ -992,8 +1943,592 @@
 
 
         <!-- =================================================
-             FOOTER LINK BOXES
+             FEE PAYMENT FORM
         ================================================= -->
+
+        <div class="fees-form-container">
+
+
+            <header>
+
+                Fees and Payment Structure
+
+            </header>
+
+
+            <form method="post"
+                  name="fees-sheet">
+
+
+                <!-- =================================================
+                     STEP 1
+                ================================================= -->
+
+                <div class="form step step-1 active">
+
+
+                    <!-- PERSONAL DETAILS -->
+
+                    <div class="details personal">
+
+
+                        <span class="title">
+
+                            Personal Details
+
+                        </span>
+
+
+                        <div class="fields">
+
+
+                            <!-- FULL NAME -->
+
+                            <div class="input-field">
+
+
+                                <label>
+
+                                    Full Name
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       placeholder="Enter your name"
+                                       name="Full Name"
+                                       pattern="[A-z ]+"
+                                       required>
+
+
+                            </div>
+
+
+                            <!-- ROLL NUMBER -->
+
+                            <div class="input-field">
+
+
+                                <label>
+
+                                    School Roll Number
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="tel"
+                                       placeholder="Enter school roll number"
+                                       name="Roll no"
+                                       pattern="[0-9]+"
+                                       maxlength="11"
+                                       required>
+
+
+                            </div>
+
+
+                            <!-- COURSE -->
+
+                            <div class="input-field">
+
+
+                                <label>
+
+                                    Course
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select name="Course"
+                                        required>
+
+
+                                    <option value=""
+                                            disabled
+                                            selected>
+
+                                        Select Course
+
+                                    </option>
+
+
+                                    <option value="Nursery">
+
+                                        Nursery
+
+                                    </option>
+
+
+                                    <option value="LKG">
+
+                                        LKG
+
+                                    </option>
+
+
+                                    <option value="UKG">
+
+                                        UKG
+
+                                    </option>
+
+
+                                    <option value="Class 1st">
+
+                                        Class 1st
+
+                                    </option>
+
+
+                                    <option value="Class 2nd">
+
+                                        Class 2nd
+
+                                    </option>
+
+
+                                    <option value="Class 3rd">
+
+                                        Class 3rd
+
+                                    </option>
+
+
+                                    <option value="Class 4th">
+
+                                        Class 4th
+
+                                    </option>
+
+
+                                    <option value="Class 5th">
+
+                                        Class 5th
+
+                                    </option>
+
+
+                                    <option value="Class 6th">
+
+                                        Class 6th
+
+                                    </option>
+
+
+                                    <option value="Class 7th">
+
+                                        Class 7th
+
+                                    </option>
+
+
+                                    <option value="Class 8th">
+
+                                        Class 8th
+
+                                    </option>
+
+
+                                    <option value="Class 9th">
+
+                                        Class 9th
+
+                                    </option>
+
+
+                                    <option value="Class 10th">
+
+                                        Class 10th
+
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         INVOICE DETAILS
+                    ================================================= -->
+
+                    <div class="details personal">
+
+
+                        <span class="title">
+
+                            Invoice Details
+
+                        </span>
+
+
+                        <!-- FEES -->
+
+                        <div class="fields">
+
+
+                            <div class="input-field">
+
+
+                                <label>
+
+                                    Fees
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="number"
+                                       placeholder="Enter your Fees Amount"
+                                       name="Fees Amount"
+                                       required>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- INSTALLMENT -->
+
+                        <div class="fields">
+
+
+                            <div class="input-field">
+
+
+                                <label>
+
+                                    Installment
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select name="Installment"
+                                        required>
+
+
+                                    <option value=""
+                                            disabled
+                                            selected>
+
+                                        Select Installment
+
+                                    </option>
+
+
+                                    <option value="1st Installment">
+
+                                        1st Installment
+
+                                    </option>
+
+
+                                    <option value="2nd Installment">
+
+                                        2nd Installment
+
+                                    </option>
+
+
+                                    <option value="3rd Installment">
+
+                                        3rd Installment
+
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- NEXT BUTTON -->
+
+                    <button type="button"
+                            class="next-btn">
+
+
+                        Next
+
+
+                        <i class="uil uil-navigator"></i>
+
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STEP 2
+                ================================================= -->
+
+                <div class="form step step-2">
+
+
+                    <div class="details Family">
+
+
+                        <span class="title">
+
+                            Account Detail
+
+                        </span>
+
+
+                        <!-- BANK DETAILS -->
+
+                        <div class="account-details-content">
+
+
+                            <p>
+
+                                <b>
+                                    Bank Name :
+                                </b>
+
+                                SBI Bank
+
+                            </p>
+
+
+                            <p>
+
+                                <b>
+                                    Account Number :
+                                </b>
+
+                                41518978034
+
+                            </p>
+
+
+                            <p>
+
+                                <b>
+                                    IFSC Number :
+                                </b>
+
+                                SBIN0020623
+
+                            </p>
+
+
+                            <p class="receipt-note">
+
+                                <b>
+
+                                    After payment, please collect
+                                    your fees receipt from the
+                                    school office.
+
+                                </b>
+
+                            </p>
+
+
+                        </div>
+
+
+                        <!-- PHOTO -->
+
+                        <div class="input-field">
+
+
+                            <label>
+
+                                Photograph
+
+                                <span class="star">
+                                    *
+                                </span>
+
+                            </label>
+
+
+                            <input type="file"
+                                   name="Photograph"
+                                   id="photograph"
+                                   accept=".png,.jpg,.jpeg"
+                                   required>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="buttons">
+
+
+                        <!-- BACK -->
+
+                        <button type="button"
+                                class="previous-btn">
+
+
+                            <i class="uil uil-navigator"></i>
+
+
+                            Back
+
+
+                        </button>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <button type="submit"
+                                class="submit-btn"
+                                name="submit">
+
+
+                            Submit
+
+
+                            <i class="uil uil-navigator"></i>
+
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="content">
+
+
+        <div class="top">
+
+
+            <div class="logo-details">
+
+                <span>
+
+                    Maria’s Podar Learn School Nilanga
+
+                </span>
+
+            </div>
+
+
+            <div class="media-icons">
+
+
+                <a href="https://www.facebook.com/him.sonepat/"
+                   target="_blank"
+                   rel="noopener">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="mailto:principal.mpls@podar.org">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <a href="https://instagram.com/mariaspodarschoolnilanga"
+                   target="_blank"
+                   rel="noopener">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+
+                <a href="#">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank"
+                   rel="noopener">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
 
         <div class="link-boxes">
 
@@ -1072,9 +2607,9 @@
 
                 <li>
 
-                    <a href="index.html#notice-board">
+                    <a href="events.html">
 
-                        Notice Board
+                        Events
 
                     </a>
 
@@ -1083,9 +2618,9 @@
 
                 <li>
 
-                    <a href="index.html">
+                    <a href="gallery.html">
 
-                        School Site
+                        Gallery
 
                     </a>
 
@@ -1096,7 +2631,7 @@
 
 
 
-            <!-- STUDENT CORNER -->
+            <!-- STUDENT -->
 
             <ul class="box">
 
@@ -1157,8 +2692,6 @@
                 </li>
 
 
-                <!-- ADMIN LOGIN -->
-
                 <li>
 
                     <a href="#"
@@ -1171,8 +2704,6 @@
                 </li>
 
 
-                <!-- EVENTS -->
-
                 <li>
 
                     <a href="events.html">
@@ -1183,8 +2714,6 @@
 
                 </li>
 
-
-                <!-- GALLERY -->
 
                 <li>
 
@@ -1215,32 +2744,28 @@
 
                 <li>
 
-
                     <input type="email"
                            id="subscribeEmail"
-                           placeholder="Enter your email"
-                           required>
-
+                           placeholder="Enter your email">
 
                 </li>
 
 
                 <li>
 
+                    <button type="button"
+                            onclick="subscribeUser()">
 
-                    <input type="button"
-                           value="Subscribe"
-                           onclick="subscribeUser()">
+                        Subscribe
 
+                    </button>
 
                 </li>
 
 
                 <li>
-
 
                     <p id="subscribeMessage"></p>
-
 
                 </li>
 
@@ -1257,17 +2782,208 @@
 </footer>
 
 
-<!-- =====================================================
-     FOOTER END
-===================================================== -->
-
-
 
 <!-- =====================================================
-     FEES FORM JAVASCRIPT
+     TIDIO
 ===================================================== -->
+
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
+
+
+
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+
 
 <script>
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+const adminLoginLink =
+    document.getElementById("adminLoginLink");
+
+
+if (adminLoginLink) {
+
+    adminLoginLink.addEventListener(
+        "click",
+        function(event) {
+
+            event.preventDefault();
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+            if (accountForm) {
+
+                accountForm.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   HEADER ACCOUNT
+===================================================== */
+
+const accountBtn =
+    document.getElementById("account-btn");
+
+
+if (accountBtn) {
+
+    accountBtn.addEventListener(
+        "click",
+        function() {
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+            if (accountForm) {
+
+                accountForm.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CLOSE LOGIN
+===================================================== */
+
+const closeForm =
+    document.getElementById("close-form");
+
+
+if (closeForm) {
+
+    closeForm.addEventListener(
+        "click",
+        function() {
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+            if (accountForm) {
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+const schoolLoginForm =
+    document.getElementById(
+        "schoolLoginForm"
+    );
+
+
+if (schoolLoginForm) {
+
+    schoolLoginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const email =
+                document.getElementById(
+                    "loginEmail"
+                ).value.trim();
+
+
+            const password =
+                document.getElementById(
+                    "loginPassword"
+                ).value.trim();
+
+
+            const message =
+                document.getElementById(
+                    "loginMessage"
+                );
+
+
+            if (
+                email === "admin@school.com" &&
+                password === "Admin@123"
+            ) {
+
+                message.textContent =
+                    "Login successful!";
+
+                message.style.color =
+                    "green";
+
+
+                setTimeout(
+                    function() {
+
+                        window.location.href =
+                            "admin-dashboard.html";
+
+                    },
+                    700
+                );
+
+            }
+
+            else {
+
+                message.textContent =
+                    "Invalid email or password.";
+
+                message.style.color =
+                    "red";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FEES FORM
+===================================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -1294,15 +3010,21 @@ document.addEventListener(
         =============================== */
 
         const steps =
-            form.querySelectorAll(".step");
+            form.querySelectorAll(
+                ".step"
+            );
 
 
         const nextButton =
-            form.querySelector(".next-btn");
+            form.querySelector(
+                ".next-btn"
+            );
 
 
         const previousButton =
-            form.querySelector(".previous-btn");
+            form.querySelector(
+                ".previous-btn"
+            );
 
 
         /* ===============================
@@ -1310,7 +3032,6 @@ document.addEventListener(
         =============================== */
 
         if (nextButton) {
-
 
             nextButton.addEventListener(
                 "click",
@@ -1325,7 +3046,9 @@ document.addEventListener(
 
                     const currentIndex =
                         Array.from(steps)
-                        .indexOf(currentStep);
+                        .indexOf(
+                            currentStep
+                        );
 
 
                     const requiredFields =
@@ -1361,12 +3084,16 @@ document.addEventListener(
 
                         steps[currentIndex]
                             .classList
-                            .remove("active");
+                            .remove(
+                                "active"
+                            );
 
 
                         steps[currentIndex + 1]
                             .classList
-                            .add("active");
+                            .add(
+                                "active"
+                            );
 
 
                         window.scrollTo({
@@ -1377,13 +3104,11 @@ document.addEventListener(
 
                         });
 
-
                     }
 
 
                 }
             );
-
 
         }
 
@@ -1393,7 +3118,6 @@ document.addEventListener(
         =============================== */
 
         if (previousButton) {
-
 
             previousButton.addEventListener(
                 "click",
@@ -1408,20 +3132,28 @@ document.addEventListener(
 
                     const currentIndex =
                         Array.from(steps)
-                        .indexOf(currentStep);
+                        .indexOf(
+                            currentStep
+                        );
 
 
-                    if (currentIndex > 0) {
+                    if (
+                        currentIndex > 0
+                    ) {
 
 
                         steps[currentIndex]
                             .classList
-                            .remove("active");
+                            .remove(
+                                "active"
+                            );
 
 
                         steps[currentIndex - 1]
                             .classList
-                            .add("active");
+                            .add(
+                                "active"
+                            );
 
 
                         window.scrollTo({
@@ -1432,13 +3164,11 @@ document.addEventListener(
 
                         });
 
-
                     }
 
 
                 }
             );
-
 
         }
 
@@ -1469,9 +3199,7 @@ document.addEventListener(
                     );
 
 
-                /* ===============================
-                   PHOTO INPUT
-                =============================== */
+                /* PHOTO INPUT */
 
                 const photoInput =
                     document.getElementById(
@@ -1499,9 +3227,7 @@ document.addEventListener(
                     photoInput.files[0];
 
 
-                /* ===============================
-                   PHOTO TYPE
-                =============================== */
+                /* PHOTO TYPE */
 
                 const allowedTypes = [
 
@@ -1531,9 +3257,7 @@ document.addEventListener(
                 }
 
 
-                /* ===============================
-                   PHOTO SIZE
-                =============================== */
+                /* PHOTO SIZE */
 
                 if (
                     photoFile.size >
@@ -1551,20 +3275,15 @@ document.addEventListener(
                 }
 
 
-                /* ===============================
-                   DISABLE SUBMIT
-                =============================== */
+                /* DISABLE SUBMIT */
 
                 if (submitButton) {
-
 
                     submitButton.disabled =
                         true;
 
-
                     submitButton.innerText =
                         "Compressing Photo...";
-
 
                 }
 
@@ -1572,9 +3291,7 @@ document.addEventListener(
                 try {
 
 
-                    /* ===============================
-                       COMPRESS PHOTO
-                    =============================== */
+                    /* COMPRESS PHOTO */
 
                     const photoBase64 =
                         await fileToBase64(
@@ -1585,7 +3302,8 @@ document.addEventListener(
                     console.log(
                         "Final photo size:",
                         Math.round(
-                            photoBase64.length / 1024
+                            photoBase64.length /
+                            1024
                         ),
                         "KB"
                     );
@@ -1593,17 +3311,13 @@ document.addEventListener(
 
                     if (submitButton) {
 
-
                         submitButton.innerText =
                             "Uploading Photo...";
-
 
                     }
 
 
-                    /* ===============================
-                       FORM DATA
-                    =============================== */
+                    /* FORM DATA */
 
                     const formData =
                         new URLSearchParams();
@@ -1655,9 +3369,7 @@ document.addEventListener(
                     );
 
 
-                    /* ===============================
-                       SEND DATA
-                    =============================== */
+                    /* SEND DATA */
 
                     await fetch(
                         scriptURL,
@@ -1673,9 +3385,7 @@ document.addEventListener(
                     );
 
 
-                    /* ===============================
-                       SUCCESS
-                    =============================== */
+                    /* SUCCESS */
 
                     alert(
                         "Fees information and photograph submitted successfully! Please collect your fees receipt from the school office."
@@ -1688,10 +3398,10 @@ document.addEventListener(
                     steps.forEach(
                         function (step) {
 
-
                             step.classList
-                                .remove("active");
-
+                                .remove(
+                                    "active"
+                                );
 
                         }
                     );
@@ -1699,14 +3409,15 @@ document.addEventListener(
 
                     steps[0]
                         .classList
-                        .add("active");
+                        .add(
+                            "active"
+                        );
 
 
                 }
 
 
                 catch (error) {
-
 
                     console.error(
                         "Submission Error:",
@@ -1718,26 +3429,20 @@ document.addEventListener(
                         "Something went wrong. Please try again."
                     );
 
-
                 }
 
 
                 finally {
 
-
                     if (submitButton) {
-
 
                         submitButton.disabled =
                             false;
 
-
                         submitButton.innerText =
                             "Submit";
 
-
                     }
-
 
                 }
 
@@ -1754,7 +3459,10 @@ document.addEventListener(
 
 
             return new Promise(
-                function (resolve, reject) {
+                function (
+                    resolve,
+                    reject
+                ) {
 
 
                     const reader =
@@ -1791,9 +3499,7 @@ document.addEventListener(
                                         img.height;
 
 
-                                    /* =========================
-                                       RESIZE
-                                    ========================= */
+                                    /* RESIZE */
 
                                     if (
                                         width >
@@ -1818,12 +3524,10 @@ document.addEventListener(
                                             width =
                                                 maxSize;
 
-
                                         }
 
 
                                     }
-
 
                                     else {
 
@@ -1845,7 +3549,6 @@ document.addEventListener(
                                             height =
                                                 maxSize;
 
-
                                         }
 
 
@@ -1860,9 +3563,7 @@ document.addEventListener(
                                         height;
 
 
-                                    /* =========================
-                                       CANVAS
-                                    ========================= */
+                                    /* CANVAS */
 
                                     const ctx =
                                         canvas.getContext(
@@ -1879,9 +3580,7 @@ document.addEventListener(
                                     );
 
 
-                                    /* =========================
-                                       JPEG COMPRESSION
-                                    ========================= */
+                                    /* JPEG COMPRESSION */
 
                                     let quality =
                                         0.5;
@@ -1912,7 +3611,6 @@ document.addEventListener(
                                                 quality
                                             );
 
-
                                     }
 
 
@@ -1938,9 +3636,7 @@ document.addEventListener(
                                     );
 
 
-                                    /* =========================
-                                       SAFETY CHECK
-                                    ========================= */
+                                    /* SAFETY CHECK */
 
                                     if (
                                         base64.length >
@@ -2017,23 +3713,18 @@ document.addEventListener(
     }
 );
 
-</script>
 
-
-
-<!-- =====================================================
-     SUBSCRIBE SCRIPT
-===================================================== -->
-
-<script>
+/* =====================================================
+   SUBSCRIBE
+===================================================== */
 
 function subscribeUser() {
 
 
-    const email =
+    const emailInput =
         document.getElementById(
             "subscribeEmail"
-        ).value.trim();
+        );
 
 
     const message =
@@ -2042,14 +3733,26 @@ function subscribeUser() {
         );
 
 
-    /* ===============================
-       EMPTY EMAIL
-    =============================== */
+    if (
+        !emailInput ||
+        !message
+    ) {
 
-    if (email === "") {
+        return;
+
+    }
 
 
-        message.innerHTML =
+    const email =
+        emailInput.value.trim();
+
+
+    if (
+        email === ""
+    ) {
+
+
+        message.textContent =
             "Please enter your email.";
 
 
@@ -2062,43 +3765,18 @@ function subscribeUser() {
     }
 
 
-    /* ===============================
-       EMAIL VALIDATION
-    =============================== */
-
-    if (
-        !email.includes("@") ||
-        !email.includes(".")
-    ) {
-
-
-        message.innerHTML =
-            "Please enter a valid email.";
-
-
-        message.style.color =
-            "red";
-
-
-        return;
-
-    }
-
-
-    /* ===============================
-       GOOGLE APPS SCRIPT URL
-    =============================== */
-
     const scriptURL =
         "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
-    message.innerHTML =
-        "Submitting...";
+    const formData =
+        new FormData();
 
 
-    message.style.color =
-        "white";
+    formData.append(
+        "email",
+        email
+    );
 
 
     fetch(
@@ -2107,51 +3785,36 @@ function subscribeUser() {
 
             method: "POST",
 
-            body:
-                new URLSearchParams({
+            body: formData,
 
-                    email: email
-
-                })
+            mode: "no-cors"
 
         }
     )
 
-
     .then(
-        function () {
+        function() {
 
 
-            message.innerHTML =
-                "Thank you for subscribing! 😊";
+            message.textContent =
+                "Thank you for subscribing!";
 
 
             message.style.color =
-                "lightgreen";
+                "green";
 
 
-            document
-                .getElementById(
-                    "subscribeEmail"
-                )
-                .value = "";
+            emailInput.value = "";
 
 
         }
     )
 
-
     .catch(
-        function (error) {
+        function() {
 
 
-            console.error(
-                "Subscribe Error:",
-                error
-            );
-
-
-            message.innerHTML =
+            message.textContent =
                 "Something went wrong. Please try again.";
 
 
@@ -2162,335 +3825,38 @@ function subscribeUser() {
         }
     );
 
-
 }
 
-</script>
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
 
 
-
-<!-- =====================================================
-     COURSE DROPDOWN
-===================================================== -->
-
-<script>
-
-document.querySelectorAll(
-    ".course-group > a"
-).forEach(
-    function (link) {
+        if (
+            event.key === "Escape"
+        ) {
 
 
-        link.addEventListener(
-            "click",
-            function (e) {
-
-
-                e.preventDefault();
-
-                e.stopPropagation();
-
-
-                const submenu =
-                    this.parentElement
-                    .querySelector(
-                        ".dropdown2"
-                    );
-
-
-                document.querySelectorAll(
-                    ".course-group .dropdown2"
-                ).forEach(
-                    function (menu) {
-
-
-                        if (
-                            menu !== submenu
-                        ) {
-
-
-                            menu.classList.remove(
-                                "show"
-                            );
-
-
-                        }
-
-
-                    }
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
                 );
 
 
-                submenu.classList.toggle(
-                    "show"
+            if (accountForm) {
+
+
+                accountForm.classList.remove(
+                    "active"
                 );
 
 
             }
-        );
-
-
-    }
-);
-
-</script>
-
-
-
-<!-- =====================================================
-     ADMIN LOGIN SCRIPT
-===================================================== -->
-
-<script>
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-
-        /* =========================
-           ELEMENTS
-        ========================= */
-
-        const accountBtn =
-            document.getElementById(
-                "account-btn"
-            );
-
-
-        const adminLoginLink =
-            document.getElementById(
-                "adminLoginLink"
-            );
-
-
-        const accountForm =
-            document.getElementById(
-                "loginAccountForm"
-            );
-
-
-        const closeForm =
-            document.getElementById(
-                "close-form"
-            );
-
-
-        const loginForm =
-            document.getElementById(
-                "schoolLoginForm"
-            );
-
-
-        const loginMessage =
-            document.getElementById(
-                "loginMessage"
-            );
-
-
-        /* =========================
-           HEADER LOGIN
-        ========================= */
-
-        if (
-            accountBtn &&
-            accountForm
-        ) {
-
-
-            accountBtn.addEventListener(
-                "click",
-                function (e) {
-
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-
-                    accountForm.classList.add(
-                        "active"
-                    );
-
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: "smooth"
-
-                    });
-
-
-                }
-            );
-
-
-        }
-
-
-        /* =========================
-           FOOTER LOGIN
-        ========================= */
-
-        if (
-            adminLoginLink &&
-            accountForm
-        ) {
-
-
-            adminLoginLink.addEventListener(
-                "click",
-                function (e) {
-
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-
-                    accountForm.classList.add(
-                        "active"
-                    );
-
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: "smooth"
-
-                    });
-
-
-                }
-            );
-
-
-        }
-
-
-        /* =========================
-           CLOSE LOGIN
-        ========================= */
-
-        if (
-            closeForm &&
-            accountForm
-        ) {
-
-
-            closeForm.addEventListener(
-                "click",
-                function (e) {
-
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-
-                    accountForm.classList.remove(
-                        "active"
-                    );
-
-
-                }
-            );
-
-
-        }
-
-
-        /* =========================
-           LOGIN SUBMIT
-        ========================= */
-
-        if (loginForm) {
-
-
-            loginForm.addEventListener(
-                "submit",
-                function (event) {
-
-
-                    event.preventDefault();
-
-
-                    const email =
-                        document.getElementById(
-                            "loginEmail"
-                        )
-                        .value
-                        .trim();
-
-
-                    const password =
-                        document.getElementById(
-                            "loginPassword"
-                        )
-                        .value
-                        .trim();
-
-
-                    /* =========================
-                       CORRECT LOGIN
-                    ========================= */
-
-                    if (
-                        email ===
-                        "admin@school.com"
-                        &&
-                        password ===
-                        "Admin@123"
-                    ) {
-
-
-                        loginMessage.innerHTML =
-                            "Login Successful! ✅";
-
-
-                        loginMessage.style.color =
-                            "green";
-
-
-                        setTimeout(
-                            function () {
-
-
-                                window.location.href =
-                                    "admin-dashboard.html";
-
-
-                            },
-                            1000
-                        );
-
-
-                    }
-
-
-                    /* =========================
-                       WRONG LOGIN
-                    ========================= */
-
-                    else {
-
-
-                        loginMessage.innerHTML =
-                            "Invalid Email or Password ❌";
-
-
-                        loginMessage.style.color =
-                            "red";
-
-
-                    }
-
-
-                }
-            );
-
 
         }
 
@@ -2499,12 +3865,6 @@ document.addEventListener(
 );
 
 </script>
-
-
-
-<!-- ================= MAIN JS ================= -->
-
-<script src="js/script.js"></script>
 
 
 </body>

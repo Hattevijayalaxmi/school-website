@@ -12,13 +12,14 @@
     <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet"
-          href="css/responsive.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
 
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -26,746 +27,817 @@
           referrerpolicy="no-referrer">
 
 
+    <!-- Favicon -->
     <link rel="shortcut icon"
           href="Image/Logo.jpeg"
           type="image/png">
 
 
-    <!-- =================================================
-         NURSERY PAGE CSS
-    ================================================= -->
+<style>
 
-    <style>
+/* =========================================================
+   NURSERY PAGE
+========================================================= */
 
-        * {
-            box-sizing: border-box;
-        }
+* {
+    box-sizing: border-box;
+}
 
+.nursery-page {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #263238;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            margin: 0;
-        }
 
+/* =========================================================
+   HEADER FIX
+========================================================= */
 
-        .nursery-page {
-            background: #f6f9fc;
-            color: #263238;
-            font-family: Arial, sans-serif;
-        }
+.header {
+    width: 100%;
+    z-index: 9999;
+}
 
 
-        /* =================================================
-           HERO
-        ================================================= */
+/* =========================================================
+   HERO
+========================================================= */
 
-        .nursery-hero {
-            min-height: 500px;
+.nursery-hero {
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    width: 100%;
+    min-height: 560px;
 
-            text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            padding: 150px 20px 90px;
+    text-align: center;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(5, 31, 58, .88),
-                    rgba(7, 100, 125, .72)
-                ),
-                url("Image/Image.png");
+    padding: 150px 20px 90px;
 
-            background-size: cover;
-            background-position: center;
-        }
+    position: relative;
 
+    background-image:
+        linear-gradient(
+            rgba(5, 31, 58, 0.55),
+            rgba(7, 100, 125, 0.45)
+        ),
+        url("Image/Image.png");
 
-        .nursery-hero-content {
-            width: 100%;
-            max-width: 900px;
-            color: white;
-        }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
-        .nursery-badge {
-            display: inline-block;
+.nursery-hero-content {
 
-            padding: 9px 20px;
+    width: 100%;
+    max-width: 950px;
 
-            border: 1px solid rgba(255,255,255,.6);
+    margin: auto;
 
-            border-radius: 50px;
+    color: #ffffff;
 
-            font-size: 13px;
-            font-weight: 700;
+}
 
-            letter-spacing: 2px;
 
-            margin-bottom: 20px;
-        }
+.nursery-badge {
 
+    display: inline-block;
 
-        .nursery-hero h1 {
-            margin: 0 0 20px;
+    padding: 9px 22px;
 
-            font-size: clamp(42px, 7vw, 70px);
+    border: 1px solid rgba(255,255,255,0.75);
 
-            line-height: 1.1;
+    border-radius: 50px;
 
-            font-weight: 800;
-        }
+    font-size: 13px;
 
+    font-weight: 700;
 
-        .nursery-hero h1 span {
-            display: block;
+    letter-spacing: 2px;
 
-            font-size: clamp(20px, 3vw, 30px);
+    margin-bottom: 22px;
 
-            font-weight: 500;
+}
 
-            margin-top: 15px;
-        }
 
+.nursery-hero h1 {
 
-        .nursery-hero p {
-            max-width: 760px;
+    margin: 0;
 
-            margin: 0 auto;
+    font-size: clamp(42px, 7vw, 72px);
 
-            font-size: 17px;
+    line-height: 1.1;
 
-            line-height: 1.8;
+    font-weight: 800;
 
-            color: rgba(255,255,255,.92);
-        }
+    text-shadow: 0 3px 15px rgba(0,0,0,0.25);
 
+}
 
-        .nursery-hero-buttons {
-            display: flex;
 
-            justify-content: center;
+.nursery-hero h1 span {
 
-            gap: 15px;
+    display: block;
 
-            flex-wrap: wrap;
+    margin-top: 18px;
 
-            margin-top: 30px;
-        }
+    font-size: clamp(20px, 3vw, 30px);
 
+    font-weight: 500;
 
-        .nursery-btn {
-            display: inline-flex;
+}
 
-            align-items: center;
 
-            gap: 9px;
+.nursery-hero p {
 
-            padding: 13px 24px;
+    max-width: 780px;
 
-            border-radius: 7px;
+    margin: 25px auto 0;
 
-            text-decoration: none;
+    font-size: 17px;
 
-            font-weight: 700;
+    line-height: 1.8;
 
-            transition: .3s;
-        }
+    color: rgba(255,255,255,0.95);
 
+}
 
-        .nursery-btn-main {
-            background: white;
 
-            color: #075d78;
-        }
+/* =========================================================
+   COMMON SECTION
+========================================================= */
 
+.nursery-section {
 
-        .nursery-btn-main:hover {
-            transform: translateY(-3px);
-        }
+    width: 100%;
 
+    padding: 80px 20px;
 
-        .nursery-btn-outline {
-            border: 1px solid white;
+    background: #ffffff;
 
-            color: white;
-        }
+}
 
 
-        .nursery-btn-outline:hover {
-            background: white;
+.nursery-container {
 
-            color: #075d78;
-        }
+    width: 100%;
 
+    max-width: 1180px;
 
-        /* =================================================
-           COMMON SECTION
-        ================================================= */
+    margin: auto;
 
-        .nursery-section {
-            padding: 80px 20px;
-        }
+}
 
 
-        .nursery-container {
-            width: 100%;
+.nursery-heading {
 
-            max-width: 1180px;
+    max-width: 800px;
 
-            margin: auto;
-        }
+    margin: 0 auto 45px;
 
+    text-align: center;
 
-        .nursery-heading {
-            text-align: center;
+}
 
-            max-width: 800px;
 
-            margin: 0 auto 45px;
-        }
+.nursery-heading .small-title {
 
+    display: inline-block;
 
-        .nursery-heading .small-title {
-            display: inline-block;
+    margin-bottom: 12px;
 
-            font-size: 13px;
+    color: #087d9b;
 
-            font-weight: 700;
+    font-size: 13px;
 
-            letter-spacing: 2px;
+    font-weight: 700;
 
-            text-transform: uppercase;
+    letter-spacing: 2px;
 
-            margin-bottom: 12px;
+    text-transform: uppercase;
 
-            color: #087d9b;
-        }
+}
 
 
-        .nursery-heading h2 {
-            margin: 0 0 15px;
+.nursery-heading h2 {
 
-            font-size: clamp(30px, 5vw, 42px);
+    margin: 0 0 15px;
 
-            color: #183b56;
-        }
+    color: #183b56;
 
+    font-size: clamp(30px, 5vw, 42px);
 
-        .nursery-heading p {
-            margin: 0;
+    line-height: 1.2;
 
-            font-size: 16px;
+}
 
-            line-height: 1.8;
 
-            color: #667781;
-        }
+.nursery-heading p {
 
+    margin: 0;
 
-        /* =================================================
-           INTRO
-        ================================================= */
+    color: #667781;
 
-        .nursery-intro {
-            display: grid;
+    font-size: 16px;
 
-            grid-template-columns: 1.4fr .8fr;
+    line-height: 1.8;
 
-            gap: 45px;
+}
 
-            align-items: center;
-        }
 
+/* =========================================================
+   INTRO
+========================================================= */
 
-        .nursery-intro-text h2 {
-            margin: 0 0 20px;
+.nursery-intro {
 
-            font-size: 38px;
+    display: grid;
 
-            color: #183b56;
-        }
+    grid-template-columns: 1.4fr 0.8fr;
 
+    gap: 45px;
 
-        .nursery-intro-text p {
-            margin: 0 0 17px;
+    align-items: center;
 
-            line-height: 1.8;
+}
 
-            color: #596a73;
 
-            font-size: 16px;
-        }
+.nursery-intro-text h2 {
 
+    margin: 0 0 20px;
 
-        .nursery-highlight {
-            background: white;
+    color: #183b56;
 
-            border-radius: 18px;
+    font-size: 38px;
 
-            padding: 32px;
+    line-height: 1.2;
 
-            box-shadow: 0 15px 45px rgba(0,0,0,.08);
+}
 
-            border-top: 5px solid #087d9b;
-        }
 
+.nursery-intro-text p {
 
-        .nursery-highlight h3 {
-            margin: 0 0 20px;
+    margin: 0 0 17px;
 
-            font-size: 23px;
+    color: #596a73;
 
-            color: #183b56;
-        }
+    font-size: 16px;
 
+    line-height: 1.8;
 
-        .nursery-highlight ul {
-            list-style: none;
+}
 
-            padding: 0;
 
-            margin: 0;
-        }
+.nursery-highlight {
 
+    padding: 32px;
 
-        .nursery-highlight li {
-            display: flex;
+    background: #ffffff;
 
-            gap: 12px;
+    border-radius: 18px;
 
-            align-items: flex-start;
+    border-top: 5px solid #087d9b;
 
-            margin-bottom: 15px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
 
-            line-height: 1.5;
+}
 
-            color: #52636c;
-        }
 
+.nursery-highlight h3 {
 
-        .nursery-highlight li i {
-            margin-top: 3px;
+    margin: 0 0 20px;
 
-            color: #087d9b;
-        }
+    color: #183b56;
 
+    font-size: 23px;
 
-        /* =================================================
-           LEARNING AREAS
-        ================================================= */
+}
 
-        .nursery-learning-grid {
-            display: grid;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+.nursery-highlight ul {
 
-            gap: 22px;
-        }
+    margin: 0;
 
+    padding: 0;
 
-        .nursery-learning-card {
-            background: white;
+    list-style: none;
 
-            padding: 30px 25px;
+}
 
-            border-radius: 16px;
 
-            box-shadow: 0 10px 35px rgba(0,0,0,.06);
+.nursery-highlight li {
 
-            border: 1px solid #e7edf1;
+    display: flex;
 
-            transition: .3s;
-        }
+    align-items: flex-start;
 
+    gap: 12px;
 
-        .nursery-learning-card:hover {
-            transform: translateY(-7px);
+    margin-bottom: 15px;
 
-            box-shadow: 0 18px 45px rgba(0,0,0,.11);
-        }
+    color: #52636c;
 
+    line-height: 1.5;
 
-        .nursery-icon {
-            width: 58px;
+}
 
-            height: 58px;
 
-            display: flex;
+.nursery-highlight li i {
 
-            align-items: center;
+    margin-top: 3px;
 
-            justify-content: center;
+    color: #087d9b;
 
-            border-radius: 14px;
+}
 
-            background: #eaf7fa;
 
-            color: #087d9b;
+/* =========================================================
+   LEARNING AREAS
+========================================================= */
 
-            font-size: 24px;
+.nursery-learning-grid {
 
-            margin-bottom: 20px;
-        }
+    display: grid;
 
+    grid-template-columns: repeat(3, 1fr);
 
-        .nursery-learning-card h3 {
-            margin: 0 0 12px;
+    gap: 22px;
 
-            color: #183b56;
+}
 
-            font-size: 21px;
-        }
 
+.nursery-learning-card {
 
-        .nursery-learning-card p {
-            margin: 0;
+    padding: 30px 25px;
 
-            line-height: 1.7;
+    background: #ffffff;
 
-            color: #667781;
-        }
+    border: 1px solid #e7edf1;
 
+    border-radius: 16px;
 
-        /* =================================================
-           PROGRAMME JOURNEY
-        ================================================= */
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
 
-        .nursery-journey {
-            display: grid;
+    transition: 0.3s;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+}
 
-            gap: 25px;
-        }
 
+.nursery-learning-card:hover {
 
-        .nursery-level {
-            position: relative;
+    transform: translateY(-7px);
 
-            background: white;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.11);
 
-            border-radius: 18px;
+}
 
-            padding: 35px 28px;
 
-            box-shadow: 0 10px 35px rgba(0,0,0,.07);
+.nursery-icon {
 
-            overflow: hidden;
-        }
+    width: 58px;
 
+    height: 58px;
 
-        .nursery-level-number {
-            position: absolute;
+    display: flex;
 
-            right: 20px;
+    align-items: center;
 
-            top: 15px;
+    justify-content: center;
 
-            font-size: 55px;
+    margin-bottom: 20px;
 
-            font-weight: 900;
+    background: #eaf7fa;
 
-            color: #eef4f7;
-        }
+    border-radius: 14px;
 
+    color: #087d9b;
 
-        .nursery-level-icon {
-            width: 60px;
+    font-size: 24px;
 
-            height: 60px;
+}
 
-            display: flex;
 
-            justify-content: center;
+.nursery-learning-card h3 {
 
-            align-items: center;
+    margin: 0 0 12px;
 
-            border-radius: 50%;
+    color: #183b56;
 
-            background: #087d9b;
+    font-size: 21px;
 
-            color: white;
+}
 
-            font-size: 23px;
 
-            margin-bottom: 22px;
+.nursery-learning-card p {
 
-            position: relative;
-        }
+    margin: 0;
 
+    color: #667781;
 
-        .nursery-level h3 {
-            margin: 0 0 13px;
+    line-height: 1.7;
 
-            color: #183b56;
+}
 
-            font-size: 25px;
 
-            position: relative;
-        }
+/* =========================================================
+   PROGRAMME JOURNEY
+========================================================= */
 
+.nursery-journey {
 
-        .nursery-level p {
-            margin: 0;
+    display: grid;
 
-            line-height: 1.7;
+    grid-template-columns: repeat(3, 1fr);
 
-            color: #667781;
+    gap: 25px;
 
-            position: relative;
-        }
+}
 
 
-        /* =================================================
-           DEVELOPMENT
-        ================================================= */
+.nursery-level {
 
-        .nursery-development {
-            display: grid;
+    position: relative;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    overflow: hidden;
 
-            gap: 20px;
-        }
+    padding: 35px 28px;
 
+    background: #ffffff;
 
-        .nursery-development-item {
-            display: flex;
+    border-radius: 18px;
 
-            gap: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.07);
 
-            background: white;
+}
 
-            padding: 25px;
 
-            border-radius: 15px;
+.nursery-level-number {
 
-            box-shadow: 0 8px 30px rgba(0,0,0,.06);
+    position: absolute;
 
-            border: 1px solid #e9eef1;
-        }
+    top: 15px;
 
+    right: 20px;
 
-        .nursery-development-item > i {
-            min-width: 50px;
+    color: #eef4f7;
 
-            height: 50px;
+    font-size: 55px;
 
-            display: flex;
+    font-weight: 900;
 
-            align-items: center;
+}
 
-            justify-content: center;
 
-            border-radius: 12px;
+.nursery-level-icon {
 
-            background: #eaf7fa;
+    position: relative;
 
-            color: #087d9b;
+    width: 60px;
 
-            font-size: 21px;
-        }
+    height: 60px;
 
+    display: flex;
 
-        .nursery-development-item h3 {
-            margin: 0 0 8px;
+    align-items: center;
 
-            color: #183b56;
-        }
+    justify-content: center;
 
+    margin-bottom: 22px;
 
-        .nursery-development-item p {
-            margin: 0;
+    background: #087d9b;
 
-            line-height: 1.6;
+    border-radius: 50%;
 
-            color: #667781;
-        }
+    color: white;
 
+    font-size: 23px;
 
-        /* =================================================
-           ENVIRONMENT
-        ================================================= */
+}
 
-        .nursery-environment {
-            background: #edf7f9;
-        }
 
+.nursery-level h3 {
 
-        .nursery-environment-grid {
-            display: grid;
+    position: relative;
 
-            grid-template-columns:
-                repeat(4, 1fr);
+    margin: 0 0 13px;
 
-            gap: 20px;
-        }
+    color: #183b56;
 
+    font-size: 25px;
 
-        .nursery-environment-card {
-            background: white;
+}
 
-            text-align: center;
 
-            padding: 30px 20px;
+.nursery-level p {
 
-            border-radius: 15px;
+    position: relative;
 
-            box-shadow: 0 8px 28px rgba(0,0,0,.05);
-        }
+    margin: 0;
 
+    color: #667781;
 
-        .nursery-environment-card i {
-            font-size: 30px;
+    line-height: 1.7;
 
-            color: #087d9b;
+}
 
-            margin-bottom: 18px;
-        }
 
+/* =========================================================
+   DEVELOPMENT
+========================================================= */
 
-        .nursery-environment-card h3 {
-            margin: 0 0 10px;
+.nursery-development {
 
-            color: #183b56;
+    display: grid;
 
-            font-size: 18px;
-        }
+    grid-template-columns: repeat(2, 1fr);
 
+    gap: 20px;
 
-        .nursery-environment-card p {
-            margin: 0;
+}
 
-            color: #667781;
 
-            line-height: 1.6;
+.nursery-development-item {
 
-            font-size: 14px;
-        }
+    display: flex;
 
+    gap: 20px;
 
-        /* =================================================
-           WHAT CHILDREN LEARN
-        ================================================= */
+    padding: 25px;
 
-        .nursery-learning-box {
-            display: grid;
+    background: #ffffff;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    border: 1px solid #e9eef1;
 
-            gap: 25px;
-        }
+    border-radius: 15px;
 
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
 
-        .nursery-info-box {
-            background: white;
+}
 
-            border-radius: 17px;
 
-            padding: 30px;
+.nursery-development-item > i {
 
-            box-shadow: 0 10px 35px rgba(0,0,0,.06);
-        }
+    min-width: 50px;
 
+    height: 50px;
 
-        .nursery-info-box h3 {
-            margin: 0 0 20px;
+    display: flex;
 
-            font-size: 23px;
+    align-items: center;
 
-            color: #183b56;
-        }
+    justify-content: center;
 
+    background: #eaf7fa;
 
-        .nursery-info-box ul {
-            margin: 0;
+    border-radius: 12px;
 
-            padding: 0;
+    color: #087d9b;
 
-            list-style: none;
-        }
+    font-size: 21px;
 
+}
 
-        .nursery-info-box li {
-            padding: 11px 0;
 
-            border-bottom: 1px solid #edf0f2;
+.nursery-development-item h3 {
 
-            color: #5f7078;
+    margin: 0 0 8px;
 
-            display: flex;
+    color: #183b56;
 
-            gap: 10px;
-        }
+}
 
 
-        .nursery-info-box li:last-child {
-            border-bottom: none;
-        }
+.nursery-development-item p {
 
+    margin: 0;
 
-        .nursery-info-box li i {
-            color: #087d9b;
+    color: #667781;
 
-            margin-top: 4px;
-        }
+    line-height: 1.6;
 
+}
 
-        /* =================================================
-           ADMISSION CTA
-        ================================================= */
 
-        .nursery-admission {
-            max-width: 950px;
+/* =========================================================
+   SCHOOL ENVIRONMENT
+========================================================= */
 
-            margin: auto;
+.nursery-environment {
 
-            text-align: center;
+    background: #edf7f9;
 
-            padding: 55px 35px;
+}
 
-            border-radius: 22px;
 
-            color: white;
+.nursery-environment-grid {
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #073b5c,
-                    #087d9b
-                );
+    display: grid;
 
-            box-shadow: 0 20px 50px rgba(0,0,0,.12);
-        }
+    grid-template-columns: repeat(4, 1fr);
 
+    gap: 20px;
 
-        .nursery-admission h2 {
-            margin: 0 0 15px;
+}
 
-            font-size: clamp(28px, 5vw, 40px);
-        }
 
+.nursery-environment-card {
 
-        .nursery-admission p {
-            max-width: 700px;
+    padding: 30px 20px;
 
-            margin: 0 auto 25px;
+    background: #ffffff;
 
-            line-height: 1.7;
+    border-radius: 15px;
 
-            color: rgba(255,255,255,.9);
-        }
+    text-align: center;
 
+    box-shadow: 0 8px 28px rgba(0,0,0,0.05);
 
-       /* =================================================
-   ADMISSION BUTTONS
-================================================= */
+}
+
+
+.nursery-environment-card i {
+
+    margin-bottom: 18px;
+
+    color: #087d9b;
+
+    font-size: 30px;
+
+}
+
+
+.nursery-environment-card h3 {
+
+    margin: 0 0 10px;
+
+    color: #183b56;
+
+    font-size: 18px;
+
+}
+
+
+.nursery-environment-card p {
+
+    margin: 0;
+
+    color: #667781;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   LEARNING OUTCOMES
+========================================================= */
+
+.nursery-learning-box {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.nursery-info-box {
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 17px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+
+}
+
+
+.nursery-info-box h3 {
+
+    margin: 0 0 20px;
+
+    color: #183b56;
+
+    font-size: 23px;
+
+}
+
+
+.nursery-info-box h3 i {
+
+    margin-right: 8px;
+
+    color: #087d9b;
+
+}
+
+
+.nursery-info-box ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.nursery-info-box li {
+
+    display: flex;
+
+    gap: 10px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #edf0f2;
+
+    color: #5f7078;
+
+}
+
+
+.nursery-info-box li:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.nursery-info-box li i {
+
+    margin-top: 4px;
+
+    color: #087d9b;
+
+}
+
+
+/* =========================================================
+   ADMISSION
+========================================================= */
+
+.nursery-admission {
+
+    max-width: 950px;
+
+    margin: auto;
+
+    padding: 55px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #073b5c,
+            #087d9b
+        );
+
+    border-radius: 22px;
+
+    color: white;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+
+}
+
+
+.nursery-admission h2 {
+
+    margin: 0 0 15px;
+
+    font-size: clamp(28px, 5vw, 40px);
+
+}
+
+
+.nursery-admission p {
+
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+
+    color: rgba(255,255,255,0.9);
+
+    line-height: 1.7;
+
+}
+
 
 .nursery-admission-buttons {
 
@@ -796,15 +868,15 @@
 
     background: white;
 
-    color: #075d78;
-
     border-radius: 7px;
+
+    color: #075d78;
 
     text-decoration: none;
 
     font-weight: 700;
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
@@ -820,9 +892,9 @@
 
     background: transparent;
 
-    color: white;
-
     border: 1px solid white;
+
+    color: white;
 
 }
 
@@ -836,212 +908,287 @@
 }
 
 
+/* =========================================================
+   FAQ
+========================================================= */
 
-        /* =================================================
-           FAQ
-        ================================================= */
+.nursery-faq {
 
-        .nursery-faq {
-            max-width: 900px;
+    max-width: 900px;
 
-            margin: auto;
-        }
+    margin: auto;
 
+}
 
-        .nursery-faq-item {
-            background: white;
 
-            border-radius: 12px;
+.nursery-faq-item {
 
-            margin-bottom: 13px;
+    overflow: hidden;
 
-            overflow: hidden;
+    margin-bottom: 13px;
 
-            border: 1px solid #e4eaee;
+    background: #ffffff;
 
-            box-shadow: 0 5px 20px rgba(0,0,0,.04);
-        }
+    border: 1px solid #e4eaee;
 
+    border-radius: 12px;
 
-        .nursery-faq-header {
-            display: flex;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
 
-            justify-content: space-between;
+}
 
-            align-items: center;
 
-            gap: 20px;
+.nursery-faq-header {
 
-            padding: 20px 23px;
+    display: flex;
 
-            cursor: pointer;
-        }
+    align-items: center;
 
+    justify-content: space-between;
 
-        .nursery-faq-header h3 {
-            margin: 0;
+    gap: 20px;
 
-            font-size: 17px;
+    padding: 20px 23px;
 
-            color: #183b56;
-        }
+    cursor: pointer;
 
+}
 
-        .nursery-faq-icon {
-            min-width: 35px;
 
-            height: 35px;
+.nursery-faq-header h3 {
 
-            display: flex;
+    margin: 0;
 
-            justify-content: center;
+    color: #183b56;
 
-            align-items: center;
+    font-size: 17px;
 
-            border-radius: 50%;
+}
 
-            background: #edf7f9;
 
-            color: #087d9b;
+.nursery-faq-icon {
 
-            transition: .3s;
-        }
+    min-width: 35px;
 
+    height: 35px;
 
-        .nursery-faq-header.active
-        .nursery-faq-icon {
-            transform: rotate(180deg);
-        }
+    display: flex;
 
+    align-items: center;
 
-        .nursery-faq-content {
-            max-height: 0;
+    justify-content: center;
 
-            overflow: hidden;
+    background: #edf7f9;
 
-            transition: max-height .35s ease;
-        }
+    border-radius: 50%;
 
+    color: #087d9b;
 
-        .nursery-faq-content p {
-            padding: 0 23px 22px;
+    transition: 0.3s;
 
-            margin: 0;
+}
 
-            line-height: 1.7;
 
-            color: #667781;
-        }
+.nursery-faq-header.active
+.nursery-faq-icon {
 
+    transform: rotate(180deg);
 
-        .nursery-faq-content a {
-            color: #087d9b;
+}
 
-            font-weight: 700;
-        }
 
+.nursery-faq-content {
 
-        /* =================================================
-           RESPONSIVE
-        ================================================= */
+    max-height: 0;
 
-        @media(max-width: 900px) {
+    overflow: hidden;
 
-            .nursery-intro {
-                grid-template-columns: 1fr;
-            }
+    transition: max-height 0.35s ease;
 
+}
 
-            .nursery-learning-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
 
+.nursery-faq-content p {
 
-            .nursery-journey {
-                grid-template-columns: 1fr;
-            }
+    margin: 0;
 
+    padding: 0 23px 22px;
 
-            .nursery-environment-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
+    color: #667781;
 
-        }
+    line-height: 1.7;
 
+}
 
-        @media(max-width: 650px) {
 
-            .nursery-hero {
-                min-height: 520px;
+.nursery-faq-content a {
 
-                padding: 130px 18px 70px;
-            }
+    color: #087d9b;
 
+    font-weight: 700;
 
-            .nursery-hero h1 {
-                font-size: 42px;
-            }
+}
 
 
-            .nursery-hero h1 span {
-                font-size: 21px;
-            }
+/* =========================================================
+   MOBILE
+========================================================= */
 
+@media(max-width: 900px) {
 
-            .nursery-hero p {
-                font-size: 15px;
-            }
+    .nursery-intro {
 
+        grid-template-columns: 1fr;
 
-            .nursery-section {
-                padding: 55px 15px;
-            }
+    }
 
+    .nursery-learning-grid {
 
-            .nursery-intro-text h2 {
-                font-size: 30px;
-            }
+        grid-template-columns: repeat(2, 1fr);
 
+    }
 
-            .nursery-learning-grid {
-                grid-template-columns: 1fr;
-            }
+    .nursery-journey {
 
+        grid-template-columns: 1fr;
 
-            .nursery-development {
-                grid-template-columns: 1fr;
-            }
+    }
 
+    .nursery-environment-grid {
 
-            .nursery-environment-grid {
-                grid-template-columns: 1fr;
-            }
+        grid-template-columns: repeat(2, 1fr);
 
+    }
 
-            .nursery-learning-box {
-                grid-template-columns: 1fr;
-            }
+}
 
 
-            .nursery-admission {
-                padding: 40px 20px;
-            }
+@media(max-width: 650px) {
 
+    .nursery-hero {
 
-            .nursery-faq-header {
-                padding: 17px;
-            }
+        min-height: 520px;
 
+        padding: 130px 18px 70px;
 
-            .nursery-faq-header h3 {
-                font-size: 15px;
-            }
+    }
 
-        }
 
-    </style>
+    .nursery-hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .nursery-hero h1 span {
+
+        font-size: 21px;
+
+    }
+
+
+    .nursery-hero p {
+
+        font-size: 15px;
+
+    }
+
+
+    .nursery-section {
+
+        padding: 55px 15px;
+
+    }
+
+
+    .nursery-intro-text h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .nursery-learning-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nursery-development {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nursery-environment-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nursery-learning-box {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nursery-admission {
+
+        padding: 40px 20px;
+
+    }
+
+
+    .nursery-faq-header {
+
+        padding: 17px;
+
+    }
+
+
+    .nursery-faq-header h3 {
+
+        font-size: 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER SMALL FIX
+========================================================= */
+
+footer {
+
+    width: 100%;
+
+}
+
+
+footer .content {
+
+    width: 100%;
+
+}
+
+
+@media(max-width: 768px) {
+
+    footer .link-boxes {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -1049,17 +1196,19 @@
 <body class="nursery-page">
 
 
-<!-- =================================================
+<!-- =========================================================
      HEADER START
-================================================= -->
+========================================================= -->
 
 <header class="header">
 
-    <a href="index.html"
-       class="logo">
+
+    <!-- LOGO -->
+
+    <a href="index.html" class="logo">
 
         <img src="Image/Logo.jpeg"
-             alt="Maria's Podar Learn School logo"
+             alt="Maria's Podar Learn School Logo"
              style="width:80px;height:55px;">
 
         <div class="collage-name">
@@ -1071,7 +1220,12 @@
     </a>
 
 
+    <!-- NAVBAR -->
+
     <nav class="navbar">
+
+
+        <!-- CLOSE MENU -->
 
         <div id="close-navbar"
              class="close-icon"
@@ -1092,7 +1246,9 @@
             <li class="navbar-dropdown">
 
                 <a href="index.html">
+
                     Home
+
                 </a>
 
             </li>
@@ -1103,7 +1259,9 @@
             <li class="navbar-dropdown">
 
                 <a href="#">
+
                     Course
+
                 </a>
 
 
@@ -1112,7 +1270,7 @@
                     <ul>
 
 
-                        <!-- PRIMARY GROUP -->
+                        <!-- PRIMARY -->
 
                         <li class="course-group">
 
@@ -1132,7 +1290,9 @@
                                 <li>
 
                                     <a href="nursery.html">
+
                                         Nursery to UKG
+
                                     </a>
 
                                 </li>
@@ -1141,7 +1301,9 @@
                                 <li>
 
                                     <a href="class-1-5.html">
+
                                         Class 1st to 5th
+
                                     </a>
 
                                 </li>
@@ -1151,7 +1313,7 @@
                         </li>
 
 
-                        <!-- SECONDARY GROUP -->
+                        <!-- SECONDARY -->
 
                         <li class="course-group">
 
@@ -1171,7 +1333,9 @@
                                 <li>
 
                                     <a href="class-6-8.html">
+
                                         Class 6th to 8th
+
                                     </a>
 
                                 </li>
@@ -1180,7 +1344,9 @@
                                 <li>
 
                                     <a href="class-9-10.html">
+
                                         Class 9th to 10th
+
                                     </a>
 
                                 </li>
@@ -1242,7 +1408,7 @@
     </nav>
 
 
-    <!-- LOGIN ICON -->
+    <!-- ACCOUNT -->
 
     <div id="account-btn"
          class="header-icon"
@@ -1264,27 +1430,28 @@
     <div id="menu-btn"
          class="header-icon">
 
-        <img src="image/menu-icon.svg"
-             alt="menu-icon">
+        <img src="Image/menu-icon.svg"
+             alt="Menu">
 
-        <img src="image/menu-icon-hover.gif"
-             alt="menu-icon"
+        <img src="Image/menu-icon-hover.gif"
+             alt="Menu"
              width="30"
              class="header-icon-hover">
 
     </div>
 
+
 </header>
 
-<!-- =================================================
+<!-- =========================================================
      HEADER END
-================================================= -->
+========================================================= -->
 
 
 
-<!-- =================================================
-     LOGIN FORM START
-================================================= -->
+<!-- =========================================================
+     LOGIN FORM
+========================================================= -->
 
 <div class="account-form"
      id="loginAccountForm">
@@ -1341,7 +1508,9 @@
                    id="remember-me">
 
             <label for="remember-me">
+
                 Remember Me
+
             </label>
 
         </div>
@@ -1362,15 +1531,10 @@
 
 </div>
 
-<!-- =================================================
-     LOGIN FORM END
-================================================= -->
 
-
-
-<!-- =================================================
-     NURSERY TO UKG HERO
-================================================= -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="nursery-hero">
 
@@ -1379,7 +1543,9 @@
 
 
         <span class="nursery-badge">
+
             PRIMARY GROUP
+
         </span>
 
 
@@ -1388,7 +1554,9 @@
             Nursery to UKG
 
             <span>
+
                 A Joyful Beginning to Lifelong Learning
+
             </span>
 
         </h1>
@@ -1404,16 +1572,15 @@
         </p>
 
 
-
     </div>
 
 </section>
 
 
 
-<!-- =================================================
+<!-- =========================================================
      INTRO
-================================================= -->
+========================================================= -->
 
 <section class="nursery-section">
 
@@ -1428,8 +1595,10 @@
 
 
                 <h2>
+
                     Growing Through Learning,
                     Play & Exploration
+
                 </h2>
 
 
@@ -1471,12 +1640,13 @@
 
 
                 <h3>
+
                     Key Focus Areas
+
                 </h3>
 
 
                 <ul>
-
 
                     <li>
 
@@ -1531,7 +1701,6 @@
 
                     </li>
 
-
                 </ul>
 
 
@@ -1546,9 +1715,9 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      LEARNING AREAS
-================================================= -->
+========================================================= -->
 
 <section class="nursery-section">
 
@@ -1558,14 +1727,17 @@
 
         <div class="nursery-heading">
 
-
             <span class="small-title">
+
                 Learning Areas
+
             </span>
 
 
             <h2>
+
                 Building Skills for the Early Years
+
             </h2>
 
 
@@ -1577,7 +1749,6 @@
 
             </p>
 
-
         </div>
 
 
@@ -1585,10 +1756,7 @@
         <div class="nursery-learning-grid">
 
 
-            <!-- 1 -->
-
             <div class="nursery-learning-card">
-
 
                 <div class="nursery-icon">
 
@@ -1598,7 +1766,9 @@
 
 
                 <h3>
+
                     Language & Communication
+
                 </h3>
 
 
@@ -1610,15 +1780,11 @@
 
                 </p>
 
-
             </div>
 
 
 
-            <!-- 2 -->
-
             <div class="nursery-learning-card">
-
 
                 <div class="nursery-icon">
 
@@ -1628,7 +1794,9 @@
 
 
                 <h3>
+
                     Early Numeracy
+
                 </h3>
 
 
@@ -1640,15 +1808,11 @@
 
                 </p>
 
-
             </div>
 
 
 
-            <!-- 3 -->
-
             <div class="nursery-learning-card">
-
 
                 <div class="nursery-icon">
 
@@ -1658,7 +1822,9 @@
 
 
                 <h3>
+
                     Reading Readiness
+
                 </h3>
 
 
@@ -1670,15 +1836,11 @@
 
                 </p>
 
-
             </div>
 
 
 
-            <!-- 4 -->
-
             <div class="nursery-learning-card">
-
 
                 <div class="nursery-icon">
 
@@ -1688,7 +1850,9 @@
 
 
                 <h3>
+
                     Art & Creativity
+
                 </h3>
 
 
@@ -1700,15 +1864,11 @@
 
                 </p>
 
-
             </div>
 
 
 
-            <!-- 5 -->
-
             <div class="nursery-learning-card">
-
 
                 <div class="nursery-icon">
 
@@ -1718,7 +1878,9 @@
 
 
                 <h3>
+
                     Music & Rhymes
+
                 </h3>
 
 
@@ -1730,15 +1892,11 @@
 
                 </p>
 
-
             </div>
 
 
 
-            <!-- 6 -->
-
             <div class="nursery-learning-card">
-
 
                 <div class="nursery-icon">
 
@@ -1748,7 +1906,9 @@
 
 
                 <h3>
+
                     Activity-Based Learning
+
                 </h3>
 
 
@@ -1759,7 +1919,6 @@
                     and meaningful.
 
                 </p>
-
 
             </div>
 
@@ -1772,9 +1931,9 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      PROGRAMME JOURNEY
-================================================= -->
+========================================================= -->
 
 <section class="nursery-section">
 
@@ -1784,14 +1943,17 @@
 
         <div class="nursery-heading">
 
-
             <span class="small-title">
+
                 Programme Journey
+
             </span>
 
 
             <h2>
+
                 Nursery • LKG • UKG
+
             </h2>
 
 
@@ -1803,7 +1965,6 @@
 
             </p>
 
-
         </div>
 
 
@@ -1811,13 +1972,13 @@
         <div class="nursery-journey">
 
 
-            <!-- NURSERY -->
-
             <div class="nursery-level">
 
 
                 <div class="nursery-level-number">
+
                     01
+
                 </div>
 
 
@@ -1829,7 +1990,9 @@
 
 
                 <h3>
+
                     Nursery
+
                 </h3>
 
 
@@ -1847,13 +2010,13 @@
 
 
 
-            <!-- LKG -->
-
             <div class="nursery-level">
 
 
                 <div class="nursery-level-number">
+
                     02
+
                 </div>
 
 
@@ -1865,7 +2028,9 @@
 
 
                 <h3>
+
                     LKG
+
                 </h3>
 
 
@@ -1883,13 +2048,13 @@
 
 
 
-            <!-- UKG -->
-
             <div class="nursery-level">
 
 
                 <div class="nursery-level-number">
+
                     03
+
                 </div>
 
 
@@ -1901,7 +2066,9 @@
 
 
                 <h3>
+
                     UKG
+
                 </h3>
 
 
@@ -1926,9 +2093,9 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      CHILD DEVELOPMENT
-================================================= -->
+========================================================= -->
 
 <section class="nursery-section">
 
@@ -1938,14 +2105,17 @@
 
         <div class="nursery-heading">
 
-
             <span class="small-title">
+
                 Child Development
+
             </span>
 
 
             <h2>
+
                 More Than Academic Learning
+
             </h2>
 
 
@@ -1957,7 +2127,6 @@
 
             </p>
 
-
         </div>
 
 
@@ -1965,18 +2134,16 @@
         <div class="nursery-development">
 
 
-            <!-- 1 -->
-
             <div class="nursery-development-item">
 
-
                 <i class="fa-solid fa-comments"></i>
-
 
                 <div>
 
                     <h3>
+
                         Communication
+
                     </h3>
 
                     <p>
@@ -1988,23 +2155,20 @@
 
                 </div>
 
-
             </div>
 
 
 
-            <!-- 2 -->
-
             <div class="nursery-development-item">
 
-
                 <i class="fa-solid fa-lightbulb"></i>
-
 
                 <div>
 
                     <h3>
+
                         Curiosity
+
                     </h3>
 
                     <p>
@@ -2016,23 +2180,20 @@
 
                 </div>
 
-
             </div>
 
 
 
-            <!-- 3 -->
-
             <div class="nursery-development-item">
 
-
                 <i class="fa-solid fa-paintbrush"></i>
-
 
                 <div>
 
                     <h3>
+
                         Creativity
+
                     </h3>
 
                     <p>
@@ -2044,23 +2205,20 @@
 
                 </div>
 
-
             </div>
 
 
 
-            <!-- 4 -->
-
             <div class="nursery-development-item">
 
-
                 <i class="fa-solid fa-people-group"></i>
-
 
                 <div>
 
                     <h3>
+
                         Social Skills
+
                     </h3>
 
                     <p>
@@ -2072,23 +2230,20 @@
 
                 </div>
 
-
             </div>
 
 
 
-            <!-- 5 -->
-
             <div class="nursery-development-item">
 
-
                 <i class="fa-solid fa-person-running"></i>
-
 
                 <div>
 
                     <h3>
+
                         Physical Development
+
                     </h3>
 
                     <p>
@@ -2100,23 +2255,20 @@
 
                 </div>
 
-
             </div>
 
 
 
-            <!-- 6 -->
-
             <div class="nursery-development-item">
 
-
                 <i class="fa-solid fa-user-check"></i>
-
 
                 <div>
 
                     <h3>
+
                         Independence
+
                     </h3>
 
                     <p>
@@ -2127,7 +2279,6 @@
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -2140,9 +2291,9 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      SCHOOL ENVIRONMENT
-================================================= -->
+========================================================= -->
 
 <section class="nursery-section nursery-environment">
 
@@ -2152,14 +2303,17 @@
 
         <div class="nursery-heading">
 
-
             <span class="small-title">
+
                 School Experience
+
             </span>
 
 
             <h2>
+
                 A Positive Early Learning Environment
+
             </h2>
 
 
@@ -2170,7 +2324,6 @@
                 opportunities to explore.
 
             </p>
-
 
         </div>
 
@@ -2184,7 +2337,9 @@
                 <i class="fa-solid fa-child-reaching"></i>
 
                 <h3>
+
                     Child-Friendly Learning
+
                 </h3>
 
                 <p>
@@ -2197,12 +2352,15 @@
             </div>
 
 
+
             <div class="nursery-environment-card">
 
                 <i class="fa-solid fa-puzzle-piece"></i>
 
                 <h3>
+
                     Learning Through Activities
+
                 </h3>
 
                 <p>
@@ -2215,12 +2373,15 @@
             </div>
 
 
+
             <div class="nursery-environment-card">
 
                 <i class="fa-solid fa-heart"></i>
 
                 <h3>
+
                     Care & Encouragement
+
                 </h3>
 
                 <p>
@@ -2233,12 +2394,15 @@
             </div>
 
 
+
             <div class="nursery-environment-card">
 
                 <i class="fa-solid fa-handshake"></i>
 
                 <h3>
+
                     Parent Partnership
+
                 </h3>
 
                 <p>
@@ -2259,9 +2423,9 @@
 
 
 
-<!-- =================================================
-     WHAT CHILDREN LEARN
-================================================= -->
+<!-- =========================================================
+     LEARNING OUTCOMES
+========================================================= -->
 
 <section class="nursery-section">
 
@@ -2271,14 +2435,17 @@
 
         <div class="nursery-heading">
 
-
             <span class="small-title">
+
                 Learning Outcomes
+
             </span>
 
 
             <h2>
+
                 What Children Develop
+
             </h2>
 
 
@@ -2289,15 +2456,12 @@
 
             </p>
 
-
         </div>
 
 
 
         <div class="nursery-learning-box">
 
-
-            <!-- ACADEMIC -->
 
             <div class="nursery-info-box">
 
@@ -2312,7 +2476,6 @@
 
 
                 <ul>
-
 
                     <li>
 
@@ -2367,15 +2530,11 @@
 
                     </li>
 
-
                 </ul>
-
 
             </div>
 
 
-
-            <!-- OVERALL -->
 
             <div class="nursery-info-box">
 
@@ -2390,7 +2549,6 @@
 
 
                 <ul>
-
 
                     <li>
 
@@ -2445,9 +2603,7 @@
 
                     </li>
 
-
                 </ul>
-
 
             </div>
 
@@ -2460,23 +2616,25 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      ADMISSION CTA
-================================================= -->
-
-<!-- =================================================
-     ADMISSION CTA
-================================================= -->
+========================================================= -->
 
 <section class="nursery-section">
 
+
     <div class="nursery-container">
+
 
         <div class="nursery-admission">
 
+
             <h2>
+
                 Begin Your Child's Learning Journey
+
             </h2>
+
 
             <p>
 
@@ -2486,9 +2644,9 @@
 
             </p>
 
+
             <div class="nursery-admission-buttons">
 
-                <!-- ADMISSION FORM -->
 
                 <a href="admission-form.html"
                    target="_blank"
@@ -2501,8 +2659,6 @@
                 </a>
 
 
-                <!-- CONTACT SCHOOL -->
-
                 <a href="contact-us.html"
                    class="nursery-admission-btn nursery-contact-btn">
 
@@ -2512,6 +2668,7 @@
 
                 </a>
 
+
             </div>
 
         </div>
@@ -2519,9 +2676,12 @@
     </div>
 
 </section>
-<!-- =================================================
+
+
+
+<!-- =========================================================
      FAQ
-================================================= -->
+========================================================= -->
 
 <section class="nursery-section">
 
@@ -2531,14 +2691,17 @@
 
         <div class="nursery-heading">
 
-
             <span class="small-title">
+
                 Frequently Asked Questions
+
             </span>
 
 
             <h2>
+
                 Nursery to UKG – FAQ
+
             </h2>
 
 
@@ -2548,7 +2711,6 @@
                 early-learning programme.
 
             </p>
-
 
         </div>
 
@@ -2564,9 +2726,10 @@
 
                 <div class="nursery-faq-header">
 
-
                     <h3>
+
                         What classes are included in Nursery to UKG?
+
                     </h3>
 
 
@@ -2575,7 +2738,6 @@
                         <i class="fa-solid fa-chevron-down"></i>
 
                     </div>
-
 
                 </div>
 
@@ -2592,7 +2754,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -2604,9 +2765,10 @@
 
                 <div class="nursery-faq-header">
 
-
                     <h3>
+
                         What does early learning focus on?
+
                     </h3>
 
 
@@ -2615,7 +2777,6 @@
                         <i class="fa-solid fa-chevron-down"></i>
 
                     </div>
-
 
                 </div>
 
@@ -2633,7 +2794,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -2645,9 +2805,10 @@
 
                 <div class="nursery-faq-header">
 
-
                     <h3>
+
                         How are children encouraged to learn?
+
                     </h3>
 
 
@@ -2656,7 +2817,6 @@
                         <i class="fa-solid fa-chevron-down"></i>
 
                     </div>
-
 
                 </div>
 
@@ -2674,7 +2834,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -2686,9 +2845,10 @@
 
                 <div class="nursery-faq-header">
 
-
                     <h3>
+
                         How can parents apply for admission?
+
                     </h3>
 
 
@@ -2698,7 +2858,6 @@
 
                     </div>
 
-
                 </div>
 
 
@@ -2707,16 +2866,19 @@
                     <p>
 
                         Parents can visit the
+
                         <a href="admission-form.html">
+
                             Admission Form
+
                         </a>
+
                         page for the current admission process
                         or contact the school for further information.
 
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -2729,9 +2891,10 @@
 
                 <div class="nursery-faq-header">
 
-
                     <h3>
+
                         How can I contact the school?
+
                     </h3>
 
 
@@ -2741,7 +2904,6 @@
 
                     </div>
 
-
                 </div>
 
 
@@ -2750,16 +2912,19 @@
                     <p>
 
                         Please visit the
+
                         <a href="contact-us.html">
+
                             Contact Us
+
                         </a>
+
                         page for the available school
                         contact information.
 
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -2772,11 +2937,10 @@
 
 
 
-<!-- =================================================
+<!-- =========================================================
      FOOTER START
-================================================= -->
-
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+========================================================= -->
+<footer>
 
 
     <div class="content">
@@ -2788,9 +2952,7 @@
             <div class="logo-details">
 
                 <span>
-
                     Maria’s Podar Learn School Nilanga
-
                 </span>
 
             </div>
@@ -2800,20 +2962,24 @@
 
 
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
-              <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                <a href="mailto:principal.mpls@podar.org">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
 
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
@@ -2827,8 +2993,9 @@
                 </a>
 
 
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-                   target="_blank">
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
@@ -2837,14 +3004,12 @@
 
             </div>
 
-        </div>
 
+        </div>
 
 
         <div class="link-boxes">
 
-
-            <!-- ABOUT -->
 
             <ul class="box">
 
@@ -2865,16 +3030,13 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="About-us.html">
                         About us
                     </a>
                 </li>
 
             </ul>
 
-
-
-            <!-- QUICK LINKS -->
 
             <ul class="box">
 
@@ -2889,7 +3051,7 @@
                 </li>
 
                 <li>
-                    <a href="index.html">
+                    <a href="index.html#notice-board">
                         Notice Board
                     </a>
                 </li>
@@ -2902,9 +3064,6 @@
 
             </ul>
 
-
-
-            <!-- STUDENT CORNER -->
 
             <ul class="box">
 
@@ -2933,9 +3092,6 @@
             </ul>
 
 
-
-            <!-- ACCOUNT -->
-
             <ul class="box">
 
                 <li class="link_name">
@@ -2943,68 +3099,51 @@
                 </li>
 
                 <li>
-
                     <a href="#"
                        id="adminLoginLink">
-
                         Admin Login
-
                     </a>
-
                 </li>
 
                 <li>
-
                     <a href="events.html">
-
                         Events
-
                     </a>
-
                 </li>
 
                 <li>
-
                     <a href="gallery.html">
-
                         Gallery
-
                     </a>
-
                 </li>
 
             </ul>
 
 
-
-            <!-- SUBSCRIBE -->
-
             <ul class="box input-box">
-
 
                 <li class="link_name">
                     Subscribe
                 </li>
 
-
                 <li>
 
                     <input type="email"
                            id="subscribeEmail"
-                           placeholder="Enter your email"
-                           required>
+                           placeholder="Enter your email">
 
                 </li>
-
 
                 <li>
 
-                    <input type="button"
-                           value="Subscribe"
-                           onclick="subscribeUser()">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
-
 
                 <li>
 
@@ -3012,48 +3151,48 @@
 
                 </li>
 
-
             </ul>
 
 
         </div>
 
+
     </div>
+
 
 </footer>
 
-<!-- =================================================
+
+
+<!-- =========================================================
      FOOTER END
-================================================= -->
+========================================================= -->
 
 
 
-<!-- =================================================
-     EXISTING SCRIPT
-================================================= -->
+<!-- =========================================================
+     MAIN SCRIPT
+========================================================= -->
 
 <script src="js/script.js"></script>
 
 
 
-<!-- =================================================
+<!-- =========================================================
      SUBSCRIBE SCRIPT
-================================================= -->
+========================================================= -->
 
 <script>
 
 function subscribeUser() {
 
     const email =
-        document.getElementById(
-            "subscribeEmail"
-        ).value.trim();
+        document.getElementById("subscribeEmail")
+        .value.trim();
 
 
     const message =
-        document.getElementById(
-            "subscribeMessage"
-        );
+        document.getElementById("subscribeMessage");
 
 
     if (email === "") {
@@ -3091,7 +3230,6 @@ function subscribeUser() {
 
     message.innerHTML =
         "Submitting...";
-
 
     message.style.color =
         "white";
@@ -3131,7 +3269,6 @@ function subscribeUser() {
 
         console.error(error);
 
-
         message.innerHTML =
             "Something went wrong. Please try again.";
 
@@ -3146,9 +3283,9 @@ function subscribeUser() {
 
 
 
-<!-- =================================================
+<!-- =========================================================
      LOGIN SCRIPT
-================================================= -->
+========================================================= -->
 
 <script>
 
@@ -3253,7 +3390,7 @@ document.addEventListener(
 
 
 
-        /* LOGIN CHECK */
+        /* LOGIN */
 
         if (loginForm) {
 
@@ -3276,14 +3413,12 @@ document.addEventListener(
                         ).value;
 
 
-
                     const adminEmail =
                         "admin@school.com";
 
 
                     const adminPassword =
                         "Admin@123";
-
 
 
                     if (
@@ -3336,9 +3471,9 @@ document.addEventListener(
 
 
 
-<!-- =================================================
+<!-- =========================================================
      FAQ SCRIPT
-================================================= -->
+========================================================= -->
 
 <script>
 
@@ -3360,7 +3495,6 @@ document.querySelectorAll(
                 this.classList.contains(
                     "active"
                 );
-
 
 
             /* CLOSE ALL */
@@ -3386,7 +3520,6 @@ document.querySelectorAll(
             });
 
 
-
             /* OPEN CURRENT */
 
             if (!isOpen) {
@@ -3397,8 +3530,7 @@ document.querySelectorAll(
 
 
                 content.style.maxHeight =
-                    content.scrollHeight +
-                    "px";
+                    content.scrollHeight + "px";
 
             }
 
@@ -3411,9 +3543,9 @@ document.querySelectorAll(
 
 
 
-<!-- =================================================
+<!-- =========================================================
      COURSE DROPDOWN SCRIPT
-================================================= -->
+========================================================= -->
 
 <script>
 
@@ -3433,16 +3565,14 @@ document.querySelectorAll(
 
 
             const submenu =
-                this.parentElement
-                    .querySelector(
-                        ".dropdown2"
-                    );
+                this.parentElement.querySelector(
+                    ".dropdown2"
+                );
 
 
             document.querySelectorAll(
                 ".course-group .dropdown2"
             ).forEach(function(menu) {
-
 
                 if (menu !== submenu) {
 

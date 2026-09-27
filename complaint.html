@@ -13,6 +13,20 @@
 
     <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="shortcut icon"
+          href="Image/Logo.jpeg"
+          type="image/png">
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
     <link rel="stylesheet"
           href="css/style.css">
 
@@ -20,20 +34,495 @@
           href="css/responsive.css">
 
 
-    <!-- FONT AWESOME -->
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
-    <!-- FAVICON -->
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
-    <link rel="shortcut icon"
-          href="Image/Logo.jpeg"
-          type="image/png">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           COMPLAINT MAIN
+           ONLY ONE BACKGROUND IMAGE
+        ====================================================== */
+
+        .complaint-main {
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: 750px;
+
+            padding: 80px 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-image:
+
+                linear-gradient(
+                    60deg,
+                    rgba(0, 0, 0, 0.78),
+                    rgba(0, 0, 0, 0.35)
+                ),
+
+                url("Image/Image.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+        }
+
+
+        /* =====================================================
+           COMPLAINT FORM CONTAINER
+        ====================================================== */
+
+        .complaint-form-wrapper {
+
+            width: 100%;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            border-radius: 18px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .complaint-form-wrapper h2 {
+
+            margin: 0;
+
+            text-align: center;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 32px;
+
+            font-weight: 700;
+
+            color: #122b49;
+        }
+
+
+        .complaint-form-wrapper .form-line {
+
+            width: 70px;
+
+            height: 4px;
+
+            margin: 12px auto 15px;
+
+            border-radius: 10px;
+
+            background: #f39c12;
+        }
+
+
+        .complaint-form-wrapper .form-description {
+
+            margin: 0 0 30px;
+
+            text-align: center;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: #666;
+        }
+
+
+        /* =====================================================
+           INPUT BOX
+        ====================================================== */
+
+        .complaint-input-box {
+
+            position: relative;
+
+            width: 100%;
+
+            margin-bottom: 25px;
+        }
+
+
+        .complaint-input-box input,
+        .complaint-input-box textarea {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-bottom: 2px solid #cccccc;
+
+            outline: none;
+
+            background: transparent;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 16px;
+
+            color: #333;
+
+            transition: 0.3s ease;
+        }
+
+
+        .complaint-input-box input:focus,
+        .complaint-input-box textarea:focus {
+
+            border-bottom-color: #f39c12;
+        }
+
+
+        .complaint-input-box span {
+
+            position: absolute;
+
+            left: 15px;
+
+            top: 15px;
+
+            pointer-events: none;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 15px;
+
+            color: #777;
+
+            transition: 0.3s ease;
+        }
+
+
+        .complaint-input-box input:focus ~ span,
+        .complaint-input-box input:valid ~ span {
+
+            top: -8px;
+
+            left: 10px;
+
+            padding: 0 5px;
+
+            font-size: 12px;
+
+            color: #f39c12;
+
+            background: #ffffff;
+        }
+
+
+        .complaint-input-box textarea {
+
+            min-height: 130px;
+
+            resize: vertical;
+        }
+
+
+        .complaint-input-box textarea:focus ~ span,
+        .complaint-input-box textarea:valid ~ span {
+
+            top: -8px;
+
+            left: 10px;
+
+            padding: 0 5px;
+
+            font-size: 12px;
+
+            color: #f39c12;
+
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           COURSE SELECT
+        ====================================================== */
+
+        .course-select-box {
+
+            width: 100%;
+
+            margin-bottom: 25px;
+        }
+
+
+        .course-select-box select {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-bottom: 2px solid #cccccc;
+
+            outline: none;
+
+            background: transparent;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 16px;
+
+            color: #555;
+
+            cursor: pointer;
+        }
+
+
+        .course-select-box select:focus {
+
+            border-bottom-color: #f39c12;
+        }
+
+
+        /* =====================================================
+           SUBMIT BUTTON
+        ====================================================== */
+
+        .complaint-submit {
+
+            width: 100%;
+
+            padding: 15px 20px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #122b49;
+
+            color: #ffffff;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+
+        .complaint-submit:hover {
+
+            background: #f39c12;
+
+            transform: translateY(-2px);
+        }
+
+
+        .complaint-submit:disabled {
+
+            opacity: 0.7;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* =====================================================
+           MOBILE 768px
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .complaint-main {
+
+                padding: 55px 15px;
+
+                min-height: 650px;
+
+                background-position: center;
+            }
+
+
+            .complaint-form-wrapper {
+
+                padding: 35px 25px;
+            }
+
+
+            .complaint-form-wrapper h2 {
+
+                font-size: 27px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE 480px
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            html,
+            body {
+
+                width: 100%;
+
+                max-width: 100%;
+
+                overflow-x: hidden;
+            }
+
+
+            .complaint-main {
+
+                padding: 40px 12px;
+
+                min-height: 600px;
+
+                background-position: center;
+            }
+
+
+            .complaint-form-wrapper {
+
+                padding: 28px 18px;
+
+                border-radius: 12px;
+            }
+
+
+            .complaint-form-wrapper h2 {
+
+                font-size: 23px;
+
+                line-height: 1.4;
+            }
+
+
+            .complaint-form-wrapper .form-description {
+
+                font-size: 14px;
+
+                line-height: 1.6;
+            }
+
+
+            .complaint-input-box input,
+            .complaint-input-box textarea,
+            .course-select-box select {
+
+                font-size: 14px;
+            }
+
+
+            .complaint-submit {
+
+                font-size: 14px;
+
+                padding: 13px;
+            }
+
+        }
+
+
+        /* =====================================================
+           EXTRA SMALL 360px
+        ====================================================== */
+
+        @media (max-width: 360px) {
+
+            .complaint-main {
+
+                padding: 30px 10px;
+            }
+
+
+            .complaint-form-wrapper {
+
+                padding: 23px 15px;
+            }
+
+
+            .complaint-form-wrapper h2 {
+
+                font-size: 20px;
+            }
+
+
+            .complaint-form-wrapper .form-description {
+
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -54,12 +543,11 @@
        class="logo">
 
         <img src="Image/Logo.jpeg"
-             alt="collage logo"
-             style="width:80px; height:55px;">
+             alt="Maria's Podar Learn School Logo">
 
         <div class="collage-name">
 
-            Maria’s Podar Learn School Nilanga
+            Maria's Podar Learn School Nilanga
 
         </div>
 
@@ -71,12 +559,14 @@
     <nav class="navbar">
 
 
+        <!-- CLOSE MENU -->
+
         <div id="close-navbar"
              class="close-icon">
 
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="Close">
+                 alt="Close Menu">
 
         </div>
 
@@ -86,7 +576,7 @@
 
             <!-- HOME -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="index.html">
 
@@ -101,7 +591,8 @@
 
             <li class="navbar-dropdown">
 
-                <a href="#">
+                <a href="#"
+                   class="course-main-link">
 
                     Course
 
@@ -117,11 +608,15 @@
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Primary Group
 
-                                <span class="arrow">›</span>
+                                <span class="arrow">
+
+                                    ›
+
+                                </span>
 
                             </a>
 
@@ -132,7 +627,7 @@
 
                                     <a href="nursery.html">
 
-                                        Nursery To UKG
+                                        Nursery to UKG
 
                                     </a>
 
@@ -143,7 +638,7 @@
 
                                     <a href="class-1-5.html">
 
-                                        Class 1st To 5th
+                                        Class 1st to 5th
 
                                     </a>
 
@@ -158,11 +653,15 @@
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Secondary Group
 
-                                <span class="arrow">›</span>
+                                <span class="arrow">
+
+                                    ›
+
+                                </span>
 
                             </a>
 
@@ -173,7 +672,7 @@
 
                                     <a href="class-6-8.html">
 
-                                        Class 6th To 8th
+                                        Class 6th to 8th
 
                                     </a>
 
@@ -184,7 +683,7 @@
 
                                     <a href="class-9-10.html">
 
-                                        Class 9th To 10th
+                                        Class 9th to 10th
 
                                     </a>
 
@@ -204,10 +703,9 @@
 
             <!-- ADMISSIONS -->
 
-            <li class="navbar-dropdown">
+            <li>
 
-                <a href="admission-form.html"
-                   target="_blank">
+                <a href="admission-form.html">
 
                     Admissions
 
@@ -215,9 +713,10 @@
 
             </li>
 
-             <!-- CAREERS -->
 
-            <li class="navbar-dropdown">
+            <!-- CAREERS -->
+
+            <li>
 
                 <a href="careers.html">
 
@@ -230,7 +729,7 @@
 
             <!-- CONTACT -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="contact-us.html">
 
@@ -246,37 +745,40 @@
     </nav>
 
 
-    <!-- MOBILE MENU -->
+    <!-- HEADER ICONS -->
 
-    <div id="menu-btn"
-         class="header-icon">
-
-        <img src="image/menu-icon.svg"
-             alt="menu-icon">
-
-        <img src="image/menu-icon-hover.gif"
-             alt="menu-icon"
-             width="30"
-             class="header-icon-hover">
-
-    </div>
+    <div class="icons">
 
 
-    <!-- =================================================
-         ADMIN LOGIN ICON
-    ================================================= -->
+        <!-- ADMIN ACCOUNT -->
 
-    <div id="account-btn"
-         class="header-icon"
-         style="cursor:pointer;">
+        <div id="account-btn"
+             class="header-icon">
 
-        <img src="Image/avatar-icon.svg"
-             alt="Login">
+            <img src="Image/avatar-icon.svg"
+                 alt="Login">
 
-        <img src="Image/avatar-icon-hover.gif"
-             alt="Login"
-             width="30"
-             class="header-icon-hover">
+            <img src="Image/avatar-icon-hover.gif"
+                 alt="Login"
+                 class="header-icon-hover">
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <div id="menu-btn"
+             class="header-icon">
+
+            <img src="Image/menu-icon.svg"
+                 alt="Menu">
+
+            <img src="Image/menu-icon-hover.gif"
+                 alt="Menu"
+                 class="header-icon-hover">
+
+        </div>
+
 
     </div>
 
@@ -285,18 +787,15 @@
 
 
 <!-- =====================================================
-     ADMIN LOGIN FORM
+     ADMIN LOGIN
 ===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
 
 
-    <!-- CLOSE -->
-
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
+         class="close-icon">
 
         <img src="Image/close-icon.gif"
              alt="Close"
@@ -305,20 +804,16 @@
     </div>
 
 
-    <!-- LOGIN BUTTON -->
-
     <div class="buttons">
 
         <span class="btn active login-btn">
 
-            Login
+            Admin Login
 
         </span>
 
     </div>
 
-
-    <!-- LOGIN FORM -->
 
     <form class="login-form active"
           id="schoolLoginForm">
@@ -326,7 +821,7 @@
 
         <h3>
 
-            Login Now
+            Admin Login
 
         </h3>
 
@@ -335,6 +830,7 @@
                id="loginEmail"
                placeholder="Enter your email"
                class="box"
+               autocomplete="email"
                required>
 
 
@@ -342,6 +838,7 @@
                id="loginPassword"
                placeholder="Enter your password"
                class="box"
+               autocomplete="current-password"
                required>
 
 
@@ -363,7 +860,7 @@
 
 
         <button type="submit"
-                class="btn">
+                class="btn login-submit">
 
             Login Now
 
@@ -377,185 +874,191 @@
 
 
 <!-- =====================================================
-     COMPLAINT SECTION
+     COMPLAINT MAIN
+     ONLY ONE BACKGROUND IMAGE
 ===================================================== -->
 
-<div style="
-background-image:linear-gradient(60deg,#000,transparent),url(Image/Image.png);
-background-size:cover;
-">
+<section class="complaint-main">
 
 
-    <section style="
-position:relative;
-padding:80px;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-">
+    <div class="complaint-form-wrapper">
 
 
-        <div class="contactForm"
-             style="width:600px;margin:auto;">
+        <h2>
 
+            Send Complaint Message
 
-            <form name="complain-sheet">
+        </h2>
 
 
-                <h2>
+        <div class="form-line"></div>
 
-                    Send Complain Message
 
-                </h2>
+        <p class="form-description">
 
-                <br>
-                <br>
+            If you have any complaint, suggestion or feedback,
+            please fill out the form below. We will try to
+            address your concern as soon as possible.
 
+        </p>
 
-                <!-- NAME -->
 
-              <div class="inputBox"> <input type="text" name="Name" required="required" pattern="[A-Za-z ]+" title="Please enter letters only"> <span>Name or Anonymous</span> </div>
+        <!-- =================================================
+             COMPLAINT FORM
+        ================================================== -->
 
+        <form name="complain-sheet">
 
-                <!-- COURSE -->
 
-                <div class="course-select-box">
+            <!-- NAME -->
 
-                    <select name="Course"
-                            id="course"
-                            required>
+            <div class="complaint-input-box">
 
-                        <option value="">
+                <input type="text"
+                       name="Name"
+                       required
+                       pattern="[A-Za-z ]+"
+                       title="Please enter letters only">
 
-                            Select Course
+                <span>
 
-                        </option>
+                    Name or Anonymous
 
+                </span>
 
-                        <option value="Nursery">
-                            Nursery
-                        </option>
+            </div>
 
-                        <option value="LKG">
-                            LKG
-                        </option>
 
-                        <option value="UKG">
-                            UKG
-                        </option>
+            <!-- COURSE -->
 
-                        <option value="1st">
-                            1st
-                        </option>
+            <div class="course-select-box">
 
-                        <option value="2nd">
-                            2nd
-                        </option>
+                <select name="Course"
+                        id="course"
+                        required>
 
-                        <option value="3rd">
-                            3rd
-                        </option>
+                    <option value="">
 
-                        <option value="4th">
-                            4th
-                        </option>
+                        Select Course
 
-                        <option value="5th">
-                            5th
-                        </option>
+                    </option>
 
-                        <option value="6th">
-                            6th
-                        </option>
+                    <option value="Nursery">
+                        Nursery
+                    </option>
 
-                        <option value="7th">
-                            7th
-                        </option>
+                    <option value="LKG">
+                        LKG
+                    </option>
 
-                        <option value="8th">
-                            8th
-                        </option>
+                    <option value="UKG">
+                        UKG
+                    </option>
 
-                        <option value="9th">
-                            9th
-                        </option>
+                    <option value="1st">
+                        1st
+                    </option>
 
-                        <option value="10th">
-                            10th
-                        </option>
+                    <option value="2nd">
+                        2nd
+                    </option>
 
-                    </select>
+                    <option value="3rd">
+                        3rd
+                    </option>
 
-                </div>
+                    <option value="4th">
+                        4th
+                    </option>
 
+                    <option value="5th">
+                        5th
+                    </option>
 
-                <!-- SUBJECT -->
+                    <option value="6th">
+                        6th
+                    </option>
 
-                <div class="inputBox">
+                    <option value="7th">
+                        7th
+                    </option>
 
-                    <input type="text"
-                           name="Subject"
-                           required="required"
-                           pattern="[A-z0-9, ]+">
+                    <option value="8th">
+                        8th
+                    </option>
 
-                    <span>
+                    <option value="9th">
+                        9th
+                    </option>
 
-                        Subject
+                    <option value="10th">
+                        10th
+                    </option>
 
-                    </span>
+                </select>
 
-                </div>
+            </div>
 
 
-                <!-- MESSAGE -->
+            <!-- SUBJECT -->
 
-                <div class="inputBox">
+            <div class="complaint-input-box">
 
-                    <textarea
-                        required
-                        name="Complain Message"></textarea>
+                <input type="text"
+                       name="Subject"
+                       required
+                       pattern="[A-Za-z0-9, ]+"
+                       title="Please enter letters and numbers only">
 
-                    <span>
+                <span>
 
-                        Type your Message...
+                    Subject
 
-                    </span>
+                </span>
 
-                </div>
+            </div>
 
 
-                <!-- SUBMIT -->
+            <!-- MESSAGE -->
 
-                <div class="inputBox">
+            <div class="complaint-input-box">
 
-                    <input type="submit"
-                           name="submit"
-                           value="Send Complain">
+                <textarea name="Complain Message"
+                          required></textarea>
 
-                </div>
+                <span>
 
+                    Type your Message...
 
-            </form>
+                </span>
 
+            </div>
 
-        </div>
 
+            <!-- SUBMIT -->
 
-    </section>
+            <button type="submit"
+                    class="complaint-submit">
 
+                Send Complaint
 
-</div>
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</section>
 
 
 <!-- =====================================================
      FOOTER
 ===================================================== -->
 
-<footer style="
-background:url(Image/Speedline-50s-1846px.svg)
-">
+<footer>
 
 
     <div class="content">
@@ -563,6 +1066,8 @@ background:url(Image/Speedline-50s-1846px.svg)
 
         <div class="top">
 
+
+            <!-- SCHOOL NAME -->
 
             <div class="logo-details">
 
@@ -581,20 +1086,24 @@ background:url(Image/Speedline-50s-1846px.svg)
 
 
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
-              <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                <a href="mailto:principal.mpls@podar.org">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
 
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
@@ -608,8 +1117,9 @@ background:url(Image/Speedline-50s-1846px.svg)
                 </a>
 
 
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-                   target="_blank">
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
@@ -622,7 +1132,7 @@ background:url(Image/Speedline-50s-1846px.svg)
         </div>
 
 
-        <!-- FOOTER LINKS -->
+        <!-- FOOTER LINK BOXES -->
 
         <div class="link-boxes">
 
@@ -632,42 +1142,25 @@ background:url(Image/Speedline-50s-1846px.svg)
             <ul class="box">
 
                 <li class="link_name">
-
                     About
-
                 </li>
 
-
                 <li>
-
                     <a href="index.html">
-
                         Home
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="contact-us.html">
-
                         Contact us
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="About-us.html">
-
                         About us
-
                     </a>
-
                 </li>
 
             </ul>
@@ -678,42 +1171,25 @@ background:url(Image/Speedline-50s-1846px.svg)
             <ul class="box">
 
                 <li class="link_name">
-
                     Quick Links
-
                 </li>
 
-
                 <li>
-
                     <a href="admission-form.html">
-
                         Admission Form
-
                     </a>
-
                 </li>
 
-
                 <li>
-
-                    <a href="index.html">
-
+                    <a href="index.html#notice-board">
                         Notice Board
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="index.html">
-
                         School Site
-
                     </a>
-
                 </li>
 
             </ul>
@@ -724,42 +1200,25 @@ background:url(Image/Speedline-50s-1846px.svg)
             <ul class="box">
 
                 <li class="link_name">
-
                     Student's Corner
-
                 </li>
 
-
                 <li>
-
                     <a href="fees-payment.html">
-
                         Fees Payment
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="complaint.html">
-
                         Complaint Section
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="careers.html">
-
-                       Careers
-
+                        Careers
                     </a>
-
                 </li>
 
             </ul>
@@ -767,75 +1226,70 @@ background:url(Image/Speedline-50s-1846px.svg)
 
             <!-- ACCOUNT -->
 
-           <ul class="box">
+            <ul class="box">
 
-    <li class="link_name">
-        Account
-    </li>
+                <li class="link_name">
+                    Account
+                </li>
 
-    <!-- ADMIN LOGIN -->
-    <li>
-        <a href="#" id="adminLoginLink">
-            Admin Login
-        </a>
-    </li>
+                <li>
 
-    <!-- EVENTS -->
-    <li>
-        <a href="events.html">
-            Events
-        </a>
-    </li>
+                    <a href="#"
+                       id="adminLoginLink">
 
-    <!-- GALLERY -->
-    <li>
-        <a href="gallery.html">
-            Gallery
-        </a>
-    </li>
+                        Admin Login
 
-</ul>
+                    </a>
 
+                </li>
 
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+            </ul>
 
 
             <!-- SUBSCRIBE -->
 
             <ul class="box input-box">
 
-
                 <li class="link_name">
-
                     Subscribe
-
                 </li>
-
 
                 <li>
 
                     <input type="email"
                            id="subscribeEmail"
-                           placeholder="Enter your email"
-                           required>
+                           placeholder="Enter your email">
 
                 </li>
-
 
                 <li>
 
-                    <input type="button"
-                           value="Subscribe"
-                           onclick="subscribeUser()">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
-
 
                 <li>
 
                     <p id="subscribeMessage"></p>
 
                 </li>
-
 
             </ul>
 
@@ -850,149 +1304,23 @@ background:url(Image/Speedline-50s-1846px.svg)
 
 
 <!-- =====================================================
-     JAVASCRIPT
+     TIDIO
+===================================================== -->
+
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
+
+
+<!-- =====================================================
+     MAIN JS
 ===================================================== -->
 
 <script src="js/script.js"></script>
 
 
 <!-- =====================================================
-     SUBSCRIBE
-===================================================== -->
-
-<script>
-
-function subscribeUser() {
-
-
-    const email =
-        document.getElementById(
-            "subscribeEmail"
-        ).value.trim();
-
-
-    const message =
-        document.getElementById(
-            "subscribeMessage"
-        );
-
-
-    if (email === "") {
-
-
-        message.innerHTML =
-            "Please enter your email.";
-
-
-        message.style.color =
-            "red";
-
-
-        return;
-
-    }
-
-
-    if (
-        !email.includes("@") ||
-        !email.includes(".")
-    ) {
-
-
-        message.innerHTML =
-            "Please enter a valid email.";
-
-
-        message.style.color =
-            "red";
-
-
-        return;
-
-    }
-
-
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
-
-
-    message.innerHTML =
-        "Submitting...";
-
-
-    message.style.color =
-        "white";
-
-
-    fetch(
-        scriptURL,
-        {
-
-            method: "POST",
-
-            body:
-                new URLSearchParams({
-
-                    email: email
-
-                })
-
-        }
-    )
-
-
-    .then(
-        function () {
-
-
-            message.innerHTML =
-                "Thank you for subscribing! 😊";
-
-
-            message.style.color =
-                "lightgreen";
-
-
-            document
-                .getElementById(
-                    "subscribeEmail"
-                )
-                .value = "";
-
-
-        }
-    )
-
-
-    .catch(
-        function (error) {
-
-
-            console.error(error);
-
-
-            message.innerHTML =
-                "Something went wrong. Please try again.";
-
-
-            message.style.color =
-                "red";
-
-
-        }
-    );
-
-}
-
-</script>
-
-
-<!-- =====================================================
-     COMPLAINT FORM
-===================================================== -->
-
-<!-- =====================================================
-     COMPLAINT FORM
+     COMPLAINT FORM JAVASCRIPT
 ===================================================== -->
 
 <script>
@@ -1009,52 +1337,41 @@ if (complaintForm) {
 
     complaintForm.addEventListener(
         "submit",
-        function (e) {
+        function(event) {
 
-            e.preventDefault();
-
+            event.preventDefault();
 
             const submitButton =
                 complaintForm.querySelector(
-                    'input[type="submit"]'
+                    'button[type="submit"]'
                 );
 
-
-            submitButton.value =
+            submitButton.textContent =
                 "Sending...";
 
             submitButton.disabled =
                 true;
 
-
             fetch(
                 complaintScriptURL,
                 {
                     method: "POST",
-
-                    body:
-                        new FormData(
-                            complaintForm
-                        ),
-
+                    body: new FormData(complaintForm),
                     mode: "no-cors"
                 }
             )
 
             .then(
-                function () {
+                function() {
 
                     alert(
                         "Thanks for your complaint or feedback! We will try to solve it as soon as possible."
                     );
 
-
                     complaintForm.reset();
 
-
-                    submitButton.value =
-                        "Send Complain";
-
+                    submitButton.textContent =
+                        "Send Complaint";
 
                     submitButton.disabled =
                         false;
@@ -1063,22 +1380,19 @@ if (complaintForm) {
             )
 
             .catch(
-                function (error) {
+                function(error) {
 
                     console.error(
                         "Complaint Error:",
                         error
                     );
 
-
                     alert(
                         "Something went wrong. Please try again."
                     );
 
-
-                    submitButton.value =
-                        "Send Complain";
-
+                    submitButton.textContent =
+                        "Send Complaint";
 
                     submitButton.disabled =
                         false;
@@ -1101,61 +1415,50 @@ if (complaintForm) {
 <script>
 
 document
-.querySelectorAll(
-    ".course-group > a"
-)
+.querySelectorAll(".course-group > a")
 .forEach(
-    function (link) {
-
+    function(link) {
 
         link.addEventListener(
             "click",
-            function (e) {
+            function(event) {
 
-
-                e.preventDefault();
-
-                e.stopPropagation();
-
+                event.preventDefault();
+                event.stopPropagation();
 
                 const submenu =
-                    this.parentElement
-                    .querySelector(
+                    this.parentElement.querySelector(
                         ".dropdown2"
                     );
-
 
                 document
                 .querySelectorAll(
                     ".course-group .dropdown2"
                 )
                 .forEach(
-                    function (menu) {
+                    function(menu) {
 
+                        if (menu !== submenu) {
 
-                        if (
-                            menu !== submenu
-                        ) {
-
-                            menu.classList
-                                .remove(
-                                    "show"
-                                );
+                            menu.classList.remove(
+                                "show"
+                            );
 
                         }
 
                     }
                 );
 
+                if (submenu) {
 
-                submenu.classList.toggle(
-                    "show"
-                );
+                    submenu.classList.toggle(
+                        "show"
+                    );
 
+                }
 
             }
         );
-
 
     }
 );
@@ -1164,199 +1467,341 @@ document
 
 
 <!-- =====================================================
-     ADMIN LOGIN
+     ADMIN LOGIN + SUBSCRIBE
 ===================================================== -->
 
 <script>
 
+
+/* =====================================================
+   ADMIN LOGIN LINK
+===================================================== */
+
+const adminLoginLink =
+    document.getElementById(
+        "adminLoginLink"
+    );
+
+
+if (adminLoginLink) {
+
+    adminLoginLink.addEventListener(
+        "click",
+        function(event) {
+
+            event.preventDefault();
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+            if (accountForm) {
+
+                accountForm.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   HEADER ACCOUNT ICON
+===================================================== */
+
+const accountBtn =
+    document.getElementById(
+        "account-btn"
+    );
+
+
+if (accountBtn) {
+
+    accountBtn.addEventListener(
+        "click",
+        function() {
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+            if (accountForm) {
+
+                accountForm.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CLOSE ADMIN LOGIN
+===================================================== */
+
+const closeForm =
+    document.getElementById(
+        "close-form"
+    );
+
+
+if (closeForm) {
+
+    closeForm.addEventListener(
+        "click",
+        function() {
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+            if (accountForm) {
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+const schoolLoginForm =
+    document.getElementById(
+        "schoolLoginForm"
+    );
+
+
+if (schoolLoginForm) {
+
+    schoolLoginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById(
+                    "loginEmail"
+                )
+                .value
+                .trim();
+
+            const password =
+                document.getElementById(
+                    "loginPassword"
+                )
+                .value
+                .trim();
+
+            const message =
+                document.getElementById(
+                    "loginMessage"
+                );
+
+
+            if (
+                email === "admin@school.com" &&
+                password === "Admin@123"
+            ) {
+
+                message.textContent =
+                    "Login successful!";
+
+                message.style.color =
+                    "green";
+
+                setTimeout(
+                    function() {
+
+                        window.location.href =
+                            "admin-dashboard.html";
+
+                    },
+                    700
+                );
+
+            }
+
+            else {
+
+                message.textContent =
+                    "Invalid email or password.";
+
+                message.style.color =
+                    "red";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   SUBSCRIBE
+===================================================== */
+
+function subscribeUser() {
+
+    const emailInput =
+        document.getElementById(
+            "subscribeEmail"
+        );
+
+    const message =
+        document.getElementById(
+            "subscribeMessage"
+        );
+
+
+    if (
+        !emailInput ||
+        !message
+    ) {
+
+        return;
+
+    }
+
+
+    const email =
+        emailInput.value.trim();
+
+
+    if (email === "") {
+
+        message.textContent =
+            "Please enter your email.";
+
+        message.style.color =
+            "red";
+
+        return;
+
+    }
+
+
+    if (
+        !email.includes("@") ||
+        !email.includes(".")
+    ) {
+
+        message.textContent =
+            "Please enter a valid email.";
+
+        message.style.color =
+            "red";
+
+        return;
+
+    }
+
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
+
+
+    const formData =
+        new FormData();
+
+
+    formData.append(
+        "email",
+        email
+    );
+
+
+    message.textContent =
+        "Submitting...";
+
+
+    message.style.color =
+        "white";
+
+
+    fetch(
+        scriptURL,
+        {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+        }
+    )
+
+    .then(
+        function() {
+
+            message.textContent =
+                "Thank you for subscribing!";
+
+            message.style.color =
+                "lightgreen";
+
+            emailInput.value =
+                "";
+
+        }
+    )
+
+    .catch(
+        function() {
+
+            message.textContent =
+                "Something went wrong. Please try again.";
+
+            message.style.color =
+                "red";
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
 document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+    "keydown",
+    function(event) {
 
+        if (event.key === "Escape") {
 
-        const accountBtn =
-            document.getElementById(
-                "account-btn"
-            );
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
 
+            if (accountForm) {
 
-        const adminLoginLink =
-            document.getElementById(
-                "adminLoginLink"
-            );
+                accountForm.classList.remove(
+                    "active"
+                );
 
-
-        const loginAccountForm =
-            document.getElementById(
-                "loginAccountForm"
-            );
-
-
-        const closeForm =
-            document.getElementById(
-                "close-form"
-            );
-
-
-        const loginForm =
-            document.getElementById(
-                "schoolLoginForm"
-            );
-
-
-        const loginMessage =
-            document.getElementById(
-                "loginMessage"
-            );
-
-
-        /* ===============================
-           HEADER LOGIN ICON
-        =============================== */
-
-        if (accountBtn) {
-
-            accountBtn.addEventListener(
-                "click",
-                function () {
-
-                    loginAccountForm.classList.add(
-                        "active"
-                    );
-
-                }
-            );
+            }
 
         }
-
-
-        /* ===============================
-           FOOTER ADMIN LOGIN
-        =============================== */
-
-        if (adminLoginLink) {
-
-            adminLoginLink.addEventListener(
-                "click",
-                function (e) {
-
-                    e.preventDefault();
-
-
-                    loginAccountForm.classList.add(
-                        "active"
-                    );
-
-                }
-            );
-
-        }
-
-
-        /* ===============================
-           CLOSE LOGIN
-        =============================== */
-
-        if (closeForm) {
-
-            closeForm.addEventListener(
-                "click",
-                function () {
-
-                    loginAccountForm.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
-
-        }
-
-
-        /* ===============================
-           LOGIN
-        =============================== */
-
-        if (loginForm) {
-
-            loginForm.addEventListener(
-                "submit",
-                function (e) {
-
-
-                    e.preventDefault();
-
-
-                    const email =
-                        document.getElementById(
-                            "loginEmail"
-                        ).value.trim();
-
-
-                    const password =
-                        document.getElementById(
-                            "loginPassword"
-                        ).value;
-
-
-                    const adminEmail =
-                        "admin@school.com";
-
-
-                    const adminPassword =
-                        "Admin@123";
-
-
-                    /* ===============================
-                       CHECK
-                    =============================== */
-
-                    if (
-                        email === adminEmail &&
-                        password === adminPassword
-                    ) {
-
-
-                        loginMessage.innerHTML =
-                            "Login successful!";
-
-
-                        loginMessage.style.color =
-                            "green";
-
-
-                        setTimeout(
-                            function () {
-
-
-                                window.location.href =
-                                    "admin-dashboard.html";
-
-
-                            },
-                            500
-                        );
-
-
-                    }
-                    else {
-
-
-                        loginMessage.innerHTML =
-                            "Invalid email or password!";
-
-
-                        loginMessage.style.color =
-                            "red";
-
-                    }
-
-
-                }
-            );
-
-        }
-
 
     }
 );

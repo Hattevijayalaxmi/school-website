@@ -21,8 +21,6 @@
     <link rel="shortcut icon" href="Image/Logo.jpeg" type="image/png">
 
 
-    <!-- ================= CLASS 6 TO 8 PROFESSIONAL CSS ================= -->
-
     <style>
 
         * {
@@ -30,55 +28,68 @@
         }
 
 
-        .secondary-page {
+        body.secondary-page {
+            margin: 0;
             background: #f7f9fc;
             color: #263238;
         }
 
 
-        /* ================= HERO ================= */
+        /* =====================================================
+           HERO
+           ONLY TOP SECTION HAS BACKGROUND IMAGE
+        ===================================================== */
 
         .secondary-hero {
+
             min-height: 500px;
 
             padding: 150px 25px 90px;
 
             display: flex;
-
             justify-content: center;
             align-items: center;
 
             text-align: center;
 
-            color: #fff;
+            color: #ffffff;
 
-            background:
+            background-image:
                 linear-gradient(
-                    135deg,
-                    rgba(7, 35, 65, 0.88),
-                    rgba(15, 93, 125, 0.76)
+                    rgba(5, 31, 58, 0.30),
+                    rgba(7, 100, 125, 0.20)
                 ),
                 url("Image/Image.png");
 
             background-size: cover;
+
             background-position: center;
+
+            background-repeat: no-repeat;
+
         }
 
 
         .secondary-hero-content {
+
             max-width: 900px;
             width: 100%;
+
+            text-shadow:
+                0 2px 5px rgba(0,0,0,0.35);
+
         }
 
 
         .secondary-badge {
+
             display: inline-block;
 
             padding: 9px 20px;
 
             margin-bottom: 20px;
 
-            border: 1px solid rgba(255,255,255,0.45);
+            border: 1px solid rgba(255,255,255,0.65);
 
             border-radius: 50px;
 
@@ -88,13 +99,15 @@
 
             letter-spacing: 1px;
 
-            background: rgba(255,255,255,0.12);
+            background: rgba(0,0,0,0.18);
 
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(2px);
+
         }
 
 
         .secondary-hero h1 {
+
             margin: 0 0 18px;
 
             font-size: clamp(38px, 6vw, 64px);
@@ -102,10 +115,12 @@
             line-height: 1.1;
 
             font-weight: 700;
+
         }
 
 
         .secondary-hero h1 span {
+
             display: block;
 
             font-size: clamp(21px, 3vw, 30px);
@@ -114,26 +129,596 @@
 
             font-weight: 500;
 
-            opacity: 0.95;
         }
 
 
         .secondary-hero p {
+
             max-width: 720px;
 
-            margin: 0 auto 30px;
+            margin: 0 auto;
 
             font-size: 18px;
 
             line-height: 1.8;
 
-            color: rgba(255,255,255,0.92);
+            color: #ffffff;
+
         }
 
 
-        /* ================= BUTTONS ================= */
+        /* =====================================================
+           COMMON SECTION
+        ===================================================== */
+
+        .secondary-section {
+
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding: 75px 25px;
+
+        }
+
+
+        .secondary-section-heading {
+
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 45px;
+
+        }
+
+
+        .secondary-section-heading .small-title {
+
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            color: #0b7298;
+
+        }
+
+
+        .secondary-section-heading h2 {
+
+            margin: 0 0 15px;
+
+            font-size: clamp(28px, 4vw, 40px);
+
+            line-height: 1.2;
+
+            color: #183b56;
+
+        }
+
+
+        .secondary-section-heading p {
+
+            margin: 0;
+
+            line-height: 1.8;
+
+            color: #667781;
+
+            font-size: 16px;
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .secondary-intro {
+
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+        }
+
+
+        .secondary-intro-text h2 {
+
+            margin: 0 0 18px;
+
+            font-size: 35px;
+
+            color: #183b56;
+
+        }
+
+
+        .secondary-intro-text p {
+
+            margin-bottom: 15px;
+
+            line-height: 1.8;
+
+            color: #5e6d75;
+
+        }
+
+
+        .secondary-highlight-box {
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            box-shadow: 0 10px 35px rgba(20,60,90,0.10);
+
+            border-left: 5px solid #0b7298;
+
+        }
+
+
+        .secondary-highlight-box h3 {
+
+            margin: 0 0 18px;
+
+            color: #183b56;
+
+        }
+
+
+        .secondary-highlight-box ul {
+
+            margin: 0;
+
+            padding: 0;
+
+            list-style: none;
+
+        }
+
+
+        .secondary-highlight-box li {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 14px;
+
+            line-height: 1.5;
+
+            color: #586970;
+
+        }
+
+
+        .secondary-highlight-box li i {
+
+            margin-top: 4px;
+
+            color: #0b7298;
+
+        }
+
+
+        /* =====================================================
+           LEARNING AREAS
+        ===================================================== */
+
+        .secondary-learning-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .secondary-learning-card {
+
+            padding: 30px 25px;
+
+            background: #ffffff;
+
+            border-radius: 15px;
+
+            border: 1px solid #e8edf1;
+
+            transition: 0.3s ease;
+
+            box-shadow: 0 5px 20px rgba(20,60,90,0.05);
+
+        }
+
+
+        .secondary-learning-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 15px 35px rgba(20,60,90,0.12);
+
+        }
+
+
+        .secondary-learning-icon {
+
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            border-radius: 14px;
+
+            background: #eaf6fa;
+
+            color: #0b7298;
+
+            font-size: 23px;
+
+        }
+
+
+        .secondary-learning-card h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 20px;
+
+            color: #183b56;
+
+        }
+
+
+        .secondary-learning-card p {
+
+            margin: 0;
+
+            line-height: 1.7;
+
+            color: #68777e;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           CLASS JOURNEY
+        ===================================================== */
+
+        .secondary-classes {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .secondary-class-card {
+
+            padding: 30px 22px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            background: #ffffff;
+
+            border: 1px solid #e5ebef;
+
+            box-shadow: 0 5px 18px rgba(20,60,90,0.05);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .secondary-class-card:hover {
+
+            transform: translateY(-6px);
+
+            border-color: #a8d8e7;
+
+        }
+
+
+        .secondary-class-number {
+
+            width: 58px;
+            height: 58px;
+
+            margin: 0 auto 17px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #0b7298;
+
+            color: #ffffff;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+        }
+
+
+        .secondary-class-card h3 {
+
+            margin: 0 0 10px;
+
+            color: #183b56;
+
+            font-size: 21px;
+
+        }
+
+
+        .secondary-class-card p {
+
+            margin: 0;
+
+            color: #6b777d;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           DEVELOPMENT
+        ===================================================== */
+
+        .secondary-development {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .secondary-development-item {
+
+            display: flex;
+
+            gap: 17px;
+
+            padding: 23px;
+
+            background: #ffffff;
+
+            border-radius: 13px;
+
+            border: 1px solid #e8edf1;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .secondary-development-item:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 10px 25px rgba(20,60,90,0.08);
+
+        }
+
+
+        .secondary-development-item i {
+
+            min-width: 43px;
+
+            width: 43px;
+            height: 43px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: #eaf6fa;
+
+            color: #0b7298;
+
+        }
+
+
+        .secondary-development-item h3 {
+
+            margin: 0 0 6px;
+
+            color: #183b56;
+
+            font-size: 18px;
+
+        }
+
+
+        .secondary-development-item p {
+
+            margin: 0;
+
+            color: #68777e;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =====================================================
+           LEARNING ENVIRONMENT
+        ===================================================== */
+
+        .secondary-environment {
+
+            background: #edf7fa;
+
+        }
+
+
+        .secondary-environment-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .secondary-environment-card {
+
+            padding: 27px 20px;
+
+            text-align: center;
+
+            background: #ffffff;
+
+            border-radius: 14px;
+
+            box-shadow: 0 5px 18px rgba(20,60,90,0.05);
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .secondary-environment-card:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+        .secondary-environment-card i {
+
+            font-size: 27px;
+
+            color: #0b7298;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .secondary-environment-card h3 {
+
+            margin: 0 0 8px;
+
+            color: #183b56;
+
+            font-size: 17px;
+
+        }
+
+
+        .secondary-environment-card p {
+
+            margin: 0;
+
+            color: #68777e;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================================
+           ADMISSION
+        ===================================================== */
+
+        .secondary-admission {
+
+            margin: 20px auto 70px;
+
+            max-width: 1100px;
+
+            padding: 55px 35px;
+
+            border-radius: 22px;
+
+            text-align: center;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #123f59,
+                    #0b789d
+                );
+
+            box-shadow: 0 15px 40px rgba(10,70,100,0.18);
+
+        }
+
+
+        .secondary-admission h2 {
+
+            margin: 0 0 12px;
+
+            font-size: 32px;
+
+        }
+
+
+        .secondary-admission p {
+
+            max-width: 700px;
+
+            margin: 0 auto 25px;
+
+            line-height: 1.7;
+
+            color: rgba(255,255,255,0.88);
+
+        }
+
 
         .secondary-buttons {
+
             display: flex;
 
             justify-content: center;
@@ -141,10 +726,12 @@
             gap: 15px;
 
             flex-wrap: wrap;
+
         }
 
 
         .secondary-btn {
+
             display: inline-flex;
 
             align-items: center;
@@ -162,537 +749,76 @@
             font-weight: 600;
 
             transition: 0.3s ease;
+
         }
 
 
         .secondary-btn-main {
-            background: #fff;
+
+            background: #ffffff;
 
             color: #0c5877;
+
         }
 
 
         .secondary-btn-main:hover {
+
             transform: translateY(-3px);
+
         }
 
 
         .secondary-btn-outline {
+
             border: 1px solid rgba(255,255,255,0.7);
 
-            color: #fff;
+            color: #ffffff;
 
             background: rgba(255,255,255,0.08);
+
         }
 
 
         .secondary-btn-outline:hover {
-            background: #fff;
+
+            background: #ffffff;
 
             color: #0c5877;
+
         }
 
 
-        /* ================= COMMON SECTION ================= */
-
-        .secondary-section {
-            max-width: 1180px;
-
-            margin: auto;
-
-            padding: 75px 25px;
-        }
-
-
-        .secondary-section-heading {
-            text-align: center;
-
-            max-width: 750px;
-
-            margin: 0 auto 45px;
-        }
-
-
-        .secondary-section-heading .small-title {
-            display: inline-block;
-
-            margin-bottom: 10px;
-
-            font-size: 13px;
-
-            font-weight: 700;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.5px;
-
-            color: #0b7298;
-        }
-
-
-        .secondary-section-heading h2 {
-            margin: 0 0 15px;
-
-            font-size: clamp(28px, 4vw, 40px);
-
-            line-height: 1.2;
-
-            color: #183b56;
-        }
-
-
-        .secondary-section-heading p {
-            margin: 0;
-
-            line-height: 1.8;
-
-            color: #667781;
-
-            font-size: 16px;
-        }
-
-
-        /* ================= INTRO ================= */
-
-        .secondary-intro {
-            display: grid;
-
-            grid-template-columns: 1.1fr 0.9fr;
-
-            gap: 45px;
-
-            align-items: center;
-        }
-
-
-        .secondary-intro-text h2 {
-            margin: 0 0 18px;
-
-            font-size: 35px;
-
-            color: #183b56;
-        }
-
-
-        .secondary-intro-text p {
-            margin-bottom: 15px;
-
-            line-height: 1.8;
-
-            color: #5e6d75;
-        }
-
-
-        .secondary-highlight-box {
-            padding: 30px;
-
-            border-radius: 18px;
-
-            background: #fff;
-
-            box-shadow: 0 10px 35px rgba(20, 60, 90, 0.10);
-
-            border-left: 5px solid #0b7298;
-        }
-
-
-        .secondary-highlight-box h3 {
-            margin: 0 0 18px;
-
-            color: #183b56;
-        }
-
-
-        .secondary-highlight-box ul {
-            margin: 0;
-
-            padding: 0;
-
-            list-style: none;
-        }
-
-
-        .secondary-highlight-box li {
-            display: flex;
-
-            gap: 12px;
-
-            margin-bottom: 14px;
-
-            line-height: 1.5;
-
-            color: #586970;
-        }
-
-
-        .secondary-highlight-box li i {
-            margin-top: 4px;
-
-            color: #0b7298;
-        }
-
-
-        /* ================= LEARNING AREAS ================= */
-
-        .secondary-learning-grid {
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 22px;
-        }
-
-
-        .secondary-learning-card {
-            padding: 30px 25px;
-
-            background: #fff;
-
-            border-radius: 15px;
-
-            border: 1px solid #e8edf1;
-
-            transition: 0.3s ease;
-
-            box-shadow: 0 5px 20px rgba(20, 60, 90, 0.05);
-        }
-
-
-        .secondary-learning-card:hover {
-            transform: translateY(-7px);
-
-            box-shadow: 0 15px 35px rgba(20, 60, 90, 0.12);
-        }
-
-
-        .secondary-learning-icon {
-            width: 58px;
-            height: 58px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            margin-bottom: 20px;
-
-            border-radius: 14px;
-
-            background: #eaf6fa;
-
-            color: #0b7298;
-
-            font-size: 23px;
-        }
-
-
-        .secondary-learning-card h3 {
-            margin: 0 0 10px;
-
-            font-size: 20px;
-
-            color: #183b56;
-        }
-
-
-        .secondary-learning-card p {
-            margin: 0;
-
-            line-height: 1.7;
-
-            color: #68777e;
-
-            font-size: 15px;
-        }
-
-
-        /* ================= CLASS JOURNEY ================= */
-
-        .secondary-classes {
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 20px;
-        }
-
-
-        .secondary-class-card {
-            padding: 30px 22px;
-
-            text-align: center;
-
-            border-radius: 15px;
-
-            background: #fff;
-
-            border: 1px solid #e5ebef;
-
-            box-shadow: 0 5px 18px rgba(20, 60, 90, 0.05);
-
-            transition: 0.3s ease;
-        }
-
-
-        .secondary-class-card:hover {
-            transform: translateY(-6px);
-
-            border-color: #a8d8e7;
-        }
-
-
-        .secondary-class-number {
-            width: 58px;
-            height: 58px;
-
-            margin: 0 auto 17px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #0b7298;
-
-            color: #fff;
-
-            font-size: 18px;
-
-            font-weight: 700;
-        }
-
-
-        .secondary-class-card h3 {
-            margin: 0 0 10px;
-
-            color: #183b56;
-
-            font-size: 21px;
-        }
-
-
-        .secondary-class-card p {
-            margin: 0;
-
-            color: #6b777d;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-
-        /* ================= DEVELOPMENT ================= */
-
-        .secondary-development {
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .secondary-development-item {
-            display: flex;
-
-            gap: 17px;
-
-            padding: 23px;
-
-            background: #fff;
-
-            border-radius: 13px;
-
-            border: 1px solid #e8edf1;
-
-            transition: 0.3s ease;
-        }
-
-
-        .secondary-development-item:hover {
-            transform: translateY(-4px);
-
-            box-shadow: 0 10px 25px rgba(20, 60, 90, 0.08);
-        }
-
-
-        .secondary-development-item i {
-            min-width: 43px;
-
-            width: 43px;
-            height: 43px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 10px;
-
-            background: #eaf6fa;
-
-            color: #0b7298;
-        }
-
-
-        .secondary-development-item h3 {
-            margin: 0 0 6px;
-
-            color: #183b56;
-
-            font-size: 18px;
-        }
-
-
-        .secondary-development-item p {
-            margin: 0;
-
-            color: #68777e;
-
-            line-height: 1.6;
-
-            font-size: 14px;
-        }
-
-
-        /* ================= LEARNING ENVIRONMENT ================= */
-
-        .secondary-environment {
-            background: #edf7fa;
-        }
-
-
-        .secondary-environment-grid {
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .secondary-environment-card {
-            padding: 27px 20px;
-
-            text-align: center;
-
-            background: #fff;
-
-            border-radius: 14px;
-
-            box-shadow: 0 5px 18px rgba(20, 60, 90, 0.05);
-
-            transition: 0.3s ease;
-        }
-
-
-        .secondary-environment-card:hover {
-            transform: translateY(-5px);
-        }
-
-
-        .secondary-environment-card i {
-            font-size: 27px;
-
-            color: #0b7298;
-
-            margin-bottom: 15px;
-        }
-
-
-        .secondary-environment-card h3 {
-            margin: 0 0 8px;
-
-            color: #183b56;
-
-            font-size: 17px;
-        }
-
-
-        .secondary-environment-card p {
-            margin: 0;
-
-            color: #68777e;
-
-            font-size: 14px;
-
-            line-height: 1.6;
-        }
-
-
-        /* ================= ADMISSION CTA ================= */
-
-        .secondary-admission {
-            margin: 20px auto 70px;
-
-            max-width: 1100px;
-
-            padding: 55px 35px;
-
-            border-radius: 22px;
-
-            text-align: center;
-
-            color: #fff;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #123f59,
-                    #0b789d
-                );
-
-            box-shadow: 0 15px 40px rgba(10, 70, 100, 0.18);
-        }
-
-
-        .secondary-admission h2 {
-            margin: 0 0 12px;
-
-            font-size: 32px;
-        }
-
-
-        .secondary-admission p {
-            max-width: 700px;
-
-            margin: 0 auto 25px;
-
-            line-height: 1.7;
-
-            color: rgba(255,255,255,0.88);
-        }
-
-
-        /* ================= FAQ ================= */
+        /* =====================================================
+           FAQ
+        ===================================================== */
 
         .secondary-faq {
+
             max-width: 900px;
 
             margin: auto;
+
         }
 
 
         .secondary-faq-item {
+
             margin-bottom: 13px;
 
-            background: #fff;
+            background: #ffffff;
 
             border: 1px solid #e4eaee;
 
             border-radius: 10px;
 
             overflow: hidden;
+
         }
 
 
         .secondary-faq-header {
+
             display: flex;
 
             justify-content: space-between;
@@ -704,19 +830,23 @@
             padding: 20px 22px;
 
             cursor: pointer;
+
         }
 
 
         .secondary-faq-header h3 {
+
             margin: 0;
 
             font-size: 17px;
 
             color: #183b56;
+
         }
 
 
         .secondary-faq-icon {
+
             min-width: 32px;
 
             width: 32px;
@@ -725,7 +855,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             border-radius: 50%;
@@ -734,25 +863,30 @@
 
             color: #0b7298;
 
-            transition: 0.3s ease;
         }
 
 
-        .secondary-faq-header.active .secondary-faq-icon {
+        .secondary-faq-header.active
+        .secondary-faq-icon {
+
             transform: rotate(180deg);
+
         }
 
 
         .secondary-faq-content {
+
             max-height: 0;
 
             overflow: hidden;
 
             transition: max-height 0.35s ease;
+
         }
 
 
         .secondary-faq-content p {
+
             margin: 0;
 
             padding: 0 22px 20px;
@@ -762,42 +896,424 @@
             line-height: 1.7;
 
             font-size: 15px;
+
         }
 
 
         .secondary-faq-content a {
+
             color: #0b7298;
 
             font-weight: 600;
+
         }
 
 
-        /* ================= RESPONSIVE ================= */
+        /* =====================================================
+           FOOTER
+           SAME STRUCTURE AS SITE
+        ===================================================== */
+
+        footer {
+
+            width: 100%;
+
+            background:
+                linear-gradient(
+                    rgba(5,31,58,0.96),
+                    rgba(5,31,58,0.96)
+                ),
+                url("Image/Speedline-50s-1846px.svg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            color: #ffffff;
+
+        }
+
+
+        footer .content {
+
+            width: 90%;
+
+            max-width: 1250px;
+
+            margin: auto;
+
+        }
+
+
+        footer .top {
+
+            min-height: 100px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+
+        }
+
+
+        .logo-details span {
+
+            font-size: 21px;
+
+            font-weight: 600;
+
+        }
+
+
+        .media-icons {
+
+            display: flex;
+
+            gap: 10px;
+
+        }
+
+
+        .media-icons a {
+
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.45);
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+        }
+
+
+        .media-icons a:hover {
+
+            background: #ffffff;
+
+            color: #051f3a;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .link-boxes {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr 1fr 1fr 1.5fr;
+
+            gap: 30px;
+
+            padding: 45px 0;
+
+        }
+
+
+        .link-boxes .box {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+
+        .link-boxes .link_name {
+
+            color: #ffffff;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .link-boxes .box li {
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .link-boxes .box li a {
+
+            color: #dce5ee;
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+        }
+
+
+        .link-boxes .box li a:hover {
+
+            color: #ffffff;
+
+            padding-left: 5px;
+
+        }
+
+
+        .input-box input {
+
+            width: 100%;
+
+            height: 40px;
+
+            padding: 0 12px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 4px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .input-box button {
+
+            border: none;
+
+            padding: 10px 18px;
+
+            border-radius: 4px;
+
+            background: #ffffff;
+
+            color: #051f3a;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+        }
+
+
+        .input-box button:hover {
+
+            background: #e8eef5;
+
+        }
+
+
+        #subscribeMessage {
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           LOGIN POPUP
+        ===================================================== */
+
+        .account-form {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0,0,0,0.65);
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            z-index: 99999;
+
+        }
+
+
+        .account-form.active {
+
+            display: flex;
+
+        }
+
+
+        .account-form .buttons {
+
+            display: none;
+
+        }
+
+
+        .login-form {
+
+            width: 400px;
+
+            max-width: 90%;
+
+            background: #ffffff;
+
+            padding: 35px;
+
+            border-radius: 10px;
+
+            color: #222;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+
+        }
+
+
+        .login-form h3 {
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .login-form .box {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            outline: none;
+
+        }
+
+
+        .login-form .flex {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .login-form .btn {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            background: #051f3a;
+
+            color: #ffffff;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+        }
+
+
+        #close-form {
+
+            position: fixed;
+
+            top: 20px;
+
+            right: 25px;
+
+            z-index: 100000;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
 
         @media (max-width: 900px) {
 
             .secondary-intro {
+
                 grid-template-columns: 1fr;
+
             }
 
 
             .secondary-learning-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns: repeat(2,1fr);
+
             }
 
 
             .secondary-classes {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns: repeat(2,1fr);
+
             }
 
 
             .secondary-development {
+
                 grid-template-columns: 1fr;
+
             }
 
 
             .secondary-environment-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+
+            .link-boxes {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
             }
 
         }
@@ -806,73 +1322,123 @@
         @media (max-width: 600px) {
 
             .secondary-hero {
+
                 min-height: 450px;
 
                 padding: 130px 18px 70px;
+
+                background-position: center center;
+
             }
 
 
             .secondary-hero h1 {
+
                 font-size: 40px;
+
             }
 
 
             .secondary-hero h1 span {
+
                 font-size: 21px;
+
             }
 
 
             .secondary-hero p {
+
                 font-size: 15px;
+
+                line-height: 1.7;
+
             }
 
 
             .secondary-section {
+
                 padding: 55px 18px;
+
             }
 
 
             .secondary-intro-text h2 {
+
                 font-size: 29px;
+
             }
 
 
             .secondary-section-heading h2 {
+
                 font-size: 29px;
+
             }
 
 
             .secondary-learning-grid,
             .secondary-development,
             .secondary-environment-grid {
+
                 grid-template-columns: 1fr;
+
             }
 
 
             .secondary-classes {
+
                 grid-template-columns: 1fr;
+
             }
 
 
             .secondary-admission {
+
                 margin: 10px 15px 50px;
 
                 padding: 40px 20px;
+
             }
 
 
             .secondary-admission h2 {
+
                 font-size: 27px;
+
             }
 
 
             .secondary-faq-header {
+
                 padding: 18px;
+
             }
 
 
             .secondary-faq-header h3 {
+
                 font-size: 15px;
+
+            }
+
+
+            footer .top {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 20px;
+
+            }
+
+
+            .link-boxes {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
             }
 
         }
@@ -885,7 +1451,9 @@
 <body class="secondary-page">
 
 
-<!-- ================= HEADER START ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
 
@@ -893,7 +1461,7 @@
 
         <img src="Image/Logo.jpeg"
              alt="Maria's Podar Learn School logo"
-             style="width: 80px; height: 55px;">
+             style="width:80px;height:55px;">
 
         <div class="collage-name">
             Maria’s Podar Learn School Nilanga
@@ -937,8 +1505,6 @@
 
                     <ul>
 
-                        <!-- PRIMARY GROUP -->
-
                         <li class="course-group">
 
                             <a href="javascript:void(0);">
@@ -955,28 +1521,22 @@
                             <ul class="dropdown2">
 
                                 <li>
-
                                     <a href="nursery.html">
                                         Nursery to UKG
                                     </a>
-
                                 </li>
 
 
                                 <li>
-
                                     <a href="class-1-5.html">
                                         Class 1st to 5th
                                     </a>
-
                                 </li>
 
                             </ul>
 
                         </li>
 
-
-                        <!-- SECONDARY GROUP -->
 
                         <li class="course-group">
 
@@ -994,20 +1554,16 @@
                             <ul class="dropdown2">
 
                                 <li>
-
                                     <a href="class-6-8.html">
                                         Class 6th to 8th
                                     </a>
-
                                 </li>
 
 
                                 <li>
-
                                     <a href="class-9-10.html">
                                         Class 9th to 10th
                                     </a>
-
                                 </li>
 
                             </ul>
@@ -1036,9 +1592,7 @@
             <li class="navbar-dropdown">
 
                 <a href="careers.html">
-
                     Careers
-
                 </a>
 
             </li>
@@ -1047,9 +1601,7 @@
             <li class="navbar-dropdown">
 
                 <a href="contact-us.html">
-
                     Contact us
-
                 </a>
 
             </li>
@@ -1058,8 +1610,6 @@
 
     </nav>
 
-
-    <!-- LOGIN ICON -->
 
     <div id="account-btn"
          class="header-icon"
@@ -1076,16 +1626,14 @@
     </div>
 
 
-    <!-- MOBILE MENU -->
-
     <div id="menu-btn"
          class="header-icon">
 
-        <img src="image/menu-icon.svg"
-             alt="menu-icon">
+        <img src="Image/menu-icon.svg"
+             alt="Menu">
 
-        <img src="image/menu-icon-hover.gif"
-             alt="menu-icon"
+        <img src="Image/menu-icon-hover.gif"
+             alt="Menu"
              width="30"
              class="header-icon-hover">
 
@@ -1093,11 +1641,10 @@
 
 </header>
 
-<!-- ================= HEADER END ================= -->
 
-
-
-<!-- ================= LOGIN FORM ================= -->
+<!-- =====================================================
+     LOGIN
+===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
@@ -1171,7 +1718,10 @@
 </div>
 
 
-<!-- ================= HERO START ================= -->
+<!-- =====================================================
+     HERO
+     ONLY THIS SECTION HAS IMAGE
+===================================================== -->
 
 <section class="secondary-hero">
 
@@ -1202,21 +1752,18 @@
 
         </p>
 
-
     </div>
 
 </section>
 
-<!-- ================= HERO END ================= -->
 
-
-
-<!-- ================= INTRO START ================= -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
 <section class="secondary-section">
 
     <div class="secondary-intro">
-
 
         <div class="secondary-intro-text">
 
@@ -1226,33 +1773,27 @@
 
 
             <p>
-
                 Classes 6th to 8th are an important stage in a
                 student's academic journey. At this level, students
                 begin to develop deeper understanding of subjects
                 while becoming more confident and responsible
                 learners.
-
             </p>
 
 
             <p>
-
                 The learning programme encourages students to ask
                 questions, understand concepts, participate in
                 activities and connect classroom learning with
                 everyday experiences.
-
             </p>
 
 
             <p>
-
                 Along with academic learning, students are encouraged
                 to develop communication, creativity, collaboration,
                 logical thinking, problem-solving and independent
                 learning skills.
-
             </p>
 
         </div>
@@ -1268,56 +1809,38 @@
             <ul>
 
                 <li>
-
                     <i class="fa-solid fa-check"></i>
-
                     Strong foundation in core subjects
-
                 </li>
 
 
                 <li>
-
                     <i class="fa-solid fa-check"></i>
-
                     Conceptual and logical thinking
-
                 </li>
 
 
                 <li>
-
                     <i class="fa-solid fa-check"></i>
-
                     Communication and presentation skills
-
                 </li>
 
 
                 <li>
-
                     <i class="fa-solid fa-check"></i>
-
                     Problem-solving and reasoning
-
                 </li>
 
 
                 <li>
-
                     <i class="fa-solid fa-check"></i>
-
                     Creativity and collaboration
-
                 </li>
 
 
                 <li>
-
                     <i class="fa-solid fa-check"></i>
-
                     Independent and responsible learning
-
                 </li>
 
             </ul>
@@ -1328,14 +1851,12 @@
 
 </section>
 
-<!-- ================= INTRO END ================= -->
 
+<!-- =====================================================
+     LEARNING AREAS
+===================================================== -->
 
-
-<!-- ================= LEARNING AREAS ================= -->
-
-<section class="secondary-section"
-         id="learning-areas">
+<section class="secondary-section">
 
     <div class="secondary-section-heading">
 
@@ -1350,11 +1871,9 @@
 
 
         <p>
-
             Students are encouraged to strengthen their understanding
             across different learning areas while developing skills
             that support academic and personal growth.
-
         </p>
 
     </div>
@@ -1363,159 +1882,111 @@
     <div class="secondary-learning-grid">
 
 
-        <!-- CARD 1 -->
-
         <div class="secondary-learning-card">
 
             <div class="secondary-learning-icon">
-
                 <i class="fa-solid fa-language"></i>
-
             </div>
-
 
             <h3>
                 Languages
             </h3>
 
-
             <p>
-
                 Developing reading, writing, vocabulary,
                 comprehension, speaking and effective
                 communication skills.
-
             </p>
 
         </div>
 
 
-        <!-- CARD 2 -->
-
         <div class="secondary-learning-card">
 
             <div class="secondary-learning-icon">
-
                 <i class="fa-solid fa-calculator"></i>
-
             </div>
-
 
             <h3>
                 Mathematics
             </h3>
 
-
             <p>
-
                 Strengthening mathematical concepts, numerical
                 understanding, logical reasoning and problem-solving
                 abilities.
-
             </p>
 
         </div>
 
 
-        <!-- CARD 3 -->
-
         <div class="secondary-learning-card">
 
             <div class="secondary-learning-icon">
-
                 <i class="fa-solid fa-flask"></i>
-
             </div>
-
 
             <h3>
                 Science
             </h3>
 
-
             <p>
-
                 Encouraging curiosity through observation,
                 questioning, exploration and scientific thinking.
-
             </p>
 
         </div>
 
 
-        <!-- CARD 4 -->
-
         <div class="secondary-learning-card">
 
             <div class="secondary-learning-icon">
-
                 <i class="fa-solid fa-globe"></i>
-
             </div>
-
 
             <h3>
                 Social Science
             </h3>
 
-
             <p>
-
                 Building awareness of history, geography, society,
                 environment and the world around us.
-
             </p>
 
         </div>
 
 
-        <!-- CARD 5 -->
-
         <div class="secondary-learning-card">
 
             <div class="secondary-learning-icon">
-
                 <i class="fa-solid fa-laptop-code"></i>
-
             </div>
-
 
             <h3>
                 Computer &amp; Digital Skills
             </h3>
 
-
             <p>
-
                 Developing digital awareness and encouraging
                 responsible and meaningful use of technology.
-
             </p>
 
         </div>
 
 
-        <!-- CARD 6 -->
-
         <div class="secondary-learning-card">
 
             <div class="secondary-learning-icon">
-
                 <i class="fa-solid fa-palette"></i>
-
             </div>
-
 
             <h3>
                 Creativity &amp; Activities
             </h3>
 
-
             <p>
-
                 Supporting creativity, participation, imagination
                 and expression through engaging activities.
-
             </p>
 
         </div>
@@ -1524,11 +1995,10 @@
 
 </section>
 
-<!-- ================= LEARNING AREAS END ================= -->
 
-
-
-<!-- ================= CLASS JOURNEY ================= -->
+<!-- =====================================================
+     CLASS JOURNEY
+===================================================== -->
 
 <section class="secondary-section">
 
@@ -1545,11 +2015,9 @@
 
 
         <p>
-
             Each class supports students as they gradually move
             towards deeper understanding, greater confidence and
             increased independence.
-
         </p>
 
     </div>
@@ -1558,32 +2026,24 @@
     <div class="secondary-classes">
 
 
-        <!-- CLASS 6 -->
-
         <div class="secondary-class-card">
 
             <div class="secondary-class-number">
                 06
             </div>
 
-
             <h3>
                 Class 6
             </h3>
 
-
             <p>
-
                 Strengthening the transition into middle school
                 learning while building strong concepts, study
                 habits and confidence.
-
             </p>
 
         </div>
 
-
-        <!-- CLASS 7 -->
 
         <div class="secondary-class-card">
 
@@ -1591,23 +2051,17 @@
                 07
             </div>
 
-
             <h3>
                 Class 7
             </h3>
 
-
             <p>
-
                 Encouraging deeper understanding, logical reasoning,
                 application of knowledge and collaborative learning.
-
             </p>
 
         </div>
 
-
-        <!-- CLASS 8 -->
 
         <div class="secondary-class-card">
 
@@ -1615,17 +2069,13 @@
                 08
             </div>
 
-
             <h3>
                 Class 8
             </h3>
 
-
             <p>
-
                 Building stronger concepts, independent learning
                 habits and confidence for the next academic stage.
-
             </p>
 
         </div>
@@ -1634,11 +2084,10 @@
 
 </section>
 
-<!-- ================= CLASS JOURNEY END ================= -->
 
-
-
-<!-- ================= DEVELOPMENT ================= -->
+<!-- =====================================================
+     DEVELOPMENT
+===================================================== -->
 
 <section class="secondary-section">
 
@@ -1655,11 +2104,9 @@
 
 
         <p>
-
             The middle school years are also important for developing
             confidence, responsibility, creativity and the ability
             to work with others.
-
         </p>
 
     </div>
@@ -1667,8 +2114,6 @@
 
     <div class="secondary-development">
 
-
-        <!-- ITEM 1 -->
 
         <div class="secondary-development-item">
 
@@ -1681,18 +2126,14 @@
                 </h3>
 
                 <p>
-
                     Encouraging students to express ideas,
                     thoughts and questions clearly and confidently.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- ITEM 2 -->
 
         <div class="secondary-development-item">
 
@@ -1705,18 +2146,14 @@
                 </h3>
 
                 <p>
-
                     Developing reasoning, curiosity and the ability
                     to understand and explore different solutions.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- ITEM 3 -->
 
         <div class="secondary-development-item">
 
@@ -1729,18 +2166,14 @@
                 </h3>
 
                 <p>
-
                     Helping students apply concepts and think
                     logically while approaching different tasks.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- ITEM 4 -->
 
         <div class="secondary-development-item">
 
@@ -1753,18 +2186,14 @@
                 </h3>
 
                 <p>
-
                     Supporting teamwork, cooperation, respectful
                     interaction and shared learning.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- ITEM 5 -->
 
         <div class="secondary-development-item">
 
@@ -1777,18 +2206,14 @@
                 </h3>
 
                 <p>
-
                     Providing opportunities for students to express
                     ideas through creative and engaging activities.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- ITEM 6 -->
 
         <div class="secondary-development-item">
 
@@ -1801,10 +2226,8 @@
                 </h3>
 
                 <p>
-
                     Encouraging responsibility, self-management,
                     confidence and positive study habits.
-
                 </p>
 
             </div>
@@ -1815,11 +2238,10 @@
 
 </section>
 
-<!-- ================= DEVELOPMENT END ================= -->
 
-
-
-<!-- ================= LEARNING ENVIRONMENT ================= -->
+<!-- =====================================================
+     ENVIRONMENT
+===================================================== -->
 
 <section class="secondary-environment">
 
@@ -1838,11 +2260,9 @@
 
 
             <p>
-
                 Students learn effectively when they are encouraged
                 to participate, ask questions, explore ideas and
                 take responsibility for their learning.
-
             </p>
 
         </div>
@@ -1851,89 +2271,65 @@
         <div class="secondary-environment-grid">
 
 
-            <!-- CARD 1 -->
-
             <div class="secondary-environment-card">
 
                 <i class="fa-solid fa-book-open-reader"></i>
-
 
                 <h3>
                     Concept-Based Learning
                 </h3>
 
-
                 <p>
-
                     Supporting understanding of concepts rather
                     than relying only on memorisation.
-
                 </p>
 
             </div>
 
-
-            <!-- CARD 2 -->
 
             <div class="secondary-environment-card">
 
                 <i class="fa-solid fa-person-chalkboard"></i>
 
-
                 <h3>
                     Interactive Learning
                 </h3>
 
-
                 <p>
-
                     Encouraging questions, participation and
                     meaningful classroom interaction.
-
                 </p>
 
             </div>
 
-
-            <!-- CARD 3 -->
 
             <div class="secondary-environment-card">
 
                 <i class="fa-solid fa-people-arrows"></i>
 
-
                 <h3>
                     Collaborative Learning
                 </h3>
 
-
                 <p>
-
                     Developing teamwork, cooperation and
                     respect through shared learning.
-
                 </p>
 
             </div>
 
 
-            <!-- CARD 4 -->
-
             <div class="secondary-environment-card">
 
                 <i class="fa-solid fa-seedling"></i>
-
 
                 <h3>
                     Positive Values
                 </h3>
 
-
                 <p>
-
                     Encouraging responsibility, confidence,
                     discipline and positive attitudes.
-
                 </p>
 
             </div>
@@ -1944,11 +2340,10 @@
 
 </section>
 
-<!-- ================= LEARNING ENVIRONMENT END ================= -->
 
-
-
-<!-- ================= ADMISSION CTA ================= -->
+<!-- =====================================================
+     ADMISSION
+===================================================== -->
 
 <section class="secondary-section">
 
@@ -1960,11 +2355,9 @@
 
 
         <p>
-
             For admission-related information and the current
             admission process, please visit the admission form
             or contact Maria’s Podar Learn School Nilanga.
-
         </p>
 
 
@@ -1996,11 +2389,10 @@
 
 </section>
 
-<!-- ================= ADMISSION CTA END ================= -->
 
-
-
-<!-- ================= FAQ ================= -->
+<!-- =====================================================
+     FAQ
+===================================================== -->
 
 <section class="secondary-section">
 
@@ -2026,8 +2418,6 @@
     <div class="secondary-faq">
 
 
-        <!-- FAQ 1 -->
-
         <div class="secondary-faq-item">
 
             <div class="secondary-faq-header">
@@ -2036,11 +2426,8 @@
                     What does the Class 6th to 8th programme focus on?
                 </h3>
 
-
                 <div class="secondary-faq-icon">
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </div>
 
             </div>
@@ -2049,20 +2436,16 @@
             <div class="secondary-faq-content">
 
                 <p>
-
                     The programme focuses on strong academic
                     foundations, conceptual understanding,
                     communication, logical thinking, problem-solving,
                     creativity, collaboration and independent learning.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- FAQ 2 -->
 
         <div class="secondary-faq-item">
 
@@ -2072,11 +2455,8 @@
                     Which classes are included in the Secondary Group?
                 </h3>
 
-
                 <div class="secondary-faq-icon">
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </div>
 
             </div>
@@ -2085,18 +2465,14 @@
             <div class="secondary-faq-content">
 
                 <p>
-
                     This page covers Class 6th, Class 7th and
                     Class 8th.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- FAQ 3 -->
 
         <div class="secondary-faq-item">
 
@@ -2106,11 +2482,8 @@
                     What learning areas are covered?
                 </h3>
 
-
                 <div class="secondary-faq-icon">
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </div>
 
             </div>
@@ -2119,19 +2492,15 @@
             <div class="secondary-faq-content">
 
                 <p>
-
                     Learning areas include Languages, Mathematics,
                     Science, Social Science, Computer and Digital
                     Skills, along with creativity and activities.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- FAQ 4 -->
 
         <div class="secondary-faq-item">
 
@@ -2141,11 +2510,8 @@
                     How does the programme develop independent learning?
                 </h3>
 
-
                 <div class="secondary-faq-icon">
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </div>
 
             </div>
@@ -2154,20 +2520,16 @@
             <div class="secondary-faq-content">
 
                 <p>
-
                     Students are encouraged to understand concepts,
                     participate in learning activities, practise
                     regularly, communicate their ideas and gradually
                     take greater responsibility for their learning.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- FAQ 5 -->
 
         <div class="secondary-faq-item">
 
@@ -2177,11 +2539,8 @@
                     How does Class 8 prepare students for the next stage?
                 </h3>
 
-
                 <div class="secondary-faq-icon">
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </div>
 
             </div>
@@ -2190,20 +2549,16 @@
             <div class="secondary-faq-content">
 
                 <p>
-
                     Class 8 supports students by strengthening
                     concepts, communication, problem-solving,
                     independent study habits and confidence for
                     the next academic stage.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- FAQ 6 -->
 
         <div class="secondary-faq-item">
 
@@ -2213,11 +2568,8 @@
                     How can parents apply for admission?
                 </h3>
 
-
                 <div class="secondary-faq-icon">
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </div>
 
             </div>
@@ -2226,22 +2578,18 @@
             <div class="secondary-faq-content">
 
                 <p>
-
                     Parents can visit the
                     <a href="admission-form.html">
                         Admission Form
                     </a>
                     page for the current admission process or
                     contact the school for further information.
-
                 </p>
 
             </div>
 
         </div>
 
-
-        <!-- FAQ 7 -->
 
         <div class="secondary-faq-item">
 
@@ -2251,11 +2599,8 @@
                     How can parents contact the school?
                 </h3>
 
-
                 <div class="secondary-faq-icon">
-
                     <i class="fa-solid fa-chevron-down"></i>
-
                 </div>
 
             </div>
@@ -2264,31 +2609,27 @@
             <div class="secondary-faq-content">
 
                 <p>
-
                     Parents can visit the
                     <a href="contact-us.html">
                         Contact Us
                     </a>
                     page for the available school contact information.
-
                 </p>
 
             </div>
 
         </div>
 
-
     </div>
 
 </section>
 
-<!-- ================= FAQ END ================= -->
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-
-<!-- ================= FOOTER START ================= -->
-
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+<footer>
 
     <div class="content">
 
@@ -2306,7 +2647,8 @@
             <div class="media-icons">
 
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
@@ -2314,12 +2656,15 @@
 
 
                 <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
 
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
@@ -2333,8 +2678,9 @@
                 </a>
 
 
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-                   target="_blank">
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
@@ -2348,14 +2694,11 @@
         <div class="link-boxes">
 
 
-            <!-- ABOUT -->
-
             <ul class="box">
 
                 <li class="link_name">
                     About
                 </li>
-
 
                 <li>
                     <a href="index.html">
@@ -2363,16 +2706,14 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a href="contact-us.html">
                         Contact us
                     </a>
                 </li>
 
-
                 <li>
-                    <a href="#">
+                    <a href="About-us.html">
                         About us
                     </a>
                 </li>
@@ -2380,14 +2721,11 @@
             </ul>
 
 
-            <!-- QUICK LINKS -->
-
             <ul class="box">
 
                 <li class="link_name">
                     Quick Links
                 </li>
-
 
                 <li>
                     <a href="admission-form.html">
@@ -2395,13 +2733,11 @@
                     </a>
                 </li>
 
-
                 <li>
-                    <a href="index.html">
+                    <a href="index.html#notice-board">
                         Notice Board
                     </a>
                 </li>
-
 
                 <li>
                     <a href="index.html">
@@ -2412,14 +2748,11 @@
             </ul>
 
 
-            <!-- STUDENT CORNER -->
-
             <ul class="box">
 
                 <li class="link_name">
                     Student's Corner
                 </li>
-
 
                 <li>
                     <a href="fees-payment.html">
@@ -2427,13 +2760,11 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a href="complaint.html">
                         Complaint Section
                     </a>
                 </li>
-
 
                 <li>
                     <a href="careers.html">
@@ -2444,33 +2775,24 @@
             </ul>
 
 
-            <!-- ACCOUNT -->
-
             <ul class="box">
 
                 <li class="link_name">
                     Account
                 </li>
 
-
                 <li>
-
                     <a href="#"
                        id="adminLoginLink">
-
                         Admin Login
-
                     </a>
-
                 </li>
-
 
                 <li>
                     <a href="events.html">
                         Events
                     </a>
                 </li>
-
 
                 <li>
                     <a href="gallery.html">
@@ -2481,14 +2803,11 @@
             </ul>
 
 
-            <!-- SUBSCRIBE -->
-
             <ul class="box input-box">
 
                 <li class="link_name">
                     Subscribe
                 </li>
-
 
                 <li>
 
@@ -2498,15 +2817,16 @@
 
                 </li>
 
-
                 <li>
 
-                    <input type="button"
-                           value="Subscribe"
-                           onclick="subscribeUser()">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
-
 
                 <li>
 
@@ -2522,73 +2842,70 @@
 
 </footer>
 
-<!-- ================= FOOTER END ================= -->
 
-
-
-<!-- ================= EXISTING SCRIPT ================= -->
+<!-- =====================================================
+     EXISTING JS
+===================================================== -->
 
 <script src="js/script.js"></script>
 
 
-
-<!-- ================= FAQ SCRIPT ================= -->
+<!-- =====================================================
+     FAQ
+===================================================== -->
 
 <script>
 
 document
-    .querySelectorAll(".secondary-faq-header")
-    .forEach(function(header) {
+.querySelectorAll(".secondary-faq-header")
+.forEach(function(header) {
 
-        header.addEventListener("click", function() {
+    header.addEventListener("click", function() {
 
-            const content =
-                this.nextElementSibling;
+        const content =
+            this.nextElementSibling;
 
-            const isOpen =
-                this.classList.contains("active");
-
-
-            /* CLOSE ALL */
-
-            document
-                .querySelectorAll(".secondary-faq-header")
-                .forEach(function(item) {
-
-                    item.classList.remove("active");
-
-                });
+        const isOpen =
+            this.classList.contains("active");
 
 
-            document
-                .querySelectorAll(".secondary-faq-content")
-                .forEach(function(item) {
+        document
+        .querySelectorAll(".secondary-faq-header")
+        .forEach(function(item) {
 
-                    item.style.maxHeight = null;
-
-                });
-
-
-            /* OPEN CURRENT */
-
-            if (!isOpen) {
-
-                this.classList.add("active");
-
-                content.style.maxHeight =
-                    content.scrollHeight + "px";
-
-            }
+            item.classList.remove("active");
 
         });
 
+
+        document
+        .querySelectorAll(".secondary-faq-content")
+        .forEach(function(item) {
+
+            item.style.maxHeight = null;
+
+        });
+
+
+        if (!isOpen) {
+
+            this.classList.add("active");
+
+            content.style.maxHeight =
+                content.scrollHeight + "px";
+
+        }
+
     });
+
+});
 
 </script>
 
 
-
-<!-- ================= SUBSCRIBE SCRIPT ================= -->
+<!-- =====================================================
+     SUBSCRIBE
+===================================================== -->
 
 <script>
 
@@ -2596,9 +2913,9 @@ function subscribeUser() {
 
     const email =
         document
-            .getElementById("subscribeEmail")
-            .value
-            .trim();
+        .getElementById("subscribeEmail")
+        .value
+        .trim();
 
 
     const message =
@@ -2643,7 +2960,6 @@ function subscribeUser() {
     message.innerHTML =
         "Submitting...";
 
-
     message.style.color =
         "white";
 
@@ -2660,32 +2976,26 @@ function subscribeUser() {
         }
     )
 
-
     .then(function() {
 
         message.innerHTML =
             "Thank you for subscribing! 😊";
 
-
         message.style.color =
             "lightgreen";
 
-
         document
-            .getElementById("subscribeEmail")
-            .value = "";
+        .getElementById("subscribeEmail")
+        .value = "";
 
     })
-
 
     .catch(function(error) {
 
         console.error(error);
 
-
         message.innerHTML =
             "Something went wrong. Please try again.";
-
 
         message.style.color =
             "red";
@@ -2697,15 +3007,15 @@ function subscribeUser() {
 </script>
 
 
-
-<!-- ================= LOGIN SCRIPT ================= -->
+<!-- =====================================================
+     LOGIN
+===================================================== -->
 
 <script>
 
 document.addEventListener(
     "DOMContentLoaded",
     function() {
-
 
         const accountBtn =
             document.getElementById(
@@ -2743,8 +3053,6 @@ document.addEventListener(
             );
 
 
-        /* HEADER LOGIN */
-
         if (accountBtn) {
 
             accountBtn.addEventListener(
@@ -2760,8 +3068,6 @@ document.addEventListener(
 
         }
 
-
-        /* ADMIN LOGIN */
 
         if (adminLoginLink) {
 
@@ -2781,8 +3087,6 @@ document.addEventListener(
         }
 
 
-        /* CLOSE LOGIN */
-
         if (closeForm) {
 
             closeForm.addEventListener(
@@ -2799,8 +3103,6 @@ document.addEventListener(
         }
 
 
-        /* LOGIN */
-
         if (loginForm) {
 
             loginForm.addEventListener(
@@ -2812,19 +3114,19 @@ document.addEventListener(
 
                     const email =
                         document
-                            .getElementById(
-                                "loginEmail"
-                            )
-                            .value
-                            .trim();
+                        .getElementById(
+                            "loginEmail"
+                        )
+                        .value
+                        .trim();
 
 
                     const password =
                         document
-                            .getElementById(
-                                "loginPassword"
-                            )
-                            .value;
+                        .getElementById(
+                            "loginPassword"
+                        )
+                        .value;
 
 
                     const adminEmail =
@@ -2840,10 +3142,8 @@ document.addEventListener(
                         password === adminPassword
                     ) {
 
-
                         loginMessage.innerHTML =
                             "Login successful!";
-
 
                         loginMessage.style.color =
                             "green";
@@ -2859,13 +3159,12 @@ document.addEventListener(
                             500
                         );
 
+                    }
 
-                    } else {
-
+                    else {
 
                         loginMessage.innerHTML =
                             "Invalid email or password!";
-
 
                         loginMessage.style.color =
                             "red";
@@ -2878,65 +3177,62 @@ document.addEventListener(
         }
 
     }
-
 );
 
 </script>
 
 
-
-<!-- ================= COURSE DROPDOWN SCRIPT ================= -->
+<!-- =====================================================
+     COURSE DROPDOWN
+===================================================== -->
 
 <script>
 
 document
-    .querySelectorAll(
-        ".course-group > a"
-    )
-    .forEach(function(link) {
+.querySelectorAll(".course-group > a")
+.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function(e) {
+
+            e.preventDefault();
+
+            e.stopPropagation();
 
 
-        link.addEventListener(
-            "click",
-            function(e) {
-
-                e.preventDefault();
-
-                e.stopPropagation();
-
-
-                const submenu =
-                    this.parentElement
-                        .querySelector(
-                            ".dropdown2"
-                        );
-
-
-                document
-                    .querySelectorAll(
-                        ".course-group .dropdown2"
-                    )
-                    .forEach(function(menu) {
-
-                        if (menu !== submenu) {
-
-                            menu.classList.remove(
-                                "show"
-                            );
-
-                        }
-
-                    });
-
-
-                submenu.classList.toggle(
-                    "show"
+            const submenu =
+                this.parentElement
+                .querySelector(
+                    ".dropdown2"
                 );
 
-            }
-        );
 
-    });
+            document
+            .querySelectorAll(
+                ".course-group .dropdown2"
+            )
+            .forEach(function(menu) {
+
+                if (menu !== submenu) {
+
+                    menu.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            });
+
+
+            submenu.classList.toggle(
+                "show"
+            );
+
+        }
+    );
+
+});
 
 </script>
 

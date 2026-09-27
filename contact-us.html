@@ -1,419 +1,1593 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
-    <title>Maria's Podar Learn School Nilanga(CBSE)</title>
+<!-- Favicon -->
+<link rel="shortcut icon"
+      href="Image/Logo.jpeg"
+      type="image/png">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+<!-- Main CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="shortcut icon"
-          href="Image/Logo.jpeg"
-          type="image/png">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: #ffffff;
+    }
+
+
+    /* =====================================================
+       CONTACT HERO
+    ===================================================== */
+
+    .contact-page-hero {
+
+        position: relative;
+
+        width: 100%;
+        min-height: 520px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        background-image:
+            linear-gradient(
+                rgba(0, 0, 0, 0.30),
+                rgba(0, 0, 0, 0.65)
+            ),
+            url("Image/Image.png");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    .contact-page-hero-content {
+
+        width: 90%;
+        max-width: 1000px;
+
+        padding: 30px 20px;
+    }
+
+
+    .contact-page-hero-content h1 {
+
+        margin: 0;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 60px;
+        font-weight: 700;
+
+        line-height: 1.2;
+
+        color: #ffffff;
+
+        text-shadow:
+            0 4px 12px rgba(0,0,0,0.65);
+    }
+
+
+    .contact-page-hero-content p {
+
+        margin: 18px 0 0;
+
+        font-family: 'Quicksand', sans-serif;
+
+        font-size: 24px;
+        font-weight: 600;
+
+        line-height: 1.5;
+
+        color: #ffffff;
+
+        text-shadow:
+            0 3px 8px rgba(0,0,0,0.65);
+    }
+
+
+    /* =====================================================
+       CONTACT MAIN
+    ===================================================== */
+
+    .contact-page-main {
+
+        width: 100%;
+
+        padding: 70px 0;
+
+        background: #f7f9fc;
+    }
+
+
+    .contact-page-wrapper {
+
+        width: 90%;
+        max-width: 1200px;
+
+        margin: auto;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .contact-intro {
+
+        text-align: center;
+
+        margin-bottom: 50px;
+    }
+
+
+    .contact-intro h2 {
+
+        margin: 0 0 15px;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 35px;
+        font-weight: 700;
+
+        color: #122b49;
+    }
+
+
+    .contact-intro .line {
+
+        width: 75px;
+        height: 4px;
+
+        margin: 0 auto 20px;
+
+        border-radius: 10px;
+
+        background: #f39c12;
+    }
+
+
+    .contact-intro p {
+
+        max-width: 850px;
+
+        margin: auto;
+
+        font-family: 'Quicksand', sans-serif;
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+        color: #555;
+    }
+
+
+    /* =====================================================
+       CONTACT GRID
+    ===================================================== */
+
+    .contact-page-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            0.9fr 1.1fr;
+
+        gap: 30px;
+
+        align-items: stretch;
+    }
+
+
+    /* =====================================================
+       CONTACT INFORMATION
+    ===================================================== */
+
+    .contact-information {
+
+        padding: 35px;
+
+        border-radius: 16px;
+
+        background:
+            linear-gradient(
+                135deg,
+                #122b49,
+                #1d4c78
+            );
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.10);
+    }
+
+
+    .contact-information h2 {
+
+        margin: 0 0 12px;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 29px;
+
+        color: #ffffff;
+    }
+
+
+    .contact-information > p {
+
+        margin: 0 0 30px;
+
+        font-family: 'Quicksand', sans-serif;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        color: rgba(255,255,255,0.88);
+    }
+
+
+    /* =====================================================
+       CONTACT INFO BOX
+    ===================================================== */
+
+    .contact-info-item {
+
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+        margin-bottom: 25px;
+
+        padding: 18px;
+
+        border-radius: 12px;
+
+        background:
+            rgba(255,255,255,0.10);
+    }
+
+
+    .contact-info-item:last-child {
+
+        margin-bottom: 0;
+    }
+
+
+    .contact-info-icon {
+
+        min-width: 48px;
+
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #f39c12;
+    }
+
+
+    .contact-info-icon i {
+
+        font-size: 21px;
+
+        color: #ffffff;
+    }
+
+
+    .contact-info-text h3 {
+
+        margin: 0 0 6px;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 18px;
+
+        color: #ffffff;
+    }
+
+
+    .contact-info-text p {
+
+        margin: 0;
+
+        font-family: 'Quicksand', sans-serif;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        color: rgba(255,255,255,0.88);
+    }
+
+
+    .contact-info-text a {
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+        word-break: break-word;
+    }
+
+
+    .contact-info-text a:hover {
+
+        color: #f39c12;
+    }
+
+
+    /* =====================================================
+       CONTACT FORM BOX
+    ===================================================== */
+
+    .contact-form-box {
+
+        padding: 40px;
+
+        border-radius: 16px;
+
+        background: #ffffff;
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.08);
+    }
+
+
+    .contact-form-box h2 {
+
+        position: relative;
+
+        margin: 0 0 30px;
+
+        padding-bottom: 13px;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 29px;
+
+        color: #122b49;
+    }
+
+
+    .contact-form-box h2::after {
+
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 65px;
+        height: 4px;
+
+        border-radius: 10px;
+
+        background: #f39c12;
+    }
+
+
+    /* =====================================================
+       FORM INPUT
+    ===================================================== */
+
+    .contact-input-box {
+
+        position: relative;
+
+        width: 100%;
+
+        margin-bottom: 25px;
+    }
+
+
+    .contact-input-box input,
+    .contact-input-box textarea {
+
+        width: 100%;
+
+        padding: 14px 15px;
+
+        border: 1px solid #d8dce2;
+
+        border-radius: 8px;
+
+        outline: none;
+
+        background: #ffffff;
+
+        font-family: 'Quicksand', sans-serif;
+
+        font-size: 16px;
+
+        color: #333;
+
+        transition: 0.3s ease;
+    }
+
+
+    .contact-input-box input {
+
+        height: 52px;
+    }
+
+
+    .contact-input-box textarea {
+
+        min-height: 135px;
+
+        resize: vertical;
+    }
+
+
+    .contact-input-box input:focus,
+    .contact-input-box textarea:focus {
+
+        border-color: #f39c12;
+
+        box-shadow:
+            0 0 0 3px rgba(243,156,18,0.10);
+    }
+
+
+    .contact-input-box label {
+
+        display: block;
+
+        margin-bottom: 8px;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        color: #333;
+    }
+
+
+    /* =====================================================
+       SUBMIT BUTTON
+    ===================================================== */
+
+    .contact-submit {
+
+        width: 100%;
+
+        min-height: 52px;
+
+        border: none;
+
+        border-radius: 8px;
+
+        cursor: pointer;
+
+        background:
+            linear-gradient(
+                135deg,
+                #f39c12,
+                #fa8007
+            );
+
+        color: #ffffff;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 16px;
+
+        font-weight: 600;
+
+        transition: 0.3s ease;
+    }
+
+
+    .contact-submit:hover {
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 8px 20px rgba(243,156,18,0.25);
+    }
+
+
+    .contact-submit:disabled {
+
+        opacity: 0.7;
+
+        cursor: not-allowed;
+
+        transform: none;
+    }
+
+
+    #contactMessage {
+
+        min-height: 24px;
+
+        margin: 15px 0 0;
+
+        text-align: center;
+
+        font-family: 'Quicksand', sans-serif;
+
+        font-size: 15px;
+
+        font-weight: 600;
+    }
+
+
+    /* =====================================================
+       MAP
+    ===================================================== */
+
+    .map-section {
+
+        width: 100%;
+
+        background: #ffffff;
+
+        padding: 0 0 70px;
+    }
+
+
+    .map-wrapper {
+
+        width: 90%;
+        max-width: 1200px;
+
+        margin: auto;
+
+        overflow: hidden;
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.10);
+    }
+
+
+    .map-title {
+
+        text-align: center;
+
+        margin-bottom: 30px;
+    }
+
+
+    .map-title h2 {
+
+        margin: 0 0 12px;
+
+        font-family: 'Poppins', sans-serif;
+
+        font-size: 32px;
+
+        color: #122b49;
+    }
+
+
+    .map-title .line {
+
+        width: 70px;
+        height: 4px;
+
+        margin: auto;
+
+        border-radius: 10px;
+
+        background: #f39c12;
+    }
+
+
+    .map-wrapper iframe {
+
+        display: block;
+
+        width: 100%;
+
+        height: 450px;
+
+        border: 0;
+    }
+
+
+    /* =====================================================
+       CONTACT MOBILE 768px
+    ===================================================== */
+
+    @media (max-width: 768px) {
+
+        .contact-page-hero {
+
+            min-height: 450px;
+
+            background-position: center;
+        }
+
+
+        .contact-page-hero-content h1 {
+
+            font-size: 43px;
+        }
+
+
+        .contact-page-hero-content p {
+
+            font-size: 20px;
+        }
+
+
+        .contact-page-main {
+
+            padding: 50px 0;
+        }
+
+
+        .contact-page-wrapper {
+
+            width: 92%;
+        }
+
+
+        .contact-intro {
+
+            margin-bottom: 35px;
+        }
+
+
+        .contact-intro h2 {
+
+            font-size: 28px;
+        }
+
+
+        .contact-intro p {
+
+            font-size: 16px;
+
+            line-height: 1.7;
+        }
+
+
+        .contact-page-grid {
+
+            grid-template-columns: 1fr;
+
+            gap: 25px;
+        }
+
+
+        .contact-information {
+
+            padding: 30px 25px;
+        }
+
+
+        .contact-form-box {
+
+            padding: 30px 25px;
+        }
+
+
+        .map-section {
+
+            padding-bottom: 50px;
+        }
+
+
+        .map-wrapper {
+
+            width: 92%;
+        }
+
+
+        .map-title h2 {
+
+            font-size: 28px;
+        }
+
+
+        .map-wrapper iframe {
+
+            height: 400px;
+        }
+
+    }
+
+
+    /* =====================================================
+       CONTACT MOBILE 480px
+    ===================================================== */
+
+    @media (max-width: 480px) {
+
+        html,
+        body {
+
+            width: 100%;
+
+            max-width: 100%;
+
+            overflow-x: hidden;
+        }
+
+
+        .contact-page-hero {
+
+            min-height: 410px;
+
+            background-position: center;
+        }
+
+
+        .contact-page-hero-content {
+
+            width: 95%;
+
+            padding: 20px 10px;
+        }
+
+
+        .contact-page-hero-content h1 {
+
+            font-size: 32px;
+
+            line-height: 1.25;
+        }
+
+
+        .contact-page-hero-content p {
+
+            margin-top: 12px;
+
+            font-size: 17px;
+
+            line-height: 1.5;
+        }
+
+
+        .contact-page-main {
+
+            padding: 38px 0;
+        }
+
+
+        .contact-page-wrapper {
+
+            width: 94%;
+        }
+
+
+        .contact-intro {
+
+            margin-bottom: 28px;
+        }
+
+
+        .contact-intro h2 {
+
+            font-size: 24px;
+
+            line-height: 1.4;
+        }
+
+
+        .contact-intro p {
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        .contact-page-grid {
+
+            gap: 18px;
+        }
+
+
+        .contact-information {
+
+            padding: 25px 18px;
+
+            border-radius: 12px;
+        }
+
+
+        .contact-information h2 {
+
+            font-size: 23px;
+        }
+
+
+        .contact-information > p {
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 22px;
+        }
+
+
+        .contact-info-item {
+
+            gap: 12px;
+
+            padding: 14px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .contact-info-icon {
+
+            min-width: 40px;
+
+            width: 40px;
+            height: 40px;
+        }
+
+
+        .contact-info-icon i {
+
+            font-size: 17px;
+        }
+
+
+        .contact-info-text h3 {
+
+            font-size: 16px;
+        }
+
+
+        .contact-info-text p {
+
+            font-size: 13px;
+
+            line-height: 1.55;
+        }
+
+
+        .contact-form-box {
+
+            padding: 24px 18px;
+
+            border-radius: 12px;
+        }
+
+
+        .contact-form-box h2 {
+
+            font-size: 22px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .contact-input-box {
+
+            margin-bottom: 18px;
+        }
+
+
+        .contact-input-box label {
+
+            font-size: 14px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .contact-input-box input {
+
+            height: 48px;
+        }
+
+
+        .contact-input-box input,
+        .contact-input-box textarea {
+
+            font-size: 14px;
+
+            padding: 12px;
+        }
+
+
+        .contact-input-box textarea {
+
+            min-height: 115px;
+        }
+
+
+        .contact-submit {
+
+            min-height: 48px;
+
+            font-size: 14px;
+        }
+
+
+        #contactMessage {
+
+            font-size: 13px;
+        }
+
+
+        .map-section {
+
+            padding-bottom: 38px;
+        }
+
+
+        .map-wrapper {
+
+            width: 94%;
+
+            border-radius: 12px;
+        }
+
+
+        .map-title {
+
+            margin-bottom: 20px;
+        }
+
+
+        .map-title h2 {
+
+            font-size: 23px;
+        }
+
+
+        .map-wrapper iframe {
+
+            height: 330px;
+        }
+
+    }
+
+
+    /* =====================================================
+       EXTRA SMALL MOBILE 360px
+    ===================================================== */
+
+    @media (max-width: 360px) {
+
+        .contact-page-hero {
+
+            min-height: 380px;
+        }
+
+
+        .contact-page-hero-content h1 {
+
+            font-size: 28px;
+        }
+
+
+        .contact-page-hero-content p {
+
+            font-size: 15px;
+        }
+
+
+        .contact-page-wrapper {
+
+            width: 93%;
+        }
+
+
+        .contact-intro h2 {
+
+            font-size: 21px;
+        }
+
+
+        .contact-intro p {
+
+            font-size: 13px;
+        }
+
+
+        .contact-information {
+
+            padding: 20px 14px;
+        }
+
+
+        .contact-information h2 {
+
+            font-size: 21px;
+        }
+
+
+        .contact-info-item {
+
+            padding: 12px;
+
+            gap: 10px;
+        }
+
+
+        .contact-info-icon {
+
+            min-width: 36px;
+
+            width: 36px;
+            height: 36px;
+        }
+
+
+        .contact-info-icon i {
+
+            font-size: 15px;
+        }
+
+
+        .contact-info-text h3 {
+
+            font-size: 15px;
+        }
+
+
+        .contact-info-text p {
+
+            font-size: 12px;
+        }
+
+
+        .contact-form-box {
+
+            padding: 20px 14px;
+        }
+
+
+        .contact-form-box h2 {
+
+            font-size: 20px;
+        }
+
+
+        .contact-input-box input,
+        .contact-input-box textarea {
+
+            font-size: 13px;
+        }
+
+
+        .map-wrapper iframe {
+
+            height: 280px;
+        }
+
+    }
+
+</style>
 
 </head>
 
-
 <body>
 
-
-<!-- ================= HEADER START ================= -->
+<!-- =====================================================
+     HEADER - INDEX STYLE
+===================================================== -->
 
 <header class="header">
 
+<a href="index.html" class="logo">
 
-    <a href="index.html" class="logo">
 
-        <img src="Image/Logo.jpeg"
-             alt="School logo"
-             style="width:80px; height:55px;">
+    <img src="Image/Logo.jpeg"
+         alt="Maria's Podar Learn School Logo">
 
-        <div class="collage-name">
-            Maria’s Podar Learn School Nilanga
-        </div>
 
-    </a>
+    <div class="collage-name">
+        Maria's Podar Learn School Nilanga
+    </div>
 
 
-    <!-- ================= NAVBAR ================= -->
+</a>
 
-    <nav class="navbar">
 
 
-        <div id="close-navbar"
-             class="close-icon">
+<!-- NAVBAR -->
 
-            <img src="Image/close-icon.gif"
-                 width="50"
-                 alt="Close">
+<nav class="navbar">
 
-        </div>
 
+    <div id="close-navbar"
+         class="close-icon">
 
-        <ul class="navbar-links">
 
-
-            <!-- HOME -->
-
-            <li class="navbar-dropdown">
-
-                <a href="index.html">
-                    Home
-                </a>
-
-            </li>
-
-
-            <!-- COURSE -->
-
-            <li class="navbar-dropdown">
-
-                <a href="#">
-                    Course
-                </a>
-
-
-                <div class="dropdown">
-
-                    <ul>
-
-
-                        <!-- PRIMARY GROUP -->
-
-                        <li class="course-group">
-
-                            <a href="javascript:void(0);">
-
-                                Primary Group
-
-                                <span class="arrow">
-                                    ›
-                                </span>
-
-                            </a>
-
-
-                            <ul class="dropdown2">
-
-                                <li>
-
-                                    <a href="nursery.html">
-                                        Nursery to UKG
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a href="class-1-5.html">
-                                        Class 1st to 5th
-                                    </a>
-
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-                        <!-- SECONDARY GROUP -->
-
-                        <li class="course-group">
-
-                            <a href="javascript:void(0);">
-
-                                Secondary Group
-
-                                <span class="arrow">
-                                    ›
-                                </span>
-
-                            </a>
-
-
-                            <ul class="dropdown2">
-
-                                <li>
-
-                                    <a href="class-6-8.html">
-                                        Class 6th to 8th
-                                    </a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a href="class-9-10.html">
-                                        Class 9th to 10th
-                                    </a>
-
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-                    </ul>
-
-                </div>
-
-            </li>
-
-
-
-            <!-- ADMISSION -->
-
-            <li class="navbar-dropdown">
-
-                <a href="admission-form.html"
-                   target="_blank">
-
-                    Admissions
-
-                </a>
-
-            </li>
-
-             <!-- CAREERS -->
-
-            <li class="navbar-dropdown">
-
-                <a href="careers.html">
-
-                    Careers
-
-                </a>
-
-            </li>
-
-
-
-            <!-- CONTACT -->
-
-            <li class="navbar-dropdown">
-
-                <a href="contact-us.html">
-
-                    Contact us
-
-                </a>
-
-            </li>
-
-
-        </ul>
-
-    </nav>
-
-
-
-    <!-- ================= HEADER ICONS ================= -->
-
-    <div class="icons">
-
-
-        <!-- LOGIN ICON -->
-
-        <div id="account-btn"
-             class="header-icon"
-             style="cursor:pointer;">
-
-            <img src="Image/avatar-icon.svg"
-                 alt="Login">
-
-            <img src="Image/avatar-icon-hover.gif"
-                 alt="Login"
-                 width="10"
-                 class="header-icon-hover">
-
-        </div>
-
-
-        <!-- MENU ICON -->
-
-        <div id="menu-btn"
-             class="header-icon">
-
-            <img src="Image/menu-icon.svg"
-                 alt="Menu">
-
-            <img src="Image/menu-icon-hover.gif"
-                 alt="Menu"
-                 width="30"
-                 class="header-icon-hover">
-
-        </div>
+        <img src="Image/close-icon.gif"
+             width="50"
+             alt="Close Menu">
 
 
     </div>
 
 
+
+    <ul class="navbar-links">
+
+
+        <!-- HOME -->
+
+        <li>
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </li>
+
+
+
+        <!-- COURSE -->
+
+        <li class="navbar-dropdown">
+
+
+            <a href="#"
+               class="course-main-link">
+
+                Course
+
+            </a>
+
+
+            <div class="dropdown">
+
+
+                <ul>
+
+
+                    <!-- PRIMARY -->
+
+                    <li class="course-group">
+
+
+                        <a href="#">
+
+                            Primary Group
+
+                            <span class="arrow">
+                                ›
+                            </span>
+
+                        </a>
+
+
+                        <ul class="dropdown2">
+
+
+                            <li>
+
+                                <a href="nursery.html">
+                                    Nursery to UKG
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="class-1-5.html">
+                                    Class 1st to 5th
+                                </a>
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </li>
+
+
+
+                    <!-- SECONDARY -->
+
+                    <li class="course-group">
+
+
+                        <a href="#">
+
+                            Secondary Group
+
+                            <span class="arrow">
+                                ›
+                            </span>
+
+                        </a>
+
+
+                        <ul class="dropdown2">
+
+
+                            <li>
+
+                                <a href="class-6-8.html">
+                                    Class 6th to 8th
+                                </a>
+
+                            </li>
+
+
+                            <li>
+
+                                <a href="class-9-10.html">
+                                    Class 9th to 10th
+                                </a>
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+
+        </li>
+
+
+
+        <!-- ADMISSIONS -->
+
+        <li>
+
+            <a href="admission-form.html">
+
+                Admissions
+
+            </a>
+
+        </li>
+
+
+
+        <!-- CAREERS -->
+
+        <li>
+
+            <a href="careers.html">
+
+                Careers
+
+            </a>
+
+        </li>
+
+
+
+        <!-- CONTACT -->
+
+        <li>
+
+            <a href="contact-us.html">
+
+                Contact us
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+
+</nav>
+
+
+
+<!-- HEADER ICONS -->
+
+<div class="icons">
+
+
+    <!-- ACCOUNT -->
+
+    <div id="account-btn"
+         class="header-icon">
+
+
+        <img src="Image/avatar-icon.svg"
+             alt="Login">
+
+
+        <img src="Image/avatar-icon-hover.gif"
+             alt="Login"
+             class="header-icon-hover">
+
+
+    </div>
+
+
+
+    <!-- MENU -->
+
+    <div id="menu-btn"
+         class="header-icon">
+
+
+        <img src="Image/menu-icon.svg"
+             alt="Menu">
+
+
+        <img src="Image/menu-icon-hover.gif"
+             alt="Menu"
+             class="header-icon-hover">
+
+
+    </div>
+
+
+</div>
+```
+
 </header>
 
-<!-- ================= HEADER END ================= -->
-
-
-
-<!-- ================= LOGIN FORM START ================= -->
+<!-- =====================================================
+     ADMIN LOGIN FORM
+===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
 
-
-    <!-- CLOSE -->
-
-    <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
-
-        <img src="Image/close-icon.gif"
-             alt="Close"
-             width="50">
-
-    </div>
+```
+<div id="close-form"
+     class="close-icon">
 
 
-    <!-- LOGIN TITLE -->
+    <img src="Image/close-icon.gif"
+         alt="Close"
+         width="50">
 
-    <div class="buttons">
-
-        <span class="btn active login-btn">
-
-            Login
-
-        </span>
-
-    </div>
-
-
-    <!-- LOGIN FORM -->
-
-    <form class="login-form active"
-          id="schoolLoginForm">
-
-
-        <h3>
-            Login Now
-        </h3>
-
-
-        <!-- EMAIL -->
-
-        <input type="email"
-               id="loginEmail"
-               placeholder="Enter your email"
-               class="box"
-               required>
-
-
-        <!-- PASSWORD -->
-
-        <input type="password"
-               id="loginPassword"
-               placeholder="Enter your password"
-               class="box"
-               required>
-
-
-        <!-- REMEMBER -->
-
-        <div class="flex">
-
-            <input type="checkbox"
-                   id="remember-me">
-
-            <label for="remember-me">
-                Remember Me
-            </label>
-
-        </div>
-
-
-        <!-- MESSAGE -->
-
-        <p id="loginMessage"></p>
-
-
-        <!-- BUTTON -->
-
-        <button type="submit"
-                class="btn">
-
-            Login Now
-
-        </button>
-
-
-    </form>
 
 </div>
 
-<!-- ================= LOGIN FORM END ================= -->
+
+
+<div class="buttons">
+
+
+    <span class="btn active login-btn">
+
+        Admin Login
+
+    </span>
+
+
+</div>
 
 
 
-<!-- ================= CONTACT SECTION ================= -->
+<form class="login-form active"
+      id="schoolLoginForm">
 
-<section class="contact">
+
+    <h3>
+        Admin Login
+    </h3>
 
 
-    <div class="content">
+    <input type="email"
+           id="loginEmail"
+           placeholder="Enter your email"
+           class="box"
+           autocomplete="email"
+           required>
 
-        <h2 style="font-size:40px;">
 
-            Contact
+    <input type="password"
+           id="loginPassword"
+           placeholder="Enter your password"
+           class="box"
+           autocomplete="current-password"
+           required>
 
-            <span style="color:#fa8007">
-                Us
-            </span>
 
+    <div class="flex">
+
+
+        <input type="checkbox"
+               id="remember-me">
+
+
+        <label for="remember-me">
+            Remember Me
+        </label>
+
+
+    </div>
+
+
+    <p id="loginMessage"></p>
+
+
+    <button type="submit"
+            class="btn login-submit">
+
+        Login Now
+
+    </button>
+
+
+</form>
+```
+
+</div>
+
+<!-- =====================================================
+     CONTACT HERO
+===================================================== -->
+
+<section class="contact-page-hero">
+
+```
+<div class="contact-page-hero-content">
+
+
+    <h1>
+        Contact Us
+    </h1>
+
+
+    <p>
+        We Would Love to Hear From You
+    </p>
+
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     CONTACT MAIN
+===================================================== -->
+
+<section class="contact-page-main">
+
+<div class="contact-page-wrapper">
+
+
+    <!-- INTRO -->
+
+    <div class="contact-intro">
+
+
+        <h2>
+            Get In Touch With Us
         </h2>
 
-        <p></p>
+
+        <div class="line"></div>
+
+
+        <p>
+
+            Have a question about admissions, academics,
+            school activities or any other information?
+            Feel free to contact Maria's Podar Learn School,
+            Nilanga. Our team will be happy to assist you.
+
+        </p>
+
 
     </div>
 
 
 
-    <div class="contact-container">
+    <!-- CONTACT GRID -->
+
+    <div class="contact-page-grid">
 
 
-        <!-- CONTACT INFORMATION -->
+        <!-- =================================================
+             CONTACT INFORMATION
+        ================================================== -->
 
-        <div class="contactInfo">
+        <div class="contact-information">
+
+
+            <h2>
+                Contact Information
+            </h2>
+
+
+            <p>
+
+                You can reach us through the following
+                contact details.
+
+            </p>
+
 
 
             <!-- ADDRESS -->
 
-            <div class="box">
+            <div class="contact-info-item">
 
-                <div class="icon">
+
+                <div class="contact-info-icon">
 
                     <i class="fa-solid fa-location-dot"></i>
 
                 </div>
 
 
-                <div class="text">
+                <div class="contact-info-text">
+
 
                     <h3>
                         Address
                     </h3>
+
 
                     <p>
 
@@ -423,7 +1597,9 @@
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
@@ -431,26 +1607,35 @@
 
             <!-- PHONE -->
 
-            <div class="box">
+            <div class="contact-info-item">
 
-                <div class="icon">
+
+                <div class="contact-info-icon">
 
                     <i class="fa-solid fa-phone"></i>
 
                 </div>
 
 
-                <div class="text">
+                <div class="contact-info-text">
+
 
                     <h3>
                         Phone Number
                     </h3>
 
+
                     <p>
-                        8765735556
+
+                        <a href="tel:8765735556">
+                            8765735556
+                        </a>
+
                     </p>
 
+
                 </div>
+
 
             </div>
 
@@ -458,26 +1643,71 @@
 
             <!-- EMAIL -->
 
-            <div class="box">
+            <div class="contact-info-item">
 
-                <div class="icon">
+
+                <div class="contact-info-icon">
 
                     <i class="fa-solid fa-envelope"></i>
 
                 </div>
 
 
-                <div class="text">
+                <div class="contact-info-text">
+
 
                     <h3>
-                        Email Id
+                        Email Address
                     </h3>
 
+
                     <p>
-                        principal.mpls@podar.org
+
+                        <a href="mailto:principal.mpls@podar.org">
+
+                            principal.mpls@podar.org
+
+                        </a>
+
                     </p>
 
+
                 </div>
+
+
+            </div>
+
+
+
+            <!-- SCHOOL -->
+
+            <div class="contact-info-item">
+
+
+                <div class="contact-info-icon">
+
+                    <i class="fa-solid fa-school"></i>
+
+                </div>
+
+
+                <div class="contact-info-text">
+
+
+                    <h3>
+                        School
+                    </h3>
+
+
+                    <p>
+
+                        Maria's Podar Learn School Nilanga (CBSE)
+
+                    </p>
+
+
+                </div>
+
 
             </div>
 
@@ -486,34 +1716,39 @@
 
 
 
-        <!-- CONTACT FORM -->
+        <!-- =================================================
+             CONTACT FORM
+        ================================================== -->
 
-        <div class="contactForm">
+        <div class="contact-form-box">
 
 
-            <form method="post"
+            <h2>
+                Send Message
+            </h2>
+
+
+            <form id="contactForm"
                   name="contact-us">
-
-
-                <h2>
-                    Send Message
-                </h2>
-
-                <br>
 
 
                 <!-- FULL NAME -->
 
-                <div class="inputBox">
+                <div class="contact-input-box">
+
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
 
                     <input type="text"
+                           id="fullName"
                            name="Full Name"
-                           pattern="[A-z ]+"
+                           placeholder="Enter your full name"
+                           pattern="[A-Za-z ]+"
                            required>
 
-                    <span>
-                        Full Name
-                    </span>
 
                 </div>
 
@@ -521,15 +1756,20 @@
 
                 <!-- EMAIL -->
 
-                <div class="inputBox">
+                <div class="contact-input-box">
+
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
 
                     <input type="email"
+                           id="email"
                            name="Email"
+                           placeholder="Enter your email"
                            required>
 
-                    <span>
-                        Email
-                    </span>
 
                 </div>
 
@@ -537,15 +1777,20 @@
 
                 <!-- MESSAGE -->
 
-                <div class="inputBox">
+                <div class="contact-input-box">
+
+
+                    <label for="userMessage">
+                        Your Message
+                    </label>
+
 
                     <textarea
-                        required
-                        name="Type your Message"></textarea>
+                        id="userMessage"
+                        name="Type your Message"
+                        placeholder="Type your message..."
+                        required></textarea>
 
-                    <span>
-                        Type your Message...
-                    </span>
 
                 </div>
 
@@ -553,293 +1798,399 @@
 
                 <!-- SUBMIT -->
 
-                <div class="inputBox">
+                <button type="submit"
+                        class="contact-submit"
+                        id="contactSubmit">
 
-                    <input type="submit"
-                           name="submit"
-                           value="Send Message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Message
 
-                </div>
+                </button>
+
+
+                <p id="contactMessage"></p>
 
 
             </form>
 
+
         </div>
 
 
     </div>
+
+
+</div>
+```
 
 </section>
 
+<!-- =====================================================
+     GOOGLE MAP
+===================================================== -->
+
+<section class="map-section">
+
+```
+<div class="map-title">
 
 
-<br>
+    <h2>
+        Find Our School
+    </h2>
 
 
-
-<!-- ================= GOOGLE MAP ================= -->
-
-<iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.5096907172924!2d76.73167127464352!3d18.140419780676925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf6d9b6ee5b873%3A0x8be85cfc21936071!2sMaria%20Podar%20School%20Nilanga!5e0!3m2!1sen!2sin!4v1789310045396!5m2!1sen!2sin"
-    width="100%"
-    height="450"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="strict-origin-when-cross-origin">
-</iframe>
+    <div class="line"></div>
 
 
-
-<!-- ================= FOOTER ================= -->
-
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
-
-
-    <div class="content">
-
-
-        <div class="top">
-
-
-            <div class="logo-details">
-
-                <span>
-                    Maria’s Podar Learn School Nilanga
-                </span>
-
-            </div>
+</div>
 
 
 
-            <div class="media-icons">
+<div class="map-wrapper">
 
 
-                <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
-
-                    <i class="fab fa-facebook-f"></i>
-
-                </a>
-
-
-               <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.5096907172924!2d76.73167127464352!3d18.140419780676925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf6d9b6ee5b873%3A0x8be85cfc21936071!2sMaria%20Podar%20School%20Nilanga!5e0!3m2!1sen!2sin!4v1789310045396!5m2!1sen!2sin"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
 
 
-                <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+</div>
+```
 
-                    <i class="fab fa-instagram"></i>
+</section>
 
-                </a>
+<!-- =====================================================
+     FOOTER - INDEX STYLE
+===================================================== -->
 
+<footer>
 
-                <a href="#">
-
-                    <i class="fab fa-linkedin-in"></i>
-
-                </a>
-
-
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-                   target="_blank">
-
-                    <i class="fab fa-youtube"></i>
-
-                </a>
+<div class="content">
 
 
-            </div>
+    <div class="top">
+
+
+        <div class="logo-details">
+
+            <span>
+                Maria’s Podar Learn School Nilanga
+            </span>
 
         </div>
 
 
 
-        <!-- ================= FOOTER LINKS ================= -->
-
-        <div class="link-boxes">
+        <div class="media-icons">
 
 
-            <!-- ABOUT -->
+            <!-- FACEBOOK -->
 
-            <ul class="box">
+            <a href="https://www.facebook.com/him.sonepat/"
+               target="_blank"
+               rel="noopener">
 
-                <li class="link_name">
-                    About
-                </li>
+                <i class="fab fa-facebook-f"></i>
 
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact-us.html">
-                        Contact us
-                    </a>
-                </li>
-
-                <li>
-                    <a href="About-us.html">
-                        About us
-                    </a>
-                </li>
-
-            </ul>
+            </a>
 
 
 
-            <!-- QUICK LINKS -->
+            <!-- EMAIL -->
 
-            <ul class="box">
+            <a href="mailto:principal.mpls@podar.org">
 
-                <li class="link_name">
-                    Quick Links
-                </li>
+                <i class="fa-solid fa-envelope"></i>
 
-                <li>
-                    <a href="admission-form.html">
-                        Admission Form
-                    </a>
-                </li>
-
-                <li>
-                    <a href="index.html#notice-board">
-                        Notice Board
-                    </a>
-                </li>
-
-                <li>
-                    <a href="index.html">
-                        School Site
-                    </a>
-                </li>
-
-            </ul>
+            </a>
 
 
 
-            <!-- STUDENT CORNER -->
+            <!-- INSTAGRAM -->
 
-            <ul class="box">
+            <a href="https://instagram.com/mariaspodarschoolnilanga"
+               target="_blank"
+               rel="noopener">
 
-                <li class="link_name">
-                    Student's Corner
-                </li>
+                <i class="fab fa-instagram"></i>
 
-                <li>
-                    <a href="fees-payment.html">
-                        Fees Payment
-                    </a>
-                </li>
-
-                <li>
-                    <a href="complaint.html">
-                        Complaint Section
-                    </a>
-                </li>
-
-                <li>
-                    <a href="careers.html">
-                      Careers
-                    </a>
-                </li>
-
-            </ul>
+            </a>
 
 
 
-            <!-- ================= ACCOUNT ================= -->
+            <!-- LINKEDIN -->
 
-           <ul class="box">
+            <a href="#">
 
-    <li class="link_name">
-        Account
-    </li>
+                <i class="fab fa-linkedin-in"></i>
 
-    <!-- ADMIN LOGIN -->
-    <li>
-        <a href="#" id="adminLoginLink">
-            Admin Login
-        </a>
-    </li>
-
-    <!-- EVENTS -->
-    <li>
-        <a href="events.html">
-            Events
-        </a>
-    </li>
-
-    <!-- GALLERY -->
-    <li>
-        <a href="gallery.html">
-            Gallery
-        </a>
-    </li>
-
-</ul>
+            </a>
 
 
 
+            <!-- YOUTUBE -->
 
+            <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+               target="_blank"
+               rel="noopener">
 
-            <!-- ================= SUBSCRIBE ================= -->
+                <i class="fab fa-youtube"></i>
 
-            <ul class="box input-box">
-
-                <li class="link_name">
-                    Subscribe
-                </li>
-
-
-                <li>
-
-                    <input type="email"
-                           id="subscribeEmail"
-                           placeholder="Enter your email"
-                           required>
-
-                </li>
-
-
-                <li>
-
-                    <input type="button"
-                           value="Subscribe"
-                           onclick="subscribeUser()">
-
-                </li>
-
-
-                <li>
-
-                    <p id="subscribeMessage"></p>
-
-                </li>
-
-
-            </ul>
+            </a>
 
 
         </div>
+
 
     </div>
 
+
+
+    <!-- FOOTER LINKS -->
+
+    <div class="link-boxes">
+
+
+        <!-- ABOUT -->
+
+        <ul class="box">
+
+
+            <li class="link_name">
+                About
+            </li>
+
+
+            <li>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="contact-us.html">
+                    Contact us
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="About-us.html">
+                    About us
+                </a>
+
+            </li>
+
+
+        </ul>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <ul class="box">
+
+
+            <li class="link_name">
+                Quick Links
+            </li>
+
+
+            <li>
+
+                <a href="admission-form.html">
+                    Admission Form
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="index.html#notice-board">
+                    Notice Board
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="index.html">
+                    School Site
+                </a>
+
+            </li>
+
+
+        </ul>
+
+
+
+        <!-- STUDENT CORNER -->
+
+        <ul class="box">
+
+
+            <li class="link_name">
+                Student's Corner
+            </li>
+
+
+            <li>
+
+                <a href="fees-payment.html">
+                    Fees Payment
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="complaint.html">
+                    Complaint Section
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="careers.html">
+                    Careers
+                </a>
+
+            </li>
+
+
+        </ul>
+
+
+
+        <!-- ACCOUNT -->
+
+        <ul class="box">
+
+
+            <li class="link_name">
+                Account
+            </li>
+
+
+            <li>
+
+                <a href="#"
+                   id="adminLoginLink">
+
+                    Admin Login
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+            </li>
+
+
+        </ul>
+
+
+
+        <!-- SUBSCRIBE -->
+
+        <ul class="box input-box">
+
+
+            <li class="link_name">
+                Subscribe
+            </li>
+
+
+            <li>
+
+                <input type="email"
+                       id="subscribeEmail"
+                       placeholder="Enter your email">
+
+
+            </li>
+
+
+            <li>
+
+                <button type="button"
+                        onclick="subscribeUser()">
+
+                    Subscribe
+
+                </button>
+
+            </li>
+
+
+            <li>
+
+                <p id="subscribeMessage"></p>
+
+            </li>
+
+
+        </ul>
+
+
+    </div>
+
+
+</div>
+
 </footer>
 
+<!-- =====================================================
+     TIDIO
+===================================================== -->
 
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
 
-<!-- ================= MAIN JS ================= -->
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
 
 <script src="js/script.js"></script>
 
-
-
-<!-- ================= CONTACT FORM SCRIPT ================= -->
+<!-- =====================================================
+     CONTACT FORM SCRIPT
+===================================================== -->
 
 <script>
 
@@ -848,19 +2199,23 @@ document.addEventListener(
     function () {
 
 
+        const form =
+            document.getElementById("contactForm");
+
+
+        const submitButton =
+            document.getElementById("contactSubmit");
+
+
+        const message =
+            document.getElementById("contactMessage");
+
+
         const scriptURL =
             "https://script.google.com/macros/s/AKfycbzGJlDwDGll-2vRQLZFcCuywkLqXBxAfl1OBCAyrwImgmDOsNKcKU-wg-Q-yhxqQ3L1Ow/exec";
 
 
-        const form =
-            document.forms["contact-us"];
-
-
         if (!form) {
-
-            console.error(
-                "Contact form not found"
-            );
 
             return;
 
@@ -871,21 +2226,19 @@ document.addEventListener(
             "submit",
             async function (e) {
 
+
                 e.preventDefault();
 
 
-                const submitButton =
-                    form.querySelector(
-                        'input[type="submit"]'
-                    );
+                submitButton.disabled = true;
 
 
-                submitButton.value =
-                    "Sending...";
+                submitButton.innerHTML =
+                    '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
 
 
-                submitButton.disabled =
-                    true;
+                message.textContent =
+                    "";
 
 
                 try {
@@ -905,9 +2258,12 @@ document.addEventListener(
                     );
 
 
-                    alert(
-                        "Thanks for your feedback!"
-                    );
+                    message.textContent =
+                        "Thank you for contacting us! Your message has been sent successfully.";
+
+
+                    message.style.color =
+                        "green";
 
 
                     form.reset();
@@ -919,29 +2275,33 @@ document.addEventListener(
 
 
                     console.error(
-                        "Error!",
+                        "Contact form error:",
                         error
                     );
 
 
-                    alert(
-                        "Something went wrong. Please try again."
-                    );
+                    message.textContent =
+                        "Something went wrong. Please try again.";
 
+
+                    message.style.color =
+                        "red";
 
                 }
 
+
                 finally {
-
-
-                    submitButton.value =
-                        "Send Message";
 
 
                     submitButton.disabled =
                         false;
 
+
+                    submitButton.innerHTML =
+                        '<i class="fa-solid fa-paper-plane"></i> Send Message';
+
                 }
+
 
             }
         );
@@ -951,34 +2311,44 @@ document.addEventListener(
 
 </script>
 
-
-
-<!-- ================= SUBSCRIBE SCRIPT ================= -->
+<!-- =====================================================
+     SUBSCRIBE SCRIPT
+===================================================== -->
 
 <script>
 
 function subscribeUser() {
 
 
-    const email =
-        document.getElementById(
-            "subscribeEmail"
-        ).value.trim();
+    const emailInput =
+        document.getElementById("subscribeEmail");
 
 
     const message =
-        document.getElementById(
-            "subscribeMessage"
-        );
+        document.getElementById("subscribeMessage");
+
+
+    if (!emailInput || !message) {
+
+        return;
+
+    }
+
+
+    const email =
+        emailInput.value.trim();
 
 
     if (email === "") {
 
-        message.innerHTML =
+
+        message.textContent =
             "Please enter your email.";
+
 
         message.style.color =
             "red";
+
 
         return;
 
@@ -990,11 +2360,14 @@ function subscribeUser() {
         !email.includes(".")
     ) {
 
-        message.innerHTML =
+
+        message.textContent =
             "Please enter a valid email.";
+
 
         message.style.color =
             "red";
+
 
         return;
 
@@ -1005,7 +2378,17 @@ function subscribeUser() {
         "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
-    message.innerHTML =
+    const formData =
+        new FormData();
+
+
+    formData.append(
+        "email",
+        email
+    );
+
+
+    message.textContent =
         "Submitting...";
 
 
@@ -1016,53 +2399,55 @@ function subscribeUser() {
     fetch(
         scriptURL,
         {
-
             method: "POST",
+            body: formData,
+            mode: "no-cors"
+        }
+    )
 
-            body:
-                new URLSearchParams({
-                    email: email
-                })
+    .then(
+        function () {
+
+
+            message.textContent =
+                "Thank you for subscribing! 😊";
+
+
+            message.style.color =
+                "lightgreen";
+
+
+            emailInput.value = "";
+
 
         }
     )
 
-
-    .then(function () {
-
-        message.innerHTML =
-            "Thank you for subscribing! 😊";
-
-        message.style.color =
-            "lightgreen";
+    .catch(
+        function (error) {
 
 
-        document.getElementById(
-            "subscribeEmail"
-        ).value = "";
-
-    })
+            console.error(error);
 
 
-    .catch(function (error) {
+            message.textContent =
+                "Something went wrong. Please try again.";
 
-        console.error(error);
 
-        message.innerHTML =
-            "Something went wrong. Please try again.";
+            message.style.color =
+                "red";
 
-        message.style.color =
-            "red";
 
-    });
+        }
+    );
 
 }
 
 </script>
 
-
-
-<!-- ================= COURSE DROPDOWN ================= -->
+<!-- =====================================================
+     COURSE DROPDOWN
+===================================================== -->
 
 <script>
 
@@ -1083,8 +2468,7 @@ document.querySelectorAll(
 
 
                 const submenu =
-                    this.parentElement
-                    .querySelector(
+                    this.parentElement.querySelector(
                         ".dropdown2"
                     );
 
@@ -1095,9 +2479,7 @@ document.querySelectorAll(
                     function (menu) {
 
 
-                        if (
-                            menu !== submenu
-                        ) {
+                        if (menu !== submenu) {
 
                             menu.classList.remove(
                                 "show"
@@ -1113,6 +2495,7 @@ document.querySelectorAll(
                     "show"
                 );
 
+
             }
         );
 
@@ -1121,9 +2504,9 @@ document.querySelectorAll(
 
 </script>
 
-
-
-<!-- ================= ADMIN LOGIN SCRIPT ================= -->
+<!-- =====================================================
+     ADMIN LOGIN SCRIPT
+===================================================== -->
 
 <script>
 
@@ -1131,10 +2514,6 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
 
-
-        /* =========================
-           LOGIN ELEMENTS
-        ========================= */
 
         const accountBtn =
             document.getElementById(
@@ -1160,14 +2539,13 @@ document.addEventListener(
             );
 
 
-        /* =========================
-           HEADER LOGIN ICON
-        ========================= */
+        /* HEADER LOGIN */
 
         if (
             accountBtn &&
             accountForm
         ) {
+
 
             accountBtn.addEventListener(
                 "click",
@@ -1184,11 +2562,6 @@ document.addEventListener(
                     );
 
 
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-
                 }
             );
 
@@ -1196,14 +2569,13 @@ document.addEventListener(
 
 
 
-        /* =========================
-           FOOTER ADMIN LOGIN
-        ========================= */
+        /* FOOTER LOGIN */
 
         if (
             adminLoginLink &&
             accountForm
         ) {
+
 
             adminLoginLink.addEventListener(
                 "click",
@@ -1220,11 +2592,6 @@ document.addEventListener(
                     );
 
 
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-
                 }
             );
 
@@ -1232,14 +2599,13 @@ document.addEventListener(
 
 
 
-        /* =========================
-           CLOSE LOGIN
-        ========================= */
+        /* CLOSE */
 
         if (
             closeForm &&
             accountForm
         ) {
+
 
             closeForm.addEventListener(
                 "click",
@@ -1255,6 +2621,7 @@ document.addEventListener(
                         "active"
                     );
 
+
                 }
             );
 
@@ -1262,9 +2629,7 @@ document.addEventListener(
 
 
 
-        /* =========================
-           LOGIN FORM
-        ========================= */
+        /* LOGIN */
 
         const loginForm =
             document.getElementById(
@@ -1273,6 +2638,7 @@ document.addEventListener(
 
 
         if (loginForm) {
+
 
             loginForm.addEventListener(
                 "submit",
@@ -1300,22 +2666,14 @@ document.addEventListener(
                         );
 
 
-
-                    /* =========================
-                       CORRECT LOGIN
-                    ========================= */
-
                     if (
-                        email ===
-                        "admin@school.com"
-                        &&
-                        password ===
-                        "Admin@123"
+                        email === "admin@school.com" &&
+                        password === "Admin@123"
                     ) {
 
 
-                        message.innerHTML =
-                            "Login Successful! ✅";
+                        message.textContent =
+                            "Login successful!";
 
 
                         message.style.color =
@@ -1331,26 +2689,22 @@ document.addEventListener(
 
 
                             },
-                            1000
+                            700
                         );
 
+
                     }
-
-
-
-                    /* =========================
-                       WRONG LOGIN
-                    ========================= */
 
                     else {
 
 
-                        message.innerHTML =
-                            "Invalid Email or Password ❌";
+                        message.textContent =
+                            "Invalid email or password.";
 
 
                         message.style.color =
                             "red";
+
 
                     }
 
@@ -1359,12 +2713,48 @@ document.addEventListener(
 
         }
 
+
     }
 );
 
 </script>
 
+<!-- =====================================================
+     ESC KEY
+===================================================== -->
 
+<script>
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+
+        if (event.key === "Escape") {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+
+            }
+
+        }
+
+    }
+);
+
+</script>
 
 </body>
 

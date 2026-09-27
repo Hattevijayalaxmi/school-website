@@ -12,73 +12,955 @@
 
     <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
 
     <link rel="shortcut icon"
           href="Image/Logo.jpeg"
           type="image/png">
 
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/responsive.css">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         ADMISSION PAGE CSS
+    ====================================================== -->
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #f7f9fc;
+        }
+
+
+        /* =====================================================
+           ADMISSION HERO
+        ====================================================== */
+
+        .admission-page-hero {
+
+            position: relative;
+
+            width: 100%;
+            min-height: 430px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.30),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("Image/Image.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+
+        .admission-page-hero-content {
+
+            width: 90%;
+            max-width: 1000px;
+
+            padding: 30px 20px;
+        }
+
+
+        .admission-page-hero-content h1 {
+
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 58px;
+            font-weight: 700;
+
+            line-height: 1.2;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 4px 12px rgba(0,0,0,0.60);
+        }
+
+
+        .admission-page-hero-content p {
+
+            margin: 18px 0 0;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 23px;
+            font-weight: 600;
+
+            line-height: 1.5;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 3px 8px rgba(0,0,0,0.60);
+        }
+
+
+        /* =====================================================
+           ADMISSION MAIN AREA
+        ====================================================== */
+
+        .admission-main {
+
+            width: 100%;
+
+            padding: 60px 0 70px;
+
+            background: #f7f9fc;
+        }
+
+
+        .admission-wrapper {
+
+            width: 92%;
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .admission-intro {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+
+        .admission-intro h2 {
+
+            margin: 0 0 12px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 34px;
+            font-weight: 700;
+
+            color: #122b49;
+        }
+
+
+        .admission-intro .line {
+
+            width: 75px;
+            height: 4px;
+
+            margin: 0 auto 18px;
+
+            border-radius: 10px;
+
+            background: #f39c12;
+        }
+
+
+        .admission-intro p {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #555;
+        }
+
+
+        /* =====================================================
+           FORM CONTAINER
+        ====================================================== */
+
+        .admission-form-container {
+
+            width: 100%;
+
+            padding: 40px;
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.08);
+        }
+
+
+        .admission-form-container > header {
+
+            margin-bottom: 35px;
+
+            text-align: center;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 30px;
+            font-weight: 700;
+
+            color: #122b49;
+        }
+
+
+        /* =====================================================
+           STEP
+        ====================================================== */
+
+        .step {
+
+            display: none;
+        }
+
+
+        .step.active {
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           DETAILS
+        ====================================================== */
+
+        .details {
+
+            width: 100%;
+
+            margin-bottom: 35px;
+
+            padding: 25px;
+
+            border: 1px solid #e5e8ed;
+
+            border-radius: 14px;
+
+            background: #ffffff;
+        }
+
+
+        .details .title {
+
+            display: block;
+
+            margin-bottom: 25px;
+
+            padding-bottom: 12px;
+
+            border-bottom: 3px solid #f39c12;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 23px;
+            font-weight: 700;
+
+            color: #122b49;
+        }
+
+
+        .step-number {
+
+            float: right;
+
+            margin-top: -52px;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            color: #777;
+        }
+
+
+        /* =====================================================
+           FIELDS
+        ====================================================== */
+
+        .fields {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .input-field {
+
+            width: 100%;
+        }
+
+
+        .input-field label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            color: #333;
+        }
+
+
+        .input-field .star {
+
+            color: red;
+
+            font-weight: 700;
+        }
+
+
+        .input-field input,
+        .input-field select {
+
+            width: 100%;
+
+            height: 48px;
+
+            padding: 0 14px;
+
+            border: 1px solid #d9dde3;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            background: #ffffff;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 15px;
+
+            color: #333;
+
+            transition: 0.3s ease;
+        }
+
+
+        .input-field input:focus,
+        .input-field select:focus {
+
+            border-color: #f39c12;
+
+            box-shadow:
+                0 0 0 3px rgba(243,156,18,0.10);
+        }
+
+
+        .input-field input::placeholder {
+
+            color: #999;
+        }
+
+
+        /* =====================================================
+           COURSE FIELD
+        ====================================================== */
+
+        .course-field {
+
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           FORM BUTTONS
+        ====================================================== */
+
+        .form-navigation {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+
+        .form-navigation button,
+        .next-btn,
+        .previous-btn,
+        .submit-btn {
+
+            min-width: 130px;
+
+            padding: 13px 25px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+
+        .next-btn,
+        .submit-btn {
+
+            margin-left: auto;
+
+            background: #122b49;
+
+            color: #ffffff;
+        }
+
+
+        .next-btn:hover,
+        .submit-btn:hover {
+
+            background: #f39c12;
+
+            transform: translateY(-2px);
+        }
+
+
+        .previous-btn {
+
+            background: #e9edf2;
+
+            color: #122b49;
+        }
+
+
+        .previous-btn:hover {
+
+            background: #d9dfe7;
+        }
+
+
+        .submit-btn:disabled {
+
+            opacity: 0.6;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* =====================================================
+           STEP 2 BUTTONS
+        ====================================================== */
+
+        .step-2 .buttons {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            margin-top: 30px;
+
+            gap: 15px;
+        }
+
+
+        /* =====================================================
+           ADMIN LOGIN PAGE SUPPORT
+        ====================================================== */
+
+        #loginMessage {
+
+            margin: 10px 0;
+
+            font-family: 'Quicksand', sans-serif;
+
+            font-size: 14px;
+
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           MOBILE 768px
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .admission-page-hero {
+
+                min-height: 430px;
+            }
+
+
+            .admission-page-hero-content h1 {
+
+                font-size: 43px;
+            }
+
+
+            .admission-page-hero-content p {
+
+                font-size: 20px;
+            }
+
+
+            .admission-main {
+
+                padding: 45px 0 55px;
+            }
+
+
+            .admission-wrapper {
+
+                width: 94%;
+            }
+
+
+            .admission-intro h2 {
+
+                font-size: 27px;
+            }
+
+
+            .admission-intro p {
+
+                font-size: 15px;
+            }
+
+
+            .admission-form-container {
+
+                padding: 30px 22px;
+            }
+
+
+            .admission-form-container > header {
+
+                font-size: 26px;
+            }
+
+
+            .fields {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 18px;
+            }
+
+
+            .details {
+
+                padding: 22px 18px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE 480px
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            html,
+            body {
+
+                width: 100%;
+                max-width: 100%;
+
+                overflow-x: hidden;
+            }
+
+
+            .admission-page-hero {
+
+                min-height: 390px;
+
+                background-position: center;
+            }
+
+
+            .admission-page-hero-content {
+
+                width: 95%;
+
+                padding: 20px 10px;
+            }
+
+
+            .admission-page-hero-content h1 {
+
+                font-size: 32px;
+
+                line-height: 1.25;
+            }
+
+
+            .admission-page-hero-content p {
+
+                margin-top: 12px;
+
+                font-size: 17px;
+
+                line-height: 1.5;
+            }
+
+
+            .admission-main {
+
+                padding: 35px 0 45px;
+            }
+
+
+            .admission-wrapper {
+
+                width: 94%;
+            }
+
+
+            .admission-intro {
+
+                margin-bottom: 25px;
+            }
+
+
+            .admission-intro h2 {
+
+                font-size: 23px;
+
+                line-height: 1.4;
+            }
+
+
+            .admission-intro p {
+
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+
+            .admission-form-container {
+
+                padding: 22px 14px;
+
+                border-radius: 12px;
+            }
+
+
+            .admission-form-container > header {
+
+                margin-bottom: 25px;
+
+                font-size: 23px;
+            }
+
+
+            .fields {
+
+                grid-template-columns: 1fr;
+
+                gap: 17px;
+            }
+
+
+            .details {
+
+                padding: 20px 15px;
+
+                margin-bottom: 22px;
+            }
+
+
+            .details .title {
+
+                font-size: 19px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .step-number {
+
+                margin-top: -45px;
+
+                font-size: 12px;
+            }
+
+
+            .input-field label {
+
+                font-size: 13px;
+            }
+
+
+            .input-field input,
+            .input-field select {
+
+                height: 46px;
+
+                font-size: 14px;
+            }
+
+
+            .form-navigation {
+
+                flex-direction: column;
+            }
+
+
+            .next-btn,
+            .previous-btn,
+            .submit-btn {
+
+                width: 100%;
+
+                margin-left: 0;
+            }
+
+
+            .step-2 .buttons {
+
+                flex-direction: column;
+            }
+
+
+            .step-2 .buttons button {
+
+                width: 100%;
+            }
+
+        }
+
+
+        /* =====================================================
+           EXTRA SMALL 360px
+        ====================================================== */
+
+        @media (max-width: 360px) {
+
+            .admission-page-hero {
+
+                min-height: 370px;
+            }
+
+
+            .admission-page-hero-content h1 {
+
+                font-size: 28px;
+            }
+
+
+            .admission-page-hero-content p {
+
+                font-size: 15px;
+            }
+
+
+            .admission-intro h2 {
+
+                font-size: 21px;
+            }
+
+
+            .admission-intro p {
+
+                font-size: 13px;
+            }
+
+
+            .admission-form-container {
+
+                padding: 18px 10px;
+            }
+
+
+            .details {
+
+                padding: 18px 12px;
+            }
+
+
+            .details .title {
+
+                font-size: 18px;
+            }
+
+
+            .step-number {
+
+                font-size: 11px;
+            }
+
+
+            .input-field input,
+            .input-field select {
+
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
 
-<!-- ================= HEADER START ================= -->
+<!-- =====================================================
+     HEADER - SAME AS INDEX / ABOUT
+===================================================== -->
 
 <header class="header">
 
-    <a href="index.html" class="logo">
+
+    <a href="index.html"
+       class="logo">
+
 
         <img src="Image/Logo.jpeg"
-             alt="School Logo"
-             style="width:80px;height:55px;">
+             alt="Maria's Podar Learn School Logo">
+
 
         <div class="collage-name">
-            Maria’s Podar Learn School Nilanga
+
+            Maria's Podar Learn School Nilanga
+
         </div>
+
 
     </a>
 
 
+
+    <!-- NAVBAR -->
+
     <nav class="navbar">
+
 
         <div id="close-navbar"
              class="close-icon">
 
+
             <img src="Image/close-icon.gif"
-                 width="50">
+                 width="50"
+                 alt="Close Menu">
+
 
         </div>
 
 
+
         <ul class="navbar-links">
 
-            <li class="navbar-dropdown">
+
+            <!-- HOME -->
+
+            <li>
 
                 <a href="index.html">
+
                     Home
+
                 </a>
 
             </li>
 
 
-            <!-- ================= COURSE ================= -->
+
+            <!-- =================================================
+                 COURSE
+            ================================================== -->
 
             <li class="navbar-dropdown">
 
-                <a href="#">
+
+                <a href="#"
+                   class="course-main-link">
+
                     Course
+
                 </a>
 
 
                 <div class="dropdown">
+
 
                     <ul>
 
@@ -87,7 +969,8 @@
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Primary Group
 
@@ -100,28 +983,42 @@
 
                             <ul class="dropdown2">
 
-                                <li>
-                                    <a href="nursery.html">
-                                        Nursery to UKG
-                                    </a>
-                                </li>
 
                                 <li>
-                                    <a href="class-1-5.html">
-                                        Class 1st to 5th
+
+                                    <a href="nursery.html">
+
+                                        Nursery to UKG
+
                                     </a>
+
                                 </li>
+
+
+                                <li>
+
+                                    <a href="class-1-5.html">
+
+                                        Class 1st to 5th
+
+                                    </a>
+
+                                </li>
+
 
                             </ul>
 
+
                         </li>
+
 
 
                         <!-- SECONDARY GROUP -->
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Secondary Group
 
@@ -134,42 +1031,62 @@
 
                             <ul class="dropdown2">
 
-                                <li>
-                                    <a href="class-6-8.html">
-                                        Class 6th to 8th
-                                    </a>
-                                </li>
 
                                 <li>
-                                    <a href="class-9-10.html">
-                                        Class 9th to 10th
+
+                                    <a href="class-6-8.html">
+
+                                        Class 6th to 8th
+
                                     </a>
+
                                 </li>
+
+
+                                <li>
+
+                                    <a href="class-9-10.html">
+
+                                        Class 9th to 10th
+
+                                    </a>
+
+                                </li>
+
 
                             </ul>
 
+
                         </li>
+
 
                     </ul>
 
+
                 </div>
+
 
             </li>
 
 
-            <!-- ================= ADMISSION ================= -->
 
-            <li class="navbar-dropdown">
+            <!-- ADMISSIONS -->
+
+            <li>
 
                 <a href="admission-form.html">
+
                     Admissions
+
                 </a>
 
             </li>
 
-             <!-- CAREERS -->
 
-            <li class="navbar-dropdown">
+
+            <!-- CAREERS -->
+
+            <li>
 
                 <a href="careers.html">
 
@@ -180,96 +1097,119 @@
             </li>
 
 
-            <!-- ================= CONTACT ================= -->
 
-            <li class="navbar-dropdown">
+            <!-- CONTACT -->
+
+            <li>
 
                 <a href="contact-us.html">
+
                     Contact us
+
                 </a>
 
             </li>
 
+
         </ul>
+
 
     </nav>
 
 
-    <!-- MENU BUTTON -->
 
-    <div id="menu-btn"
-         class="header-icon">
+    <!-- HEADER ICONS -->
 
-        <img src="Image/menu-icon.svg"
-             alt="menu-icon">
+    <div class="icons">
 
-        <img src="Image/menu-icon-hover.gif"
-             alt="menu-icon"
-             width="30"
-             class="header-icon-hover">
+
+        <!-- ACCOUNT -->
+
+        <div id="account-btn"
+             class="header-icon">
+
+
+            <img src="Image/avatar-icon.svg"
+                 alt="Login">
+
+
+            <img src="Image/avatar-icon-hover.gif"
+                 alt="Login"
+                 class="header-icon-hover">
+
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <div id="menu-btn"
+             class="header-icon">
+
+
+            <img src="Image/menu-icon.svg"
+                 alt="Menu">
+
+
+            <img src="Image/menu-icon-hover.gif"
+                 alt="Menu"
+                 class="header-icon-hover">
+
+
+        </div>
+
 
     </div>
 
-
-    <!-- ADMIN LOGIN ICON -->
-
-    <div id="account-btn"
-         class="header-icon"
-         style="cursor:pointer;">
-
-        <img src="Image/avatar-icon.svg"
-             alt="Login">
-
-        <img src="Image/avatar-icon-hover.gif"
-             alt="Login"
-             width="30"
-             class="header-icon-hover">
-
-    </div>
 
 </header>
 
-<!-- ================= HEADER END ================= -->
 
 
-
-<!-- ================= ADMIN LOGIN FORM ================= -->
+<!-- =====================================================
+     ADMIN LOGIN
+===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
 
 
-    <!-- CLOSE -->
-
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
+         class="close-icon">
+
 
         <img src="Image/close-icon.gif"
              alt="Close"
              width="50">
 
+
     </div>
 
 
-    <!-- LOGIN BUTTON -->
 
     <div class="buttons">
 
+
         <span class="btn active login-btn">
-            Login
+
+            Admin Login
+
         </span>
+
 
     </div>
 
 
-    <!-- LOGIN FORM -->
 
     <form class="login-form active"
           id="schoolLoginForm">
 
+
         <h3>
-            Login Now
+
+            Admin Login
+
         </h3>
 
 
@@ -277,6 +1217,7 @@
                id="loginEmail"
                placeholder="Enter your email"
                class="box"
+               autocomplete="email"
                required>
 
 
@@ -284,17 +1225,23 @@
                id="loginPassword"
                placeholder="Enter your password"
                class="box"
+               autocomplete="current-password"
                required>
 
 
         <div class="flex">
 
+
             <input type="checkbox"
                    id="remember-me">
 
+
             <label for="remember-me">
+
                 Remember Me
+
             </label>
+
 
         </div>
 
@@ -303,818 +1250,1070 @@
 
 
         <button type="submit"
-                class="btn">
+                class="btn login-submit">
 
             Login Now
 
         </button>
 
+
     </form>
+
 
 </div>
 
-<!-- ================= ADMIN LOGIN FORM END ================= -->
 
 
+<!-- =====================================================
+     ADMISSION HERO
+===================================================== -->
 
-<!-- ================= ADMISSION FORM START ================= -->
+<section class="admission-page-hero">
 
-<div class="form-section">
 
-    <div class="container">
+    <div class="admission-page-hero-content">
 
-        <header>
-            Registration
-        </header>
 
+        <h1>
 
-        <form id="admissionForm"
-              name="admission-form"
-              method="post">
+            Admission Form
 
+        </h1>
 
-            <!-- ================= STEP 1 ================= -->
 
-            <div class="form step step-1 active">
+        <p>
 
-                <div class="details personal">
+            Begin Your Child's Journey With Us
 
-                    <span class="title">
-                        Personal Details
-                    </span>
+        </p>
 
-
-                    <span style="float:right;font-size:16px;margin:5px 35px;">
-                        ( step 1/2 )
-                    </span>
-
-
-                    <div class="fields">
-
-
-                        <!-- FULL NAME -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Full Name
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter your name"
-                                   name="Full Name"
-                                   required>
-
-                        </div>
-
-
-                        <!-- DOB -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Date of Birth
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="date"
-                                   name="Date of Birth"
-                                   required>
-
-                        </div>
-
-
-                        <!-- GENDER -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Gender
-                                <span class="star">*</span>
-                            </label>
-
-                            <select name="gender"
-                                    required>
-
-                                <option value=""
-                                        disabled
-                                        selected>
-                                    Select gender
-                                </option>
-
-                                <option value="Male">
-                                    Male
-                                </option>
-
-                                <option value="Female">
-                                    Female
-                                </option>
-
-                                <option value="Other">
-                                    Other
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- EMAIL -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Email
-                            </label>
-
-                            <input type="email"
-                                   placeholder="Enter your email"
-                                   name="Email">
-
-                        </div>
-
-
-                        <!-- MOBILE -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Mobile Number
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="tel"
-                                   placeholder="Enter mobile number"
-                                   name="Mobile Number"
-                                   pattern="[6789][0-9]{9}"
-                                   maxlength="10"
-                                   required>
-
-                        </div>
-
-
-                        <!-- ID TYPE -->
-
-                        <div class="input-field">
-
-                            <label>
-                                ID Type
-                                <span class="star">*</span>
-                            </label>
-
-                            <select name="idType"
-                                    required>
-
-                                <option value=""
-                                        disabled
-                                        selected>
-                                    Select ID Type
-                                </option>
-
-                                <option value="Aadhaar Card">
-                                    Aadhaar Card
-                                </option>
-
-                                <option value="Voter ID">
-                                    Voter ID
-                                </option>
-
-                                <option value="PAN Card">
-                                    PAN Card
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                        
-
-
-                        <!-- ID NUMBER -->
-
-                        <div class="input-field">
-
-                            <label>
-                                ID Number
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter ID number"
-                                   name="ID Number"
-                                   required>
-
-                                   
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ================= COURSE ================= -->
-
-                <div class="details Family">
-
-                    <span class="title"
-                          style="margin-top:40px;">
-
-                        Course Admission
-
-                    </span>
-
-
-                    <div class="fields">
-
-                        <div class="input-field"
-                             style="width:90%;">
-
-                            <label>
-
-                                Course you wish to join
-
-                                <span class="star">
-                                    *
-                                </span>
-
-                            </label>
-
-
-                            <select name="course"
-                                    required>
-
-                                <option value=""
-                                        disabled
-                                        selected>
-
-                                    Select Course
-
-                                </option>
-
-                                <option value="Nursery">
-                                    Nursery
-                                </option>
-
-                                <option value="LKG">
-                                    LKG
-                                </option>
-
-                                <option value="UKG">
-                                    UKG
-                                </option>
-
-                                <option value="1st">
-                                    1st
-                                </option>
-
-                                <option value="2nd">
-                                    2nd
-                                </option>
-
-                                <option value="3rd">
-                                    3rd
-                                </option>
-
-                                <option value="4th">
-                                    4th
-                                </option>
-
-                                <option value="5th">
-                                    5th
-                                </option>
-
-                                <option value="6th">
-                                    6th
-                                </option>
-
-                                <option value="7th">
-                                    7th
-                                </option>
-
-                                <option value="8th">
-                                    8th
-                                </option>
-
-                                <option value="9th">
-                                    9th
-                                </option>
-
-                                <option value="10th">
-                                    10th
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- NEXT BUTTON -->
-
-                
-                   <button type="button"  class="next-btn"> Next
-                        <i class="uil uil-navigator"></i>
-                    </button>
-
-
-            </div>
-
-
-
-            <!-- ================= STEP 2 ================= -->
-
-            <div class="form step step-2">
-
-
-                <!-- FAMILY DETAILS -->
-
-                <div class="details Family">
-
-                    <span class="title">
-                        Family Details
-                    </span>
-
-
-                    <span style="float:right;font-size:16px;margin:5px 35px;">
-                        ( step 2/2 )
-                    </span>
-
-
-                    <div class="fields">
-
-
-                        <!-- FATHER NAME -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Father's Name
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter father's name"
-                                   name="Father's Name"
-                                   required>
-
-                        </div>
-
-
-                        <!-- FATHER OCCUPATION -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Father's Occupation
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter father's occupation"
-                                   name="Father's Occupation"
-                                   required>
-
-                        </div>
-
-
-                        <!-- FATHER MOBILE -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Father's Mobile No.
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="tel"
-                                   placeholder="Enter father number"
-                                   name="Father's Mobile No."
-                                   pattern="[6789][0-9]{9}"
-                                   maxlength="10"
-                                   required>
-
-                        </div>
-
-
-                        <!-- MOTHER NAME -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Mother's Name
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter mother's name"
-                                   name="Mother's Name"
-                                   required>
-
-                        </div>
-
-
-                        <!-- MOTHER OCCUPATION -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Mother's Occupation
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter mother's occupation"
-                                   name="Mother's Occupation">
-
-                        </div>
-
-
-                        <!-- FAMILY INCOME -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Family Annual Income
-                            </label>
-
-                            <input type="number"
-                                   placeholder="Enter family income"
-                                   name="Family annual Income">
-
-                        </div>
-
-                    </div>
-
-
-                    <br><br>
-
-
-                    <div class="fields">
-
-
-                        <!-- CATEGORY -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Category
-                                <span class="star">*</span>
-                            </label>
-
-
-                            <select name="category"
-                                    required>
-
-                                <option value=""
-                                        disabled
-                                        selected>
-                                    Select Category
-                                </option>
-
-                                <option value="General">
-                                    General
-                                </option>
-
-                                <option value="OBC">
-                                    OBC
-                                </option>
-
-                                <option value="SC/ST">
-                                    SC/ST
-                                </option>
-
-                                <option value="EWS">
-                                    EWS
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- CASTE -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Caste
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter caste"
-                                   name="caste"
-                                   required>
-
-                        </div>
-
-
-                        <!-- NATIONALITY -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Nationality
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter nationality"
-                                   name="nationality"
-                                   value="Indian">
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ================= ADDRESS ================= -->
-
-                <div class="details address">
-
-                    <span class="title">
-                        Address Details
-                    </span>
-
-
-                    <div class="fields">
-
-
-                        <!-- ADDRESS TYPE -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Address Type
-                            </label>
-
-
-                            <select name="addressType">
-
-                                <option value=""
-                                        disabled
-                                        selected>
-                                    Select Address Type
-                                </option>
-
-                                <option value="Permanent">
-                                    Permanent
-                                </option>
-
-                                <option value="Temporary">
-                                    Temporary
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- ADDRESS -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Address Details
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter your address"
-                                   name="address"
-                                   required>
-
-                        </div>
-
-
-                        <!-- PINCODE -->
-
-                        <div class="input-field">
-
-                            <label>
-                                Pin Code
-                                <span class="star">*</span>
-                            </label>
-
-                            <input type="text"
-                                   placeholder="Enter Pin Code"
-                                   name="pincode"
-                                   pattern="[0-9]{6}"
-                                   maxlength="6"
-                                   required>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- BUTTONS -->
-
-                <div class="buttons">
-
-                    <button type="button"
-                            class="previous-btn">
-
-                        <i class="uil uil-navigator"></i>
-
-                        Back
-
-                    </button>
-
-
-                    <button type="submit"
-                            class="submit-btn">
-
-                        Submit
-
-                        <i class="uil uil-navigator"></i>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </form>
 
     </div>
 
-</div>
 
-<!-- ================= ADMISSION FORM END ================= -->
+</section>
 
 
 
-<!-- ================= STEP NAVIGATION ================= -->
+<!-- =====================================================
+     ADMISSION MAIN
+===================================================== -->
 
-<script>
+<section class="admission-main">
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    const form = document.getElementById("admissionForm");
+    <div class="admission-wrapper">
 
-    const steps = document.querySelectorAll(".step");
 
-    const nextButtons = document.querySelectorAll(".next-btn");
+        <!-- INTRO -->
 
-    const previousButtons = document.querySelectorAll(".previous-btn");
+        <div class="admission-intro">
 
 
-    /* ================= NEXT BUTTON ================= */
+            <h2>
 
-    nextButtons.forEach(function (button) {
+                Apply for Admission
 
-        button.addEventListener("click", function () {
+            </h2>
 
-            const currentStep =
-                this.closest(".step");
 
-            /* Validate Step 1 before going to Step 2 */
+            <div class="line"></div>
 
-            const requiredFields =
-                currentStep.querySelectorAll(
-                    "input[required], select[required]"
-                );
 
-            let valid = true;
+            <p>
 
+                Please fill in the required details carefully.
+                Our school team will review your application
+                and contact you regarding the admission process.
 
-            requiredFields.forEach(function (field) {
+            </p>
 
-                if (!field.checkValidity()) {
 
-                    field.reportValidity();
+        </div>
 
-                    valid = false;
 
-                }
 
-            });
+        <!-- =================================================
+             FORM
+        ================================================== -->
 
+        <div class="admission-form-container">
 
-            if (!valid) {
-                return;
-            }
 
+            <header>
 
-            const currentIndex =
-                Array.from(steps).indexOf(currentStep);
+                Registration
 
+            </header>
 
-            if (currentIndex < steps.length - 1) {
 
-                steps[currentIndex]
-                    .classList.remove("active");
+            <form id="admissionForm"
+                  name="admission-form"
+                  method="post">
 
-                steps[currentIndex + 1]
-                    .classList.add("active");
 
+                <!-- =================================================
+                     STEP 1
+                ================================================== -->
 
-                window.scrollTo({
+                <div class="form step step-1 active">
 
-                    top: 0,
 
-                    behavior: "smooth"
+                    <!-- PERSONAL DETAILS -->
 
-                });
+                    <div class="details personal">
 
-            }
 
-        });
+                        <span class="title">
 
-    });
+                            Personal Details
 
+                        </span>
 
-    /* ================= BACK BUTTON ================= */
 
-    previousButtons.forEach(function (button) {
+                        <span class="step-number">
 
-        button.addEventListener("click", function () {
+                            ( Step 1 / 2 )
 
-            const currentStep =
-                this.closest(".step");
+                        </span>
 
-            const currentIndex =
-                Array.from(steps).indexOf(currentStep);
 
 
-            if (currentIndex > 0) {
+                        <div class="fields">
 
-                steps[currentIndex]
-                    .classList.remove("active");
 
-                steps[currentIndex - 1]
-                    .classList.add("active");
+                            <!-- FULL NAME -->
 
+                            <div class="input-field">
 
-                window.scrollTo({
 
-                    top: 0,
+                                <label for="fullName">
 
-                    behavior: "smooth"
+                                    Full Name
 
-                });
+                                    <span class="star">
+                                        *
+                                    </span>
 
-            }
+                                </label>
 
-        });
 
-    });
+                                <input type="text"
+                                       id="fullName"
+                                       placeholder="Enter your name"
+                                       name="Full Name"
+                                       required>
 
-});
 
-</script>
+                            </div>
 
 
 
-<!-- ================= FOOTER START ================= -->
+                            <!-- DOB -->
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+                            <div class="input-field">
+
+
+                                <label for="dob">
+
+                                    Date of Birth
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="date"
+                                       id="dob"
+                                       name="Date of Birth"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- GENDER -->
+
+                            <div class="input-field">
+
+
+                                <label for="gender">
+
+                                    Gender
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select id="gender"
+                                        name="gender"
+                                        required>
+
+
+                                    <option value=""
+                                            disabled
+                                            selected>
+
+                                        Select gender
+
+                                    </option>
+
+
+                                    <option value="Male">
+
+                                        Male
+
+                                    </option>
+
+
+                                    <option value="Female">
+
+                                        Female
+
+                                    </option>
+
+
+                                    <option value="Other">
+
+                                        Other
+
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+
+                            <!-- EMAIL -->
+
+                            <div class="input-field">
+
+
+                                <label for="email">
+
+                                    Email
+
+                                </label>
+
+
+                                <input type="email"
+                                       id="email"
+                                       placeholder="Enter your email"
+                                       name="Email">
+
+
+                            </div>
+
+
+
+                            <!-- MOBILE -->
+
+                            <div class="input-field">
+
+
+                                <label for="mobile">
+
+                                    Mobile Number
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="tel"
+                                       id="mobile"
+                                       placeholder="Enter mobile number"
+                                       name="Mobile Number"
+                                       pattern="[6789][0-9]{9}"
+                                       maxlength="10"
+                                       inputmode="numeric"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- ID TYPE -->
+
+                            <div class="input-field">
+
+
+                                <label for="idType">
+
+                                    ID Type
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select id="idType"
+                                        name="idType"
+                                        required>
+
+
+                                    <option value=""
+                                            disabled
+                                            selected>
+
+                                        Select ID Type
+
+                                    </option>
+
+
+                                    <option value="Aadhaar Card">
+
+                                        Aadhaar Card
+
+                                    </option>
+
+
+                                    <option value="Voter ID">
+
+                                        Voter ID
+
+                                    </option>
+
+
+                                    <option value="PAN Card">
+
+                                        PAN Card
+
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+
+                            <!-- ID NUMBER -->
+
+                            <div class="input-field">
+
+
+                                <label for="idNumber">
+
+                                    ID Number
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="idNumber"
+                                       placeholder="Enter ID number"
+                                       name="ID Number"
+                                       required>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         COURSE ADMISSION
+                    ================================================== -->
+
+                    <div class="details Family">
+
+
+                        <span class="title">
+
+                            Course Admission
+
+                        </span>
+
+
+                        <div class="fields">
+
+
+                            <div class="input-field course-field">
+
+
+                                <label for="course">
+
+                                    Course you wish to join
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select id="course"
+                                        name="course"
+                                        required>
+
+
+                                    <option value=""
+                                            disabled
+                                            selected>
+
+                                        Select Course
+
+                                    </option>
+
+
+                                    <option value="Nursery">
+                                        Nursery
+                                    </option>
+
+                                    <option value="LKG">
+                                        LKG
+                                    </option>
+
+                                    <option value="UKG">
+                                        UKG
+                                    </option>
+
+                                    <option value="1st">
+                                        1st
+                                    </option>
+
+                                    <option value="2nd">
+                                        2nd
+                                    </option>
+
+                                    <option value="3rd">
+                                        3rd
+                                    </option>
+
+                                    <option value="4th">
+                                        4th
+                                    </option>
+
+                                    <option value="5th">
+                                        5th
+                                    </option>
+
+                                    <option value="6th">
+                                        6th
+                                    </option>
+
+                                    <option value="7th">
+                                        7th
+                                    </option>
+
+                                    <option value="8th">
+                                        8th
+                                    </option>
+
+                                    <option value="9th">
+                                        9th
+                                    </option>
+
+                                    <option value="10th">
+                                        10th
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- NEXT -->
+
+                    <button type="button"
+                            class="next-btn">
+
+                        Next
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STEP 2
+                ================================================== -->
+
+                <div class="form step step-2">
+
+
+                    <!-- FAMILY DETAILS -->
+
+                    <div class="details Family">
+
+
+                        <span class="title">
+
+                            Family Details
+
+                        </span>
+
+
+                        <span class="step-number">
+
+                            ( Step 2 / 2 )
+
+                        </span>
+
+
+
+                        <div class="fields">
+
+
+                            <!-- FATHER NAME -->
+
+                            <div class="input-field">
+
+
+                                <label for="fatherName">
+
+                                    Father's Name
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="fatherName"
+                                       placeholder="Enter father's name"
+                                       name="Father's Name"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- FATHER OCCUPATION -->
+
+                            <div class="input-field">
+
+
+                                <label for="fatherOccupation">
+
+                                    Father's Occupation
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="fatherOccupation"
+                                       placeholder="Enter father's occupation"
+                                       name="Father's Occupation"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- FATHER MOBILE -->
+
+                            <div class="input-field">
+
+
+                                <label for="fatherMobile">
+
+                                    Father's Mobile No.
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="tel"
+                                       id="fatherMobile"
+                                       placeholder="Enter father number"
+                                       name="Father's Mobile No."
+                                       pattern="[6789][0-9]{9}"
+                                       maxlength="10"
+                                       inputmode="numeric"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- MOTHER NAME -->
+
+                            <div class="input-field">
+
+
+                                <label for="motherName">
+
+                                    Mother's Name
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="motherName"
+                                       placeholder="Enter mother's name"
+                                       name="Mother's Name"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- MOTHER OCCUPATION -->
+
+                            <div class="input-field">
+
+
+                                <label for="motherOccupation">
+
+                                    Mother's Occupation
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="motherOccupation"
+                                       placeholder="Enter mother's occupation"
+                                       name="Mother's Occupation">
+
+
+                            </div>
+
+
+
+                            <!-- FAMILY INCOME -->
+
+                            <div class="input-field">
+
+
+                                <label for="familyIncome">
+
+                                    Family Annual Income
+
+                                </label>
+
+
+                                <input type="number"
+                                       id="familyIncome"
+                                       placeholder="Enter family income"
+                                       name="Family annual Income"
+                                       min="0">
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <br>
+
+
+
+                        <div class="fields">
+
+
+                            <!-- CATEGORY -->
+
+                            <div class="input-field">
+
+
+                                <label for="category">
+
+                                    Category
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <select id="category"
+                                        name="category"
+                                        required>
+
+
+                                    <option value=""
+                                            disabled
+                                            selected>
+
+                                        Select Category
+
+                                    </option>
+
+
+                                    <option value="General">
+
+                                        General
+
+                                    </option>
+
+
+                                    <option value="OBC">
+
+                                        OBC
+
+                                    </option>
+
+
+                                    <option value="SC/ST">
+
+                                        SC/ST
+
+                                    </option>
+
+
+                                    <option value="EWS">
+
+                                        EWS
+
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+
+                            <!-- CASTE -->
+
+                            <div class="input-field">
+
+
+                                <label for="caste">
+
+                                    Caste
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="caste"
+                                       placeholder="Enter caste"
+                                       name="caste"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- NATIONALITY -->
+
+                            <div class="input-field">
+
+
+                                <label for="nationality">
+
+                                    Nationality
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="nationality"
+                                       placeholder="Enter nationality"
+                                       name="nationality"
+                                       value="Indian">
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         ADDRESS
+                    ================================================== -->
+
+                    <div class="details address">
+
+
+                        <span class="title">
+
+                            Address Details
+
+                        </span>
+
+
+
+                        <div class="fields">
+
+
+                            <!-- ADDRESS TYPE -->
+
+                            <div class="input-field">
+
+
+                                <label for="addressType">
+
+                                    Address Type
+
+                                </label>
+
+
+                                <select id="addressType"
+                                        name="addressType">
+
+
+                                    <option value=""
+                                            disabled
+                                            selected>
+
+                                        Select Address Type
+
+                                    </option>
+
+
+                                    <option value="Permanent">
+
+                                        Permanent
+
+                                    </option>
+
+
+                                    <option value="Temporary">
+
+                                        Temporary
+
+                                    </option>
+
+
+                                </select>
+
+
+                            </div>
+
+
+
+                            <!-- ADDRESS -->
+
+                            <div class="input-field">
+
+
+                                <label for="address">
+
+                                    Address Details
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="address"
+                                       placeholder="Enter your address"
+                                       name="address"
+                                       required>
+
+
+                            </div>
+
+
+
+                            <!-- PINCODE -->
+
+                            <div class="input-field">
+
+
+                                <label for="pincode">
+
+                                    Pin Code
+
+                                    <span class="star">
+                                        *
+                                    </span>
+
+                                </label>
+
+
+                                <input type="text"
+                                       id="pincode"
+                                       placeholder="Enter Pin Code"
+                                       name="pincode"
+                                       pattern="[0-9]{6}"
+                                       maxlength="6"
+                                       inputmode="numeric"
+                                       required>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         BUTTONS
+                    ================================================== -->
+
+                    <div class="buttons">
+
+
+                        <button type="button"
+                                class="previous-btn">
+
+
+                            <i class="fas fa-arrow-left"></i>
+
+
+                            Back
+
+
+                        </button>
+
+
+
+                        <button type="submit"
+                                class="submit-btn">
+
+
+                            Submit
+
+
+                            <i class="fas fa-paper-plane"></i>
+
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER - SAME AS INDEX / ABOUT
+===================================================== -->
+
+<footer>
+
 
     <div class="content">
 
 
         <div class="top">
 
+
             <div class="logo-details">
 
                 <span>
+
                     Maria’s Podar Learn School Nilanga
+
                 </span>
 
             </div>
 
 
+
             <div class="media-icons">
 
+
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
+
                 <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
 
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
                 </a>
+
 
 
                 <a href="#">
@@ -1124,14 +2323,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 </a>
 
 
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-                   target="_blank">
+
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
                 </a>
 
+
             </div>
+
 
         </div>
 
@@ -1144,27 +2347,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <ul class="box">
 
+
                 <li class="link_name">
+
                     About
+
                 </li>
 
+
                 <li>
+
                     <a href="index.html">
+
                         Home
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="contact-us.html">
+
                         Contact us
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="About-us.html">
+
                         About us
+
                     </a>
+
                 </li>
+
 
             </ul>
 
@@ -1174,57 +2396,95 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <ul class="box">
 
+
                 <li class="link_name">
+
                     Quick Links
+
                 </li>
 
+
                 <li>
+
                     <a href="admission-form.html">
+
                         Admission Form
+
                     </a>
+
                 </li>
 
+
                 <li>
-                    <a href="index.html">
+
+                    <a href="index.html#notice-board">
+
                         Notice Board
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="index.html">
+
                         School Site
+
                     </a>
+
                 </li>
+
 
             </ul>
 
 
 
-            <!-- STUDENT CORNER -->
+            <!-- STUDENT'S CORNER -->
 
             <ul class="box">
 
+
                 <li class="link_name">
+
                     Student's Corner
+
                 </li>
 
+
                 <li>
+
                     <a href="fees-payment.html">
+
                         Fees Payment
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="complaint.html">
+
                         Complaint Section
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="careers.html">
-                       Careers
+
+                        Careers
+
                     </a>
+
                 </li>
+
 
             </ul>
 
@@ -1232,36 +2492,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <!-- ACCOUNT -->
 
-           <ul class="box">
-
-    <li class="link_name">
-        Account
-    </li>
-
-    <!-- ADMIN LOGIN -->
-    <li>
-        <a href="#" id="adminLoginLink">
-            Admin Login
-        </a>
-    </li>
-
-    <!-- EVENTS -->
-    <li>
-        <a href="events.html">
-            Events
-        </a>
-    </li>
-
-    <!-- GALLERY -->
-    <li>
-        <a href="gallery.html">
-            Gallery
-        </a>
-    </li>
-
-</ul>
+            <ul class="box">
 
 
+                <li class="link_name">
+
+                    Account
+
+                </li>
+
+
+                <li>
+
+                    <a href="#"
+                       id="adminLoginLink">
+
+                        Admin Login
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="events.html">
+
+                        Events
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="gallery.html">
+
+                        Gallery
+
+                    </a>
+
+                </li>
+
+
+            </ul>
 
 
 
@@ -1269,8 +2544,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <ul class="box input-box">
 
+
                 <li class="link_name">
+
                     Subscribe
+
                 </li>
 
 
@@ -1278,17 +2556,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <input type="email"
                            id="subscribeEmail"
-                           placeholder="Enter your email"
-                           required>
+                           placeholder="Enter your email">
 
                 </li>
 
 
                 <li>
 
-                    <input type="button"
-                           value="Subscribe"
-                           onclick="subscribeUser()">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
 
@@ -1299,122 +2579,237 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 </li>
 
+
             </ul>
+
 
         </div>
 
+
     </div>
+
 
 </footer>
 
-<!-- ================= FOOTER END ================= -->
 
 
+<!-- =====================================================
+     TIDIO
+===================================================== -->
+
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
+
+
+
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
 
 <script src="js/script.js"></script>
 
 
 
-<!-- ================= SUBSCRIBE SCRIPT ================= -->
+<!-- =====================================================
+     ADMISSION STEP NAVIGATION
+===================================================== -->
 
 <script>
 
-function subscribeUser() {
-
-    const email =
-        document.getElementById("subscribeEmail")
-        .value.trim();
-
-    const message =
-        document.getElementById("subscribeMessage");
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
-    if (email === "") {
+        const form =
+            document.getElementById(
+                "admissionForm"
+            );
 
-        message.innerHTML =
-            "Please enter your email.";
 
-        message.style.color =
-            "red";
+        const steps =
+            document.querySelectorAll(
+                ".step"
+            );
 
-        return;
+
+        const nextButtons =
+            document.querySelectorAll(
+                ".next-btn"
+            );
+
+
+        const previousButtons =
+            document.querySelectorAll(
+                ".previous-btn"
+            );
+
+
+
+        /* =================================================
+           NEXT BUTTON
+        ================================================= */
+
+        nextButtons.forEach(
+            function (button) {
+
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        const currentStep =
+                            this.closest(".step");
+
+
+                        if (!currentStep) {
+                            return;
+                        }
+
+
+                        const requiredFields =
+                            currentStep.querySelectorAll(
+                                "input[required], select[required]"
+                            );
+
+
+                        let valid = true;
+
+
+                        requiredFields.forEach(
+                            function (field) {
+
+
+                                if (
+                                    !field.checkValidity()
+                                ) {
+
+
+                                    field.reportValidity();
+
+                                    valid = false;
+
+                                }
+
+                            }
+                        );
+
+
+                        if (!valid) {
+                            return;
+                        }
+
+
+                        const currentIndex =
+                            Array.from(steps)
+                            .indexOf(currentStep);
+
+
+                        if (
+                            currentIndex <
+                            steps.length - 1
+                        ) {
+
+
+                            steps[currentIndex]
+                                .classList
+                                .remove("active");
+
+
+                            steps[currentIndex + 1]
+                                .classList
+                                .add("active");
+
+
+                            window.scrollTo({
+
+                                top: 0,
+
+                                behavior: "smooth"
+
+                            });
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* =================================================
+           PREVIOUS BUTTON
+        ================================================= */
+
+        previousButtons.forEach(
+            function (button) {
+
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+
+                        const currentStep =
+                            this.closest(".step");
+
+
+                        if (!currentStep) {
+                            return;
+                        }
+
+
+                        const currentIndex =
+                            Array.from(steps)
+                            .indexOf(currentStep);
+
+
+                        if (
+                            currentIndex > 0
+                        ) {
+
+
+                            steps[currentIndex]
+                                .classList
+                                .remove("active");
+
+
+                            steps[currentIndex - 1]
+                                .classList
+                                .add("active");
+
+
+                            window.scrollTo({
+
+                                top: 0,
+
+                                behavior: "smooth"
+
+                            });
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
 
     }
-
-
-    if (!email.includes("@") ||
-        !email.includes(".")) {
-
-        message.innerHTML =
-            "Please enter a valid email.";
-
-        message.style.color =
-            "red";
-
-        return;
-
-    }
-
-
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
-
-
-    message.innerHTML =
-        "Submitting...";
-
-    message.style.color =
-        "white";
-
-
-    fetch(scriptURL, {
-
-        method: "POST",
-
-        body: new URLSearchParams({
-
-            email: email
-
-        })
-
-    })
-
-
-    .then(() => {
-
-        message.innerHTML =
-            "Thank you for subscribing! 😊";
-
-        message.style.color =
-            "lightgreen";
-
-
-        document.getElementById(
-            "subscribeEmail"
-        ).value = "";
-
-    })
-
-
-    .catch((error) => {
-
-        console.error(error);
-
-        message.innerHTML =
-            "Something went wrong. Please try again.";
-
-        message.style.color =
-            "red";
-
-    });
-
-}
+);
 
 </script>
 
 
 
-<!-- ================= GOOGLE SHEET ADMISSION ================= -->
+<!-- =====================================================
+     GOOGLE SHEET ADMISSION SUBMISSION
+===================================================== -->
 
 <script>
 
@@ -1429,11 +2824,13 @@ document.addEventListener(
             );
 
 
-        if (!admissionForm)
+        if (!admissionForm) {
             return;
+        }
 
 
         let submitting = false;
+
 
 
         admissionForm.addEventListener(
@@ -1444,27 +2841,43 @@ document.addEventListener(
                 event.preventDefault();
 
 
-                /* DOUBLE SUBMIT STOP */
 
-                if (submitting)
+                /* =========================================
+                   STOP DOUBLE SUBMISSION
+                ========================================= */
+
+                if (submitting) {
                     return;
+                }
+
 
                 submitting = true;
 
 
+
                 const submitButton =
                     admissionForm.querySelector(
-                        'button[type="submit"], input[type="submit"]'
+                        'button[type="submit"]'
                     );
 
 
                 if (submitButton) {
 
+
                     submitButton.disabled =
                         true;
 
+
+                    submitButton.innerHTML =
+                        "Submitting...";
+
                 }
 
+
+
+                /* =========================================
+                   FORM DATA
+                ========================================= */
 
                 const formData =
                     new FormData(
@@ -1476,13 +2889,16 @@ document.addEventListener(
                     new URLSearchParams();
 
 
+
                 formData.forEach(
-                    (value, key) => {
+                    function (value, key) {
+
 
                         if (
                             key !== "Photograph" &&
-                            value instanceof File === false
+                            !(value instanceof File)
                         ) {
+
 
                             data.append(
                                 key,
@@ -1493,6 +2909,7 @@ document.addEventListener(
 
                     }
                 );
+
 
 
                 try {
@@ -1515,12 +2932,42 @@ document.addEventListener(
                     );
 
 
+
                     alert(
                         "Admission form submitted successfully! Thank you."
                     );
 
 
+
                     admissionForm.reset();
+
+
+
+                    /* Return to Step 1 */
+
+                    const steps =
+                        document.querySelectorAll(
+                            ".step"
+                        );
+
+
+                    steps.forEach(
+                        function (step) {
+
+                            step.classList
+                                .remove("active");
+
+                        }
+                    );
+
+
+                    if (steps[0]) {
+
+                        steps[0]
+                            .classList
+                            .add("active");
+
+                    }
 
 
                 }
@@ -1546,15 +2993,22 @@ document.addEventListener(
 
                     if (submitButton) {
 
+
                         submitButton.disabled =
                             false;
+
+
+                        submitButton.innerHTML =
+                            'Submit <i class="fas fa-paper-plane"></i>';
 
                     }
 
                 }
 
+
             }
         );
+
 
     }
 );
@@ -1563,68 +3017,88 @@ document.addEventListener(
 
 
 
-<!-- ================= COURSE DROPDOWN ================= -->
+<!-- =====================================================
+     COURSE DROPDOWN
+===================================================== -->
 
 <script>
 
 document
-    .querySelectorAll(".course-group > a")
-    .forEach(function(link) {
+    .querySelectorAll(
+        ".course-group > a"
+    )
+    .forEach(
+        function (link) {
 
 
-        link.addEventListener(
-            "click",
-            function(e) {
+            link.addEventListener(
+                "click",
+                function (event) {
 
 
-                e.preventDefault();
+                    event.preventDefault();
 
-                e.stopPropagation();
-
-
-                const submenu =
-                    this.parentElement
-                    .querySelector(
-                        ".dropdown2"
-                    );
+                    event.stopPropagation();
 
 
-                document
-                    .querySelectorAll(
-                        ".course-group .dropdown2"
-                    )
-                    .forEach(
-                        function(menu) {
+
+                    const submenu =
+                        this.parentElement
+                        .querySelector(
+                            ".dropdown2"
+                        );
 
 
-                            if (
-                                menu !== submenu
-                            ) {
+                    if (!submenu) {
+                        return;
+                    }
 
-                                menu.classList.remove(
-                                    "show"
-                                );
+
+
+                    document
+                        .querySelectorAll(
+                            ".course-group .dropdown2"
+                        )
+                        .forEach(
+                            function (menu) {
+
+
+                                if (
+                                    menu !== submenu
+                                ) {
+
+
+                                    menu.classList
+                                        .remove(
+                                            "show"
+                                        );
+
+                                }
 
                             }
+                        );
 
-                        }
+
+
+                    submenu.classList.toggle(
+                        "show"
                     );
 
 
-                submenu.classList.toggle(
-                    "show"
-                );
+                }
+            );
 
-            }
-        );
 
-    });
+        }
+    );
 
 </script>
 
 
 
-<!-- ================= ADMIN LOGIN ================= -->
+<!-- =====================================================
+     ADMIN LOGIN
+===================================================== -->
 
 <script>
 
@@ -1670,17 +3144,25 @@ document.addEventListener(
 
 
 
-        /* HEADER LOGIN ICON */
+        /* =================================================
+           HEADER ACCOUNT ICON
+        ================================================= */
 
-        if (accountBtn) {
+        if (
+            accountBtn &&
+            loginAccountForm
+        ) {
+
 
             accountBtn.addEventListener(
                 "click",
                 function () {
 
-                    loginAccountForm.classList.add(
-                        "active"
-                    );
+
+                    loginAccountForm
+                        .classList
+                        .add("active");
+
 
                 }
             );
@@ -1689,19 +3171,28 @@ document.addEventListener(
 
 
 
-        /* FOOTER ADMIN LOGIN */
+        /* =================================================
+           FOOTER ADMIN LOGIN
+        ================================================= */
 
-        if (adminLoginLink) {
+        if (
+            adminLoginLink &&
+            loginAccountForm
+        ) {
+
 
             adminLoginLink.addEventListener(
                 "click",
-                function (e) {
+                function (event) {
 
-                    e.preventDefault();
 
-                    loginAccountForm.classList.add(
-                        "active"
-                    );
+                    event.preventDefault();
+
+
+                    loginAccountForm
+                        .classList
+                        .add("active");
+
 
                 }
             );
@@ -1710,17 +3201,25 @@ document.addEventListener(
 
 
 
-        /* CLOSE LOGIN */
+        /* =================================================
+           CLOSE LOGIN
+        ================================================= */
 
-        if (closeForm) {
+        if (
+            closeForm &&
+            loginAccountForm
+        ) {
+
 
             closeForm.addEventListener(
                 "click",
                 function () {
 
-                    loginAccountForm.classList.remove(
-                        "active"
-                    );
+
+                    loginAccountForm
+                        .classList
+                        .remove("active");
+
 
                 }
             );
@@ -1729,28 +3228,37 @@ document.addEventListener(
 
 
 
-        /* LOGIN */
+        /* =================================================
+           ADMIN LOGIN
+        ================================================= */
 
         if (loginForm) {
 
+
             loginForm.addEventListener(
                 "submit",
-                function (e) {
+                function (event) {
 
 
-                    e.preventDefault();
+                    event.preventDefault();
+
 
 
                     const email =
                         document.getElementById(
                             "loginEmail"
-                        ).value.trim();
+                        )
+                        .value
+                        .trim();
+
 
 
                     const password =
                         document.getElementById(
                             "loginPassword"
-                        ).value;
+                        )
+                        .value;
+
 
 
                     /* ADMIN LOGIN DETAILS */
@@ -1763,13 +3271,14 @@ document.addEventListener(
                         "Admin@123";
 
 
+
                     if (
                         email === adminEmail &&
                         password === adminPassword
                     ) {
 
 
-                        loginMessage.innerHTML =
+                        loginMessage.textContent =
                             "Login successful!";
 
 
@@ -1777,14 +3286,17 @@ document.addEventListener(
                             "green";
 
 
+
                         setTimeout(
                             function () {
+
 
                                 window.location.href =
                                     "admin-dashboard.html";
 
+
                             },
-                            500
+                            700
                         );
 
 
@@ -1793,19 +3305,22 @@ document.addEventListener(
                     else {
 
 
-                        loginMessage.innerHTML =
-                            "Invalid email or password!";
+                        loginMessage.textContent =
+                            "Invalid email or password.";
 
 
                         loginMessage.style.color =
                             "red";
 
+
                     }
+
 
                 }
             );
 
         }
+
 
     }
 );
@@ -1813,6 +3328,207 @@ document.addEventListener(
 </script>
 
 
+
+<!-- =====================================================
+     SUBSCRIBE
+===================================================== -->
+
+<script>
+
+function subscribeUser() {
+
+
+    const emailInput =
+        document.getElementById(
+            "subscribeEmail"
+        );
+
+
+    const message =
+        document.getElementById(
+            "subscribeMessage"
+        );
+
+
+    if (
+        !emailInput ||
+        !message
+    ) {
+
+        return;
+
+    }
+
+
+    const email =
+        emailInput.value.trim();
+
+
+
+    /* EMPTY EMAIL */
+
+    if (email === "") {
+
+
+        message.textContent =
+            "Please enter your email.";
+
+
+        message.style.color =
+            "red";
+
+
+        return;
+
+    }
+
+
+
+    /* EMAIL VALIDATION */
+
+    if (
+        !email.includes("@") ||
+        !email.includes(".")
+    ) {
+
+
+        message.textContent =
+            "Please enter a valid email.";
+
+
+        message.style.color =
+            "red";
+
+
+        return;
+
+    }
+
+
+
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
+
+
+
+    message.textContent =
+        "Submitting...";
+
+
+    message.style.color =
+        "white";
+
+
+
+    const formData =
+        new FormData();
+
+
+
+    formData.append(
+        "email",
+        email
+    );
+
+
+
+    fetch(
+        scriptURL,
+        {
+
+            method: "POST",
+
+            body: formData,
+
+            mode: "no-cors"
+
+        }
+    )
+
+
+    .then(
+        function () {
+
+
+            message.textContent =
+                "Thank you for subscribing!";
+
+
+            message.style.color =
+                "lightgreen";
+
+
+            emailInput.value =
+                "";
+
+
+        }
+    )
+
+
+    .catch(
+        function (error) {
+
+
+            console.error(error);
+
+
+            message.textContent =
+                "Something went wrong. Please try again.";
+
+
+            message.style.color =
+                "red";
+
+
+        }
+    );
+
+}
+
+</script>
+
+
+
+<!-- =====================================================
+     ESCAPE KEY - CLOSE LOGIN
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+
+        if (
+            event.key === "Escape"
+        ) {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+
+                accountForm
+                    .classList
+                    .remove("active");
+
+
+            }
+
+        }
+
+
+    }
+);
+
+</script>
 
 
 </body>

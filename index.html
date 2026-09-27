@@ -5,23 +5,482 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Maria's Podar Learn School Nilanga(CBSE)</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>
+        Maria's Podar Learn School Nilanga(CBSE)
+    </title>
+
+
+    <!-- ================= CSS ================= -->
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer">
+          href="css/style.css">
 
-    <link rel="shortcut icon" href="Image/Logo.jpeg" type="image/png">
-    <!-- Preload Hero Background Image -->
-<link rel="preload" as="image" href="Image/Image.png">
+    <link rel="stylesheet"
+          href="css/responsive.css">
 
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+
+    <!-- ================= FAVICON ================= -->
+
+    <link rel="shortcut icon"
+          href="Image/Logo.jpeg"
+          type="image/png">
+
+
+    <!-- ================= PRELOAD HERO IMAGE ================= -->
+
+    <link rel="preload"
+          as="image"
+          href="Image/Image.png">
+
+
+<style>
+
+/* =========================================================
+   HERO AUTOMATIC IMAGE SLIDER
+========================================================= */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.paralex-images {
+    position: relative;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    overflow: hidden;
+
+    background: #000 !important;
+}
+
+
+/* =========================================================
+   HERO BACKGROUND SLIDER
+========================================================= */
+
+.hero-background-slider {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    z-index: 0;
+}
+
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+
+    animation: heroAutomaticSlide 20s infinite;
+}
+
+
+/* IMAGE 1 */
+
+.hero-slide:nth-child(1) {
+    background-image: url("Image/Image.png");
+    animation-delay: 0s;
+}
+
+
+/* IMAGE 2 */
+
+.hero-slide:nth-child(2) {
+    background-image: url("Image/Image2.jpg");
+    animation-delay: 5s;
+}
+
+
+/* IMAGE 3 */
+
+.hero-slide:nth-child(3) {
+    background-image: url("Image/Photo.png");
+    animation-delay: 10s;
+}
+
+
+/* IMAGE 4 */
+
+.hero-slide:nth-child(4) {
+    background-image: url("Image/Photo2.jpg");
+    animation-delay: 15s;
+}
+
+
+/* =========================================================
+   HERO SLIDE ANIMATION
+========================================================= */
+
+@keyframes heroAutomaticSlide {
+
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    5% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    25% {
+        opacity: 0;
+        transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   HERO DARK OVERLAY
+========================================================= */
+
+.hero-background-slider::after {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.22)
+        );
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.paralex-text {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 950px;
+
+    padding: 40px 25px;
+
+    margin: auto;
+
+    color: #ffffff;
+}
+
+
+.paralex-text h1 {
+
+    color: #ffffff;
+
+    font-size: 52px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.65);
+}
+
+
+.paralex-text p {
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    max-width: 750px;
+
+    margin: 0 auto 28px;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.65);
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #ffffff;
+
+    color: #164e63;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.hero-button:hover {
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   HERO SLIDER DOTS
+========================================================= */
+
+.hero-slider-dots {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+
+    gap: 9px;
+}
+
+
+.hero-slider-dot {
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.55);
+
+    border: 1px solid rgba(255,255,255,0.9);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.hero-slider-dot.active {
+
+    background: #ffffff;
+
+    transform: scale(1.25);
+}
+
+
+/* =========================================================
+   STUDENT NOTICE BOARD
+   CONTINUOUS SCROLL
+========================================================= */
+
+.notice-area {
+    overflow: hidden;
+}
+
+
+.notice-container {
+    overflow: hidden;
+}
+
+
+.notice-area .first-box {
+    overflow: hidden;
+}
+
+
+.notice-area .second-box {
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+.notice-area .third-box {
+
+    overflow: hidden;
+}
+
+
+/* Continuous notice track */
+
+.notice-scroll-track {
+
+    display: flex;
+
+    flex-direction: column;
+
+    animation:
+        noticeContinuousScroll 30s linear infinite;
+
+}
+
+
+/* Pause when mouse is over notices */
+
+.notice-scroll-track:hover {
+
+    animation-play-state: paused;
+}
+
+
+.notice-item {
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NOTICE CONTINUOUS ANIMATION
+========================================================= */
+
+@keyframes noticeContinuousScroll {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE HERO
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .paralex-images {
+
+        min-height: 570px;
+
+    }
+
+
+    .paralex-text h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .paralex-text p {
+
+        font-size: 17px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .paralex-images {
+
+        min-height: 520px;
+
+    }
+
+
+    .paralex-text {
+
+        padding: 30px 18px;
+
+    }
+
+
+    .paralex-text h1 {
+
+        font-size: 32px;
+
+        line-height: 1.25;
+
+    }
+
+
+    .paralex-text p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .hero-button {
+
+        padding: 11px 22px;
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-slider-dots {
+
+        bottom: 18px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -29,19 +488,27 @@
 <body>
 
 
-<!-- ================= HEADER START ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
 
-    <a href="#" class="logo">
+
+    <a href="index.html"
+       class="logo">
+
 
         <img src="Image/Logo.jpeg"
-             alt="School logo"
-             style="width:80px; height:55px;">
+             alt="Maria's Podar Learn School Logo">
+
 
         <div class="collage-name">
+
             Maria's Podar Learn School Nilanga
+
         </div>
+
 
     </a>
 
@@ -50,23 +517,30 @@
 
     <nav class="navbar">
 
-        <div id="close-navbar" class="close-icon">
+
+        <div id="close-navbar"
+             class="close-icon">
+
 
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="close">
+                 alt="Close Menu">
+
 
         </div>
 
 
         <ul class="navbar-links">
 
+
             <!-- HOME -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="index.html">
+
                     Home
+
                 </a>
 
             </li>
@@ -76,25 +550,34 @@
 
             <li class="navbar-dropdown">
 
-                <a href="#">
+
+                <a href="#"
+                   class="course-main-link">
+
                     Course
+
                 </a>
 
 
                 <div class="dropdown">
 
+
                     <ul>
+
 
                         <!-- PRIMARY -->
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Primary Group
 
                                 <span class="arrow">
+
                                     ›
+
                                 </span>
 
                             </a>
@@ -102,19 +585,31 @@
 
                             <ul class="dropdown2">
 
-                                <li>
-                                    <a href="nursery.html">
-                                        Nursery to UKG
-                                    </a>
-                                </li>
 
                                 <li>
-                                    <a href="class-1-5.html">
-                                        Class 1st to 5th
+
+                                    <a href="nursery.html">
+
+                                        Nursery to UKG
+
                                     </a>
+
                                 </li>
+
+
+                                <li>
+
+                                    <a href="class-1-5.html">
+
+                                        Class 1st to 5th
+
+                                    </a>
+
+                                </li>
+
 
                             </ul>
+
 
                         </li>
 
@@ -123,12 +618,15 @@
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Secondary Group
 
                                 <span class="arrow">
+
                                     ›
+
                                 </span>
 
                             </a>
@@ -136,39 +634,49 @@
 
                             <ul class="dropdown2">
 
+
                                 <li>
 
                                     <a href="class-6-8.html">
+
                                         Class 6th to 8th
+
                                     </a>
 
                                 </li>
+
 
                                 <li>
 
                                     <a href="class-9-10.html">
+
                                         Class 9th to 10th
+
                                     </a>
 
                                 </li>
 
+
                             </ul>
+
 
                         </li>
 
+
                     </ul>
 
+
                 </div>
+
 
             </li>
 
 
-            <!-- ADMISSION -->
+            <!-- ADMISSIONS -->
 
-            <li class="navbar-dropdown">
+            <li>
 
-                <a href="admission-form.html"
-                   target="_blank">
+                <a href="admission-form.html">
 
                     Admissions
 
@@ -176,9 +684,10 @@
 
             </li>
 
-             <!-- CAREERS -->
 
-            <li class="navbar-dropdown">
+            <!-- CAREERS -->
+
+            <li>
 
                 <a href="careers.html">
 
@@ -191,15 +700,19 @@
 
             <!-- CONTACT -->
 
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="contact-us.html">
+
                     Contact us
+
                 </a>
 
             </li>
 
+
         </ul>
+
 
     </nav>
 
@@ -209,222 +722,311 @@
     <div class="icons">
 
 
-        <!-- LOGIN ICON -->
+        <!-- ACCOUNT -->
 
         <div id="account-btn"
-             class="header-icon"
-             style="cursor:pointer;">
+             class="header-icon">
+
 
             <img src="Image/avatar-icon.svg"
                  alt="Login">
 
+
             <img src="Image/avatar-icon-hover.gif"
                  alt="Login"
-                 width="10"
                  class="header-icon-hover">
+
 
         </div>
 
 
-        <!-- MENU ICON -->
+        <!-- MENU -->
 
         <div id="menu-btn"
              class="header-icon">
 
+
             <img src="Image/menu-icon.svg"
-                 alt="menu">
+                 alt="Menu">
+
 
             <img src="Image/menu-icon-hover.gif"
-                 alt="menu"
-                 width="30"
+                 alt="Menu"
                  class="header-icon-hover">
+
 
         </div>
 
+
     </div>
+
 
 </header>
 
 
-<!-- ================= HEADER END ================= -->
-
-
-
-<!-- ================= LOGIN FORM START ================= -->
+<!-- =====================================================
+     LOGIN / ADMIN FORM
+===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
 
 
-    <!-- CLOSE BUTTON -->
-
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
+         class="close-icon">
+
 
         <img src="Image/close-icon.gif"
              alt="Close"
              width="50">
 
+
     </div>
 
-
-    <!-- LOGIN TITLE -->
 
     <div class="buttons">
 
+
         <span class="btn active login-btn">
-            Login
+
+            Admin Login
+
         </span>
+
 
     </div>
 
-
-    <!-- LOGIN FORM -->
 
     <form class="login-form active"
           id="schoolLoginForm">
 
 
         <h3>
-            Login Now
+
+            Admin Login
+
         </h3>
 
 
-        <!-- EMAIL -->
-
-        <input
-            type="email"
-            id="loginEmail"
-            placeholder="Enter your email"
-            class="box"
-            required>
+        <input type="email"
+               id="loginEmail"
+               placeholder="Enter your email"
+               class="box"
+               autocomplete="email"
+               required>
 
 
-        <!-- PASSWORD -->
+        <input type="password"
+               id="loginPassword"
+               placeholder="Enter your password"
+               class="box"
+               autocomplete="current-password"
+               required>
 
-        <input
-            type="password"
-            id="loginPassword"
-            placeholder="Enter your password"
-            class="box"
-            required>
-
-
-        <!-- REMEMBER ME -->
 
         <div class="flex">
 
-            <input
-                type="checkbox"
-                id="remember-me">
+
+            <input type="checkbox"
+                   id="remember-me">
+
 
             <label for="remember-me">
+
                 Remember Me
+
             </label>
+
 
         </div>
 
 
-        <!-- LOGIN MESSAGE -->
-
         <p id="loginMessage"></p>
 
 
-        <!-- LOGIN BUTTON -->
-
-        <button
-            type="submit"
-            class="btn">
+        <button type="submit"
+                class="btn login-submit">
 
             Login Now
 
         </button>
 
+
     </form>
+
 
 </div>
 
 
-<!-- ================= LOGIN FORM END ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
+<section class="hero-section">
 
-
-<!-- ================= PARALLAX START ================= -->
-
-<section>
 
     <div class="paralex-body">
 
-        <div class="paralex-head paralex-images">
+
+        <div class="paralex-head paralex-images"
+             id="heroSlider">
+
+
+            <!-- ================= BACKGROUND PHOTO SLIDES ================= -->
+
+            <div class="hero-background-slider">
+
+
+                <div class="hero-slide"></div>
+
+
+                <div class="hero-slide"></div>
+
+
+                <div class="hero-slide"></div>
+
+
+                <div class="hero-slide"></div>
+
+
+            </div>
+
+
+            <!-- ================= HERO TEXT ================= -->
 
             <div class="paralex-text">
 
+
                 <h1>
-                    Welcome to Maria's Podar Learn School Nilanga
+
+                    Welcome to Maria's Podar
+                    Learn School Nilanga
+
                 </h1>
 
+
                 <p>
+
                     We provide high-quality CBSE education,
                     creativity, and strong values for every child.
+
                 </p>
 
-            </div>
 
-        </div>
+                <a href="About-us.html"
+                   class="hero-button">
 
-    </div>
+                    Explore Our School
 
-</section>
+                </a>
 
-
-
-<!-- ================= COUNTER ================= -->
-
-<section>
-
-    <div class="counter count-section">
-
-        <div class="count-container">
-
-
-            <div class="counter-box">
-
-                <h2>
-                    <span id="count1"></span>+
-                </h2>
-
-                <p>
-                    Admission Every Year
-                </p>
 
             </div>
 
 
-            <div class="counter-box">
+            <!-- ================= HERO SLIDER DOTS ================= -->
 
-                <h2>
-                    <span id="count3"></span>+
-                </h2>
+            <div class="hero-slider-dots">
 
-                <p>
-                    Passing Rate / Year
-                </p>
+
+                <span class="hero-slider-dot active"
+                      data-slide="0"></span>
+
+
+                <span class="hero-slider-dot"
+                      data-slide="1"></span>
+
+
+                <span class="hero-slider-dot"
+                      data-slide="2"></span>
+
+
+                <span class="hero-slider-dot"
+                      data-slide="3"></span>
+
 
             </div>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
+<!-- =====================================================
+     COUNTER
+===================================================== -->
 
-<!-- ================= COURSE SECTION ================= -->
+<section class="counter count-section">
+
+
+    <div class="count-container">
+
+
+        <div class="counter-box">
+
+
+            <h2>
+
+                <span id="count1">
+
+                    0
+
+                </span>+
+
+            </h2>
+
+
+            <p>
+
+                Admission Every Year
+
+            </p>
+
+
+        </div>
+
+
+        <div class="counter-box">
+
+
+            <h2>
+
+                <span id="count3">
+
+                    0
+
+                </span>+
+
+            </h2>
+
+
+            <p>
+
+                Passing Rate / Year
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     COURSE SECTION
+===================================================== -->
 
 <section class="course-section">
+
 
     <div class="section-flex">
 
@@ -433,25 +1035,41 @@
 
         <div class="course-box">
 
+
             <div class="course-head">
 
+
                 <h4>
+
                     Primary Group
+
                 </h4>
+
 
                 <ul>
 
-                    <li>
-                        <a href="nursery.html">
-                            Nursery to UKG
-                        </a>
-                    </li>
 
                     <li>
-                        <a href="class-1-5.html">
-                            Class 1st to 5th
+
+                        <a href="nursery.html">
+
+                            Nursery to UKG
+
                         </a>
+
                     </li>
+
+
+                    <li>
+
+                        <a href="class-1-5.html">
+
+                            Class 1st to 5th
+
+                        </a>
+
+                    </li>
+
 
                 </ul>
 
@@ -463,51 +1081,62 @@
 
                 </a>
 
-            </div>
-
-
-            <div class="course-image"
-                 style="margin-top:0;">
-
-                <a href="#">
-
-                    <img
-                        width="230"
-                        height="270"
-                        src="Image/bba-department.png"
-                        alt="Primary">
-
-                </a>
 
             </div>
+
+
+            <div class="course-image">
+
+
+                <img src="Image/bba-department.png"
+                     alt="Primary Group">
+
+
+            </div>
+
 
         </div>
-
 
 
         <!-- SECONDARY -->
 
         <div class="course-box">
 
+
             <div class="course-head">
 
+
                 <h4>
+
                     Secondary Group
+
                 </h4>
+
 
                 <ul>
 
-                    <li>
-                        <a href="class-6-8.html">
-                            Class 6th to 8th
-                        </a>
-                    </li>
 
                     <li>
-                        <a href="class-9-10.html">
-                            Class 9th & 10th
+
+                        <a href="class-6-8.html">
+
+                            Class 6th to 8th
+
                         </a>
+
                     </li>
+
+
+                    <li>
+
+                        <a href="class-9-10.html">
+
+                            Class 9th & 10th
+
+                        </a>
+
+                    </li>
+
 
                 </ul>
 
@@ -519,80 +1148,92 @@
 
                 </a>
 
-            </div>
-
-
-            <div class="course-image"
-                 style="margin-top:0;">
-
-                <a href="#">
-
-                    <img
-                        width="230"
-                        height="270"
-                        src="Image/bca-department.png"
-                        alt="Secondary">
-
-                </a>
 
             </div>
+
+
+            <div class="course-image">
+
+
+                <img src="Image/bca-department.png"
+                     alt="Secondary Group">
+
+
+            </div>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
-
-<!-- ================= ABOUT SECTION ================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section class="about-section-head"
          id="about-section">
 
+
     <div class="about-container">
+
+
+        <div class="section-title">
+
+
+            <h2>
+
+                About Our
+
+                <span>
+
+                    Maria's Podar Learn School Nilanga
+
+                </span>
+
+            </h2>
+
+
+        </div>
+
 
         <div class="row">
 
 
-            <div class="section-title"
-                 style="width:1300px;">
-
-                <h2 style="font-size:36px;
-                           margin-bottom:30px;">
-
-                    About Our
-
-                    <span style="color:#f93">
-
-                        Maria's Podar Learn School Nilanga
-
-                    </span>
-
-                </h2>
-
-            </div>
-
-
+            <!-- ABOUT LEFT -->
 
             <div class="about-left">
 
+
                 <h4>
+
                     Maria's Podar Learn School Nilanga
+
                 </h4>
 
 
                 <p>
 
-                    Quality Education, Wherever We Go
+                    <strong>
+
+                        Quality Education, Wherever We Go
+
+                    </strong>
 
                     <br>
+
                     CBSE Affiliation No.: 1131276
 
                     <br>
+
                     School Code: 31263
 
                     <br>
+
                     Classes Offered: Nursery to Grade X
 
                 </p>
@@ -629,64 +1270,83 @@
                 </p>
 
 
-
                 <div class="about-director">
+
 
                     <div>
 
-                        <h4 style="font-size:18px;">
+
+                        <h4>
+
                             Mrs. Anjum Samir Patel
+
                         </h4>
 
+
                         <small>
-                            (Director of Maria's Podar Learn School Nilanga)
+
+                            Director of Maria's Podar Learn
+                            School Nilanga
+
                         </small>
+
 
                     </div>
 
 
-                    <button class="btn">
+                    <a href="About-us.html"
+                       class="btn">
 
-                        <a href="About-us.html">
-                            Explore more
-                        </a>
+                        Explore more
 
-                    </button>
+                    </a>
+
 
                 </div>
+
 
             </div>
 
 
+            <!-- ABOUT RIGHT -->
 
             <div class="about-right">
 
 
                 <div class="box-hover">
 
+
                     <div class="about-icon">
 
-                        <img
-                            src="Image/library-icon.png"
-                            alt="Library">
+
+                        <img src="Image/library-icon.png"
+                             alt="Library">
+
 
                     </div>
 
 
                     <div class="featured-content">
 
+
                         <h4>
+
                             Library
+
                         </h4>
 
+
                         <p>
-                            MPLS has excellent collection of
-                            books and Journals on Management,
-                            Computer Sciences & other subjects
-                            over 17500+ books & 36 International.
+
+                            The school provides library and reading
+                            facilities to encourage students to develop
+                            reading habits and broaden their knowledge.
+
                         </p>
 
+
                     </div>
+
 
                 </div>
 
@@ -696,28 +1356,38 @@
 
                 <div class="box-hover">
 
+
                     <div class="about-icon">
 
-                        <img
-                            src="Image/computer-icon.png"
-                            alt="Computer Lab">
+
+                        <img src="Image/computer-icon.png"
+                             alt="Computer Lab">
+
 
                     </div>
 
 
                     <div class="featured-content">
 
+
                         <h4>
+
                             Computer Lab
+
                         </h4>
 
+
                         <p>
-                            MPLS has 225 computers in four
-                            labs with updated configuration &
-                            Internet connectivity also available.
+
+                            The school provides computer learning
+                            facilities to support students' digital
+                            education and practical learning.
+
                         </p>
 
+
                     </div>
+
 
                 </div>
 
@@ -727,55 +1397,72 @@
 
                 <div class="box-hover">
 
+
                     <div class="about-icon">
 
-                        <img
-                            src="Image/sports-icon.png"
-                            alt="Sports">
+
+                        <img src="Image/sports-icon.png"
+                             alt="Sports">
+
 
                     </div>
 
 
                     <div class="featured-content">
 
+
                         <h4>
+
                             Sports
+
                         </h4>
 
+
                         <p>
-                            MPLS Students are sponsored to
-                            various inter college sports,
-                            cultural and literary activities.
+
+                            Students are encouraged to participate
+                            in sports, physical activities and
+                            co-curricular programmes.
+
                         </p>
+
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
 
-
-<!-- ================= WHY CHOOSE ================= -->
+<!-- =====================================================
+     WHY CHOOSE
+===================================================== -->
 
 <section class="about-bottom">
+
 
     <div class="about-bottom-container">
 
 
         <div class="section-title">
 
-            <h2 style="font-size:34px;">
+
+            <h2>
 
                 Why choose
 
-                <span style="color:#f93">
+                <span>
 
                     Maria’s Podar Learn School
 
@@ -795,370 +1482,429 @@
 
             </p>
 
-        </div>
 
+        </div>
 
 
         <div class="row">
 
 
+            <!-- AFFORDABLE -->
+
             <div class="bottom-box">
+
 
                 <div class="bottom-box-img">
 
-                    <img
-                        src="Image/save-money.gif"
-                        alt="Affordable">
+
+                    <img src="Image/save-money.gif"
+                         alt="Affordable">
+
 
                 </div>
 
 
                 <h4>
+
                     Affordable
+
                 </h4>
 
 
                 <p>
 
                     Student-Centred Learning
-
                     <br>
                     Individual Attention & Guidance
-
                     <br>
                     Discipline & Value-Based Education
-
                     <br>
                     Strong English Communication
-
                     <br>
                     Focus on Academic Excellence
-
                     <br>
                     Quality Education at an Affordable Cost
 
                 </p>
 
+
             </div>
 
 
+            <!-- QUALITY -->
 
             <div class="bottom-box">
 
+
                 <div class="bottom-box-img">
 
-                    <img
-                        src="Image/education.gif"
-                        alt="Education">
+
+                    <img src="Image/education.gif"
+                         alt="Quality Education">
+
 
                 </div>
 
 
                 <h4>
+
                     Quality Education
+
                 </h4>
 
 
                 <p>
 
                     CBSE Curriculum
-
                     <br>
                     Experienced & Dedicated Teachers
-
                     <br>
-                    Academic Leadership by a Kerala Principal
-
+                    Academic Leadership
                     <br>
                     Well-equipped Computer Lab
-
                     <br>
                     Science Laboratory
-
                     <br>
                     Mathematics Laboratory
-
                     <br>
                     Library & Reading Facilities
-
                     <br>
                     Smart & Digital Learning
-
                     <br>
-                    Dedicated Sports Room
-
-                    <br>
-                    Art & Activity Room
-
-                    <br>
-                    Dance & Performing Arts Room
+                    Sports, Art & Activity Facilities
 
                 </p>
+
 
             </div>
 
 
+            <!-- ACHIEVEMENTS -->
 
             <div class="bottom-box">
 
+
                 <div class="bottom-box-img">
 
-                    <img
-                        src="Image/Placement job.gif"
-                        alt="Achievements">
+
+                    <img src="Image/Placement job.gif"
+                         alt="Achievements">
+
 
                 </div>
 
 
                 <h4>
+
                     Achievements
+
                 </h4>
 
 
                 <p>
 
                     Academic Excellence
-
                     <br>
                     Sports & Physical Education
-
                     <br>
                     Art & Craft Activities
-
                     <br>
                     Dance & Cultural Activities
-
                     <br>
                     Olympiads & Competitions
-
                     <br>
                     Inter-School Activities
-
                     <br>
                     Personality & Leadership Development
-
                     <br>
                     Student Participation & Overall Development
 
                 </p>
+
 
             </div>
 
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
-
-<!-- ================= NOTICE BOARD ================= -->
+<!-- =====================================================
+     NOTICE BOARD + EVENTS
+===================================================== -->
 
 <section id="notice-board">
 
+
     <div class="notice-container">
+
 
         <div class="row">
 
 
+            <!-- ================= NOTICE BOARD ================= -->
+
             <div class="notice-area">
+
 
                 <div class="first-box">
 
 
                     <div class="notice-heading">
 
-                        <h4 class="line">
 
-                            <span>
-                                Student Notice Board
-                            </span>
+                        <h4>
+
+                            Student Notice Board
 
                         </h4>
+
 
                     </div>
 
 
                     <div class="second-box">
 
-                        <br>
-
 
                         <div class="third-box">
 
 
-                            <marquee
-                                direction="up"
-                                scrollamount="5"
-                                onmouseover="this.stop();"
-                                onmouseout="this.start();">
+                            <div class="notice-scroll-track">
 
 
-                                <div>
-
-                                    <fieldset class="alert-box simple-alert">
-
-                                        <legend
-                                            align="right"
-                                            class="flash">
-
-                                            New Notice
-
-                                        </legend>
+                                <!-- ================= FIRST NOTICE SET ================= -->
 
 
-                                        <a href="#"
-                                           style="text-decoration:none;">
+                                <div class="notice-item">
 
-                                            Welcome to Maria’s Podar Learn School,
-                                            Nilanga. Stay updated with all school
-                                            announcements.
 
-                                        </a>
+                                    <p>
 
-                                    </fieldset>
+                                        Welcome to Maria’s Podar Learn School,
+                                        Nilanga. Stay updated with all school
+                                        announcements.
+
+                                    </p>
+
 
                                 </div>
 
 
-
-                                <div>
-
-                                    <fieldset class="alert-box simple-alert">
-
-                                        <legend
-                                            align="right"
-                                            class="flash">
-
-                                            New Notice
-
-                                        </legend>
+                                <div class="notice-item">
 
 
-                                        <a href="#"
-                                           style="text-decoration:none;">
+                                    <p>
 
-                                            Students are requested to regularly
-                                            check the notice board for important
-                                            school updates.
+                                        Students are requested to regularly
+                                        check the notice board for important
+                                        school updates.
 
-                                        </a>
+                                    </p>
 
-                                    </fieldset>
 
                                 </div>
 
 
+                                <div class="notice-item">
 
-                                <div class="alert-box simple-alert">
 
-                                    <a href="#"
-                                       style="text-decoration:none;">
+                                    <p>
 
                                         Teachers and students are requested
                                         to follow the school rules and maintain
                                         discipline.
 
-                                    </a>
+                                    </p>
+
 
                                 </div>
 
 
+                                <div class="notice-item">
 
-                                <div class="alert-box simple-alert">
 
-                                    <a href="#"
-                                       style="text-decoration:none;">
+                                    <p>
 
-                                        Academic activities, cultural activities
-                                        and sports activities will be communicated
-                                        through the school notice board.
+                                        Academic, cultural and sports activities
+                                        will be communicated through the school
+                                        notice board.
 
-                                    </a>
+                                    </p>
+
 
                                 </div>
 
 
+                                <div class="notice-item">
 
-                                <div class="alert-box simple-alert">
 
-                                    <a href="#"
-                                       style="text-decoration:none;">
+                                    <p>
 
                                         Students are encouraged to participate
                                         actively in academic and co-curricular
                                         activities.
 
-                                    </a>
+                                    </p>
+
 
                                 </div>
 
 
+                                <div class="notice-item">
 
-                                <div class="alert-box simple-alert">
 
-                                    <a href="#"
-                                       style="text-decoration:none;">
+                                    <p>
 
                                         Ganesh Chaturthi was celebrated at
                                         Maria’s Podar Learn School, Nilanga
-                                        on 12th September with great enthusiasm
+                                        on 12th September with enthusiasm
                                         and devotion.
 
-                                    </a>
+                                    </p>
+
 
                                 </div>
 
 
+                                <!-- ================= DUPLICATE NOTICE SET ================= -->
 
-                                <div class="alert-box simple-alert">
 
-                                    <a href="#"
-                                       style="text-decoration:none;">
+                                <div class="notice-item">
 
+
+                                    <p>
+
+                                        Welcome to Maria’s Podar Learn School,
+                                        Nilanga. Stay updated with all school
+                                        announcements.
+
+                                    </p>
+
+
+                                </div>
+
+
+                                <div class="notice-item">
+
+
+                                    <p>
+
+                                        Students are requested to regularly
+                                        check the notice board for important
+                                        school updates.
+
+                                    </p>
+
+
+                                </div>
+
+
+                                <div class="notice-item">
+
+
+                                    <p>
+
+                                        Teachers and students are requested
+                                        to follow the school rules and maintain
+                                        discipline.
+
+                                    </p>
+
+
+                                </div>
+
+
+                                <div class="notice-item">
+
+
+                                    <p>
+
+                                        Academic, cultural and sports activities
+                                        will be communicated through the school
+                                        notice board.
+
+                                    </p>
+
+
+                                </div>
+
+
+                                <div class="notice-item">
+
+
+                                    <p>
+
+                                        Students are encouraged to participate
+                                        actively in academic and co-curricular
+                                        activities.
+
+                                    </p>
+
+
+                                </div>
+
+
+                                <div class="notice-item">
+
+
+                                    <p>
+
+                                        Ganesh Chaturthi was celebrated at
                                         Maria’s Podar Learn School, Nilanga
-                                        wishes all students a successful and
-                                        joyful learning journey.
+                                        on 12th September with enthusiasm
+                                        and devotion.
 
-                                    </a>
+                                    </p>
+
 
                                 </div>
 
 
-                            </marquee>
+                            </div>
+
 
                         </div>
 
+
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
-
-            <!-- ================= UPCOMING EVENTS ================= -->
+            <!-- ================= EVENTS ================= -->
 
             <div class="upcoming-event-section">
 
 
                 <div class="event-header">
 
+
                     <h4>
 
                         Upcoming
 
-                        <span style="color:#f93">
+                        <span>
+
                             Events
+
                         </span>
 
                     </h4>
 
+
                     <span class="event-line"></span>
 
-                </div>
 
+                </div>
 
 
                 <div class="event-body">
@@ -1166,185 +1912,262 @@
 
                     <div class="event-box">
 
+
                         <div class="time-from">
 
+
                             <div class="date">
+
 
                                 14
 
-                                <span style="font-size:12px;">
+                                <span>
+
                                     Sep
+
                                 </span>
 
+
                             </div>
+
 
                         </div>
 
 
                         <div class="event-wrapper">
 
-                            <a href="">
+
+                            <a href="events.html">
+
 
                                 <h5 class="title">
+
                                     Ganesh Chaturthi
+
                                 </h5>
 
+
                                 <div class="time">
-                                    09:00 am - 10 am
+
+                                    09:00 am - 10:00 am
+
                                 </div>
+
 
                             </a>
 
+
                         </div>
+
 
                     </div>
 
 
-
                     <div class="event-box">
+
 
                         <div class="time-from">
 
+
                             <div class="date">
+
 
                                 17
 
-                                <span style="font-size:12px;">
+                                <span>
+
                                     Sep
+
                                 </span>
 
+
                             </div>
+
 
                         </div>
 
 
                         <div class="event-wrapper">
 
-                            <a href="">
+
+                            <a href="events.html">
+
 
                                 <h5 class="title">
+
                                     Marathwada Mukti Sangram Din
+
                                 </h5>
 
+
                                 <div class="time">
+
                                     07:00 am - 08:00 am
+
                                 </div>
+
 
                             </a>
 
+
                         </div>
+
 
                     </div>
 
 
-
                     <div class="event-box">
+
 
                         <div class="time-from">
 
+
                             <div class="date">
+
 
                                 26
 
-                                <span style="font-size:12px;">
+                                <span>
+
                                     Sep
+
                                 </span>
 
+
                             </div>
+
 
                         </div>
 
 
                         <div class="event-wrapper">
 
-                            <a href="">
+
+                            <a href="events.html">
+
 
                                 <h5 class="title">
+
                                     Half Yearly Examination
+
                                 </h5>
 
+
                                 <div class="time">
+
                                     09:00 am - 02:45 pm
+
                                 </div>
+
 
                             </a>
 
+
                         </div>
+
 
                     </div>
 
 
                 </div>
 
+
             </div>
+
 
         </div>
 
+
     </div>
+
 
 </section>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-<!-- ================= FOOTER ================= -->
+<footer>
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
 
     <div class="content">
 
 
         <div class="top">
 
+
             <div class="logo-details">
 
+
                 <span>
+
                     Maria’s Podar Learn School Nilanga
+
                 </span>
+
 
             </div>
 
 
             <div class="media-icons">
 
+
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
+
 
                     <i class="fab fa-facebook-f"></i>
+
 
                 </a>
 
 
-               <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                <a href="mailto:principal.mpls@podar.org">
+
+
+                    <i class="fa-solid fa-envelope"></i>
+
+
+                </a>
 
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
+
 
                     <i class="fab fa-instagram"></i>
+
 
                 </a>
 
 
                 <a href="#">
 
+
                     <i class="fab fa-linkedin-in"></i>
+
 
                 </a>
 
 
                 <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
+
 
                     <i class="fab fa-youtube"></i>
 
+
                 </a>
+
 
             </div>
 
-        </div>
 
+        </div>
 
 
         <div class="link-boxes">
@@ -1354,151 +2177,224 @@
 
             <ul class="box">
 
+
                 <li class="link_name">
+
                     About
+
                 </li>
 
+
                 <li>
+
                     <a href="index.html">
+
                         Home
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="contact-us.html">
+
                         Contact us
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="About-us.html">
+
                         About us
+
                     </a>
+
                 </li>
+
 
             </ul>
-
 
 
             <!-- QUICK LINKS -->
 
             <ul class="box">
 
+
                 <li class="link_name">
+
                     Quick Links
+
                 </li>
 
+
                 <li>
+
                     <a href="admission-form.html">
+
                         Admission Form
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="#notice-board">
+
                         Notice Board
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="index.html">
+
                         School Site
+
                     </a>
+
                 </li>
+
 
             </ul>
 
 
-
-            <!-- STUDENT CORNER -->
+            <!-- STUDENT -->
 
             <ul class="box">
 
+
                 <li class="link_name">
+
                     Student's Corner
+
                 </li>
 
+
                 <li>
+
                     <a href="fees-payment.html">
+
                         Fees Payment
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="complaint.html">
+
                         Complaint Section
+
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="careers.html">
+
                         Careers
+
                     </a>
+
                 </li>
+
 
             </ul>
 
 
+            <!-- ACCOUNT -->
 
-            <!-- ================= ACCOUNT ================= -->
-
-           <ul class="box">
-
-    <li class="link_name">
-        Account
-    </li>
-
-    <!-- ADMIN LOGIN -->
-    <li>
-        <a href="#" id="adminLoginLink">
-            Admin Login
-        </a>
-    </li>
-
-    <!-- EVENTS -->
-    <li>
-        <a href="events.html">
-            Events
-        </a>
-    </li>
-
-    <!-- GALLERY -->
-    <li>
-        <a href="gallery.html">
-            Gallery
-        </a>
-    </li>
-
-</ul>
+            <ul class="box">
 
 
+                <li class="link_name">
 
-            <!-- ================= SUBSCRIBE ================= -->
+                    Account
+
+                </li>
+
+
+                <li>
+
+                    <a href="#"
+                       id="adminLoginLink">
+
+                        Admin Login
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="events.html">
+
+                        Events
+
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="gallery.html">
+
+                        Gallery
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+            <!-- SUBSCRIBE -->
 
             <ul class="box input-box">
 
+
                 <li class="link_name">
+
                     Subscribe
-                </li>
-
-
-                <li>
-
-                    <input
-                        type="email"
-                        id="subscribeEmail"
-                        placeholder="Enter your email"
-                        required>
 
                 </li>
 
 
                 <li>
 
-                    <input
-                        type="button"
-                        value="Subscribe"
-                        onclick="subscribeUser()">
+                    <input type="email"
+                           id="subscribeEmail"
+                           placeholder="Enter your email">
+
+                </li>
+
+
+                <li>
+
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
 
@@ -1509,903 +2405,22 @@
 
                 </li>
 
+
             </ul>
 
 
         </div>
 
+
     </div>
+
 
 </footer>
 
 
-
-<!-- ================= CHATBOT ================= -->
-
-<div class="chat-button">
-
-
-    <div class="chat-icon">
-
-        <i class="fa-solid fa-robot"></i>
-
-    </div>
-
-
-    <div class="glass-container glass">
-
-
-        <h2>
-
-            Ask Your
-
-            <span style="color:#f93">
-                Question
-            </span>
-
-        </h2>
-
-
-        <div class="input">
-
-
-            <p id="chatLog"></p>
-
-
-            <input
-                type="text"
-                id="userBox"
-                onkeydown="if(event.key === 'Enter'){ talk(); }"
-                placeholder="Type your Question"
-                name="chatbot">
-
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- ================= SUBSCRIBE SCRIPT ================= -->
-
-<script>
-
-function subscribeUser() {
-
-
-    const email =
-        document.getElementById(
-            "subscribeEmail"
-        ).value.trim();
-
-
-    const message =
-        document.getElementById(
-            "subscribeMessage"
-        );
-
-
-    if (email === "") {
-
-
-        message.innerHTML =
-            "Please enter your email.";
-
-
-        message.style.color =
-            "red";
-
-
-        return;
-
-    }
-
-
-    if (
-        !email.includes("@") ||
-        !email.includes(".")
-    ) {
-
-
-        message.innerHTML =
-            "Please enter a valid email.";
-
-
-        message.style.color =
-            "red";
-
-
-        return;
-
-    }
-
-
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
-
-
-    message.innerHTML =
-        "Submitting...";
-
-
-    message.style.color =
-        "white";
-
-
-    fetch(
-        scriptURL,
-        {
-
-            method: "POST",
-
-            body:
-                new URLSearchParams({
-
-                    email: email
-
-                })
-
-        }
-    )
-
-
-    .then(
-        function() {
-
-
-            message.innerHTML =
-                "Thank you for subscribing! 😊";
-
-
-            message.style.color =
-                "lightgreen";
-
-
-            document.getElementById(
-                "subscribeEmail"
-            ).value = "";
-
-
-        }
-    )
-
-
-    .catch(
-        function(error) {
-
-
-            console.error(error);
-
-
-            message.innerHTML =
-                "Something went wrong. Please try again.";
-
-
-            message.style.color =
-                "red";
-
-
-        }
-    );
-
-
-}
-
-</script>
-
-
-
-
-
-<!-- ================= TIDIO ================= -->
-
-<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
-        async>
-</script>
-
-
-
-<!-- ================= MAIN JS ================= -->
-
-<script src="js/script.js"></script>
-
-
-
-<!-- ================= CHATBOT SCRIPT ================= -->
-<script>
-
-function talk() {
-
-    const input = document.getElementById("userBox");
-    const chatLog = document.getElementById("chatLog");
-
-    const originalMessage = input.value.trim();
-
-    if (!originalMessage) {
-        return;
-    }
-
-    /* =========================
-       CLEAN USER QUESTION
-    ========================== */
-
-    const message = originalMessage
-        .toLowerCase()
-        .replace(/[?!.]/g, "")
-        .replace(/[’‘]/g, "'")
-        .replace(/\s+/g, " ")
-        .trim();
-
-    let answer = "";
-
-
-    /* =========================
-       1. GREETING
-       Exact word matching
-    ========================== */
-
-    const words = message.split(" ");
-
-    if (
-        words.includes("hello") ||
-        words.includes("hi") ||
-        words.includes("hey") ||
-        words.includes("namaste") ||
-        message === "good morning" ||
-        message === "good afternoon" ||
-        message === "good evening"
-    ) {
-
-        answer =
-            "Hello! 👋 Welcome to Maria’s Podar Learn School. How can I help you?";
-
-    }
-
-
-    /* =========================
-       2. HOW ARE YOU
-    ========================== */
-
-    else if (
-        message === "how are you" ||
-        message === "how r you" ||
-        message === "how are u"
-    ) {
-
-        answer =
-            "I am fine, thank you! 😊 How can I help you today?";
-
-    }
-
-
-    /* =========================
-       3. SCHOOL NAME
-    ========================== */
-
-    else if (
-        message === "what is the school name" ||
-        message === "what is your school name" ||
-        message === "school name" ||
-        message === "which school"
-    ) {
-
-        answer =
-            "Our school is Maria’s Podar Learn School, Nilanga.";
-
-    }
-
-
-    /* =========================
-       4. SCHOOL LOCATION
-    ========================== */
-
-    else if (
-        message === "where is maria's podar learn school located" ||
-        message === "where is the school located" ||
-        message === "where is the school" ||
-        message === "school location" ||
-        message === "where is maria's podar learn school"
-    ) {
-
-        answer =
-            "Maria’s Podar Learn School is located in Nilanga, Latur District, Maharashtra.";
-
-    }
-
-
-    /* =========================
-       5. SCHOOL BOARD
-    ========================== */
-
-    else if (
-        message === "which board is the school affiliated with" ||
-        message === "which board is the school affiliated to" ||
-        message === "which board is your school affiliated with" ||
-        message === "which board is the school"
-    ) {
-
-        answer =
-            "Maria’s Podar Learn School, Nilanga is affiliated with the CBSE board.";
-
-    }
-
-
-    /* =========================
-       6. CBSE
-    ========================== */
-
-    else if (
-        message === "is the school cbse" ||
-        message === "is your school cbse" ||
-        message === "is the school affiliated with cbse"
-    ) {
-
-        answer =
-            "Yes. Maria’s Podar Learn School, Nilanga is affiliated with the CBSE board.";
-
-    }
-
-
-    /* =========================
-       7. AFFILIATION NUMBER
-    ========================== */
-
-    else if (
-        message === "what is the school's cbse affiliation number" ||
-        message === "what is the school cbse affiliation number" ||
-        message === "what is the cbse affiliation number" ||
-        message === "what is the affiliation number" ||
-        message === "cbse affiliation number"
-    ) {
-
-        answer =
-            "The CBSE Affiliation Number of Maria’s Podar Learn School, Nilanga is 1131276.";
-
-    }
-
-
-    /* =========================
-       8. SCHOOL CODE
-    ========================== */
-
-    else if (
-        message === "what is the school code" ||
-        message === "what is your school code" ||
-        message === "school code" ||
-        message === "what is the code of the school"
-    ) {
-
-        answer =
-            "The school code of Maria’s Podar Learn School, Nilanga is 31263.";
-
-    }
-
-
-    /* =========================
-       9. CLASSES
-    ========================== */
-
-    else if (
-        message === "which classes are available at the school" ||
-        message === "which classes are available" ||
-        message === "what classes are available at the school" ||
-        message === "what classes are available" ||
-        message === "which classes does the school offer" ||
-        message === "what classes does the school offer"
-    ) {
-
-        answer =
-            "Our school offers classes from Nursery to Grade X.";
-
-    }
-
-
-    /* =========================
-       10. ADMISSION OPEN
-    ========================== */
-
-    else if (
-        message === "are admissions currently open" ||
-        message === "are admissions open" ||
-        message === "is admission open" ||
-        message === "is admission currently open" ||
-        message === "are admissions currently available"
-    ) {
-
-        answer =
-            "Admissions are subject to seat availability. For the latest admission status and admission process, please contact the school office.";
-
-    }
-
-
-    /* =========================
-       11. ADMISSION DOCUMENTS
-    ========================== */
-
-    else if (
-        message === "what documents are required for admission" ||
-        message === "which documents are required for admission" ||
-        message === "what documents do i need for admission" ||
-        message === "documents required for admission" ||
-        message === "admission documents"
-    ) {
-
-        answer =
-            "Common admission documents may include the student's birth certificate, previous school records or report card, Transfer Certificate where applicable, Aadhaar or identity proof, passport-size photographs, and other documents requested by the school.";
-
-    }
-
-
-    /* =========================
-       12. FEE STRUCTURE
-    ========================== */
-
-    else if (
-        message === "what is the school fee structure" ||
-        message === "what is the fee structure" ||
-        message === "what are the school fees" ||
-        message === "how much is the school fee" ||
-        message === "school fee structure"
-    ) {
-
-        answer =
-            "The fee structure may vary depending on the class and school policy. Please contact the school office for the latest fee details.";
-
-    }
-
-
-    /* =========================
-       13. SCHOOL TIMINGS
-    ========================== */
-
-    else if (
-        message === "what are the school timings" ||
-        message === "what is the school timing" ||
-        message === "what are your school timings" ||
-        message === "school timings" ||
-        message === "what time does school start"
-    ) {
-
-        answer =
-            "School timings may vary according to the class and daily schedule. Please contact the school office for the current timings.";
-
-    }
-
-
-    /* =========================
-       14. TRANSPORTATION
-    ========================== */
-
-    else if (
-        message === "is school transportation available" ||
-        message === "is transportation available" ||
-        message === "is school transport available" ||
-        message === "does the school provide transportation" ||
-        message === "is school bus available"
-    ) {
-
-        answer =
-            "School transportation availability depends on the current routes and arrangements. Please contact the school office for transport-related information.";
-
-    }
-
-
-    /* =========================
-       15. FACILITIES
-    ========================== */
-
-    else if (
-        message === "what facilities are available at the school" ||
-        message === "what facilities does the school have" ||
-        message === "what facilities are available" ||
-        message === "school facilities"
-    ) {
-
-        answer =
-            "The school provides facilities including classrooms, library, Computer Lab, Science Laboratory, Mathematics Laboratory, sports facilities, art and activity facilities, and smart and digital learning resources.";
-
-    }
-
-
-    /* =========================
-       16. SMART CLASSROOMS
-    ========================== */
-
-    else if (
-        message === "does the school have smart classrooms" ||
-        message === "does the school have smart classroom" ||
-        message === "are smart classrooms available" ||
-        message === "smart classrooms"
-    ) {
-
-        answer =
-            "Yes. The school supports smart and digital learning through technology-enabled educational resources.";
-
-    }
-
-
-    /* =========================
-       17. LABORATORIES
-    ========================== */
-
-    else if (
-        message === "what laboratories are available" ||
-        message === "what labs are available" ||
-        message === "which laboratories are available" ||
-        message === "which labs are available" ||
-        message === "what laboratories does the school have"
-    ) {
-
-        answer =
-            "The school provides practical learning facilities including a Computer Laboratory, Science Laboratory and Mathematics Laboratory.";
-
-    }
-
-
-    /* =========================
-       18. EXTRACURRICULAR ACTIVITIES
-    ========================== */
-
-    else if (
-        message === "what extracurricular activities does the school offer" ||
-        message === "what extracurricular activities are available" ||
-        message === "what extracurricular activities does the school have" ||
-        message === "what extra curricular activities does the school offer"
-    ) {
-
-        answer =
-            "The school offers extracurricular and co-curricular activities including sports, dance, art, music, cultural activities, competitions, celebrations and other student development activities.";
-
-    }
-
-
-    /* =========================
-       19. SPORTS DANCE ART MUSIC
-    ========================== */
-
-    else if (
-        message === "are sports dance art and music activities available" ||
-        message === "are sports dance art and music available" ||
-        message === "are sports activities available" ||
-        message === "are dance art and music activities available"
-    ) {
-
-        answer =
-            "Yes. Sports, dance, art and music activities are available as part of the school's extracurricular and co-curricular activities.";
-
-    }
-
-
-    /* =========================
-       20. ACADEMIC PROGRESS
-    ========================== */
-
-    else if (
-        message === "how are parents informed about their child's academic progress" ||
-        message === "how are parents informed about academic progress" ||
-        message === "how do parents know about their child's progress" ||
-        message === "how are parents informed about student progress"
-    ) {
-
-        answer =
-            "Parents are informed about their child's academic progress through Parent–Teacher Meetings, academic reports, school communication and teacher updates.";
-
-    }
-
-
-    /* =========================
-       21. PTM
-    ========================== */
-
-    else if (
-        message === "how often are parent teacher meetings conducted" ||
-        message === "how often are ptms conducted" ||
-        message === "how often is ptm conducted" ||
-        message === "when are parent teacher meetings conducted"
-    ) {
-
-        answer =
-            "Parent–Teacher Meetings are conducted periodically during the academic year to discuss students' academic progress and overall development.";
-
-    }
-
-
-    /* =========================
-       22. EXAMINATIONS
-    ========================== */
-
-    else if (
-        message === "how are examinations and revision worksheets conducted" ||
-        message === "how are examinations conducted" ||
-        message === "how are revision worksheets conducted" ||
-        message === "how are exams conducted"
-    ) {
-
-        answer =
-            "Students are supported through regular classroom assessments, revision worksheets, practice activities and scheduled examinations.";
-
-    }
-
-
-    /* =========================
-       23. CONTACT NUMBER
-    ========================== */
-
-    else if (
-        message === "what is the school's contact number" ||
-        message === "what is the school contact number" ||
-        message === "school contact number" ||
-        message === "contact number"
-    ) {
-
-        answer =
-            "For the school's latest contact number, please visit the Contact Us page or contact the school office.";
-
-    }
-
-
-    /* =========================
-       24. WHATSAPP
-    ========================== */
-
-    else if (
-        message === "can i contact the school through whatsapp" ||
-        message === "can i contact the school on whatsapp" ||
-        message === "can i contact school through whatsapp" ||
-        message === "is whatsapp available"
-    ) {
-
-        answer =
-            "For WhatsApp communication details, please contact the school office or visit the Contact Us page.";
-
-    }
-
-
-    /* =========================
-       25. TEACHING VACANCIES
-    ========================== */
-
-    else if (
-        message === "are there any teaching vacancies" ||
-        message === "are there teaching vacancies" ||
-        message === "are there any teacher vacancies" ||
-        message === "is there any teaching vacancy" ||
-        message === "any teaching vacancies"
-    ) {
-
-        answer =
-            "Teaching vacancies depend on the school's current staffing requirements. Please check the Careers section or contact the school for current vacancy information.";
-
-    }
-
-
-    /* =========================
-       26. JOB APPLICATION
-    ========================== */
-
-    else if (
-        message === "how can i apply for a job at the school" ||
-        message === "how can i apply for a job" ||
-        message === "how do i apply for a job at the school" ||
-        message === "how can i apply for school job"
-    ) {
-
-        answer =
-            "To apply for a job, please visit the Careers section of our website and follow the application instructions provided for available positions.";
-
-    }
-
-
-    /* =========================
-       27. WHY CHOOSE SCHOOL
-    ========================== */
-
-    else if (
-        message === "why should parents choose maria's podar learn school" ||
-        message === "why should parents choose this school" ||
-        message === "why should i choose this school" ||
-        message === "why choose maria's podar learn school"
-    ) {
-
-        answer =
-            "Maria’s Podar Learn School focuses on quality education, academic development, student-centred learning, individual attention, discipline, value-based education, co-curricular activities and overall development of students.";
-
-    }
-
-
-    /* =========================
-       28. PRINCIPAL
-    ========================== */
-
-    else if (
-        message === "who is the principal" ||
-        message === "who is principal" ||
-        message === "principal of the school"
-    ) {
-
-        answer =
-            "The Principal of Maria’s Podar Learn School, Nilanga is Mr. Vishnu Raj.";
-
-    }
-
-
-    /* =========================
-       29. DIRECTOR
-    ========================== */
-
-    else if (
-        message === "who is the director" ||
-        message === "who is director" ||
-        message === "director of the school"
-    ) {
-
-        answer =
-            "The Director of Maria’s Podar Learn School, Nilanga is Mrs. Anjum Samir Patel.";
-
-    }
-
-
-    /* =========================
-       30. LIBRARY
-    ========================== */
-
-    else if (
-        message === "does the school have a library" ||
-        message === "does the school have library" ||
-        message === "library facility"
-    ) {
-
-        answer =
-            "The school provides library and reading facilities to encourage students to develop reading habits and broaden their knowledge.";
-
-    }
-
-
-    /* =========================
-       31. COMPUTER LAB
-    ========================== */
-
-    else if (
-        message === "does the school have a computer lab" ||
-        message === "computer lab" ||
-        message === "computer laboratory"
-    ) {
-
-        answer =
-            "The school has a well-equipped Computer Lab to support students' digital learning and computer education.";
-
-    }
-
-
-    /* =========================
-       32. SPORTS FACILITY
-    ========================== */
-
-    else if (
-        message === "does the school have sports facilities" ||
-        message === "sports facility" ||
-        message === "sports room"
-    ) {
-
-        answer =
-            "The school provides sports facilities and opportunities for students to participate in physical activities and sports.";
-
-    }
-
-
-    /* =========================
-       33. THANK YOU
-    ========================== */
-
-    else if (
-        message === "thank you" ||
-        message === "thanks" ||
-        message === "thankyou"
-    ) {
-
-        answer =
-            "You're welcome! 😊 If you have any other questions about Maria’s Podar Learn School, feel free to ask.";
-
-    }
-
-
-    /* =========================
-       34. BYE
-    ========================== */
-
-    else if (
-        message === "bye" ||
-        message === "goodbye" ||
-        message === "see you"
-    ) {
-
-        answer =
-            "Goodbye! 👋 Have a great day!";
-
-    }
-
-
-    /* =========================
-       DEFAULT
-    ========================== */
-
-    else {
-
-        answer =
-            "I'm sorry, I don't have information about that yet. 😊 Please ask me one of the questions related to Maria’s Podar Learn School.";
-
-    }
-
-
-    /* =========================
-       DISPLAY CHAT
-    ========================== */
-
-    chatLog.innerHTML =
-        "<b>You:</b> " +
-        originalMessage +
-        "<br><br>" +
-        "<b>Bot:</b> " +
-        answer;
-
-    input.value = "";
-
-}
-
-</script>
-
-
-
-<!-- ================= COURSE DROPDOWN SCRIPT ================= -->
-
-<script>
-
-document.querySelectorAll(
-    ".course-group > a"
-).forEach(function(link) {
-
-
-    link.addEventListener(
-        "click",
-        function(e) {
-
-            e.preventDefault();
-
-            e.stopPropagation();
-
-
-            const submenu =
-                this.parentElement
-                .querySelector(".dropdown2");
-
-
-            document.querySelectorAll(
-                ".course-group .dropdown2"
-            ).forEach(function(menu) {
-
-                if (menu !== submenu) {
-
-                    menu.classList.remove("show");
-
-                }
-
-            });
-
-
-            submenu.classList.toggle("show");
-
-        }
-    );
-
-});
-
-</script>
-
-
-
-<!-- ================= LOGIN SCRIPT ================= -->
+<!-- =====================================================
+     HERO SLIDER DOT CONTROL
+===================================================== -->
 
 <script>
 
@@ -2414,9 +2429,115 @@ document.addEventListener(
     function () {
 
 
-        /* =========================
-           GET LOGIN ELEMENTS
-        ========================= */
+        const slides =
+            document.querySelectorAll(
+                ".hero-slide"
+            );
+
+
+        const dots =
+            document.querySelectorAll(
+                ".hero-slider-dot"
+            );
+
+
+        let currentSlide = 0;
+
+
+        function updateDots(index) {
+
+            dots.forEach(
+                function(dot, dotIndex) {
+
+                    dot.classList.toggle(
+                        "active",
+                        dotIndex === index
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* Automatic dots */
+
+        setInterval(
+            function() {
+
+
+                currentSlide++;
+
+
+                if (
+                    currentSlide >= slides.length
+                ) {
+
+                    currentSlide = 0;
+
+                }
+
+
+                updateDots(currentSlide);
+
+
+            },
+            5000
+        );
+
+
+        /* Dot click */
+
+        dots.forEach(
+            function(dot) {
+
+
+                dot.addEventListener(
+                    "click",
+                    function() {
+
+
+                        const slideNumber =
+                            parseInt(
+                                this.getAttribute(
+                                    "data-slide"
+                                )
+                            );
+
+
+                        currentSlide =
+                            slideNumber;
+
+
+                        updateDots(
+                            currentSlide
+                        );
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+    }
+);
+
+</script>
+
+
+<!-- =====================================================
+     ADMIN LOGIN SCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
 
         const accountBtn =
             document.getElementById(
@@ -2430,7 +2551,7 @@ document.addEventListener(
             );
 
 
-        const accountForm =
+        const loginAccountForm =
             document.getElementById(
                 "loginAccountForm"
             );
@@ -2442,106 +2563,90 @@ document.addEventListener(
             );
 
 
-        /* =========================
-           OPEN LOGIN FROM HEADER ICON
-        ========================= */
-
-        if (accountBtn && accountForm) {
-
-            accountBtn.addEventListener(
-                "click",
-                function (e) {
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-                    accountForm.classList.add(
-                        "active"
-                    );
-
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-
-                }
-            );
-
-        }
-
-
-        /* =========================
-           OPEN LOGIN FROM
-           FOOTER ADMIN LOGIN
-        ========================= */
-
-        if (adminLoginLink && accountForm) {
-
-            adminLoginLink.addEventListener(
-                "click",
-                function (e) {
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-                    accountForm.classList.add(
-                        "active"
-                    );
-
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-
-                }
-            );
-
-        }
-
-
-        /* =========================
-           CLOSE LOGIN
-        ========================= */
-
-        if (closeForm && accountForm) {
-
-            closeForm.addEventListener(
-                "click",
-                function (e) {
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
-                    accountForm.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
-
-        }
-
-
-        /* =========================
-           LOGIN FORM
-        ========================= */
-
         const loginForm =
             document.getElementById(
                 "schoolLoginForm"
             );
 
 
+        const loginMessage =
+            document.getElementById(
+                "loginMessage"
+            );
+
+
+        if (accountBtn) {
+
+
+            accountBtn.addEventListener(
+                "click",
+                function () {
+
+
+                    loginAccountForm.classList.add(
+                        "active"
+                    );
+
+
+                }
+            );
+
+
+        }
+
+
+        if (adminLoginLink) {
+
+
+            adminLoginLink.addEventListener(
+                "click",
+                function (e) {
+
+
+                    e.preventDefault();
+
+
+                    loginAccountForm.classList.add(
+                        "active"
+                    );
+
+
+                }
+            );
+
+
+        }
+
+
+        if (closeForm) {
+
+
+            closeForm.addEventListener(
+                "click",
+                function () {
+
+
+                    loginAccountForm.classList.remove(
+                        "active"
+                    );
+
+
+                }
+            );
+
+
+        }
+
+
         if (loginForm) {
+
 
             loginForm.addEventListener(
                 "submit",
-                function (event) {
+                function (e) {
 
-                    event.preventDefault();
+
+                    e.preventDefault();
 
 
                     const email =
@@ -2553,71 +2658,154 @@ document.addEventListener(
                     const password =
                         document.getElementById(
                             "loginPassword"
-                        ).value.trim();
+                        ).value;
 
 
-                    const message =
-                        document.getElementById(
-                            "loginMessage"
-                        );
+                    const adminEmail =
+                        "admin@school.com";
 
 
-                    /* =========================
-                       CORRECT LOGIN
-                    ========================= */
+                    const adminPassword =
+                        "Admin@123";
+
 
                     if (
-                        email === "admin@school.com" &&
-                        password === "Admin@123"
+                        email === adminEmail &&
+                        password === adminPassword
                     ) {
 
 
-                        message.innerHTML =
-                            "Login Successful! ✅";
+                        loginMessage.innerHTML =
+                            "Login successful!";
 
 
-                        message.style.color =
+                        loginMessage.style.color =
                             "green";
 
 
                         setTimeout(
                             function () {
 
+
                                 window.location.href =
                                     "admin-dashboard.html";
 
+
                             },
-                            1000
+                            500
                         );
 
+
                     }
-
-
-                    /* =========================
-                       WRONG LOGIN
-                    ========================= */
 
                     else {
 
-                        message.innerHTML =
-                            "Invalid Email or Password ❌";
+
+                        loginMessage.innerHTML =
+                            "Invalid email or password!";
 
 
-                        message.style.color =
+                        loginMessage.style.color =
                             "red";
 
+
                     }
+
 
                 }
             );
 
+
         }
+
 
     }
 );
 
 </script>
 
+
+<!-- =====================================================
+     COURSE DROPDOWN SCRIPT
+===================================================== -->
+
+<script>
+
+document.querySelectorAll(
+    ".course-group > a"
+).forEach(
+    function(link) {
+
+
+        link.addEventListener(
+            "click",
+            function(e) {
+
+
+                e.preventDefault();
+
+                e.stopPropagation();
+
+
+                const submenu =
+                    this.parentElement
+                    .querySelector(
+                        ".dropdown2"
+                    );
+
+
+                document.querySelectorAll(
+                    ".course-group .dropdown2"
+                ).forEach(
+                    function(menu) {
+
+
+                        if (
+                            menu !== submenu
+                        ) {
+
+
+                            menu.classList.remove(
+                                "show"
+                            );
+
+
+                        }
+
+
+                    }
+                );
+
+
+                submenu.classList.toggle(
+                    "show"
+                );
+
+
+            }
+        );
+
+
+    }
+);
+
+</script>
+
+
+<!-- =====================================================
+     TIDIO
+===================================================== -->
+
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
+
+
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
+
+<script src="js/script.js"></script>
 
 
 </body>

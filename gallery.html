@@ -1,1209 +1,1222 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maria's Podar Learn School Nilanga(CBSE)</title>
+<!-- MAIN CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+<!-- RESPONSIVE CSS -->
+<link href="css/responsive.css" rel="stylesheet"/>
+<!-- FONT AWESOME -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<!-- FAVICON -->
+<link href="Image/Logo.jpeg" rel="shortcut icon" type="image/png"/>
+<style>
+        /* =====================================================
+           GALLERY PAGE CSS - ABOUT US STYLE
+        ===================================================== */
 
-    <meta charset="UTF-8">
+        * {
+            box-sizing: border-box;
+        }
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
 
-    <title>Maria's Podar Learn School Nilanga(CBSE)</title>
+        /* =====================================================
+           GALLERY HERO
+        ===================================================== */
 
+        .gallery-hero {
+            position: relative;
+            width: 100%;
+            min-height: 560px;
 
-    <!-- MAIN CSS -->
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    <link rel="stylesheet"
-          href="css/style.css">
+            text-align: center;
 
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.30),
+                    rgba(0, 0, 0, 0.62)
+                ),
+                url("Image/Image.png");
 
-    <!-- RESPONSIVE CSS -->
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-    <link rel="stylesheet"
-          href="css/responsive.css">
+        .gallery-hero-content {
+            position: relative;
+            z-index: 2;
 
+            width: 90%;
+            max-width: 1000px;
 
-    <!-- FONT AWESOME -->
+            padding: 30px 20px;
+        }
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer">
+        .gallery-hero-content h1 {
+            margin: 0;
 
+            font-family: 'Poppins', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.2;
 
-    <!-- FAVICON -->
+            color: #ffffff;
 
-    <link rel="shortcut icon"
-          href="Image/Logo.jpeg"
-          type="image/png">
+            text-shadow:
+                0 4px 12px rgba(0,0,0,0.60);
+        }
 
+        .gallery-hero-content h1 span {
+            color: #f39c12;
+        }
+
+        .gallery-hero-content p {
+            margin: 18px auto 0;
+
+            max-width: 850px;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 1.5;
+
+            color: #ffffff;
+
+            text-shadow:
+                0 3px 8px rgba(0,0,0,0.60);
+        }
+
+        /* =====================================================
+           GALLERY MAIN
+        ===================================================== */
+
+        .gallery-section {
+            width: 100%;
+
+            padding: 70px 0;
+
+            background: #f7f9fc;
+        }
+
+        .gallery-title {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 0 auto 35px;
+
+            text-align: center;
+        }
+
+        .gallery-title h2 {
+            margin: 0 0 15px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 35px;
+            font-weight: 700;
+
+            color: #122b49;
+        }
+
+        .gallery-title h2 span {
+            color: #f39c12;
+        }
+
+        .gallery-title p {
+            max-width: 850px;
+
+            margin: auto;
+
+            font-family: 'Quicksand', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+
+            color: #555;
+        }
+
+        /* Orange line like About Us */
+
+        .gallery-title::after {
+            content: "";
+
+            display: block;
+
+            width: 75px;
+            height: 4px;
+
+            margin: 20px auto 0;
+
+            border-radius: 10px;
+
+            background: #f39c12;
+        }
+
+        /* =====================================================
+           FILTER BUTTONS
+        ===================================================== */
+
+        .gallery-filter {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 0 auto 35px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .gallery-filter-btn {
+            padding: 11px 24px;
+
+            border: 2px solid #122b49;
+            border-radius: 30px;
+
+            background: #ffffff;
+
+            color: #122b49;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+        .gallery-filter-btn:hover,
+        .gallery-filter-btn.active {
+            background: #122b49;
+            color: #ffffff;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        /* =====================================================
+           GALLERY GRID
+        ===================================================== */
+
+        .gallery-container {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            width: 100%;
+            height: 280px;
+
+            border-radius: 15px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.45s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* =====================================================
+           GALLERY OVERLAY
+        ===================================================== */
+
+        .gallery-overlay {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            min-height: 85px;
+
+            padding: 18px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(18,43,73,0.95),
+                    rgba(18,43,73,0.10)
+                );
+
+            color: #ffffff;
+        }
+
+        .gallery-overlay h3 {
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+
+            color: #ffffff;
+        }
+
+        .gallery-overlay i {
+            flex-shrink: 0;
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #f39c12;
+
+            color: #ffffff;
+
+            font-size: 16px;
+
+            transition: 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay i {
+            transform: scale(1.08);
+        }
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        .gallery-lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 99999;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 35px;
+
+            background:
+                rgba(0,0,0,0.90);
+        }
+
+        .gallery-lightbox img {
+            max-width: 88vw;
+            max-height: 82vh;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 15px 45px rgba(0,0,0,0.45);
+        }
+
+        .gallery-close,
+        .gallery-prev,
+        .gallery-next {
+            position: absolute;
+
+            z-index: 2;
+
+            border: none;
+
+            cursor: pointer;
+
+            color: #ffffff;
+
+            transition: 0.3s ease;
+        }
+
+        .gallery-close {
+            top: 25px;
+            right: 30px;
+
+            font-size: 42px;
+
+            background: transparent;
+        }
+
+        .gallery-prev,
+        .gallery-next {
+            top: 50%;
+
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #122b49;
+
+            font-size: 25px;
+
+            transform: translateY(-50%);
+        }
+
+        .gallery-prev {
+            left: 25px;
+        }
+
+        .gallery-next {
+            right: 25px;
+        }
+
+        .gallery-close:hover {
+            color: #f39c12;
+            transform: scale(1.1);
+        }
+
+        .gallery-prev:hover,
+        .gallery-next:hover {
+            background: #f39c12;
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .gallery-container {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 20px;
+            }
+
+            .gallery-item {
+                height: 260px;
+            }
+        }
+
+        /* =====================================================
+           MOBILE 768px
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .gallery-hero {
+                min-height: 450px;
+
+                background-position: center;
+            }
+
+            .gallery-hero-content h1 {
+                font-size: 43px;
+            }
+
+            .gallery-hero-content p {
+                font-size: 20px;
+            }
+
+            .gallery-section {
+                padding: 50px 0;
+            }
+
+            .gallery-title {
+                width: 92%;
+            }
+
+            .gallery-title h2 {
+                font-size: 28px;
+            }
+
+            .gallery-title p {
+                font-size: 16px;
+            }
+
+            .gallery-filter {
+                width: 92%;
+            }
+
+            .gallery-container {
+                width: 92%;
+
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .gallery-item {
+                height: 270px;
+            }
+
+            .gallery-overlay {
+                min-height: 78px;
+
+                padding: 15px 17px;
+            }
+        }
+
+        /* =====================================================
+           MOBILE 480px
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+
+                overflow-x: hidden;
+            }
+
+            .gallery-hero {
+                min-height: 410px;
+
+                background-position: center;
+            }
+
+            .gallery-hero-content {
+                width: 95%;
+
+                padding: 20px 10px;
+            }
+
+            .gallery-hero-content h1 {
+                font-size: 32px;
+
+                line-height: 1.25;
+            }
+
+            .gallery-hero-content p {
+                margin-top: 12px;
+
+                font-size: 17px;
+
+                line-height: 1.5;
+            }
+
+            .gallery-section {
+                padding: 38px 0;
+            }
+
+            .gallery-title {
+                width: 94%;
+
+                margin-bottom: 25px;
+            }
+
+            .gallery-title h2 {
+                font-size: 24px;
+
+                line-height: 1.4;
+            }
+
+            .gallery-title p {
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+            .gallery-title::after {
+                width: 60px;
+                height: 3px;
+
+                margin-top: 15px;
+            }
+
+            .gallery-filter {
+                width: 94%;
+
+                gap: 8px;
+
+                margin-bottom: 25px;
+            }
+
+            .gallery-filter-btn {
+                padding: 9px 15px;
+
+                font-size: 12px;
+            }
+
+            .gallery-container {
+                width: 94%;
+
+                gap: 15px;
+            }
+
+            .gallery-item {
+                height: 235px;
+
+                border-radius: 12px;
+            }
+
+            .gallery-overlay {
+                min-height: 68px;
+
+                padding: 12px 14px;
+            }
+
+            .gallery-overlay h3 {
+                font-size: 15px;
+            }
+
+            .gallery-overlay i {
+                width: 35px;
+                height: 35px;
+
+                font-size: 14px;
+            }
+
+            .gallery-lightbox {
+                padding: 20px;
+            }
+
+            .gallery-lightbox img {
+                max-width: 94vw;
+                max-height: 75vh;
+            }
+
+            .gallery-close {
+                top: 12px;
+                right: 15px;
+
+                font-size: 36px;
+            }
+
+            .gallery-prev,
+            .gallery-next {
+                width: 42px;
+                height: 42px;
+
+                font-size: 20px;
+            }
+
+            .gallery-prev {
+                left: 10px;
+            }
+
+            .gallery-next {
+                right: 10px;
+            }
+        }
+
+        /* =====================================================
+           EXTRA SMALL MOBILE 360px
+        ===================================================== */
+
+        @media (max-width: 360px) {
+
+            .gallery-hero {
+                min-height: 380px;
+            }
+
+            .gallery-hero-content h1 {
+                font-size: 28px;
+            }
+
+            .gallery-hero-content p {
+                font-size: 15px;
+            }
+
+            .gallery-title h2 {
+                font-size: 21px;
+            }
+
+            .gallery-title p {
+                font-size: 13px;
+            }
+
+            .gallery-filter-btn {
+                padding: 8px 12px;
+
+                font-size: 11px;
+            }
+
+            .gallery-item {
+                height: 210px;
+            }
+
+            .gallery-overlay h3 {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
-
-
 <body>
-
-
 <!-- =====================================================
                          HEADER
 ===================================================== -->
-
 <header class="header">
-
-
-    <a href="index.html"
-       class="logo">
-
-
-        <img src="Image/Logo.jpeg"
-             alt="School logo"
-             style="width:55px; height:55px; object-fit:contain;">
-
-
-        <div class="collage-name">
-
+<a class="logo" href="index.html">
+<img alt="Maria's Podar Learn School Logo" src="Image/Logo.jpeg"/>
+<div class="collage-name">
             Maria's Podar Learn School Nilanga
-
         </div>
-
-
-    </a>
-
-
-
-    <nav class="navbar">
-
-
-        <div id="close-navbar"
-             class="close-icon">
-
-
-            <img src="Image/close-icon.gif"
-                 width="50"
-                 alt="Close">
-
-
-        </div>
-
-
-
-        <ul class="navbar-links">
-
-
-            <!-- HOME -->
-
-            <li class="navbar-dropdown">
-
-                <a href="index.html">
-
+</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="close-icon" id="close-navbar">
+<img alt="Close Menu" src="Image/close-icon.gif" width="50"/>
+</div>
+<ul class="navbar-links">
+<li>
+<a href="index.html">
                     Home
-
                 </a>
-
-            </li>
-
-
-
-            <!-- COURSE -->
-
-            <li class="navbar-dropdown">
-
-
-                <a href="#">
+</li>
+<!-- COURSE -->
+<li class="navbar-dropdown">
+<a class="course-main-link" href="#">
 
                     Course
 
                 </a>
-
-
-
-                <div class="dropdown">
-
-
-                    <ul>
-
-
-                        <!-- PRIMARY -->
-
-                        <li class="course-group">
-
-
-                            <a href="javascript:void(0);">
+<div class="dropdown">
+<ul>
+<!-- PRIMARY -->
+<li class="course-group">
+<a href="#">
 
                                 Primary Group
 
                                 <span class="arrow">
                                     ›
                                 </span>
-
-                            </a>
-
-
-
-                            <ul class="dropdown2">
-
-
-                                <li>
-
-                                    <a href="nursery.html">
-
+</a>
+<ul class="dropdown2">
+<li>
+<a href="nursery.html">
                                         Nursery to UKG
-
                                     </a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a href="class-1-5.html">
-
+</li>
+<li>
+<a href="class-1-5.html">
                                         Class 1st to 5th
-
                                     </a>
-
-                                </li>
-
-
-                            </ul>
-
-
-                        </li>
-
-
-
-                        <!-- SECONDARY -->
-
-                        <li class="course-group">
-
-
-                            <a href="javascript:void(0);">
+</li>
+</ul>
+</li>
+<!-- SECONDARY -->
+<li class="course-group">
+<a href="#">
 
                                 Secondary Group
 
                                 <span class="arrow">
                                     ›
                                 </span>
-
-                            </a>
-
-
-
-                            <ul class="dropdown2">
-
-
-                                <li>
-
-                                    <a href="class-6-8.html">
-
+</a>
+<ul class="dropdown2">
+<li>
+<a href="class-6-8.html">
                                         Class 6th to 8th
-
                                     </a>
-
-                                </li>
-
-
-                                <li>
-
-                                    <a href="class-9-10.html">
-
+</li>
+<li>
+<a href="class-9-10.html">
                                         Class 9th to 10th
-
                                     </a>
-
-                                </li>
-
-
-                            </ul>
-
-
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-
-            </li>
-
-
-
-            <!-- ADMISSION -->
-
-            <li class="navbar-dropdown">
-
-
-                <a href="admission-form.html"
-                   target="_blank">
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+<!-- ADMISSIONS -->
+<li>
+<a href="admission-form.html">
 
                     Admissions
 
                 </a>
-
-
-            </li>
-
-
-
-            <!-- CAREERS -->
-
-            <li class="navbar-dropdown">
-
-
-                <a href="careers.html">
-
+</li>
+<!-- CAREERS -->
+<li>
+<a href="careers.html">
                     Careers
-
                 </a>
-
-
-            </li>
-
-
-
-            <!-- CONTACT -->
-
-            <li class="navbar-dropdown">
-
-
-                <a href="contact-us.html">
-
+</li>
+<!-- CONTACT -->
+<li>
+<a href="contact-us.html">
                     Contact us
-
                 </a>
-
-
-            </li>
-
-
-        </ul>
-
-
-    </nav>
-
-
-
-    <!-- HEADER ICONS -->
-
-    <div class="icons">
-
-
-        <!-- LOGIN -->
-
-        <div id="account-btn"
-             class="header-icon"
-             style="cursor:pointer;">
-
-
-            <img src="Image/avatar-icon.svg"
-                 alt="Login">
-
-
-            <img src="Image/avatar-icon-hover.gif"
-                 alt="Login"
-                 width="10"
-                 class="header-icon-hover">
-
-
-        </div>
-
-
-
-        <!-- MENU -->
-
-        <div id="menu-btn"
-             class="header-icon">
-
-
-            <img src="Image/menu-icon.svg"
-                 alt="Menu">
-
-
-            <img src="Image/menu-icon-hover.gif"
-                 alt="Menu"
-                 width="30"
-                 class="header-icon-hover">
-
-
-        </div>
-
-
-    </div>
-
-
+</li>
+</ul>
+</nav>
+<!-- HEADER ICONS -->
+<div class="icons">
+<!-- ACCOUNT -->
+<div class="header-icon" id="account-btn">
+<img alt="Login" src="Image/avatar-icon.svg"/>
+<img alt="Login" class="header-icon-hover" src="Image/avatar-icon-hover.gif"/>
+</div>
+<!-- MENU -->
+<div class="header-icon" id="menu-btn">
+<img alt="Menu" src="Image/menu-icon.svg"/>
+<img alt="Menu" class="header-icon-hover" src="Image/menu-icon-hover.gif"/>
+</div>
+</div>
 </header>
-
-
-
 <!-- =====================================================
                        LOGIN FORM
 ===================================================== -->
-
-<div class="account-form"
-     id="loginAccountForm">
-
-
-    <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
-
-
-        <img src="Image/close-icon.gif"
-             alt="Close"
-             width="50">
-
-
-    </div>
-
-
-
-    <div class="buttons">
-
-
-        <span class="btn active login-btn">
+<div class="account-form" id="loginAccountForm">
+<div class="close-icon" id="close-form" style="cursor:pointer;">
+<img alt="Close" src="Image/close-icon.gif" width="50"/>
+</div>
+<div class="buttons">
+<span class="btn active login-btn">
 
             Login
 
         </span>
-
-
-    </div>
-
-
-
-    <form class="login-form active"
-          id="schoolLoginForm">
-
-
-        <h3>
+</div>
+<form class="login-form active" id="schoolLoginForm">
+<h3>
 
             Admin Login
 
         </h3>
-
-
-
-        <input
-            type="email"
-            id="loginEmail"
-            placeholder="Enter your email"
-            class="box"
-            required>
-
-
-
-        <input
-            type="password"
-            id="loginPassword"
-            placeholder="Enter your password"
-            class="box"
-            required>
-
-
-
-        <div class="flex">
-
-
-            <input
-                type="checkbox"
-                id="remember-me">
-
-
-            <label for="remember-me">
+<input class="box" id="loginEmail" placeholder="Enter your email" required="" type="email"/>
+<input class="box" id="loginPassword" placeholder="Enter your password" required="" type="password"/>
+<div class="flex">
+<input id="remember-me" type="checkbox"/>
+<label for="remember-me">
 
                 Remember Me
 
             </label>
-
-
-        </div>
-
-
-
-        <p id="loginMessage"></p>
-
-
-
-        <button type="submit"
-                class="btn">
+</div>
+<p id="loginMessage"></p>
+<button class="btn" type="submit">
 
             Login Now
 
         </button>
-
-
-    </form>
-
-
+</form>
 </div>
-
-
-
 <!-- =====================================================
                      GALLERY HERO
 ===================================================== -->
-
 <section class="gallery-hero">
-
-
-    <div class="gallery-hero-content">
-
-
-        <h1>
+<div class="gallery-hero-content">
+<h1>
 
             Our
 
             <span>
                 School Gallery
             </span>
-
-        </h1>
-
-
-        <p>
+</h1>
+<p>
 
             Explore memorable moments,
             activities and events at
             Maria's Podar Learn School Nilanga.
 
         </p>
-
-
-    </div>
-
-
+</div>
 </section>
-
-
-
 <!-- =====================================================
                      GALLERY SECTION
 ===================================================== -->
-
 <section class="gallery-section">
-
-
-    <div class="gallery-title">
-
-
-        <h2>
+<div class="gallery-title">
+<h2>
 
             School
 
             <span>
                 Gallery
             </span>
-
-        </h2>
-
-
-        <p>
+</h2>
+<p>
 
             A collection of memorable moments
             from our school.
 
         </p>
-
-
-    </div>
-
-
-
-    <!-- =================================================
+</div>
+<!-- =================================================
                          FILTER BUTTONS
     ================================================= -->
-
-    <div class="gallery-filter">
-
-
-        <button class="gallery-filter-btn active"
-                data-filter="all">
+<div class="gallery-filter">
+<button class="gallery-filter-btn active" data-filter="all">
 
             All
 
         </button>
-
-
-        <button class="gallery-filter-btn"
-                data-filter="events">
+<button class="gallery-filter-btn" data-filter="events">
 
             Events
 
         </button>
-
-
-        <button class="gallery-filter-btn"
-                data-filter="activities">
+<button class="gallery-filter-btn" data-filter="activities">
 
             Activities
 
         </button>
-
-
-        <button class="gallery-filter-btn"
-                data-filter="students">
+<button class="gallery-filter-btn" data-filter="students">
 
             Students
 
         </button>
-
-
-    </div>
-
-
-
-    <!-- =================================================
+</div>
+<!-- =================================================
                          GALLERY GRID
     ================================================= -->
-
-    <div class="gallery-container">
-
-
-        <!-- IMAGE 1 -->
-
-        <div class="gallery-item"
-             data-category="events">
-
-            <img src="Image/gallery1.jpeg"
-                 alt="School Event">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<div class="gallery-container">
+<!-- IMAGE 1 -->
+<div class="gallery-item" data-category="events">
+<img alt="School Event" src="Image/gallery1.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     School Event
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 2 -->
-
-        <div class="gallery-item"
-             data-category="activities">
-
-            <img src="Image/gallery2.jpeg"
-                 alt="School Activity">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 2 -->
+<div class="gallery-item" data-category="activities">
+<img alt="School Activity" src="Image/gallery2.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     School Activity
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 3 -->
-
-        <div class="gallery-item"
-             data-category="students">
-
-            <img src="Image/gallery3.jpeg"
-                 alt="Students">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 3 -->
+<div class="gallery-item" data-category="students">
+<img alt="Students" src="Image/gallery3.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     Students
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 4 -->
-
-        <div class="gallery-item"
-             data-category="events">
-
-            <img src="Image/gallery4.jpeg"
-                 alt="School Event">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 4 -->
+<div class="gallery-item" data-category="events">
+<img alt="School Event" src="Image/gallery4.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     School Event
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 5 -->
-
-        <div class="gallery-item"
-             data-category="activities">
-
-            <img src="Image/gallery5.jpeg"
-                 alt="School Activity">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 5 -->
+<div class="gallery-item" data-category="activities">
+<img alt="School Activity" src="Image/gallery5.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     Activities
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 6 -->
-
-        <div class="gallery-item"
-             data-category="students">
-
-            <img src="Image/gallery6.jpeg"
-                 alt="Students">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 6 -->
+<div class="gallery-item" data-category="students">
+<img alt="Students" src="Image/gallery6.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     Students
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 7 -->
-
-        <div class="gallery-item"
-             data-category="events">
-
-            <img src="Image/gallery7.jpeg"
-                 alt="School Event">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 7 -->
+<div class="gallery-item" data-category="events">
+<img alt="School Event" src="Image/gallery7.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     Events
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 8 -->
-
-        <div class="gallery-item"
-             data-category="activities">
-
-            <img src="Image/gallery8.png"
-                 alt="School Activity">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 8 -->
+<div class="gallery-item" data-category="activities">
+<img alt="School Activity" src="Image/gallery8.png"/>
+<div class="gallery-overlay">
+<h3>
                     Activities
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 9 -->
-
-        <div class="gallery-item"
-             data-category="students">
-
-            <img src="Image/gallery9.jpeg"
-                 alt="Students">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 9 -->
+<div class="gallery-item" data-category="students">
+<img alt="Students" src="Image/gallery9.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     Students
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 10 -->
-
-        <div class="gallery-item"
-             data-category="events">
-
-            <img src="Image/gallery10.jpeg"
-                 alt="School Event">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 10 -->
+<div class="gallery-item" data-category="events">
+<img alt="School Event" src="Image/gallery10.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     School Event
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 11 -->
-
-        <div class="gallery-item"
-             data-category="activities">
-
-            <img src="Image/gallery11.png"
-                 alt="School Activity">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 11 -->
+<div class="gallery-item" data-category="activities">
+<img alt="School Activity" src="Image/gallery11.png"/>
+<div class="gallery-overlay">
+<h3>
                     School Activity
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- IMAGE 12 -->
-
-        <div class="gallery-item"
-             data-category="students">
-
-            <img src="Image/gallery12.jpeg"
-                 alt="Students">
-
-            <div class="gallery-overlay">
-
-                <h3>
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+<!-- IMAGE 12 -->
+<div class="gallery-item" data-category="students">
+<img alt="Students" src="Image/gallery12.jpeg"/>
+<div class="gallery-overlay">
+<h3>
                     Students
                 </h3>
-
-                <i class="fa-solid fa-expand"></i>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
+<i class="fa-solid fa-expand"></i>
+</div>
+</div>
+</div>
 </section>
-
-
-
 <!-- =====================================================
                        LIGHTBOX
 ===================================================== -->
+<div class="gallery-lightbox" id="galleryLightbox">
+<span class="gallery-close" id="galleryClose">
 
-<div class="gallery-lightbox"
-     id="galleryLightbox">
-
-
-    <span class="gallery-close"
-          id="galleryClose">
-
-        &times;
+        ×
 
     </span>
+<button class="gallery-prev" id="galleryPrev">
 
-
-    <button class="gallery-prev"
-            id="galleryPrev">
-
-        &#10094;
+        ❮
 
     </button>
+<img alt="Gallery Image" id="lightboxImage" src=""/>
+<button class="gallery-next" id="galleryNext">
 
-
-    <img id="lightboxImage"
-         src=""
-         alt="Gallery Image">
-
-
-    <button class="gallery-next"
-            id="galleryNext">
-
-        &#10095;
+        ❯
 
     </button>
-
-
 </div>
-
-
-
 <!-- =====================================================
                          FOOTER
 ===================================================== -->
-
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
-
-
-    <div class="content">
-
-
-        <div class="top">
-
-
-            <div class="logo-details">
-
-
-                <span>
-
+<footer>
+<div class="content">
+<div class="top">
+<div class="logo-details">
+<span>
                     Maria’s Podar Learn School Nilanga
-
                 </span>
-
-
-            </div>
-
-
-
-            <div class="media-icons">
-
-
-                <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
-
-                    <i class="fab fa-facebook-f"></i>
-
-                </a>
-
-
-               <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/him.sonepat/" rel="noopener" target="_blank">
+<i class="fab fa-facebook-f"></i>
 </a>
-
-
-                <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
-
-                    <i class="fab fa-instagram"></i>
-
-                </a>
-
-
-                <a href="#">
-
-                    <i class="fab fa-linkedin-in"></i>
-
-                </a>
-
-
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
-                   target="_blank">
-
-                    <i class="fab fa-youtube"></i>
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="link-boxes">
-
-
-            <!-- ABOUT -->
-
-            <ul class="box">
-
-
-                <li class="link_name">
-
+<a href="mailto:principal.mpls@podar.org">
+<i class="fa-solid fa-envelope"></i>
+</a>
+<a href="https://instagram.com/mariaspodarschoolnilanga" rel="noopener" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="#">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k" rel="noopener" target="_blank">
+<i class="fab fa-youtube"></i>
+</a>
+</div>
+</div>
+<div class="link-boxes">
+<!-- ABOUT -->
+<ul class="box">
+<li class="link_name">
                     About
-
                 </li>
-
-
-                <li>
-
-                    <a href="index.html">
-
+<li>
+<a href="index.html">
                         Home
-
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="contact-us.html">
-
+</li>
+<li>
+<a href="contact-us.html">
                         Contact us
-
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="About-us.html">
-
+</li>
+<li>
+<a href="About-us.html">
                         About us
-
                     </a>
-
-                </li>
-
-
-            </ul>
-
-
-
-            <!-- QUICK LINKS -->
-
-            <ul class="box">
-
-
-                <li class="link_name">
-
+</li>
+</ul>
+<!-- QUICK LINKS -->
+<ul class="box">
+<li class="link_name">
                     Quick Links
-
                 </li>
-
-
-                <li>
-
-                    <a href="admission-form.html">
-
+<li>
+<a href="admission-form.html">
                         Admission Form
-
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="index.html#notice-board">
-
+</li>
+<li>
+<a href="index.html#notice-board">
                         Notice Board
-
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="index.html">
-
+</li>
+<li>
+<a href="index.html">
                         School Site
-
                     </a>
-
-                </li>
-
-
-            </ul>
-
-
-
-            <!-- STUDENT CORNER -->
-
-            <ul class="box">
-
-
-                <li class="link_name">
-
+</li>
+</ul>
+<!-- STUDENT -->
+<ul class="box">
+<li class="link_name">
                     Student's Corner
-
                 </li>
-
-
-                <li>
-
-                    <a href="fees-payment.html">
-
+<li>
+<a href="fees-payment.html">
                         Fees Payment
-
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="complaint.html">
-
+</li>
+<li>
+<a href="complaint.html">
                         Complaint Section
-
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="careers.html">
-
+</li>
+<li>
+<a href="careers.html">
                         Careers
-
                     </a>
-
-                </li>
-
-
-            </ul>
-
-
-
-            <!-- ACCOUNT -->
-
-            <ul class="box">
-
-
-                <li class="link_name">
-
+</li>
+</ul>
+<!-- ACCOUNT -->
+<ul class="box">
+<li class="link_name">
                     Account
-
                 </li>
-
-
-                <li>
-
-                    <a href="#"
-                       id="adminLoginLink">
+<li>
+<a href="#" id="adminLoginLink">
 
                         Admin Login
 
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="events.html">
-
+</li>
+<li>
+<a href="events.html">
                         Events
-
                     </a>
-
-                </li>
-
-
-                <li>
-
-                    <a href="gallery.html">
-
+</li>
+<li>
+<a href="gallery.html">
                         Gallery
-
                     </a>
-
-                </li>
-
-
-            </ul>
-
-
-
-            <!-- SUBSCRIBE -->
-
-            <ul class="box input-box">
-
-
-                <li class="link_name">
-
+</li>
+</ul>
+<!-- SUBSCRIBE -->
+<ul class="box input-box">
+<li class="link_name">
                     Subscribe
-
                 </li>
+<li>
+<input id="subscribeEmail" placeholder="Enter your email" type="email"/>
+</li>
+<li>
+<button onclick="subscribeUser()" type="button">
 
+                        Subscribe
 
-                <li>
-
-                    <input
-                        type="email"
-                        id="subscribeEmail"
-                        placeholder="Enter your email"
-                        required>
-
-                </li>
-
-
-                <li>
-
-                    <input
-                        type="button"
-                        value="Subscribe"
-                        onclick="subscribeUser()">
-
-                </li>
-
-
-                <li>
-
-                    <p id="subscribeMessage"></p>
-
-                </li>
-
-
-            </ul>
-
-
-        </div>
-
-
-    </div>
-
-
+                    </button>
+</li>
+<li>
+<p id="subscribeMessage"></p>
+</li>
+</ul>
+</div>
+</div>
 </footer>
-
-
-
 <!-- =====================================================
                      SUBSCRIBE SCRIPT
 ===================================================== -->
-
 <script>
 
 function subscribeUser() {
@@ -1300,32 +1313,18 @@ function subscribeUser() {
 }
 
 </script>
-
-
-
 <!-- =====================================================
                            TIDIO
 ===================================================== -->
-
-<script
-    src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
-    async>
+<script async="" src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js">
 </script>
-
-
-
 <!-- =====================================================
                          MAIN JS
 ===================================================== -->
-
 <script src="js/script.js"></script>
-
-
-
 <!-- =====================================================
                        GALLERY SCRIPT
 ===================================================== -->
-
 <script>
 
 document.addEventListener(
@@ -1668,13 +1667,9 @@ document.addEventListener(
 );
 
 </script>
-
-
-
 <!-- =====================================================
                          LOGIN SCRIPT
 ===================================================== -->
-
 <script>
 
 document.addEventListener(
@@ -1902,13 +1897,9 @@ document.addEventListener(
 );
 
 </script>
-
-
-
 <!-- =====================================================
                   COURSE DROPDOWN SCRIPT
 ===================================================== -->
-
 <script>
 
 document.querySelectorAll(
@@ -1968,8 +1959,5 @@ document.querySelectorAll(
 );
 
 </script>
-
-
 </body>
-
 </html>

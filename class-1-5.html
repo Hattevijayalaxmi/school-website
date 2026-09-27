@@ -9,816 +9,1585 @@
 
     <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+          href="Image/Logo.jpeg"
+          type="image/png">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
+          href="css/responsive.css">
 
-    <link rel="shortcut icon" href="Image/Logo.jpeg" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <!-- ================= CLASS 1 TO 5 PROFESSIONAL CSS ================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-        * {
-            box-sizing: border-box;
-        }
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
 
-        .primary-page {
-            background: #f7f9fc;
-            color: #263238;
-        }
 
-        /* ================= HERO ================= */
+<style>
 
-        .primary-hero {
-            min-height: 500px;
-            padding: 150px 25px 90px;
+/* =====================================================
+   RESET
+===================================================== */
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            text-align: center;
+html {
+    scroll-behavior: smooth;
+}
 
-            color: #fff;
+body {
+    margin: 0;
+    padding: 0;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(7, 35, 65, 0.88),
-                    rgba(15, 93, 125, 0.76)
-                ),
-                url("Image/Image.png");
+    width: 100%;
 
-            background-size: cover;
-            background-position: center;
-        }
+    overflow-x: hidden;
 
-        .primary-hero-content {
-            max-width: 900px;
-            width: 100%;
-        }
+    background: #f7f9fc;
+}
 
-        .primary-badge {
-            display: inline-block;
 
-            padding: 9px 20px;
+/* =====================================================
+   PRIMARY HERO
+   ONLY BACKGROUND IMAGE
+===================================================== */
 
-            margin-bottom: 20px;
+.primary-hero {
 
-            border: 1px solid rgba(255,255,255,0.45);
+    position: relative;
 
-            border-radius: 50px;
+    width: 100%;
 
-            font-size: 14px;
-            font-weight: 600;
+    min-height: 560px;
 
-            letter-spacing: 1px;
+    display: flex;
 
-            background: rgba(255,255,255,0.12);
+    align-items: center;
 
-            backdrop-filter: blur(5px);
-        }
+    justify-content: center;
 
-        .primary-hero h1 {
-            margin: 0 0 18px;
+    text-align: center;
 
-            font-size: clamp(38px, 6vw, 64px);
+    background-image:
 
-            line-height: 1.1;
+        linear-gradient(
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.65)
+        ),
 
-            font-weight: 700;
-        }
+        url("Image/Image.png");
 
-        .primary-hero h1 span {
-            display: block;
+    background-size: cover;
 
-            font-size: clamp(21px, 3vw, 30px);
+    background-position: center;
 
-            margin-top: 12px;
+    background-repeat: no-repeat;
+}
 
-            font-weight: 500;
 
-            opacity: 0.95;
-        }
+.primary-hero-content {
 
-        .primary-hero p {
-            max-width: 720px;
+    position: relative;
 
-            margin: 0 auto 30px;
+    z-index: 2;
 
-            font-size: 18px;
+    width: 90%;
 
-            line-height: 1.8;
+    max-width: 1000px;
 
-            color: rgba(255,255,255,0.92);
-        }
+    padding: 30px 20px;
+}
 
-        .primary-breadcrumb {
-            margin-top: 25px;
 
-            font-size: 14px;
+.primary-label {
 
-            color: rgba(255,255,255,0.75);
-        }
+    display: inline-block;
 
-        /* ================= BUTTONS ================= */
+    margin-bottom: 18px;
 
-        .primary-buttons {
-            display: flex;
+    padding: 8px 22px;
 
-            justify-content: center;
+    border-radius: 50px;
 
-            gap: 15px;
+    background: rgba(0,0,0,0.35);
 
-            flex-wrap: wrap;
-        }
+    border: 1px solid rgba(255,255,255,0.35);
 
-        .primary-btn {
-            display: inline-flex;
+    color: #f39c12;
 
-            align-items: center;
-            justify-content: center;
+    font-family: 'Poppins', sans-serif;
 
-            gap: 9px;
+    font-size: 15px;
 
-            padding: 13px 24px;
+    font-weight: 700;
 
-            border-radius: 7px;
+    letter-spacing: 2px;
 
-            text-decoration: none;
+    text-transform: uppercase;
+}
 
-            font-weight: 600;
 
-            transition: 0.3s ease;
-        }
+.primary-hero h1 {
 
-        .primary-btn-main {
-            background: #fff;
-            color: #0c5877;
-        }
+    margin: 0;
 
-        .primary-btn-main:hover {
-            transform: translateY(-3px);
-        }
+    color: #ffffff;
 
-        .primary-btn-outline {
-            border: 1px solid rgba(255,255,255,0.7);
+    font-family: 'Poppins', sans-serif;
 
-            color: #fff;
+    font-size: 60px;
 
-            background: rgba(255,255,255,0.08);
-        }
+    font-weight: 700;
 
-        .primary-btn-outline:hover {
-            background: #fff;
-            color: #0c5877;
-        }
+    line-height: 1.2;
 
+    text-shadow:
+        0 4px 12px rgba(0,0,0,0.65);
+}
 
-        /* ================= COMMON SECTION ================= */
 
-        .primary-section {
-            max-width: 1180px;
+.primary-hero p {
 
-            margin: auto;
+    margin: 18px 0 0;
 
-            padding: 75px 25px;
-        }
+    color: #ffffff;
 
-        .primary-section-heading {
-            text-align: center;
+    font-family: 'Quicksand', sans-serif;
 
-            max-width: 750px;
+    font-size: 25px;
 
-            margin: 0 auto 45px;
-        }
+    font-weight: 600;
 
-        .primary-section-heading .small-title {
-            display: inline-block;
+    line-height: 1.5;
 
-            margin-bottom: 10px;
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.60);
+}
 
-            font-size: 13px;
 
-            font-weight: 700;
+/* =====================================================
+   MAIN
+   WHITE BACKGROUND
+===================================================== */
 
-            text-transform: uppercase;
+.primary-main {
 
-            letter-spacing: 1.5px;
+    width: 100%;
 
-            color: #0b7298;
-        }
+    background: #f7f9fc;
 
-        .primary-section-heading h2 {
-            margin: 0 0 15px;
+    padding: 70px 0;
+}
 
-            font-size: clamp(28px, 4vw, 40px);
 
-            line-height: 1.2;
+.primary-wrapper {
 
-            color: #183b56;
-        }
+    width: 90%;
 
-        .primary-section-heading p {
-            margin: 0;
+    max-width: 1200px;
 
-            line-height: 1.8;
+    margin: auto;
+}
 
-            color: #667781;
 
-            font-size: 16px;
-        }
+/* =====================================================
+   INTRO
+===================================================== */
 
+.primary-intro {
 
-        /* ================= INTRO ================= */
+    text-align: center;
 
-        .primary-intro {
-            display: grid;
+    margin-bottom: 50px;
+}
 
-            grid-template-columns: 1.1fr 0.9fr;
 
-            gap: 45px;
+.primary-intro h2 {
 
-            align-items: center;
-        }
+    margin: 0 0 15px;
 
-        .primary-intro-text h2 {
-            margin: 0 0 18px;
+    font-family: 'Poppins', sans-serif;
 
-            font-size: 35px;
+    font-size: 35px;
 
-            color: #183b56;
-        }
+    font-weight: 700;
 
-        .primary-intro-text p {
-            margin-bottom: 15px;
+    color: #122b49;
+}
 
-            line-height: 1.8;
 
-            color: #5e6d75;
-        }
+.primary-line {
 
-        .primary-highlight-box {
-            padding: 30px;
+    width: 75px;
 
-            border-radius: 18px;
+    height: 4px;
 
-            background: #fff;
+    margin: 0 auto 20px;
 
-            box-shadow: 0 10px 35px rgba(20, 60, 90, 0.10);
+    border-radius: 10px;
 
-            border-left: 5px solid #0b7298;
-        }
+    background: #f39c12;
+}
 
-        .primary-highlight-box h3 {
-            margin: 0 0 18px;
 
-            color: #183b56;
-        }
+.primary-intro p {
 
-        .primary-highlight-box ul {
-            margin: 0;
-            padding: 0;
+    max-width: 850px;
 
-            list-style: none;
-        }
+    margin: auto;
 
-        .primary-highlight-box li {
-            display: flex;
+    font-family: 'Quicksand', sans-serif;
 
-            gap: 12px;
+    font-size: 18px;
 
-            margin-bottom: 14px;
+    line-height: 1.8;
 
-            line-height: 1.5;
+    color: #555;
+}
 
-            color: #586970;
-        }
 
-        .primary-highlight-box li i {
-            margin-top: 4px;
+/* =====================================================
+   HIGHLIGHT CARDS
+===================================================== */
 
-            color: #0b7298;
-        }
+.primary-highlight-grid {
 
+    display: grid;
 
-        /* ================= LEARNING AREAS ================= */
+    grid-template-columns:
+        repeat(3, 1fr);
 
-        .primary-learning-grid {
-            display: grid;
+    gap: 25px;
 
-            grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 55px;
+}
 
-            gap: 22px;
-        }
 
-        .primary-learning-card {
-            padding: 30px 25px;
+.primary-highlight-card {
 
-            background: #fff;
+    position: relative;
 
-            border-radius: 15px;
+    overflow: hidden;
 
-            border: 1px solid #e8edf1;
+    padding: 35px 25px;
 
-            transition: 0.3s ease;
+    text-align: center;
 
-            box-shadow: 0 5px 20px rgba(20, 60, 90, 0.05);
-        }
+    background: #ffffff;
 
-        .primary-learning-card:hover {
-            transform: translateY(-7px);
+    border-radius: 15px;
 
-            box-shadow: 0 15px 35px rgba(20, 60, 90, 0.12);
-        }
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
 
-        .primary-learning-icon {
-            width: 58px;
-            height: 58px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
 
-            display: flex;
 
-            align-items: center;
-            justify-content: center;
+.primary-highlight-card::before {
 
-            margin-bottom: 20px;
+    content: "";
 
-            border-radius: 14px;
+    position: absolute;
 
-            background: #eaf6fa;
+    top: 0;
+    left: 0;
 
-            color: #0b7298;
+    width: 100%;
+    height: 4px;
 
-            font-size: 23px;
-        }
+    background: #f39c12;
+}
 
-        .primary-learning-card h3 {
-            margin: 0 0 10px;
 
-            font-size: 20px;
+.primary-highlight-card:hover {
 
-            color: #183b56;
-        }
+    transform: translateY(-8px);
 
-        .primary-learning-card p {
-            margin: 0;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.13);
+}
 
-            line-height: 1.7;
 
-            color: #68777e;
+.primary-highlight-card i {
 
-            font-size: 15px;
-        }
+    display: block;
 
+    margin-bottom: 18px;
 
-        /* ================= CLASS JOURNEY ================= */
+    font-size: 42px;
 
-        .primary-classes {
-            display: grid;
+    color: #f39c12;
+}
 
-            grid-template-columns: repeat(5, 1fr);
 
-            gap: 15px;
-        }
+.primary-highlight-card h3 {
 
-        .primary-class-card {
-            padding: 28px 18px;
+    margin: 0 0 10px;
 
-            text-align: center;
+    font-family: 'Poppins', sans-serif;
 
-            border-radius: 15px;
+    font-size: 20px;
 
-            background: #fff;
+    color: #122b49;
+}
 
-            border: 1px solid #e5ebef;
 
-            box-shadow: 0 5px 18px rgba(20, 60, 90, 0.05);
+.primary-highlight-card p {
 
-            transition: 0.3s ease;
-        }
+    margin: 0;
 
-        .primary-class-card:hover {
-            transform: translateY(-5px);
+    font-family: 'Quicksand', sans-serif;
 
-            border-color: #a8d8e7;
-        }
+    font-size: 16px;
 
-        .primary-class-number {
-            width: 52px;
-            height: 52px;
+    line-height: 1.7;
 
-            margin: 0 auto 17px;
+    color: #666;
+}
 
-            display: flex;
 
-            align-items: center;
-            justify-content: center;
+/* =====================================================
+   CONTENT BOX
+===================================================== */
 
-            border-radius: 50%;
+.primary-box {
 
-            background: #0b7298;
+    margin-bottom: 30px;
 
-            color: #fff;
+    padding: 40px;
 
-            font-size: 17px;
+    background: #ffffff;
 
-            font-weight: 700;
-        }
+    border-radius: 15px;
 
-        .primary-class-card h3 {
-            margin: 0 0 9px;
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+}
 
-            color: #183b56;
 
-            font-size: 19px;
-        }
+.primary-box h2 {
 
-        .primary-class-card p {
-            margin: 0;
+    position: relative;
 
-            color: #6b777d;
+    margin: 0 0 25px;
 
-            font-size: 14px;
+    padding-bottom: 13px;
 
-            line-height: 1.6;
-        }
+    font-family: 'Poppins', sans-serif;
 
+    font-size: 29px;
 
-        /* ================= DEVELOPMENT ================= */
+    font-weight: 700;
 
-        .primary-development {
-            display: grid;
+    color: #122b49;
+}
 
-            grid-template-columns: repeat(2, 1fr);
 
-            gap: 18px;
-        }
+.primary-box h2::after {
 
-        .primary-development-item {
-            display: flex;
+    content: "";
 
-            gap: 17px;
+    position: absolute;
 
-            padding: 23px;
+    left: 0;
 
-            background: #fff;
+    bottom: 0;
 
-            border-radius: 13px;
+    width: 65px;
 
-            border: 1px solid #e8edf1;
-        }
+    height: 4px;
 
-        .primary-development-item i {
-            min-width: 43px;
+    border-radius: 10px;
 
-            width: 43px;
-            height: 43px;
+    background: #f39c12;
+}
 
-            display: flex;
 
-            align-items: center;
-            justify-content: center;
+.primary-box p {
 
-            border-radius: 10px;
+    margin: 0 0 18px;
 
-            background: #eaf6fa;
+    font-family: 'Quicksand', sans-serif;
 
-            color: #0b7298;
-        }
+    font-size: 17px;
 
-        .primary-development-item h3 {
-            margin: 0 0 6px;
+    line-height: 1.85;
 
-            color: #183b56;
+    color: #555;
+}
 
-            font-size: 18px;
-        }
 
-        .primary-development-item p {
-            margin: 0;
+.primary-box p:last-child {
 
-            color: #68777e;
+    margin-bottom: 0;
+}
 
-            line-height: 1.6;
 
-            font-size: 14px;
-        }
+/* =====================================================
+   LEARNING AREAS
+===================================================== */
 
+.primary-learning-grid {
 
-        /* ================= LEARNING ENVIRONMENT ================= */
+    display: grid;
 
-        .primary-environment {
-            background: #edf7fa;
-        }
+    grid-template-columns:
+        repeat(3, 1fr);
 
-        .primary-environment-grid {
-            display: grid;
+    gap: 20px;
+}
 
-            grid-template-columns: repeat(4, 1fr);
 
-            gap: 18px;
-        }
+.primary-learning-card {
 
-        .primary-environment-card {
-            padding: 27px 20px;
+    padding: 28px 22px;
 
-            text-align: center;
+    text-align: center;
 
-            background: #fff;
+    background: #f7f9fc;
 
-            border-radius: 14px;
+    border-radius: 12px;
 
-            box-shadow: 0 5px 18px rgba(20, 60, 90, 0.05);
-        }
+    transition: 0.3s ease;
+}
 
-        .primary-environment-card i {
-            font-size: 27px;
 
-            color: #0b7298;
+.primary-learning-card:hover {
 
-            margin-bottom: 15px;
-        }
+    transform: translateY(-6px);
 
-        .primary-environment-card h3 {
-            margin: 0 0 8px;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+}
 
-            color: #183b56;
 
-            font-size: 17px;
-        }
+.primary-learning-card i {
 
-        .primary-environment-card p {
-            margin: 0;
+    display: block;
 
-            color: #68777e;
+    margin-bottom: 15px;
 
-            font-size: 14px;
+    font-size: 35px;
 
-            line-height: 1.6;
-        }
+    color: #f39c12;
+}
 
 
-        /* ================= ADMISSION CTA ================= */
+.primary-learning-card h3 {
 
-        .primary-admission {
-            margin: 20px auto 70px;
+    margin: 0 0 10px;
 
-            max-width: 1100px;
+    font-family: 'Poppins', sans-serif;
 
-            padding: 55px 35px;
+    font-size: 19px;
 
-            border-radius: 22px;
+    color: #122b49;
+}
 
-            text-align: center;
 
-            color: #fff;
+.primary-learning-card p {
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #123f59,
-                    #0b789d
-                );
+    margin: 0;
 
-            box-shadow: 0 15px 40px rgba(10, 70, 100, 0.18);
-        }
+    font-size: 14px;
 
-        .primary-admission h2 {
-            margin: 0 0 12px;
+    line-height: 1.6;
 
-            font-size: 32px;
-        }
+    color: #666;
+}
 
-        .primary-admission p {
-            max-width: 700px;
 
-            margin: 0 auto 25px;
+/* =====================================================
+   CLASS JOURNEY
+===================================================== */
 
-            line-height: 1.7;
+.primary-class-grid {
 
-            color: rgba(255,255,255,0.88);
-        }
+    display: grid;
 
+    grid-template-columns:
+        repeat(5, 1fr);
 
-        /* ================= FAQ ================= */
+    gap: 15px;
+}
 
-        .primary-faq {
-            max-width: 900px;
 
-            margin: auto;
-        }
+.primary-class-card {
 
-        .primary-faq-item {
-            margin-bottom: 13px;
+    padding: 25px 15px;
 
-            background: #fff;
+    text-align: center;
 
-            border: 1px solid #e4eaee;
+    background: #f7f9fc;
 
-            border-radius: 10px;
+    border-radius: 12px;
 
-            overflow: hidden;
-        }
+    transition: 0.3s ease;
+}
 
-        .primary-faq-header {
-            display: flex;
 
-            justify-content: space-between;
+.primary-class-card:hover {
 
-            align-items: center;
+    transform: translateY(-6px);
 
-            gap: 20px;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+}
 
-            padding: 20px 22px;
 
-            cursor: pointer;
-        }
+.primary-class-number {
 
-        .primary-faq-header h3 {
-            margin: 0;
+    width: 55px;
 
-            font-size: 17px;
+    height: 55px;
 
-            color: #183b56;
-        }
+    display: flex;
 
-        .primary-faq-icon {
-            min-width: 32px;
+    align-items: center;
 
-            width: 32px;
-            height: 32px;
+    justify-content: center;
 
-            display: flex;
+    margin: 0 auto 15px;
 
-            align-items: center;
-            justify-content: center;
+    border-radius: 50%;
 
-            border-radius: 50%;
+    background:
+        linear-gradient(
+            135deg,
+            #122b49,
+            #1e4b78
+        );
 
-            background: #edf7fa;
+    color: #ffffff;
 
-            color: #0b7298;
+    font-family: 'Poppins', sans-serif;
 
-            transition: 0.3s ease;
-        }
+    font-size: 21px;
 
-        .primary-faq-header.active .primary-faq-icon {
-            transform: rotate(180deg);
-        }
+    font-weight: 700;
+}
 
-        .primary-faq-content {
-            max-height: 0;
 
-            overflow: hidden;
+.primary-class-card h3 {
 
-            transition: max-height 0.35s ease;
-        }
+    margin: 0 0 7px;
 
-        .primary-faq-content p {
-            margin: 0;
+    font-family: 'Poppins', sans-serif;
 
-            padding: 0 22px 20px;
+    font-size: 18px;
 
-            color: #68777e;
+    color: #122b49;
+}
 
-            line-height: 1.7;
 
-            font-size: 15px;
-        }
+.primary-class-card p {
 
+    margin: 0;
 
-        /* ================= RESPONSIVE ================= */
+    font-size: 13px;
 
-        @media (max-width: 900px) {
+    line-height: 1.5;
 
-            .primary-intro {
-                grid-template-columns: 1fr;
-            }
+    color: #666;
+}
 
-            .primary-learning-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
 
-            .primary-classes {
-                grid-template-columns: repeat(3, 1fr);
-            }
+/* =====================================================
+   DEVELOPMENT
+===================================================== */
 
-            .primary-environment-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.primary-development-grid {
 
-        }
+    display: grid;
 
+    grid-template-columns:
+        repeat(3, 1fr);
 
-        @media (max-width: 600px) {
+    gap: 20px;
+}
 
-            .primary-hero {
-                min-height: 450px;
 
-                padding: 130px 18px 70px;
-            }
+.primary-development-card {
 
-            .primary-hero p {
-                font-size: 15px;
-            }
+    display: flex;
 
-            .primary-section {
-                padding: 55px 18px;
-            }
+    align-items: flex-start;
 
-            .primary-learning-grid,
-            .primary-development,
-            .primary-environment-grid {
-                grid-template-columns: 1fr;
-            }
+    gap: 15px;
 
-            .primary-classes {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    padding: 23px;
 
-            .primary-admission {
-                margin: 10px 15px 50px;
+    background: #f7f9fc;
 
-                padding: 40px 20px;
-            }
+    border-radius: 12px;
 
-            .primary-admission h2 {
-                font-size: 27px;
-            }
+    transition: 0.3s ease;
+}
 
-        }
 
-    </style>
+.primary-development-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+.primary-development-card i {
+
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    font-size: 25px;
+
+    color: #f39c12;
+}
+
+
+.primary-development-card h3 {
+
+    margin: 0 0 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 17px;
+
+    color: #122b49;
+}
+
+
+.primary-development-card p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* =====================================================
+   LEARNING ENVIRONMENT
+===================================================== */
+
+.primary-environment {
+
+    margin-bottom: 30px;
+
+    padding: 45px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            rgba(18,43,73,0.94),
+            rgba(18,43,73,0.94)
+        ),
+        url("Image/Photo2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.10);
+}
+
+
+.primary-environment h2 {
+
+    margin: 0 0 20px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 30px;
+
+    color: #ffffff;
+}
+
+
+.primary-environment > p {
+
+    max-width: 850px;
+
+    margin: 0 0 30px;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #ffffff;
+}
+
+
+.primary-environment-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.primary-environment-card {
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+
+.primary-environment-card i {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 30px;
+
+    color: #f39c12;
+}
+
+
+.primary-environment-card h3 {
+
+    margin: 0 0 8px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 18px;
+
+    color: #ffffff;
+}
+
+
+.primary-environment-card p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.85);
+}
+
+
+/* =====================================================
+   ADMISSION
+===================================================== */
+
+.primary-admission {
+
+    margin-bottom: 30px;
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #122b49,
+            #1e4b78
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+}
+
+
+.primary-admission h2 {
+
+    margin: 0 0 12px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 31px;
+
+    color: #ffffff;
+}
+
+
+.primary-admission p {
+
+    max-width: 750px;
+
+    margin: 0 auto 25px;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.9);
+}
+
+
+.primary-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 170px;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    background: #f39c12;
+
+    transition: 0.3s ease;
+}
+
+
+.primary-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #e67e22;
+
+    color: #ffffff;
+}
+
+
+.primary-button.secondary {
+
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+
+.primary-button.secondary:hover {
+
+    background: rgba(255,255,255,0.12);
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.primary-faq-item {
+
+    overflow: hidden;
+
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    background: #f7f9fc;
+}
+
+
+.primary-faq-question {
+
+    width: 100%;
+
+    padding: 19px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    background: transparent;
+
+    color: #122b49;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+.primary-faq-question i {
+
+    color: #f39c12;
+
+    transition: 0.3s ease;
+}
+
+
+.primary-faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height 0.35s ease;
+}
+
+
+.primary-faq-answer p {
+
+    padding: 0 20px 18px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.primary-faq-item.active
+.primary-faq-question i {
+
+    transform: rotate(180deg);
+}
+
+
+.primary-faq-item.active
+.primary-faq-answer {
+
+    max-height: 250px;
+}
+
+
+/* =====================================================
+   MOBILE 768px
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .primary-hero {
+
+        min-height: 450px;
+
+        background-position: center;
+    }
+
+
+    .primary-hero-content {
+
+        width: 95%;
+
+        padding: 25px 15px;
+    }
+
+
+    .primary-hero h1 {
+
+        font-size: 42px;
+    }
+
+
+    .primary-hero p {
+
+        font-size: 20px;
+    }
+
+
+    .primary-main {
+
+        padding: 50px 0;
+    }
+
+
+    .primary-wrapper {
+
+        width: 92%;
+    }
+
+
+    .primary-intro h2 {
+
+        font-size: 28px;
+    }
+
+
+    .primary-intro p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .primary-highlight-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .primary-learning-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .primary-class-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .primary-development-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .primary-environment {
+
+        padding: 30px 25px;
+    }
+
+
+    .primary-environment-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .primary-box {
+
+        padding: 30px 25px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+    html,
+    body {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow-x: hidden;
+    }
+
+
+    .primary-hero {
+
+        min-height: 410px;
+    }
+
+
+    .primary-hero-content {
+
+        width: 95%;
+
+        padding: 20px 10px;
+    }
+
+
+    .primary-label {
+
+        font-size: 10px;
+
+        padding: 6px 15px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .primary-hero h1 {
+
+        font-size: 32px;
+
+        line-height: 1.25;
+    }
+
+
+    .primary-hero p {
+
+        margin-top: 12px;
+
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+
+    .primary-main {
+
+        padding: 40px 0;
+    }
+
+
+    .primary-wrapper {
+
+        width: 94%;
+    }
+
+
+    .primary-intro {
+
+        margin-bottom: 30px;
+    }
+
+
+    .primary-intro h2 {
+
+        font-size: 24px;
+
+        line-height: 1.4;
+    }
+
+
+    .primary-intro p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .primary-highlight-card {
+
+        padding: 28px 18px;
+    }
+
+
+    .primary-highlight-card i {
+
+        font-size: 35px;
+    }
+
+
+    .primary-highlight-card h3 {
+
+        font-size: 18px;
+    }
+
+
+    .primary-highlight-card p {
+
+        font-size: 14px;
+    }
+
+
+    .primary-box {
+
+        padding: 25px 18px;
+
+        margin-bottom: 20px;
+
+        border-radius: 12px;
+    }
+
+
+    .primary-box h2 {
+
+        font-size: 22px;
+
+        line-height: 1.4;
+
+        margin-bottom: 20px;
+    }
+
+
+    .primary-box p {
+
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .primary-learning-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .primary-learning-card {
+
+        padding: 22px 16px;
+    }
+
+
+    .primary-learning-card h3 {
+
+        font-size: 17px;
+    }
+
+
+    .primary-learning-card p {
+
+        font-size: 13px;
+    }
+
+
+    .primary-class-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+
+    .primary-class-card {
+
+        padding: 20px 10px;
+    }
+
+
+    .primary-class-number {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 18px;
+    }
+
+
+    .primary-class-card h3 {
+
+        font-size: 16px;
+    }
+
+
+    .primary-class-card p {
+
+        font-size: 12px;
+    }
+
+
+    .primary-development-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .primary-development-card {
+
+        padding: 19px 15px;
+    }
+
+
+    .primary-development-card h3 {
+
+        font-size: 16px;
+    }
+
+
+    .primary-development-card p {
+
+        font-size: 13px;
+    }
+
+
+    .primary-environment {
+
+        padding: 28px 18px;
+    }
+
+
+    .primary-environment h2 {
+
+        font-size: 23px;
+    }
+
+
+    .primary-environment > p {
+
+        font-size: 14px;
+    }
+
+
+    .primary-environment-card {
+
+        padding: 20px 15px;
+    }
+
+
+    .primary-environment-card h3 {
+
+        font-size: 16px;
+    }
+
+
+    .primary-environment-card p {
+
+        font-size: 13px;
+    }
+
+
+    .primary-admission {
+
+        padding: 32px 18px;
+    }
+
+
+    .primary-admission h2 {
+
+        font-size: 23px;
+    }
+
+
+    .primary-admission p {
+
+        font-size: 14px;
+    }
+
+
+    .primary-button {
+
+        width: 100%;
+    }
+
+
+    .primary-faq-question {
+
+        padding: 16px 14px;
+
+        font-size: 14px;
+    }
+
+
+    .primary-faq-answer p {
+
+        padding: 0 14px 15px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL 360px
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .primary-hero {
+
+        min-height: 380px;
+    }
+
+
+    .primary-hero h1 {
+
+        font-size: 28px;
+    }
+
+
+    .primary-hero p {
+
+        font-size: 15px;
+    }
+
+
+    .primary-intro h2 {
+
+        font-size: 21px;
+    }
+
+
+    .primary-intro p {
+
+        font-size: 13px;
+    }
+
+
+    .primary-class-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .primary-class-card {
+
+        display: flex;
+
+        align-items: center;
+
+        text-align: left;
+
+        gap: 13px;
+    }
+
+
+    .primary-class-number {
+
+        flex-shrink: 0;
+
+        margin: 0;
+    }
+
+}
+
+</style>
 
 </head>
 
 
-<body class="primary-page">
+<body>
 
 
-<!-- ================= HEADER START ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
 
+
     <a href="index.html" class="logo">
 
+
         <img src="Image/Logo.jpeg"
-             alt="Maria's Podar Learn School logo"
-             style="width: 80px; height: 55px;">
+             alt="Maria's Podar Learn School Logo">
+
 
         <div class="collage-name">
-            Maria’s Podar Learn School Nilanga
+            Maria's Podar Learn School Nilanga
         </div>
+
 
     </a>
 
 
+    <!-- NAVBAR -->
+
     <nav class="navbar">
 
+
         <div id="close-navbar"
-             class="close-icon"
-             style="cursor:pointer;">
+             class="close-icon">
+
 
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="Close">
+                 alt="Close Menu">
+
 
         </div>
 
 
         <ul class="navbar-links">
 
-            <li class="navbar-dropdown">
+
+            <li>
+
                 <a href="index.html">
                     Home
                 </a>
+
             </li>
 
 
+            <!-- COURSE -->
+
             <li class="navbar-dropdown">
 
-                <a href="#">
+
+                <a href="#"
+                   class="course-main-link">
+
                     Course
+
                 </a>
 
 
                 <div class="dropdown">
 
+
                     <ul>
 
 
-                        <!-- PRIMARY GROUP -->
+                        <!-- PRIMARY -->
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Primary Group
 
@@ -831,28 +1600,37 @@
 
                             <ul class="dropdown2">
 
+
                                 <li>
+
                                     <a href="nursery.html">
                                         Nursery to UKG
                                     </a>
+
                                 </li>
 
+
                                 <li>
+
                                     <a href="class-1-5.html">
                                         Class 1st to 5th
                                     </a>
+
                                 </li>
 
+
                             </ul>
+
 
                         </li>
 
 
-                        <!-- SECONDARY GROUP -->
+                        <!-- SECONDARY -->
 
                         <li class="course-group">
 
-                            <a href="javascript:void(0);">
+
+                            <a href="#">
 
                                 Secondary Group
 
@@ -865,126 +1643,154 @@
 
                             <ul class="dropdown2">
 
+
                                 <li>
+
                                     <a href="class-6-8.html">
                                         Class 6th to 8th
                                     </a>
+
                                 </li>
 
+
                                 <li>
+
                                     <a href="class-9-10.html">
                                         Class 9th to 10th
                                     </a>
+
                                 </li>
+
 
                             </ul>
 
+
                         </li>
+
 
                     </ul>
 
+
                 </div>
 
+
             </li>
 
 
-            <li class="navbar-dropdown">
+            <!-- ADMISSIONS -->
 
-                <a href="admission-form.html"
-                   target="_blank">
+            <li>
 
+                <a href="admission-form.html">
                     Admissions
-
                 </a>
 
             </li>
 
 
-            <li class="navbar-dropdown">
+            <!-- CAREERS -->
+
+            <li>
 
                 <a href="careers.html">
-
                     Careers
-
                 </a>
 
             </li>
 
 
-            <li class="navbar-dropdown">
+            <!-- CONTACT -->
+
+            <li>
 
                 <a href="contact-us.html">
-
                     Contact us
-
                 </a>
 
             </li>
 
+
         </ul>
+
 
     </nav>
 
 
-    <!-- LOGIN ICON -->
+    <!-- HEADER ICONS -->
 
-    <div id="account-btn"
-         class="header-icon"
-         style="cursor:pointer;">
+    <div class="icons">
 
-        <img src="Image/avatar-icon.svg"
-             alt="Login">
 
-        <img src="Image/avatar-icon-hover.gif"
-             alt="Login"
-             width="30"
-             class="header-icon-hover">
+        <!-- ACCOUNT -->
+
+        <div id="account-btn"
+             class="header-icon">
+
+
+            <img src="Image/avatar-icon.svg"
+                 alt="Login">
+
+
+            <img src="Image/avatar-icon-hover.gif"
+                 alt="Login"
+                 class="header-icon-hover">
+
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <div id="menu-btn"
+             class="header-icon">
+
+
+            <img src="Image/menu-icon.svg"
+                 alt="Menu">
+
+
+            <img src="Image/menu-icon-hover.gif"
+                 alt="Menu"
+                 class="header-icon-hover">
+
+
+        </div>
+
 
     </div>
 
-
-    <!-- MOBILE MENU -->
-
-    <div id="menu-btn"
-         class="header-icon">
-
-        <img src="Image/menu-icon.svg"
-             alt="menu-icon">
-
-        <img src="image/menu-icon-hover.gif"
-             alt="menu-icon"
-             width="30"
-             class="header-icon-hover">
-
-    </div>
 
 </header>
 
-<!-- ================= HEADER END ================= -->
 
 
-
-<!-- ================= LOGIN FORM START ================= -->
+<!-- =====================================================
+     LOGIN / ADMIN FORM
+===================================================== -->
 
 <div class="account-form"
      id="loginAccountForm">
 
+
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
+         class="close-icon">
+
 
         <img src="Image/close-icon.gif"
              alt="Close"
              width="50">
+
 
     </div>
 
 
     <div class="buttons">
 
+
         <span class="btn active login-btn">
-            Login
+            Admin Login
         </span>
+
 
     </div>
 
@@ -992,8 +1798,9 @@
     <form class="login-form active"
           id="schoolLoginForm">
 
+
         <h3>
-            Login Now
+            Admin Login
         </h3>
 
 
@@ -1001,6 +1808,7 @@
                id="loginEmail"
                placeholder="Enter your email"
                class="box"
+               autocomplete="email"
                required>
 
 
@@ -1008,17 +1816,21 @@
                id="loginPassword"
                placeholder="Enter your password"
                class="box"
+               autocomplete="current-password"
                required>
 
 
         <div class="flex">
 
+
             <input type="checkbox"
                    id="remember-me">
+
 
             <label for="remember-me">
                 Remember Me
             </label>
+
 
         </div>
 
@@ -1027,963 +1839,954 @@
 
 
         <button type="submit"
-                class="btn">
+                class="btn login-submit">
 
             Login Now
 
         </button>
 
+
     </form>
+
 
 </div>
 
-<!-- ================= LOGIN FORM END ================= -->
 
 
-
-<!-- ================= HERO START ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="primary-hero">
 
+
     <div class="primary-hero-content">
 
-        <span class="primary-badge">
-            PRIMARY GROUP
-        </span>
+
+        <div class="primary-label">
+
+            Primary Group
+
+        </div>
 
 
         <h1>
 
             Class 1st to 5th
 
-            <span>
-                Building Strong Foundations for Lifelong Learning
-            </span>
-
         </h1>
 
 
         <p>
 
-            A structured and engaging learning journey designed
-            to help children develop strong academic foundations,
-            communication skills, creativity, confidence and
-            positive learning habits.
+            Building Strong Foundations for Lifelong Learning
 
         </p>
 
+
     </div>
+
 
 </section>
 
-<!-- ================= HERO END ================= -->
 
 
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
 
-<!-- ================= INTRO START ================= -->
-
-<section class="primary-section">
-
-    <div class="primary-intro">
+<section class="primary-main">
 
 
-        <div class="primary-intro-text">
+    <div class="primary-wrapper">
 
-            <span class="primary-section-heading .small-title"></span>
+
+        <!-- INTRO -->
+
+        <div class="primary-intro">
+
 
             <h2>
+
                 Primary Learning at Maria’s Podar Learn School
+
             </h2>
 
 
-            <p>
-
-                The Class 1st to 5th years are an important stage
-                in a child's educational journey. These years help
-                children strengthen their basic concepts while
-                developing curiosity, communication and independent
-                learning habits.
-
-            </p>
+            <div class="primary-line"></div>
 
 
             <p>
 
-                At Maria’s Podar Learn School Nilanga, the primary
-                learning programme focuses on age-appropriate
-                academic learning along with activities that support
-                creativity, confidence, collaboration and overall
-                development.
+                Our primary years focus on building strong
+                academic foundations while developing confidence,
+                creativity, communication skills, curiosity and
+                positive values in every child.
 
             </p>
 
-
-            <p>
-
-                Children are encouraged to ask questions, explore
-                ideas, participate in classroom activities and
-                gradually take greater responsibility for their
-                learning.
-
-            </p>
 
         </div>
 
 
-        <div class="primary-highlight-box">
 
-            <h3>
-                Key Focus Areas
-            </h3>
+        <!-- HIGHLIGHTS -->
 
+        <div class="primary-highlight-grid">
 
-            <ul>
 
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Strong foundation in core subjects
-                </li>
+            <div class="primary-highlight-card">
 
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Reading, writing and communication development
-                </li>
 
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Mathematical thinking and problem solving
-                </li>
+                <i class="fas fa-book-open"></i>
 
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Creativity and activity-based learning
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Social skills and responsible behaviour
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-check"></i>
-                    Confidence and independent learning habits
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= INTRO END ================= -->
-
-
-
-<!-- ================= LEARNING AREAS ================= -->
-
-<section class="primary-section">
-
-    <div class="primary-section-heading">
-
-        <span class="small-title">
-            Learning Areas
-        </span>
-
-        <h2>
-            Developing Knowledge, Skills & Curiosity
-        </h2>
-
-        <p>
-
-            The primary years provide opportunities for children
-            to strengthen their academic understanding while
-            exploring different areas of learning.
-
-        </p>
-
-    </div>
-
-
-    <div class="primary-learning-grid">
-
-
-        <div class="primary-learning-card">
-
-            <div class="primary-learning-icon">
-                <i class="fa-solid fa-book-open"></i>
-            </div>
-
-            <h3>
-                Languages
-            </h3>
-
-            <p>
-
-                Development of reading, writing, vocabulary,
-                comprehension and effective communication.
-
-            </p>
-
-        </div>
-
-
-        <div class="primary-learning-card">
-
-            <div class="primary-learning-icon">
-                <i class="fa-solid fa-calculator"></i>
-            </div>
-
-            <h3>
-                Mathematics
-            </h3>
-
-            <p>
-
-                Building number sense, calculation skills,
-                logical thinking and problem-solving abilities.
-
-            </p>
-
-        </div>
-
-
-        <div class="primary-learning-card">
-
-            <div class="primary-learning-icon">
-                <i class="fa-solid fa-leaf"></i>
-            </div>
-
-            <h3>
-                Environmental Studies
-            </h3>
-
-            <p>
-
-                Encouraging children to understand their
-                surroundings, nature, people and everyday life.
-
-            </p>
-
-        </div>
-
-
-        <div class="primary-learning-card">
-
-            <div class="primary-learning-icon">
-                <i class="fa-solid fa-flask"></i>
-            </div>
-
-            <h3>
-                Science & Exploration
-            </h3>
-
-            <p>
-
-                Developing curiosity through observation,
-                questioning, exploration and simple activities.
-
-            </p>
-
-        </div>
-
-
-        <div class="primary-learning-card">
-
-            <div class="primary-learning-icon">
-                <i class="fa-solid fa-palette"></i>
-            </div>
-
-            <h3>
-                Art & Creativity
-            </h3>
-
-            <p>
-
-                Opportunities for drawing, creative expression,
-                craft and imaginative activities.
-
-            </p>
-
-        </div>
-
-
-        <div class="primary-learning-card">
-
-            <div class="primary-learning-icon">
-                <i class="fa-solid fa-laptop"></i>
-            </div>
-
-            <h3>
-                Digital Awareness
-            </h3>
-
-            <p>
-
-                Introducing age-appropriate digital awareness
-                and responsible use of technology.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= LEARNING AREAS END ================= -->
-
-
-
-<!-- ================= CLASS JOURNEY ================= -->
-
-<section class="primary-section">
-
-    <div class="primary-section-heading">
-
-        <span class="small-title">
-            Primary Journey
-        </span>
-
-        <h2>
-            Class 1st to Class 5th
-        </h2>
-
-        <p>
-
-            Each class builds upon previous learning and supports
-            children as they gradually develop greater confidence,
-            knowledge and independence.
-
-        </p>
-
-    </div>
-
-
-    <div class="primary-classes">
-
-
-        <div class="primary-class-card">
-
-            <div class="primary-class-number">
-                01
-            </div>
-
-            <h3>
-                Class 1
-            </h3>
-
-            <p>
-                Strengthening basic literacy, numeracy,
-                classroom routines and learning habits.
-            </p>
-
-        </div>
-
-
-        <div class="primary-class-card">
-
-            <div class="primary-class-number">
-                02
-            </div>
-
-            <h3>
-                Class 2
-            </h3>
-
-            <p>
-                Building reading, writing, mathematics and
-                everyday knowledge through engaging learning.
-            </p>
-
-        </div>
-
-
-        <div class="primary-class-card">
-
-            <div class="primary-class-number">
-                03
-            </div>
-
-            <h3>
-                Class 3
-            </h3>
-
-            <p>
-                Developing stronger concepts, communication,
-                reasoning and independent participation.
-            </p>
-
-        </div>
-
-
-        <div class="primary-class-card">
-
-            <div class="primary-class-number">
-                04
-            </div>
-
-            <h3>
-                Class 4
-            </h3>
-
-            <p>
-                Encouraging deeper understanding, application
-                of concepts and collaborative learning.
-            </p>
-
-        </div>
-
-
-        <div class="primary-class-card">
-
-            <div class="primary-class-number">
-                05
-            </div>
-
-            <h3>
-                Class 5
-            </h3>
-
-            <p>
-                Preparing learners for the next academic stage
-                with confidence, knowledge and responsibility.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= CLASS JOURNEY END ================= -->
-
-
-
-<!-- ================= DEVELOPMENT START ================= -->
-
-<section class="primary-section">
-
-    <div class="primary-section-heading">
-
-        <span class="small-title">
-            Child Development
-        </span>
-
-        <h2>
-            Beyond Academic Learning
-        </h2>
-
-        <p>
-
-            Primary education is also about helping children
-            become confident, curious, responsible and
-            collaborative learners.
-
-        </p>
-
-    </div>
-
-
-    <div class="primary-development">
-
-
-        <div class="primary-development-item">
-
-            <i class="fa-solid fa-comments"></i>
-
-            <div>
 
                 <h3>
-                    Communication
+                    Strong Foundations
                 </h3>
 
+
                 <p>
-                    Encouraging children to express their ideas,
-                    thoughts and questions clearly.
+                    Developing essential academic knowledge
+                    and learning skills from the early years.
                 </p>
+
 
             </div>
 
-        </div>
+
+            <div class="primary-highlight-card">
 
 
-        <div class="primary-development-item">
+                <i class="fas fa-child"></i>
 
-            <i class="fa-solid fa-lightbulb"></i>
-
-            <div>
-
-                <h3>
-                    Critical Thinking
-                </h3>
-
-                <p>
-                    Developing curiosity, reasoning and the
-                    ability to explore different solutions.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="primary-development-item">
-
-            <i class="fa-solid fa-paintbrush"></i>
-
-            <div>
-
-                <h3>
-                    Creativity
-                </h3>
-
-                <p>
-                    Giving children opportunities to express
-                    themselves through creative activities.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="primary-development-item">
-
-            <i class="fa-solid fa-people-group"></i>
-
-            <div>
-
-                <h3>
-                    Collaboration
-                </h3>
-
-                <p>
-                    Supporting teamwork, sharing, cooperation
-                    and respectful interaction.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="primary-development-item">
-
-            <i class="fa-solid fa-person-running"></i>
-
-            <div>
-
-                <h3>
-                    Physical Development
-                </h3>
-
-                <p>
-                    Encouraging participation in age-appropriate
-                    physical and activity-based experiences.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="primary-development-item">
-
-            <i class="fa-solid fa-user-check"></i>
-
-            <div>
-
-                <h3>
-                    Independence
-                </h3>
-
-                <p>
-                    Helping children develop responsibility,
-                    confidence and positive learning habits.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= DEVELOPMENT END ================= -->
-
-
-
-<!-- ================= LEARNING ENVIRONMENT ================= -->
-
-<section class="primary-environment">
-
-    <div class="primary-section">
-
-        <div class="primary-section-heading">
-
-            <span class="small-title">
-                School Experience
-            </span>
-
-            <h2>
-                A Positive Learning Environment
-            </h2>
-
-            <p>
-
-                The primary years can be a meaningful period of
-                exploration and growth when children receive
-                encouragement, guidance and opportunities to learn.
-
-            </p>
-
-        </div>
-
-
-        <div class="primary-environment-grid">
-
-
-            <div class="primary-environment-card">
-
-                <i class="fa-solid fa-child-reaching"></i>
 
                 <h3>
                     Child-Centred Learning
                 </h3>
 
+
                 <p>
-                    Learning experiences designed around children's
-                    age and stage of development.
+                    Learning experiences designed around
+                    children's needs, interests and abilities.
                 </p>
+
 
             </div>
 
 
-            <div class="primary-environment-card">
+            <div class="primary-highlight-card">
 
-                <i class="fa-solid fa-puzzle-piece"></i>
+
+                <i class="fas fa-lightbulb"></i>
+
 
                 <h3>
-                    Activity-Based Learning
+                    Learning Through Activities
                 </h3>
 
+
                 <p>
-                    Activities that encourage participation,
-                    exploration and practical understanding.
+                    Encouraging students to learn through
+                    activities, exploration and creativity.
                 </p>
+
 
             </div>
 
-
-            <div class="primary-environment-card">
-
-                <i class="fa-solid fa-handshake"></i>
-
-                <h3>
-                    Positive Values
-                </h3>
-
-                <p>
-                    Encouraging respect, cooperation,
-                    responsibility and good learning habits.
-                </p>
-
-            </div>
-
-
-            <div class="primary-environment-card">
-
-                <i class="fa-solid fa-house-user"></i>
-
-                <h3>
-                    Parent Partnership
-                </h3>
-
-                <p>
-                    Supporting communication between school
-                    and parents throughout the learning journey.
-                </p>
-
-            </div>
 
         </div>
 
+
+
+        <!-- LEARNING AREAS -->
+
+        <div class="primary-box">
+
+
+            <h2>
+                Our Primary Learning Areas
+            </h2>
+
+
+            <div class="primary-learning-grid">
+
+
+                <div class="primary-learning-card">
+
+
+                    <i class="fas fa-language"></i>
+
+
+                    <h3>
+                        Languages
+                    </h3>
+
+
+                    <p>
+                        Reading, writing, vocabulary,
+                        communication and language skills.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-learning-card">
+
+
+                    <i class="fas fa-calculator"></i>
+
+
+                    <h3>
+                        Mathematics
+                    </h3>
+
+
+                    <p>
+                        Numbers, calculations, logical thinking
+                        and practical problem solving.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-learning-card">
+
+
+                    <i class="fas fa-leaf"></i>
+
+
+                    <h3>
+                        Environmental Studies
+                    </h3>
+
+
+                    <p>
+                        Understanding our surroundings,
+                        nature, community and environment.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-learning-card">
+
+
+                    <i class="fas fa-flask"></i>
+
+
+                    <h3>
+                        Science & Exploration
+                    </h3>
+
+
+                    <p>
+                        Encouraging observation, questioning,
+                        experimentation and discovery.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-learning-card">
+
+
+                    <i class="fas fa-palette"></i>
+
+
+                    <h3>
+                        Art & Creativity
+                    </h3>
+
+
+                    <p>
+                        Art, drawing, creativity and activities
+                        that encourage self-expression.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-learning-card">
+
+
+                    <i class="fas fa-laptop"></i>
+
+
+                    <h3>
+                        Digital Awareness
+                    </h3>
+
+
+                    <p>
+                        Developing basic digital awareness
+                        and responsible technology use.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CLASS JOURNEY -->
+
+        <div class="primary-box">
+
+
+            <h2>
+                Class 1st to 5th Learning Journey
+            </h2>
+
+
+            <p>
+
+                Each primary class is designed to gradually
+                develop academic understanding, confidence,
+                communication and independent learning skills.
+
+            </p>
+
+
+            <div class="primary-class-grid">
+
+
+                <div class="primary-class-card">
+
+
+                    <div class="primary-class-number">
+                        1
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Class 1
+                        </h3>
+
+                        <p>
+                            Early learning foundations
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-class-card">
+
+
+                    <div class="primary-class-number">
+                        2
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Class 2
+                        </h3>
+
+                        <p>
+                            Building basic skills
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-class-card">
+
+
+                    <div class="primary-class-number">
+                        3
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Class 3
+                        </h3>
+
+                        <p>
+                            Developing understanding
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-class-card">
+
+
+                    <div class="primary-class-number">
+                        4
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Class 4
+                        </h3>
+
+                        <p>
+                            Strengthening concepts
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-class-card">
+
+
+                    <div class="primary-class-number">
+                        5
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Class 5
+                        </h3>
+
+                        <p>
+                            Preparing for secondary learning
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- HOLISTIC DEVELOPMENT -->
+
+        <div class="primary-box">
+
+
+            <h2>
+                Holistic Development
+            </h2>
+
+
+            <div class="primary-development-grid">
+
+
+                <div class="primary-development-card">
+
+
+                    <i class="fas fa-comments"></i>
+
+
+                    <div>
+
+                        <h3>
+                            Communication
+                        </h3>
+
+
+                        <p>
+                            Helping students express their
+                            ideas clearly and confidently.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-development-card">
+
+
+                    <i class="fas fa-brain"></i>
+
+
+                    <div>
+
+                        <h3>
+                            Critical Thinking
+                        </h3>
+
+
+                        <p>
+                            Encouraging children to ask questions,
+                            analyse and find solutions.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-development-card">
+
+
+                    <i class="fas fa-paintbrush"></i>
+
+
+                    <div>
+
+                        <h3>
+                            Creativity
+                        </h3>
+
+
+                        <p>
+                            Giving children opportunities to
+                            imagine, create and express.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-development-card">
+
+
+                    <i class="fas fa-people-group"></i>
+
+
+                    <div>
+
+                        <h3>
+                            Collaboration
+                        </h3>
+
+
+                        <p>
+                            Developing teamwork, cooperation
+                            and respect for others.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-development-card">
+
+
+                    <i class="fas fa-person-running"></i>
+
+
+                    <div>
+
+                        <h3>
+                            Physical Development
+                        </h3>
+
+
+                        <p>
+                            Encouraging healthy habits,
+                            movement and participation.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-development-card">
+
+
+                    <i class="fas fa-user-check"></i>
+
+
+                    <div>
+
+                        <h3>
+                            Independence
+                        </h3>
+
+
+                        <p>
+                            Helping students become responsible
+                            and confident learners.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- LEARNING ENVIRONMENT -->
+
+        <div class="primary-environment">
+
+
+            <h2>
+                A Positive Learning Environment
+            </h2>
+
+
+            <p>
+
+                We aim to provide an environment where every
+                child feels safe, respected, encouraged and
+                motivated to learn. Our approach combines
+                academics with activities, values and
+                opportunities for personal growth.
+
+            </p>
+
+
+            <div class="primary-environment-grid">
+
+
+                <div class="primary-environment-card">
+
+
+                    <i class="fas fa-heart"></i>
+
+
+                    <h3>
+                        Child-Centred Learning
+                    </h3>
+
+
+                    <p>
+                        Understanding individual learning needs
+                        and supporting every child.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-environment-card">
+
+
+                    <i class="fas fa-puzzle-piece"></i>
+
+
+                    <h3>
+                        Activity-Based Learning
+                    </h3>
+
+
+                    <p>
+                        Making learning interesting through
+                        activities, projects and participation.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-environment-card">
+
+
+                    <i class="fas fa-hand-holding-heart"></i>
+
+
+                    <h3>
+                        Positive Values
+                    </h3>
+
+
+                    <p>
+                        Developing kindness, discipline,
+                        responsibility and respect.
+                    </p>
+
+
+                </div>
+
+
+                <div class="primary-environment-card">
+
+
+                    <i class="fas fa-house-user"></i>
+
+
+                    <h3>
+                        Parent Partnership
+                    </h3>
+
+
+                    <p>
+                        Working together with parents to
+                        support children's development.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ADMISSION -->
+
+        <div class="primary-admission">
+
+
+            <h2>
+                Give Your Child a Strong Start
+            </h2>
+
+
+            <p>
+
+                Explore our admission process and learn more
+                about opportunities available at Maria’s Podar
+                Learn School, Nilanga.
+
+            </p>
+
+
+            <div class="primary-buttons">
+
+
+                <a href="admission-form.html"
+                   class="primary-button">
+
+                    <i class="fas fa-file-signature"
+                       style="margin-right:8px;"></i>
+
+                    Admission Form
+
+                </a>
+
+
+                <a href="contact-us.html"
+                   class="primary-button secondary">
+
+                    <i class="fas fa-phone"
+                       style="margin-right:8px;"></i>
+
+                    Contact School
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FAQ -->
+
+        <div class="primary-box">
+
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <div class="primary-faq">
+
+
+                <div class="primary-faq-item">
+
+
+                    <button class="primary-faq-question"
+                            type="button">
+
+                        What classes are included in the Primary Group?
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="primary-faq-answer">
+
+                        <p>
+                            The Primary Group includes Class 1st
+                            to Class 5th.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-faq-item">
+
+
+                    <button class="primary-faq-question"
+                            type="button">
+
+                        What is the focus of primary education?
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="primary-faq-answer">
+
+                        <p>
+                            Primary education focuses on strong
+                            academic foundations along with
+                            communication, creativity, confidence,
+                            values and social development.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-faq-item">
+
+
+                    <button class="primary-faq-question"
+                            type="button">
+
+                        Do students participate in activities?
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="primary-faq-answer">
+
+                        <p>
+                            Yes. Students are encouraged to
+                            participate in educational, creative,
+                            physical and co-curricular activities.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-faq-item">
+
+
+                    <button class="primary-faq-question"
+                            type="button">
+
+                        How can parents contact the school?
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="primary-faq-answer">
+
+                        <p>
+                            Parents can visit the Contact Us page
+                            or use the school contact information
+                            available on the website.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="primary-faq-item">
+
+
+                    <button class="primary-faq-question"
+                            type="button">
+
+                        How can I apply for admission?
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div class="primary-faq-answer">
+
+                        <p>
+                            You can use the Admission Form button
+                            on this page to proceed to the school's
+                            admission form.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
     </div>
+
 
 </section>
 
-<!-- ================= LEARNING ENVIRONMENT END ================= -->
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-<!-- ================= ADMISSION CTA ================= -->
+<footer>
 
-<section class="primary-section">
-
-    <div class="primary-admission">
-
-        <h2>
-            Begin Your Child’s Primary School Journey
-        </h2>
-
-        <p>
-
-            For admission-related information and the current
-            admission process, please visit the admission form
-            or contact Maria’s Podar Learn School Nilanga.
-
-        </p>
-
-
-        <div class="primary-buttons">
-
-            <a href="admission-form.html"
-               target="_blank"
-               class="primary-btn primary-btn-main">
-
-                <i class="fa-solid fa-file-signature"></i>
-
-                Admission Form
-
-            </a>
-
-
-            <a href="contact-us.html"
-               class="primary-btn primary-btn-outline">
-
-                <i class="fa-solid fa-envelope"></i>
-
-                Contact School
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= ADMISSION CTA END ================= -->
-
-
-
-<!-- ================= FAQ ================= -->
-
-<section class="primary-section">
-
-    <div class="primary-section-heading">
-
-        <span class="small-title">
-            Frequently Asked Questions
-        </span>
-
-        <h2>
-            Class 1st to 5th – FAQ
-        </h2>
-
-        <p>
-            Some common questions about the primary school programme.
-        </p>
-
-    </div>
-
-
-    <div class="primary-faq">
-
-
-        <!-- FAQ 1 -->
-
-        <div class="primary-faq-item">
-
-            <div class="primary-faq-header">
-
-                <h3>
-                    What does the Class 1st to 5th programme focus on?
-                </h3>
-
-                <div class="primary-faq-icon">
-
-                    <i class="fa-solid fa-chevron-down"></i>
-
-                </div>
-
-            </div>
-
-
-            <div class="primary-faq-content">
-
-                <p>
-
-                    The programme focuses on strengthening core
-                    academic concepts along with communication,
-                    creativity, problem-solving, collaboration and
-                    positive learning habits.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FAQ 2 -->
-
-        <div class="primary-faq-item">
-
-            <div class="primary-faq-header">
-
-                <h3>
-                    Which classes are included in the Primary Group?
-                </h3>
-
-                <div class="primary-faq-icon">
-
-                    <i class="fa-solid fa-chevron-down"></i>
-
-                </div>
-
-            </div>
-
-
-            <div class="primary-faq-content">
-
-                <p>
-
-                    This page covers Class 1st, Class 2nd,
-                    Class 3rd, Class 4th and Class 5th.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FAQ 3 -->
-
-        <div class="primary-faq-item">
-
-            <div class="primary-faq-header">
-
-                <h3>
-                    What learning areas are covered?
-                </h3>
-
-                <div class="primary-faq-icon">
-
-                    <i class="fa-solid fa-chevron-down"></i>
-
-                </div>
-
-            </div>
-
-
-            <div class="primary-faq-content">
-
-                <p>
-
-                    Learning areas include languages, mathematics,
-                    environmental studies, science and exploration,
-                    art and creativity, and age-appropriate digital
-                    awareness.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FAQ 4 -->
-
-        <div class="primary-faq-item">
-
-            <div class="primary-faq-header">
-
-                <h3>
-                    How can parents apply for admission?
-                </h3>
-
-                <div class="primary-faq-icon">
-
-                    <i class="fa-solid fa-chevron-down"></i>
-
-                </div>
-
-            </div>
-
-
-            <div class="primary-faq-content">
-
-                <p>
-
-                    Parents can visit the
-                    <a href="admission-form.html">
-                        Admission Form
-                    </a>
-                    page for the current admission process or
-                    contact the school for further information.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FAQ 5 -->
-
-        <div class="primary-faq-item">
-
-            <div class="primary-faq-header">
-
-                <h3>
-                    How can I contact Maria’s Podar Learn School Nilanga?
-                </h3>
-
-                <div class="primary-faq-icon">
-
-                    <i class="fa-solid fa-chevron-down"></i>
-
-                </div>
-
-            </div>
-
-
-            <div class="primary-faq-content">
-
-                <p>
-
-                    Please visit the
-                    <a href="contact-us.html">
-                        Contact Us
-                    </a>
-                    page for the available school contact information.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= FAQ END ================= -->
-
-
-
-<!-- ================= FOOTER START ================= -->
-
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
 
     <div class="content">
 
+
         <div class="top">
+
 
             <div class="logo-details">
 
@@ -1996,21 +2799,26 @@
 
             <div class="media-icons">
 
+
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
-              <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                <a href="mailto:principal.mpls@podar.org">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
 
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
@@ -2024,22 +2832,23 @@
                 </a>
 
 
-                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k&ab_channel=FunkyTeens"
-                   target="_blank">
+                <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
                 </a>
 
+
             </div>
+
 
         </div>
 
 
         <div class="link-boxes">
 
-
-            <!-- ABOUT -->
 
             <ul class="box">
 
@@ -2060,15 +2869,13 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="About-us.html">
                         About us
                     </a>
                 </li>
 
             </ul>
 
-
-            <!-- QUICK LINKS -->
 
             <ul class="box">
 
@@ -2083,7 +2890,7 @@
                 </li>
 
                 <li>
-                    <a href="index.html">
+                    <a href="index.html#notice-board">
                         Notice Board
                     </a>
                 </li>
@@ -2096,8 +2903,6 @@
 
             </ul>
 
-
-            <!-- STUDENT CORNER -->
 
             <ul class="box">
 
@@ -2126,8 +2931,6 @@
             </ul>
 
 
-            <!-- ACCOUNT -->
-
             <ul class="box">
 
                 <li class="link_name">
@@ -2137,9 +2940,7 @@
                 <li>
                     <a href="#"
                        id="adminLoginLink">
-
                         Admin Login
-
                     </a>
                 </li>
 
@@ -2158,8 +2959,6 @@
             </ul>
 
 
-            <!-- SUBSCRIBE -->
-
             <ul class="box input-box">
 
                 <li class="link_name">
@@ -2169,285 +2968,319 @@
                 <li>
 
                     <input type="email"
+                           id="subscribeEmail"
                            placeholder="Enter your email">
 
                 </li>
 
                 <li>
 
-                    <input type="button"
-                           value="Subscribe">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
+
+                </li>
+
+                <li>
+
+                    <p id="subscribeMessage"></p>
 
                 </li>
 
             </ul>
 
+
         </div>
+
 
     </div>
 
+
 </footer>
 
-<!-- ================= FOOTER END ================= -->
+
+
+<!-- =====================================================
+     TIDIO
+===================================================== -->
+
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
+</script>
 
 
 
-<!-- ================= EXISTING SCRIPT ================= -->
+<!-- =====================================================
+     MAIN JS
+===================================================== -->
 
 <script src="js/script.js"></script>
 
 
 
-<!-- ================= FAQ SCRIPT ================= -->
+<!-- =====================================================
+     PAGE JAVASCRIPT
+===================================================== -->
 
 <script>
 
-document.querySelectorAll(".primary-faq-header").forEach(function(header) {
 
-    header.addEventListener("click", function() {
+/* =====================================================
+   ADMIN LOGIN LINK
+===================================================== */
 
-        const content =
-            this.nextElementSibling;
+const adminLoginLink =
+    document.getElementById("adminLoginLink");
 
-        const isOpen =
-            this.classList.contains("active");
 
+if (adminLoginLink) {
 
-        /* CLOSE ALL */
+    adminLoginLink.addEventListener(
+        "click",
+        function(event) {
 
-        document.querySelectorAll(".primary-faq-header")
-            .forEach(function(item) {
+            event.preventDefault();
 
-                item.classList.remove("active");
 
-            });
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
 
 
-        document.querySelectorAll(".primary-faq-content")
-            .forEach(function(item) {
+            if (accountForm) {
 
-                item.style.maxHeight = null;
-
-            });
-
-
-        /* OPEN CURRENT */
-
-        if (!isOpen) {
-
-            this.classList.add("active");
-
-            content.style.maxHeight =
-                content.scrollHeight + "px";
-
-        }
-
-    });
-
-});
-
-</script>
-
-
-
-<!-- ================= LOGIN SCRIPT ================= -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    const accountBtn =
-        document.getElementById("account-btn");
-
-
-    const adminLoginLink =
-        document.getElementById("adminLoginLink");
-
-
-    const loginAccountForm =
-        document.getElementById("loginAccountForm");
-
-
-    const closeForm =
-        document.getElementById("close-form");
-
-
-    const loginForm =
-        document.getElementById("schoolLoginForm");
-
-
-    const loginMessage =
-        document.getElementById("loginMessage");
-
-
-    /* HEADER LOGIN */
-
-    if (accountBtn) {
-
-        accountBtn.addEventListener("click", function () {
-
-            loginAccountForm.classList.add("active");
-
-        });
-
-    }
-
-
-    /* ADMIN LOGIN */
-
-    if (adminLoginLink) {
-
-        adminLoginLink.addEventListener("click", function (e) {
-
-            e.preventDefault();
-
-            loginAccountForm.classList.add("active");
-
-        });
-
-    }
-
-
-    /* CLOSE */
-
-    if (closeForm) {
-
-        closeForm.addEventListener("click", function () {
-
-            loginAccountForm.classList.remove("active");
-
-        });
-
-    }
-
-
-    /* LOGIN */
-
-    if (loginForm) {
-
-        loginForm.addEventListener("submit", function (e) {
-
-            e.preventDefault();
-
-
-            const email =
-                document.getElementById("loginEmail")
-                    .value
-                    .trim();
-
-
-            const password =
-                document.getElementById("loginPassword")
-                    .value;
-
-
-            const adminEmail =
-                "admin@school.com";
-
-
-            const adminPassword =
-                "Admin@123";
-
-
-            if (
-                email === adminEmail &&
-                password === adminPassword
-            ) {
-
-
-                loginMessage.innerHTML =
-                    "Login successful!";
-
-
-                loginMessage.style.color =
-                    "green";
-
-
-                setTimeout(function () {
-
-                    window.location.href =
-                        "admin-dashboard.html";
-
-                }, 500);
-
-
-            } else {
-
-
-                loginMessage.innerHTML =
-                    "Invalid email or password!";
-
-
-                loginMessage.style.color =
-                    "red";
+                accountForm.classList.add(
+                    "active"
+                );
 
             }
-
-        });
-
-    }
-
-});
-
-</script>
-
-
-
-<!-- ================= COURSE DROPDOWN SCRIPT ================= -->
-
-<script>
-
-document.querySelectorAll(
-    ".course-group > a"
-).forEach(function(link) {
-
-
-    link.addEventListener(
-        "click",
-        function(e) {
-
-            e.preventDefault();
-
-            e.stopPropagation();
-
-
-            const submenu =
-                this.parentElement
-                    .querySelector(".dropdown2");
-
-
-            document.querySelectorAll(
-                ".course-group .dropdown2"
-            ).forEach(function(menu) {
-
-                if (menu !== submenu) {
-
-                    menu.classList.remove("show");
-
-                }
-
-            });
-
-
-            submenu.classList.toggle("show");
 
         }
     );
 
-});
+}
 
-</script>
 
-<script>
+/* =====================================================
+   ACCOUNT ICON
+===================================================== */
+
+const accountBtn =
+    document.getElementById("account-btn");
+
+
+if (accountBtn) {
+
+    accountBtn.addEventListener(
+        "click",
+        function() {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CLOSE LOGIN
+===================================================== */
+
+const closeForm =
+    document.getElementById("close-form");
+
+
+if (closeForm) {
+
+    closeForm.addEventListener(
+        "click",
+        function() {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+const schoolLoginForm =
+    document.getElementById(
+        "schoolLoginForm"
+    );
+
+
+if (schoolLoginForm) {
+
+    schoolLoginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const email =
+                document
+                .getElementById("loginEmail")
+                .value
+                .trim();
+
+
+            const password =
+                document
+                .getElementById("loginPassword")
+                .value
+                .trim();
+
+
+            const message =
+                document.getElementById(
+                    "loginMessage"
+                );
+
+
+            if (
+                email === "admin@school.com" &&
+                password === "Admin@123"
+            ) {
+
+
+                message.textContent =
+                    "Login successful!";
+
+
+                message.style.color =
+                    "green";
+
+
+                setTimeout(
+                    function() {
+
+                        window.location.href =
+                            "admin-dashboard.html";
+
+                    },
+                    700
+                );
+
+            }
+
+            else {
+
+                message.textContent =
+                    "Invalid email or password.";
+
+                message.style.color =
+                    "red";
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+const faqQuestions =
+    document.querySelectorAll(
+        ".primary-faq-question"
+    );
+
+
+faqQuestions.forEach(
+    function(question) {
+
+        question.addEventListener(
+            "click",
+            function() {
+
+
+                const currentItem =
+                    question.parentElement;
+
+
+                document
+                .querySelectorAll(
+                    ".primary-faq-item"
+                )
+                .forEach(
+                    function(item) {
+
+                        if (
+                            item !== currentItem
+                        ) {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+                currentItem.classList.toggle(
+                    "active"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   SUBSCRIBE
+===================================================== */
 
 function subscribeUser() {
 
 
-    const email =
+    const emailInput =
         document.getElementById(
             "subscribeEmail"
-        ).value.trim();
+        );
 
 
     const message =
@@ -2456,35 +3289,24 @@ function subscribeUser() {
         );
 
 
-    if (email === "") {
-
-
-        message.innerHTML =
-            "Please enter your email.";
-
-
-        message.style.color =
-            "red";
-
+    if (!emailInput || !message) {
 
         return;
 
     }
 
 
-    if (
-        !email.includes("@") ||
-        !email.includes(".")
-    ) {
+    const email =
+        emailInput.value.trim();
 
 
-        message.innerHTML =
-            "Please enter a valid email.";
+    if (email === "") {
 
+        message.textContent =
+            "Please enter your email.";
 
         message.style.color =
             "red";
-
 
         return;
 
@@ -2495,75 +3317,86 @@ function subscribeUser() {
         "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
 
 
-    message.innerHTML =
-        "Submitting...";
+    const formData =
+        new FormData();
 
 
-    message.style.color =
-        "white";
+    formData.append(
+        "email",
+        email
+    );
 
 
     fetch(
         scriptURL,
         {
-
             method: "POST",
-
-            body:
-                new URLSearchParams({
-
-                    email: email
-
-                })
-
+            body: formData,
+            mode: "no-cors"
         }
     )
-
 
     .then(
         function() {
 
-
-            message.innerHTML =
-                "Thank you for subscribing! 😊";
-
+            message.textContent =
+                "Thank you for subscribing!";
 
             message.style.color =
-                "lightgreen";
+                "green";
 
 
-            document.getElementById(
-                "subscribeEmail"
-            ).value = "";
-
+            emailInput.value = "";
 
         }
     )
 
-
     .catch(
-        function(error) {
+        function() {
 
-
-            console.error(error);
-
-
-            message.innerHTML =
+            message.textContent =
                 "Something went wrong. Please try again.";
-
 
             message.style.color =
                 "red";
 
-
         }
     );
 
-
 }
 
-</script>
 
+/* =====================================================
+   ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+
+            const accountForm =
+                document.getElementById(
+                    "loginAccountForm"
+                );
+
+
+            if (accountForm) {
+
+                accountForm.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
+
+    }
+);
+
+</script>
 
 
 </body>

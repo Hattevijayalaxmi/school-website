@@ -4,39 +4,1195 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Maria's Podar Learn School Nilanga</title>
+    <title>Maria's Podar Learn School Nilanga(CBSE)</title>
 
 
-    <!-- MAIN CSS -->
-
-    <link rel="stylesheet"
-          href="css/style.css">
-
-
-    <!-- RESPONSIVE CSS -->
-
-    <link rel="stylesheet"
-          href="css/responsive.css">
-
-
-    <!-- FONT AWESOME -->
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-
-    <!-- FAVICON -->
+    <!-- =====================================================
+                         FAVICON
+    ====================================================== -->
 
     <link rel="shortcut icon"
           href="Image/Logo.jpeg"
           type="image/png">
 
+
+    <!-- =====================================================
+                         MAIN CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/responsive.css">
+
+
+    <!-- =====================================================
+                         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+                         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+                     EVENTS PAGE CSS
+    ====================================================== -->
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+                         EVENTS HERO
+        ====================================================== */
+
+        .events-page-hero {
+
+            width: 100%;
+            min-height: 520px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 20px;
+
+            /*
+             * BACKGROUND IMAGE
+             * Image/Image.png is used because
+             * this CSS is inside events.html
+             */
+
+            background-image:
+                linear-gradient(
+                    rgba(8, 35, 70, 0.55),
+                    rgba(8, 35, 70, 0.55)
+                ),
+                url("Image/Image.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+
+        }
+
+
+        /* =====================================================
+                  HERO CONTENT WITH BACKGROUND IMAGE
+        ====================================================== */
+
+        .events-page-hero-content {
+
+            position: relative;
+
+            width: 92%;
+            max-width: 1000px;
+
+            padding: 55px 45px;
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            /*
+             * SECOND BACKGROUND IMAGE
+             * This makes the image visible
+             * directly behind the heading/text.
+             */
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.82),
+                    rgba(255,255,255,0.82)
+                ),
+                url("Image/Image.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            border: 3px solid rgba(255,255,255,0.85);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.30);
+
+        }
+
+
+        /* =====================================================
+                     HERO CONTENT DECORATION
+        ====================================================== */
+
+        .events-page-hero-content::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -80px;
+            right: -80px;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background: rgba(242,140,40,0.18);
+
+            pointer-events: none;
+
+        }
+
+
+        .events-page-hero-content::after {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -100px;
+            left: -100px;
+
+            width: 250px;
+            height: 250px;
+
+            border-radius: 50%;
+
+            background: rgba(18,59,109,0.15);
+
+            pointer-events: none;
+
+        }
+
+
+        /* =====================================================
+                         HERO HEADING
+        ====================================================== */
+
+        .events-page-hero-content h1 {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 60px;
+
+            line-height: 1.2;
+
+            font-weight: 800;
+
+            color: #123b6d;
+
+            text-shadow:
+                0 2px 5px rgba(0,0,0,0.08);
+
+        }
+
+
+        .events-page-hero-content h1 span {
+
+            color: #f28c28;
+
+        }
+
+
+        /* =====================================================
+                         HERO DESCRIPTION
+        ====================================================== */
+
+        .events-page-hero-content p {
+
+            position: relative;
+
+            z-index: 2;
+
+            margin: 22px auto 0;
+
+            max-width: 850px;
+
+            font-family: 'Nunito', sans-serif;
+
+            font-size: 21px;
+
+            line-height: 1.75;
+
+            font-weight: 600;
+
+            color: #333;
+
+        }
+
+
+        /* =====================================================
+                         EVENTS SECTION
+        ====================================================== */
+
+        .events-page-section {
+
+            width: 100%;
+
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #ffffff 0%,
+                    #f6f9fc 100%
+                );
+
+        }
+
+
+        /* =====================================================
+                         SECTION TITLE
+        ====================================================== */
+
+        .events-page-title {
+
+            width: 90%;
+            max-width: 900px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+
+        }
+
+
+        .events-page-title .subtitle {
+
+            display: inline-block;
+
+            margin-bottom: 12px;
+
+            padding: 8px 22px;
+
+            border-radius: 30px;
+
+            background: #f28c28;
+
+            color: #ffffff;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .events-page-title h2 {
+
+            margin: 0;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 46px;
+
+            line-height: 1.25;
+
+            font-weight: 800;
+
+            color: #123b6d;
+
+        }
+
+
+        .events-page-title h2 span {
+
+            color: #f28c28;
+
+        }
+
+
+        .events-page-title p {
+
+            margin: 18px auto 0;
+
+            max-width: 750px;
+
+            font-family: 'Nunito', sans-serif;
+
+            font-size: 19px;
+
+            line-height: 1.7;
+
+            font-weight: 500;
+
+            color: #555;
+
+        }
+
+
+        /* =====================================================
+                         EVENTS GRID
+        ====================================================== */
+
+        .events-page-grid {
+
+            width: 92%;
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 30px;
+
+        }
+
+
+        /* =====================================================
+                         EVENT CARD
+        ====================================================== */
+
+        .events-page-card {
+
+            width: 100%;
+
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            background: #ffffff;
+
+            border: 1px solid #e5e9ef;
+
+            box-shadow:
+                0 8px 25px rgba(18,59,109,0.10);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .events-page-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 40px rgba(18,59,109,0.18);
+
+        }
+
+
+        /* =====================================================
+                         CARD TOP
+        ====================================================== */
+
+        .events-page-card-top {
+
+            width: 100%;
+
+            min-height: 135px;
+
+            padding: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #123b6d,
+                    #1f5b98
+                );
+
+        }
+
+
+        .events-page-date {
+
+            color: #ffffff;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.2px;
+
+            line-height: 1.4;
+
+        }
+
+
+        .events-page-icon {
+
+            width: 82px;
+            height: 82px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #ffffff;
+
+            font-size: 42px;
+
+            box-shadow:
+                0 6px 15px rgba(0,0,0,0.18);
+
+        }
+
+
+        /* =====================================================
+                         CARD CONTENT
+        ====================================================== */
+
+        .events-page-card-content {
+
+            padding: 30px 28px 32px;
+
+        }
+
+
+        .events-page-card-content h3 {
+
+            margin: 0 0 15px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 25px;
+
+            line-height: 1.35;
+
+            font-weight: 800;
+
+            color: #123b6d;
+
+        }
+
+
+        .events-page-card-content p {
+
+            margin: 0 0 22px;
+
+            font-family: 'Nunito', sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.75;
+
+            font-weight: 500;
+
+            color: #555;
+
+        }
+
+
+        /* =====================================================
+                         EVENT INFORMATION
+        ====================================================== */
+
+        .events-page-info {
+
+            width: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 13px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .events-page-info-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 11px;
+
+            font-family: 'Nunito', sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.55;
+
+            font-weight: 600;
+
+            color: #444;
+
+        }
+
+
+        .events-page-info-item span {
+
+            flex: 1;
+
+        }
+
+
+        .events-page-info-item strong {
+
+            color: #123b6d;
+
+            font-weight: 800;
+
+        }
+
+
+        /* =====================================================
+                         VIEW DETAILS BUTTON
+        ====================================================== */
+
+        .events-page-details-btn {
+
+            width: 100%;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+
+            padding: 13px 20px;
+
+            border-radius: 12px;
+
+            background: #f28c28;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease;
+
+        }
+
+
+        .events-page-details-btn:hover {
+
+            background: #123b6d;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =====================================================
+                     LEARNING HIGHLIGHT
+        ====================================================== */
+
+        .events-highlight {
+
+            width: 100%;
+
+            padding: 75px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #123b6d,
+                    #1f5b98
+                );
+
+        }
+
+
+        .events-highlight-box {
+
+            width: 92%;
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 45px 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.10);
+
+            border: 1px solid rgba(255,255,255,0.20);
+
+        }
+
+
+        .events-highlight-text {
+
+            flex: 1;
+
+        }
+
+
+        .events-highlight-text h2 {
+
+            margin: 0 0 15px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 36px;
+
+            line-height: 1.3;
+
+            font-weight: 800;
+
+            color: #ffffff;
+
+        }
+
+
+        .events-highlight-text h2 span {
+
+            color: #f28c28;
+
+        }
+
+
+        .events-highlight-text p {
+
+            margin: 0;
+
+            max-width: 850px;
+
+            font-family: 'Nunito', sans-serif;
+
+            font-size: 18px;
+
+            line-height: 1.75;
+
+            font-weight: 500;
+
+            color: #ffffff;
+
+        }
+
+
+        .events-highlight-icon {
+
+            width: 110px;
+            height: 110px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #ffffff;
+
+            font-size: 55px;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.20);
+
+        }
+
+
+        /* =====================================================
+                         TABLET
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .events-page-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 25px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+                         MOBILE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            html,
+            body {
+
+                width: 100%;
+                max-width: 100%;
+
+                overflow-x: hidden;
+
+            }
+
+
+            /* HERO */
+
+            .events-page-hero {
+
+                min-height: 470px;
+
+                padding: 75px 12px;
+
+                background-attachment: scroll;
+
+            }
+
+
+            .events-page-hero-content {
+
+                width: 95%;
+
+                padding: 40px 22px;
+
+                border-radius: 24px;
+
+                /*
+                 * Image stays visible on mobile
+                 */
+
+                background-image:
+                    linear-gradient(
+                        rgba(255,255,255,0.84),
+                        rgba(255,255,255,0.84)
+                    ),
+                    url("Image/Image.png");
+
+                background-size: cover;
+
+                background-position: center;
+
+            }
+
+
+            .events-page-hero-content h1 {
+
+                font-size: 42px;
+
+                line-height: 1.25;
+
+            }
+
+
+            .events-page-hero-content p {
+
+                font-size: 18px;
+
+                line-height: 1.7;
+
+                margin-top: 18px;
+
+            }
+
+
+            /* EVENTS SECTION */
+
+            .events-page-section {
+
+                padding: 60px 0;
+
+            }
+
+
+            .events-page-title {
+
+                width: 92%;
+
+                margin-bottom: 40px;
+
+            }
+
+
+            .events-page-title h2 {
+
+                font-size: 38px;
+
+            }
+
+
+            .events-page-title p {
+
+                font-size: 17px;
+
+            }
+
+
+            /* GRID */
+
+            .events-page-grid {
+
+                width: 92%;
+
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+
+            }
+
+
+            /* CARD */
+
+            .events-page-card-top {
+
+                min-height: 125px;
+
+                padding: 22px;
+
+            }
+
+
+            .events-page-icon {
+
+                width: 75px;
+                height: 75px;
+
+                font-size: 38px;
+
+            }
+
+
+            .events-page-card-content {
+
+                padding: 28px 25px 30px;
+
+            }
+
+
+            .events-page-card-content h3 {
+
+                font-size: 25px;
+
+            }
+
+
+            .events-page-card-content p {
+
+                font-size: 17px;
+
+                line-height: 1.75;
+
+            }
+
+
+            .events-page-info-item {
+
+                font-size: 16px;
+
+            }
+
+
+            /* HIGHLIGHT */
+
+            .events-highlight {
+
+                padding: 55px 0;
+
+            }
+
+
+            .events-highlight-box {
+
+                width: 92%;
+
+                padding: 35px 25px;
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+            .events-highlight-text h2 {
+
+                font-size: 30px;
+
+            }
+
+
+            .events-highlight-text p {
+
+                font-size: 17px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+                         SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .events-page-hero {
+
+                min-height: 430px;
+
+                padding: 60px 10px;
+
+            }
+
+
+            .events-page-hero-content {
+
+                width: 96%;
+
+                padding: 32px 18px;
+
+            }
+
+
+            .events-page-hero-content h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .events-page-hero-content p {
+
+                font-size: 16px;
+
+                line-height: 1.7;
+
+            }
+
+
+            .events-page-title h2 {
+
+                font-size: 32px;
+
+            }
+
+
+            .events-page-title p {
+
+                font-size: 16px;
+
+            }
+
+
+            .events-page-grid {
+
+                width: 94%;
+
+                gap: 20px;
+
+            }
+
+
+            .events-page-card-top {
+
+                min-height: 115px;
+
+                padding: 20px;
+
+            }
+
+
+            .events-page-date {
+
+                font-size: 14px;
+
+            }
+
+
+            .events-page-icon {
+
+                width: 68px;
+                height: 68px;
+
+                font-size: 34px;
+
+            }
+
+
+            .events-page-card-content {
+
+                padding: 25px 20px;
+
+            }
+
+
+            .events-page-card-content h3 {
+
+                font-size: 23px;
+
+            }
+
+
+            .events-page-card-content p {
+
+                font-size: 16px;
+
+            }
+
+
+            .events-page-info-item {
+
+                font-size: 15px;
+
+            }
+
+
+            .events-highlight-box {
+
+                width: 94%;
+
+                padding: 30px 20px;
+
+            }
+
+
+            .events-highlight-text h2 {
+
+                font-size: 26px;
+
+            }
+
+
+            .events-highlight-text p {
+
+                font-size: 16px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+                         EXTRA SMALL
+        ====================================================== */
+
+        @media (max-width: 360px) {
+
+            .events-page-hero-content h1 {
+
+                font-size: 30px;
+
+            }
+
+
+            .events-page-hero-content p {
+
+                font-size: 15px;
+
+            }
+
+
+            .events-page-title h2 {
+
+                font-size: 29px;
+
+            }
+
+
+            .events-page-card-content h3 {
+
+                font-size: 21px;
+
+            }
+
+
+            .events-page-card-content p {
+
+                font-size: 15px;
+
+            }
+
+
+            .events-page-info-item {
+
+                font-size: 14px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -56,8 +1212,7 @@
 
 
         <img src="Image/Logo.jpeg"
-             alt="School logo"
-             style="width:55px; height:55px; object-fit:contain;">
+             alt="Maria's Podar Learn School Logo">
 
 
         <div class="collage-name">
@@ -70,6 +1225,7 @@
     </a>
 
 
+    <!-- NAVBAR -->
 
     <nav class="navbar">
 
@@ -80,19 +1236,16 @@
 
             <img src="Image/close-icon.gif"
                  width="50"
-                 alt="Close">
+                 alt="Close Menu">
 
 
         </div>
 
 
-
         <ul class="navbar-links">
 
 
-            <!-- HOME -->
-
-            <li class="navbar-dropdown">
+            <li>
 
                 <a href="index.html">
 
@@ -103,18 +1256,15 @@
             </li>
 
 
-
-            <!-- COURSE -->
-
             <li class="navbar-dropdown">
 
 
-                <a href="#">
+                <a href="#"
+                   class="course-main-link">
 
                     Course
 
                 </a>
-
 
 
                 <div class="dropdown">
@@ -123,21 +1273,20 @@
                     <ul>
 
 
-                        <!-- PRIMARY -->
-
                         <li class="course-group">
 
 
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Primary Group
 
                                 <span class="arrow">
+
                                     ›
+
                                 </span>
 
                             </a>
-
 
 
                             <ul class="dropdown2">
@@ -171,22 +1320,20 @@
                         </li>
 
 
-
-                        <!-- SECONDARY -->
-
                         <li class="course-group">
 
 
-                            <a href="javascript:void(0);">
+                            <a href="#">
 
                                 Secondary Group
 
                                 <span class="arrow">
+
                                     ›
+
                                 </span>
 
                             </a>
-
 
 
                             <ul class="dropdown2">
@@ -229,28 +1376,18 @@
             </li>
 
 
+            <li>
 
-            <!-- ADMISSION -->
-
-            <li class="navbar-dropdown">
-
-
-                <a href="admission-form.html"
-                   target="_blank">
+                <a href="admission-form.html">
 
                     Admissions
 
                 </a>
 
-
             </li>
 
 
-
-            <!-- CAREERS -->
-
-            <li class="navbar-dropdown">
-
+            <li>
 
                 <a href="careers.html">
 
@@ -258,22 +1395,16 @@
 
                 </a>
 
-
             </li>
 
 
-
-            <!-- CONTACT -->
-
-            <li class="navbar-dropdown">
-
+            <li>
 
                 <a href="contact-us.html">
 
                     Contact us
 
                 </a>
-
 
             </li>
 
@@ -284,17 +1415,13 @@
     </nav>
 
 
-
     <!-- HEADER ICONS -->
 
     <div class="icons">
 
 
-        <!-- LOGIN -->
-
         <div id="account-btn"
-             class="header-icon"
-             style="cursor:pointer;">
+             class="header-icon">
 
 
             <img src="Image/avatar-icon.svg"
@@ -303,15 +1430,11 @@
 
             <img src="Image/avatar-icon-hover.gif"
                  alt="Login"
-                 width="10"
                  class="header-icon-hover">
 
 
         </div>
 
-
-
-        <!-- MENU -->
 
         <div id="menu-btn"
              class="header-icon">
@@ -323,7 +1446,6 @@
 
             <img src="Image/menu-icon-hover.gif"
                  alt="Menu"
-                 width="30"
                  class="header-icon-hover">
 
 
@@ -338,7 +1460,7 @@
 
 
 <!-- =====================================================
-                       LOGIN FORM
+                     LOGIN / ADMIN FORM
 ===================================================== -->
 
 <div class="account-form"
@@ -346,8 +1468,7 @@
 
 
     <div id="close-form"
-         class="close-icon"
-         style="cursor:pointer;">
+         class="close-icon">
 
 
         <img src="Image/close-icon.gif"
@@ -358,19 +1479,17 @@
     </div>
 
 
-
     <div class="buttons">
 
 
         <span class="btn active login-btn">
 
-            Login
+            Admin Login
 
         </span>
 
 
     </div>
-
 
 
     <form class="login-form active"
@@ -384,31 +1503,27 @@
         </h3>
 
 
-
-        <input
-            type="email"
-            id="loginEmail"
-            placeholder="Enter your email"
-            class="box"
-            required>
-
+        <input type="email"
+               id="loginEmail"
+               placeholder="Enter your email"
+               class="box"
+               autocomplete="email"
+               required>
 
 
-        <input
-            type="password"
-            id="loginPassword"
-            placeholder="Enter your password"
-            class="box"
-            required>
-
+        <input type="password"
+               id="loginPassword"
+               placeholder="Enter your password"
+               class="box"
+               autocomplete="current-password"
+               required>
 
 
         <div class="flex">
 
 
-            <input
-                type="checkbox"
-                id="remember-me">
+            <input type="checkbox"
+                   id="remember-me">
 
 
             <label for="remember-me">
@@ -421,13 +1536,11 @@
         </div>
 
 
-
         <p id="loginMessage"></p>
 
 
-
         <button type="submit"
-                class="btn">
+                class="btn login-submit">
 
             Login Now
 
@@ -456,7 +1569,9 @@
             School
 
             <span>
+
                 Events
+
             </span>
 
         </h1>
@@ -501,7 +1616,9 @@
             Upcoming
 
             <span>
+
                 Events
+
             </span>
 
         </h2>
@@ -519,9 +1636,7 @@
     </div>
 
 
-
     <div class="events-page-grid">
-
 
 
         <!-- =================================================
@@ -551,7 +1666,6 @@
             </div>
 
 
-
             <div class="events-page-card-content">
 
 
@@ -570,7 +1684,6 @@
                     participation by our students.
 
                 </p>
-
 
 
                 <div class="events-page-info">
@@ -607,11 +1720,12 @@
                 </div>
 
 
+                <a href="event-details.html?event=ganesh"
+                   class="events-page-details-btn">
 
-               <a href="event-details.html?event=ganesh"
-   class="events-page-details-btn">
-    View Details
-</a>
+                    View Details
+
+                </a>
 
 
             </div>
@@ -648,7 +1762,6 @@
             </div>
 
 
-
             <div class="events-page-card-content">
 
 
@@ -667,7 +1780,6 @@
                     Marathwada Mukti Sangram.
 
                 </p>
-
 
 
                 <div class="events-page-info">
@@ -704,11 +1816,13 @@
                 </div>
 
 
+                <a href="event-details.html?event=marathwada"
+                   class="events-page-details-btn">
 
-               <a href="event-details.html?event=marathwada"
-   class="events-page-details-btn">
-    View Details
-</a>
+                    View Details
+
+                </a>
+
 
             </div>
 
@@ -744,7 +1858,6 @@
             </div>
 
 
-
             <div class="events-page-card-content">
 
 
@@ -763,7 +1876,6 @@
                     learning and progress.
 
                 </p>
-
 
 
                 <div class="events-page-info">
@@ -800,11 +1912,12 @@
                 </div>
 
 
-
                 <a href="event-details.html?event=exam"
-   class="events-page-details-btn">
-    View Details
-</a>
+                   class="events-page-details-btn">
+
+                    View Details
+
+                </a>
 
 
             </div>
@@ -841,7 +1954,6 @@
             </div>
 
 
-
             <div class="events-page-card-content">
 
 
@@ -860,7 +1972,6 @@
                     encourage confidence and expression.
 
                 </p>
-
 
 
                 <div class="events-page-info">
@@ -895,10 +2006,14 @@
 
 
                 </div>
+
+
                 <a href="event-details.html?event=cultural"
-   class="events-page-details-btn">
-    View Details
-</a>
+                   class="events-page-details-btn">
+
+                    View Details
+
+                </a>
 
 
             </div>
@@ -935,7 +2050,6 @@
             </div>
 
 
-
             <div class="events-page-card-content">
 
 
@@ -954,7 +2068,6 @@
                     spirit among students.
 
                 </p>
-
 
 
                 <div class="events-page-info">
@@ -989,10 +2102,16 @@
 
 
                 </div>
-<a href="event-details.html?event=sports"
-   class="events-page-details-btn">
-    View Details
-</a>
+
+
+                <a href="event-details.html?event=sports"
+                   class="events-page-details-btn">
+
+                    View Details
+
+                </a>
+
+
             </div>
 
 
@@ -1027,7 +2146,6 @@
             </div>
 
 
-
             <div class="events-page-card-content">
 
 
@@ -1046,7 +2164,6 @@
                     communication and learning skills.
 
                 </p>
-
 
 
                 <div class="events-page-info">
@@ -1082,10 +2199,13 @@
 
                 </div>
 
+
                 <a href="event-details.html?event=academic"
-   class="events-page-details-btn">
-    View Details
-</a>
+                   class="events-page-details-btn">
+
+                    View Details
+
+                </a>
 
 
             </div>
@@ -1102,7 +2222,7 @@
 
 
 <!-- =====================================================
-                     HIGHLIGHT SECTION
+                  LEARNING HIGHLIGHT
 ===================================================== -->
 
 <section class="events-highlight">
@@ -1119,7 +2239,9 @@
                 Learning Beyond the
 
                 <span>
+
                     Classroom
+
                 </span>
 
             </h2>
@@ -1137,7 +2259,6 @@
 
 
         </div>
-
 
 
         <div class="events-highlight-icon">
@@ -1158,7 +2279,7 @@
                          FOOTER
 ===================================================== -->
 
-<footer style="background:url(Image/Speedline-50s-1846px.svg)">
+<footer>
 
 
     <div class="content">
@@ -1169,35 +2290,37 @@
 
             <div class="logo-details">
 
-
                 <span>
 
                     Maria’s Podar Learn School Nilanga
 
                 </span>
 
-
             </div>
-
 
 
             <div class="media-icons">
 
 
                 <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-facebook-f"></i>
 
                 </a>
 
 
-               <a href="mailto:principal.mpls@podar.org">
-    <i class="fa-solid fa-envelope"></i>
-</a>
+                <a href="mailto:principal.mpls@podar.org">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
 
                 <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-instagram"></i>
 
@@ -1212,7 +2335,8 @@
 
 
                 <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
-                   target="_blank">
+                   target="_blank"
+                   rel="noopener">
 
                     <i class="fab fa-youtube"></i>
 
@@ -1225,11 +2349,8 @@
         </div>
 
 
-
         <div class="link-boxes">
 
-
-            <!-- ABOUT -->
 
             <ul class="box">
 
@@ -1278,8 +2399,6 @@
 
 
 
-            <!-- QUICK LINKS -->
-
             <ul class="box">
 
 
@@ -1327,8 +2446,6 @@
 
 
 
-            <!-- STUDENT CORNER -->
-
             <ul class="box">
 
 
@@ -1375,8 +2492,6 @@
             </ul>
 
 
-
-            <!-- ACCOUNT -->
 
             <ul class="box">
 
@@ -1426,8 +2541,6 @@
 
 
 
-            <!-- SUBSCRIBE -->
-
             <ul class="box input-box">
 
 
@@ -1440,21 +2553,21 @@
 
                 <li>
 
-                    <input
-                        type="email"
-                        id="subscribeEmail"
-                        placeholder="Enter your email"
-                        required>
+                    <input type="email"
+                           id="subscribeEmail"
+                           placeholder="Enter your email">
 
                 </li>
 
 
                 <li>
 
-                    <input
-                        type="button"
-                        value="Subscribe"
-                        onclick="subscribeUser()">
+                    <button type="button"
+                            onclick="subscribeUser()">
+
+                        Subscribe
+
+                    </button>
 
                 </li>
 
@@ -1480,133 +2593,11 @@
 
 
 <!-- =====================================================
-                     SUBSCRIBE SCRIPT
-===================================================== -->
-
-<script>
-
-function subscribeUser() {
-
-
-    const email =
-        document.getElementById("subscribeEmail")
-        .value.trim();
-
-
-    const message =
-        document.getElementById("subscribeMessage");
-
-
-    if (email === "") {
-
-
-        message.innerHTML =
-            "Please enter your email.";
-
-
-        message.style.color =
-            "red";
-
-
-        return;
-
-    }
-
-
-    if (!email.includes("@") ||
-        !email.includes(".")) {
-
-
-        message.innerHTML =
-            "Please enter a valid email.";
-
-
-        message.style.color =
-            "red";
-
-
-        return;
-
-    }
-
-
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
-
-
-    message.innerHTML =
-        "Submitting...";
-
-
-    message.style.color =
-        "white";
-
-
-    fetch(scriptURL, {
-
-
-        method: "POST",
-
-
-        body: new URLSearchParams({
-
-            email: email
-
-        })
-
-
-    })
-
-
-    .then(() => {
-
-
-        message.innerHTML =
-            "Thank you for subscribing! 😊";
-
-
-        message.style.color =
-            "lightgreen";
-
-
-        document.getElementById(
-            "subscribeEmail"
-        ).value = "";
-
-
-    })
-
-
-    .catch((error) => {
-
-
-        console.error(error);
-
-
-        message.innerHTML =
-            "Something went wrong. Please try again.";
-
-
-        message.style.color =
-            "red";
-
-
-    });
-
-
-}
-
-</script>
-
-
-
-<!-- =====================================================
                          TIDIO
 ===================================================== -->
 
-<script
-    src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
-    async>
+<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
+        async>
 </script>
 
 
@@ -1620,302 +2611,406 @@ function subscribeUser() {
 
 
 <!-- =====================================================
-                         LOGIN SCRIPT
+                     PAGE JAVASCRIPT
 ===================================================== -->
 
 <script>
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+(function () {
 
 
-        const accountBtn =
-            document.getElementById(
-                "account-btn"
-            );
+    /* =====================================================
+                         ADMIN LOGIN
+    ====================================================== */
+
+    const adminLoginLink =
+        document.getElementById("adminLoginLink");
 
 
-        const adminLoginLink =
-            document.getElementById(
-                "adminLoginLink"
-            );
+    if (adminLoginLink) {
 
+        adminLoginLink.addEventListener(
+            "click",
+            function (event) {
 
-        const accountForm =
-            document.getElementById(
-                "loginAccountForm"
-            );
+                event.preventDefault();
 
+                const accountForm =
+                    document.getElementById(
+                        "loginAccountForm"
+                    );
 
-        const closeForm =
-            document.getElementById(
-                "close-form"
-            );
-
-
-
-        /* HEADER LOGIN */
-
-        if (accountBtn && accountForm) {
-
-
-            accountBtn.addEventListener(
-                "click",
-                function (e) {
-
-
-                    e.preventDefault();
-
-                    e.stopPropagation();
-
+                if (accountForm) {
 
                     accountForm.classList.add(
                         "active"
                     );
 
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: "smooth"
-
-                    });
-
-
                 }
-            );
 
-        }
+            }
+        );
 
-
-
-        /* FOOTER ADMIN LOGIN */
-
-        if (
-            adminLoginLink &&
-            accountForm
-        ) {
+    }
 
 
-            adminLoginLink.addEventListener(
-                "click",
-                function (e) {
+    /* =====================================================
+                    HEADER LOGIN ICON
+    ====================================================== */
+
+    const accountBtn =
+        document.getElementById("account-btn");
 
 
-                    e.preventDefault();
+    if (accountBtn) {
 
-                    e.stopPropagation();
+        accountBtn.addEventListener(
+            "click",
+            function () {
 
+                const accountForm =
+                    document.getElementById(
+                        "loginAccountForm"
+                    );
+
+                if (accountForm) {
 
                     accountForm.classList.add(
                         "active"
                     );
 
-
-                    window.scrollTo({
-
-                        top: 0,
-
-                        behavior: "smooth"
-
-                    });
-
-
                 }
-            );
 
-        }
+            }
+        );
 
-
-
-        /* CLOSE LOGIN */
-
-        if (
-            closeForm &&
-            accountForm
-        ) {
+    }
 
 
-            closeForm.addEventListener(
-                "click",
-                function (e) {
+    /* =====================================================
+                       CLOSE LOGIN
+    ====================================================== */
+
+    const closeForm =
+        document.getElementById("close-form");
 
 
-                    e.preventDefault();
+    if (closeForm) {
 
-                    e.stopPropagation();
+        closeForm.addEventListener(
+            "click",
+            function () {
 
+                const accountForm =
+                    document.getElementById(
+                        "loginAccountForm"
+                    );
+
+                if (accountForm) {
 
                     accountForm.classList.remove(
                         "active"
                     );
 
-
                 }
-            );
-
-        }
-
-
-
-        /* LOGIN */
-
-        const loginForm =
-            document.getElementById(
-                "schoolLoginForm"
-            );
-
-
-        if (loginForm) {
-
-
-            loginForm.addEventListener(
-                "submit",
-                function (event) {
-
-
-                    event.preventDefault();
-
-
-                    const email =
-                        document.getElementById(
-                            "loginEmail"
-                        ).value.trim();
-
-
-                    const password =
-                        document.getElementById(
-                            "loginPassword"
-                        ).value.trim();
-
-
-                    const message =
-                        document.getElementById(
-                            "loginMessage"
-                        );
-
-
-                    if (
-                        email === "admin@school.com" &&
-                        password === "Admin@123"
-                    ) {
-
-
-                        message.innerHTML =
-                            "Login Successful! ✅";
-
-
-                        message.style.color =
-                            "green";
-
-
-                        setTimeout(
-                            function () {
-
-
-                                window.location.href =
-                                    "admin-dashboard.html";
-
-
-                            },
-                            1000
-                        );
-
-
-                    }
-
-
-                    else {
-
-
-                        message.innerHTML =
-                            "Invalid Email or Password ❌";
-
-
-                        message.style.color =
-                            "red";
-
-
-                    }
-
-
-                }
-            );
-
-        }
-
-
-    }
-);
-
-</script>
-
-
-
-<!-- =====================================================
-                  COURSE DROPDOWN SCRIPT
-===================================================== -->
-
-<script>
-
-document.querySelectorAll(
-    ".course-group > a"
-).forEach(
-    function (link) {
-
-
-        link.addEventListener(
-            "click",
-            function (e) {
-
-
-                e.preventDefault();
-
-                e.stopPropagation();
-
-
-                const submenu =
-                    this.parentElement
-                    .querySelector(
-                        ".dropdown2"
-                    );
-
-
-                document.querySelectorAll(
-                    ".course-group .dropdown2"
-                ).forEach(
-                    function (menu) {
-
-
-                        if (
-                            menu !== submenu
-                        ) {
-
-
-                            menu.classList.remove(
-                                "show"
-                            );
-
-
-                        }
-
-                    }
-                );
-
-
-                submenu.classList.toggle(
-                    "show"
-                );
-
 
             }
         );
 
+    }
+
+
+    /* =====================================================
+                       ADMIN LOGIN
+    ====================================================== */
+
+    const schoolLoginForm =
+        document.getElementById(
+            "schoolLoginForm"
+        );
+
+
+    if (schoolLoginForm) {
+
+        schoolLoginForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document.getElementById(
+                        "loginEmail"
+                    ).value.trim();
+
+
+                const password =
+                    document.getElementById(
+                        "loginPassword"
+                    ).value.trim();
+
+
+                const message =
+                    document.getElementById(
+                        "loginMessage"
+                    );
+
+
+                if (
+                    email === "admin@school.com" &&
+                    password === "Admin@123"
+                ) {
+
+                    message.textContent =
+                        "Login successful!";
+
+                    message.style.color =
+                        "green";
+
+
+                    setTimeout(
+                        function () {
+
+                            window.location.href =
+                                "admin-dashboard.html";
+
+                        },
+                        700
+                    );
+
+                }
+
+                else {
+
+                    message.textContent =
+                        "Invalid email or password.";
+
+                    message.style.color =
+                        "red";
+
+                }
+
+            }
+        );
 
     }
-);
+
+
+    /* =====================================================
+                         SUBSCRIBE
+    ====================================================== */
+
+    window.subscribeUser =
+        function () {
+
+
+            const emailInput =
+                document.getElementById(
+                    "subscribeEmail"
+                );
+
+
+            const message =
+                document.getElementById(
+                    "subscribeMessage"
+                );
+
+
+            if (!emailInput || !message) {
+
+                return;
+
+            }
+
+
+            const email =
+                emailInput.value.trim();
+
+
+            if (email === "") {
+
+                message.textContent =
+                    "Please enter your email.";
+
+                message.style.color =
+                    "red";
+
+                return;
+
+            }
+
+
+            if (
+                !email.includes("@") ||
+                !email.includes(".")
+            ) {
+
+                message.textContent =
+                    "Please enter a valid email.";
+
+                message.style.color =
+                    "red";
+
+                return;
+
+            }
+
+
+            const scriptURL =
+                "https://script.google.com/macros/s/AKfycbw_Kz7fpV5fPXk6V7gxLvJdtI9y0fwkkxEC3LutuuiKPUeTgiFY8nZwWdCQJCsowX-t/exec";
+
+
+            const formData =
+                new FormData();
+
+
+            formData.append(
+                "email",
+                email
+            );
+
+
+            message.textContent =
+                "Submitting...";
+
+
+            message.style.color =
+                "white";
+
+
+            fetch(
+                scriptURL,
+                {
+                    method: "POST",
+                    body: formData,
+                    mode: "no-cors"
+                }
+            )
+
+
+            .then(
+                function () {
+
+                    message.textContent =
+                        "Thank you for subscribing!";
+
+                    message.style.color =
+                        "green";
+
+                    emailInput.value =
+                        "";
+
+                }
+            )
+
+
+            .catch(
+                function () {
+
+                    message.textContent =
+                        "Something went wrong. Please try again.";
+
+                    message.style.color =
+                        "red";
+
+                }
+            );
+
+        };
+
+
+    /* =====================================================
+                         ESCAPE KEY
+    ====================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                const accountForm =
+                    document.getElementById(
+                        "loginAccountForm"
+                    );
+
+
+                if (accountForm) {
+
+                    accountForm.classList.remove(
+                        "active"
+                    );
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+                      COURSE DROPDOWN
+    ====================================================== */
+
+    document.querySelectorAll(
+        ".course-group > a"
+    ).forEach(
+        function (link) {
+
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+
+                    const submenu =
+                        this.parentElement.querySelector(
+                            ".dropdown2"
+                        );
+
+
+                    if (!submenu) {
+
+                        return;
+
+                    }
+
+
+                    document.querySelectorAll(
+                        ".course-group .dropdown2"
+                    ).forEach(
+                        function (menu) {
+
+                            if (menu !== submenu) {
+
+                                menu.classList.remove(
+                                    "show"
+                                );
+
+                            }
+
+                        }
+                    );
+
+
+                    submenu.classList.toggle(
+                        "show"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+})();
 
 </script>
 
