@@ -981,6 +981,36 @@
 
         }
 
+        @media (max-width: 768px) {
+
+    .course-main-item .dropdown {
+        overflow: visible !important;
+    }
+
+    .course-main-item .dropdown > ul {
+        overflow: visible !important;
+    }
+
+    .course-group {
+        overflow: visible !important;
+    }
+
+    .course-group .dropdown2 {
+        overflow: visible !important;
+    }
+
+    .course-group .dropdown2 li {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .course-group .dropdown2 li a {
+        display: block !important;
+        width: 100% !important;
+    }
+
+}
+
     </style>
 
 </head>
@@ -2774,6 +2804,42 @@ document.addEventListener(
     }
 );
 
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const courseGroups = document.querySelectorAll(".course-group");
+
+    courseGroups.forEach(function (group) {
+
+        const mainLink = group.querySelector(":scope > a");
+        const submenu = group.querySelector(".dropdown2");
+
+        if (!mainLink || !submenu) return;
+
+        mainLink.addEventListener("click", function (e) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Close other submenu
+            document.querySelectorAll(".course-group .dropdown2").forEach(function (menu) {
+
+                if (menu !== submenu) {
+                    menu.classList.remove("show");
+                }
+
+            });
+
+            // Open / close current submenu
+            submenu.classList.toggle("show");
+
+        });
+
+    });
+
+});
 </script>
 
 
