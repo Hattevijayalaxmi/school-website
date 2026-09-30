@@ -538,3 +538,37 @@ function subscribeUser() {
     });
 
 }
+
+document.querySelectorAll('.course-group > a').forEach(dropdownToggle => {
+    dropdownToggle.addEventListener('click', function(e) {
+
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); 
+            
+            const currentDropdown = this.nextElementSibling; 
+            const arrow = this.querySelector('.arrow');
+
+     
+            document.querySelectorAll('.dropdown2').forEach(drop => {
+                if (drop !== currentDropdown) {
+                    drop.classList.remove('active');
+                    if(drop.previousElementSibling.querySelector('.arrow')) {
+                        drop.previousElementSibling.querySelector('.arrow').style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+
+        
+            if (currentDropdown) {
+                currentDropdown.classList.toggle('active');
+                
+        
+                if (currentDropdown.classList.contains('active')) {
+                    arrow.style.transform = 'rotate(90deg)';
+                } else {
+                    arrow.style.transform = 'rotate(0deg)';
+                }
+            }
+        }
+    });
+});

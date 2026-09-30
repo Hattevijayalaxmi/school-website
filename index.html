@@ -479,8 +479,38 @@
     }
 
 }
+@media (max-width: 768px) {
+
+    .course-main-item .dropdown {
+        overflow: visible !important;
+    }
+
+    .course-main-item .dropdown > ul {
+        overflow: visible !important;
+    }
+
+    .course-group {
+        overflow: visible !important;
+    }
+
+    .course-group .dropdown2 {
+        overflow: visible !important;
+    }
+
+    .course-group .dropdown2 li {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .course-group .dropdown2 li a {
+        display: block !important;
+        width: 100% !important;
+    }
+
+}
 
 </style>
+
 
 </head>
 
@@ -1919,112 +1949,6 @@
                             <div class="date">
 
 
-                                14
-
-                                <span>
-
-                                    Sep
-
-                                </span>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="event-wrapper">
-
-
-                            <a href="events.html">
-
-
-                                <h5 class="title">
-
-                                    Ganesh Chaturthi
-
-                                </h5>
-
-
-                                <div class="time">
-
-                                    09:00 am - 10:00 am
-
-                                </div>
-
-
-                            </a>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="event-box">
-
-
-                        <div class="time-from">
-
-
-                            <div class="date">
-
-
-                                17
-
-                                <span>
-
-                                    Sep
-
-                                </span>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="event-wrapper">
-
-
-                            <a href="events.html">
-
-
-                                <h5 class="title">
-
-                                    Marathwada Mukti Sangram Din
-
-                                </h5>
-
-
-                                <div class="time">
-
-                                    07:00 am - 08:00 am
-
-                                </div>
-
-
-                            </a>
-
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="event-box">
-
-
-                        <div class="time-from">
-
-
-                            <div class="date">
-
-
                                 26
 
                                 <span>
@@ -2048,14 +1972,14 @@
 
                                 <h5 class="title">
 
-                                    Half Yearly Examination
+                                  Half Yearly Examination
 
                                 </h5>
 
 
                                 <div class="time">
 
-                                    09:00 am - 02:45 pm
+                                    11:00 am - 02:45 pm
 
                                 </div>
 
@@ -2069,10 +1993,57 @@
                     </div>
 
 
-                </div>
+                    <div class="event-box">
 
 
-            </div>
+                        <div class="time-from">
+
+
+                            <div class="date">
+
+
+                                02
+
+                                <span>
+
+                                    Oct
+
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="event-wrapper">
+
+
+                            <a href="events.html">
+
+
+                                <h5 class="title">
+
+                                Gandhi jayanti
+
+                                </h5>
+
+
+                                <div class="time">
+
+                                    07:00 am - 08:00 am
+
+                                </div>
+
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
 
 
         </div>
@@ -2113,9 +2084,9 @@
             <div class="media-icons">
 
 
-                <a href="https://www.facebook.com/him.sonepat/"
-                   target="_blank"
-                   rel="noopener">
+              <a href="https://www.facebook.com/MariapodarLearnSchoolNilanga" 
+   target="_blank" 
+   rel="noopener">
 
 
                     <i class="fab fa-facebook-f"></i>
@@ -2133,25 +2104,11 @@
                 </a>
 
 
-                <a href="https://instagram.com/mariaspodarschoolnilanga"
-                   target="_blank"
-                   rel="noopener">
-
-
-                    <i class="fab fa-instagram"></i>
-
-
-                </a>
-
-
-                <a href="#">
-
-
-                    <i class="fab fa-linkedin-in"></i>
-
-
-                </a>
-
+              <a href="https://www.instagram.com/mariaspodarnilanga/"
+   target="_blank"
+   rel="noopener noreferrer">
+    <i class="fa-brands fa-instagram"></i>
+</a>
 
                 <a href="https://www.youtube.com/watch?v=UFhMLlQCQ7k"
                    target="_blank"
@@ -2792,13 +2749,999 @@ document.querySelectorAll(
 </script>
 
 
+
 <!-- =====================================================
-     TIDIO
+     MARIA'S PODAR LEARN SCHOOL - FAQ CHATBOT
 ===================================================== -->
 
-<script src="//code.tidio.co/sdappuxo1tpwzporvf9giubyedri7c7x.js"
-        async>
+<style>
+/* ================= CHATBOT ================= */
+
+.school-chatbot {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 99999;
+    font-family: Arial, sans-serif;
+}
+
+/* Chat button */
+.chatbot-toggle {
+    width: 62px;
+    height: 62px;
+    border: none;
+    border-radius: 50%;
+    background: #164e63;
+    color: #ffffff;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.08);
+}
+
+/* Chat window */
+.chatbot-window {
+    position: absolute;
+    right: 0;
+    bottom: 76px;
+    width: 360px;
+    max-width: calc(100vw - 30px);
+    height: 540px;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    border: 1px solid #e5e5e5;
+}
+
+.chatbot-window.active {
+    display: flex;
+}
+
+/* Header */
+.chatbot-header {
+    background: #164e63;
+    color: #ffffff;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chatbot-school-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ffffff;
+    padding: 2px;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.chatbot-header small {
+    display: block;
+    margin-top: 3px;
+    opacity: 0.9;
+    font-size: 11px;
+}
+
+.chatbot-close {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Messages */
+.chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px;
+    background: #f7f9fa;
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.chat-message.bot {
+    justify-content: flex-start;
+}
+
+.chat-message.user {
+    justify-content: flex-end;
+}
+
+.chat-bubble {
+    max-width: 85%;
+    padding: 10px 13px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.chat-message.bot .chat-bubble {
+    background: #ffffff;
+    color: #333333;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+}
+
+.chat-message.user .chat-bubble {
+    background: #164e63;
+    color: #ffffff;
+    border-bottom-right-radius: 4px;
+}
+
+/* FAQ buttons */
+.chatbot-questions {
+    padding: 10px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+    max-height: 165px;
+    overflow-y: auto;
+}
+
+.chatbot-questions-title {
+    margin: 0 0 8px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.chat-question {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #d8e2e6;
+    background: #ffffff;
+    color: #164e63;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.chat-question:hover {
+    background: #eef6f8;
+}
+
+/* Input */
+.chatbot-input-area {
+    display: flex;
+    gap: 7px;
+    padding: 10px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.chatbot-input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 20px;
+    padding: 10px 13px;
+    outline: none;
+    font-size: 13px;
+}
+
+.chatbot-send {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #164e63;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.chatbot-typing {
+    font-size: 11px;
+    color: #777777;
+    margin: 2px 0 10px;
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .school-chatbot {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .chatbot-window {
+        right: -4px;
+        bottom: 72px;
+        width: calc(100vw - 28px);
+        height: 70vh;
+        max-height: 560px;
+    }
+
+    .chatbot-toggle {
+        width: 58px;
+        height: 58px;
+    }
+}
+</style>
+
+
+<div class="school-chatbot" id="schoolChatbot">
+
+    <div class="chatbot-window" id="chatbotWindow">
+
+        <div class="chatbot-header">
+
+            <div class="chatbot-header-left">
+
+                <img src="Image/Logo.jpeg"
+                     alt="Maria's Podar Learn School"
+                     class="chatbot-school-icon">
+
+                <div>
+                    <h3>Maria's Podar Learn School</h3>
+                    <small>Nilanga • School Assistant</small>
+                </div>
+
+            </div>
+
+            <button class="chatbot-close"
+                    id="chatbotClose"
+                    aria-label="Close Chatbot">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="chatbot-messages"
+             id="chatbotMessages">
+
+            <div class="chat-message bot">
+
+                <div class="chat-bubble">
+                    Hello! 👋 Welcome to Maria's Podar Learn School Nilanga.
+                    <br><br>
+                    I can help you with admissions, classes, facilities,
+                    school timings, activities, careers and other school
+                    information.
+                </div>
+
+            </div>
+
+            <div class="chat-message bot">
+
+                <div class="chat-bubble">
+                    Please select a question below or type your question.
+                </div>
+
+            </div>
+
+            <div class="chatbot-typing"
+                 id="chatbotTyping">
+                Typing...
+            </div>
+
+        </div>
+
+
+        <div class="chatbot-questions"
+             id="chatbotQuestions">
+
+            <p class="chatbot-questions-title">
+                Frequently Asked Questions
+            </p>
+
+        </div>
+
+
+        <div class="chatbot-input-area">
+
+            <input type="text"
+                   id="chatbotInput"
+                   class="chatbot-input"
+                   placeholder="Type your question..."
+                   autocomplete="off">
+
+            <button type="button"
+                    id="chatbotSend"
+                    class="chatbot-send"
+                    aria-label="Send">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button type="button"
+            class="chatbot-toggle"
+            id="chatbotToggle"
+            aria-label="Open School Chatbot">
+        <i class="fa-solid fa-comments"></i>
+    </button>
+
+</div>
+
+
+<script>
+/* =====================================================
+   SCHOOL FAQ CHATBOT
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const chatbotToggle =
+        document.getElementById("chatbotToggle");
+
+    const chatbotWindow =
+        document.getElementById("chatbotWindow");
+
+    const chatbotClose =
+        document.getElementById("chatbotClose");
+
+    const chatbotMessages =
+        document.getElementById("chatbotMessages");
+
+    const chatbotQuestions =
+        document.getElementById("chatbotQuestions");
+
+    const chatbotInput =
+        document.getElementById("chatbotInput");
+
+    const chatbotSend =
+        document.getElementById("chatbotSend");
+
+    const chatbotTyping =
+        document.getElementById("chatbotTyping");
+
+
+    const faqData = [
+
+        {
+            q: "Where is Maria’s Podar Learn School located?",
+            keywords: [
+                "where", "located", "location",
+                "school location", "nilanga", "address"
+            ],
+            a: "Maria’s Podar Learn School is located in Nilanga, Latur District, Maharashtra."
+        },
+
+        {
+            q: "Which board is the school affiliated with?",
+            keywords: [
+                "board", "cbse", "affiliated",
+                "affiliation", "education board"
+            ],
+            a: "Maria’s Podar Learn School is affiliated with the Central Board of Secondary Education (CBSE)."
+        },
+
+        {
+            q: "What is the school’s CBSE affiliation number?",
+            keywords: [
+                "affiliation number",
+                "cbse affiliation number",
+                "affiliation no",
+                "1131276"
+            ],
+            a: "The school's CBSE Affiliation Number is 1131276."
+        },
+
+        {
+            q: "What is the school code?",
+            keywords: [
+                "school code",
+                "code",
+                "31263"
+            ],
+            a: "The school code is 31263."
+        },
+
+        {
+            q: "Which classes are available at the school?",
+            keywords: [
+                "classes",
+                "class available",
+                "grades",
+                "courses",
+                "primary",
+                "secondary",
+                "nursery",
+                "ukg"
+            ],
+            a: "The school offers classes from Nursery to Grade X. The Primary Group includes Nursery to UKG and Classes 1st to 5th. The Secondary Group includes Classes 6th to 8th and Classes 9th to 10th."
+        },
+
+        {
+            q: "Are admissions currently open?",
+            keywords: [
+                "admission open",
+                "admissions open",
+                "admission",
+                "admissions",
+                "apply admission"
+            ],
+            a: "Admissions are subject to seat availability and the current admission schedule. Please contact the school office for the latest admission information."
+        },
+
+        {
+            q: "What documents are required for admission?",
+            keywords: [
+                "documents",
+                "document",
+                "admission documents",
+                "required documents",
+                "birth certificate",
+                "aadhaar"
+            ],
+            a: "Generally, admission may require the student’s birth certificate, previous school records, Aadhaar/identity documents, photographs, address proof, and other documents specified by the school."
+        },
+
+        {
+            q: "What is the school fee structure?",
+            keywords: [
+                "fee",
+                "fees",
+                "fee structure",
+                "fees structure",
+                "school fees"
+            ],
+            a: "The fee structure varies according to the class and applicable school charges. Please contact the school office for the current fee details."
+        },
+
+        {
+            q: "What are the school timings?",
+            keywords: [
+                "timing",
+                "timings",
+                "school timing",
+                "school timings",
+                "time"
+            ],
+            a: "School timings may vary according to the class and academic schedule. Please contact the school for the current timings."
+        },
+
+        {
+            q: "Is school transportation available?",
+            keywords: [
+                "transport",
+                "transportation",
+                "bus",
+                "school bus",
+                "school transportation"
+            ],
+            a: "Transportation availability and routes can be confirmed directly with the school administration."
+        },
+
+        {
+            q: "What facilities are available at the school?",
+            keywords: [
+                "facilities",
+                "facility",
+                "infrastructure",
+                "library",
+                "computer lab",
+                "sports"
+            ],
+            a: "The school provides facilities designed to support academic learning, co-curricular activities, sports, and the overall development of students. Facilities include library, computer lab, science laboratory, mathematics laboratory, smart and digital learning resources, and sports/activity facilities."
+        },
+
+        {
+            q: "Does the school have smart classrooms?",
+            keywords: [
+                "smart classroom",
+                "smart classrooms",
+                "digital learning",
+                "smart class"
+            ],
+            a: "Yes. The school provides smart and digital learning resources to support technology-enabled education."
+        },
+
+        {
+            q: "What laboratories are available?",
+            keywords: [
+                "laboratory",
+                "laboratories",
+                "lab",
+                "labs",
+                "science lab",
+                "math lab",
+                "mathematics lab",
+                "computer lab"
+            ],
+            a: "The school provides a Computer Lab, Science Laboratory, and Mathematics Laboratory to support practical and experiential learning."
+        },
+
+        {
+            q: "What extracurricular activities does the school offer?",
+            keywords: [
+                "extracurricular",
+                "extra curricular",
+                "activities",
+                "co curricular",
+                "competitions",
+                "olympiads"
+            ],
+            a: "The school encourages students to participate in sports, cultural activities, creative activities, competitions, Olympiads, inter-school activities, and other co-curricular programmes."
+        },
+
+        {
+            q: "Are sports, dance, art, and music activities available?",
+            keywords: [
+                "sports",
+                "dance",
+                "art",
+                "music",
+                "sports dance art music",
+                "cultural"
+            ],
+            a: "The school encourages participation in sports, dance, art, music, cultural activities, and other creative activities according to the school's activity schedule."
+        },
+
+        {
+            q: "How are parents informed about their child’s academic progress?",
+            keywords: [
+                "parents",
+                "parent",
+                "academic progress",
+                "progress",
+                "performance",
+                "report"
+            ],
+            a: "Parents are informed about their child’s academic performance, attendance, activities, and overall progress through the school’s communication channels and Parent–Teacher Meetings."
+        },
+
+        {
+            q: "How often are Parent–Teacher Meetings conducted?",
+            keywords: [
+                "parent teacher",
+                "ptm",
+                "ptm meeting",
+                "parent teacher meeting",
+                "meetings"
+            ],
+            a: "Parent–Teacher Meetings are conducted periodically according to the school’s academic calendar and requirements."
+        },
+
+        {
+            q: "How are examinations and revision worksheets conducted?",
+            keywords: [
+                "examination",
+                "exams",
+                "exam",
+                "revision",
+                "worksheet",
+                "worksheets",
+                "assessment",
+                "test"
+            ],
+            a: "Students are assessed through class tests, periodic assessments, examinations, revision worksheets, assignments, and other academic activities as planned by the school."
+        },
+
+        {
+            q: "What is the school’s contact number?",
+            keywords: [
+                "contact",
+                "contact number",
+                "phone",
+                "phone number",
+                "mobile number",
+                "telephone"
+            ],
+            a: "For the latest contact number, please visit the Contact Us section of the school website or contact the school office."
+        },
+
+        {
+            q: "Can I contact the school through WhatsApp?",
+            keywords: [
+                "whatsapp",
+                "whatsapp number",
+                "contact whatsapp",
+                "message whatsapp"
+            ],
+            a: "If WhatsApp support is available, parents and visitors can use the official school WhatsApp number provided on the Contact Us page."
+        },
+
+        {
+            q: "Are there any teaching vacancies?",
+            keywords: [
+                "vacancy",
+                "vacancies",
+                "teaching vacancy",
+                "teacher vacancy",
+                "job vacancy",
+                "jobs",
+                "job"
+            ],
+            a: "Teaching vacancies depend on the school’s current staffing requirements. Available vacancies can be checked in the Careers section of the school website."
+        },
+
+        {
+            q: "How can I apply for a job at the school?",
+            keywords: [
+                "apply job",
+                "apply for job",
+                "job application",
+                "career",
+                "careers",
+                "resume",
+                "cv"
+            ],
+            a: "You can apply through the Careers section of the school website or submit your updated resume/CV to the school administration according to the current vacancy instructions."
+        }
+
+    ];
+
+
+    function addMessage(message, sender) {
+
+        const wrapper =
+            document.createElement("div");
+
+        wrapper.className =
+            "chat-message " + sender;
+
+        const bubble =
+            document.createElement("div");
+
+        bubble.className =
+            "chat-bubble";
+
+        bubble.textContent = message;
+
+        wrapper.appendChild(bubble);
+
+        chatbotMessages.insertBefore(
+            wrapper,
+            chatbotTyping
+        );
+
+        chatbotMessages.scrollTop =
+            chatbotMessages.scrollHeight;
+    }
+
+
+    function openChatbot() {
+
+        chatbotWindow.classList.add("active");
+
+        setTimeout(function () {
+            chatbotInput.focus();
+        }, 150);
+    }
+
+
+    function closeChatbot() {
+
+        chatbotWindow.classList.remove("active");
+    }
+
+
+    function normalizeText(text) {
+
+        return text
+            .toLowerCase()
+            .replace(/[’']/g, "")
+            .replace(/[^a-z0-9\s]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+
+    function findAnswer(userText) {
+
+        const text =
+            normalizeText(userText);
+
+        if (!text) {
+            return null;
+        }
+
+
+        let bestMatch = null;
+        let bestScore = 0;
+
+
+        faqData.forEach(function (item) {
+
+            let score = 0;
+
+            const question =
+                normalizeText(item.q);
+
+            if (text === question) {
+                score += 100;
+            }
+
+
+            if (
+                question.includes(text) ||
+                text.includes(question)
+            ) {
+                score += 50;
+            }
+
+
+            item.keywords.forEach(function (keyword) {
+
+                const normalizedKeyword =
+                    normalizeText(keyword);
+
+                if (
+                    normalizedKeyword &&
+                    text.includes(normalizedKeyword)
+                ) {
+                    score +=
+                        normalizedKeyword.split(" ").length > 1
+                        ? 8
+                        : 4;
+                }
+
+            });
+
+
+            const userWords =
+                text.split(" ");
+
+            const questionWords =
+                question.split(" ");
+
+
+            userWords.forEach(function (word) {
+
+                if (
+                    word.length >= 4 &&
+                    questionWords.includes(word)
+                ) {
+                    score += 2;
+                }
+
+            });
+
+
+            if (score > bestScore) {
+
+                bestScore = score;
+                bestMatch = item;
+
+            }
+
+        });
+
+
+        return bestScore >= 4
+            ? bestMatch
+            : null;
+    }
+
+
+    function showTyping(callback) {
+
+        chatbotTyping.style.display =
+            "block";
+
+        chatbotMessages.scrollTop =
+            chatbotMessages.scrollHeight;
+
+
+        setTimeout(function () {
+
+            chatbotTyping.style.display =
+                "none";
+
+            callback();
+
+        }, 450);
+    }
+
+
+    function askQuestion(question) {
+
+        addMessage(
+            question,
+            "user"
+        );
+
+
+        const result =
+            findAnswer(question);
+
+
+        showTyping(function () {
+
+            if (result) {
+
+                addMessage(
+                    result.a,
+                    "bot"
+                );
+
+            } else {
+
+                addMessage(
+                    "Sorry, I could not find the answer to that question. Please contact the school office or use the Contact Us page for more information.",
+                    "bot"
+                );
+
+            }
+
+        });
+
+    }
+
+
+    /* FAQ buttons */
+
+    faqData.forEach(function (item) {
+
+        const button =
+            document.createElement("button");
+
+        button.type = "button";
+
+        button.className =
+            "chat-question";
+
+        button.textContent =
+            item.q;
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                askQuestion(item.q);
+
+            }
+        );
+
+        chatbotQuestions.appendChild(
+            button
+        );
+
+    });
+
+
+    /* Open */
+
+    chatbotToggle.addEventListener(
+        "click",
+        function () {
+
+            if (
+                chatbotWindow.classList.contains(
+                    "active"
+                )
+            ) {
+
+                closeChatbot();
+
+            } else {
+
+                openChatbot();
+
+            }
+
+        }
+    );
+
+
+    /* Close */
+
+    chatbotClose.addEventListener(
+        "click",
+        closeChatbot
+    );
+
+
+    /* Send */
+
+    function sendUserQuestion() {
+
+        const question =
+            chatbotInput.value.trim();
+
+        if (!question) {
+            return;
+        }
+
+        chatbotInput.value = "";
+
+        askQuestion(question);
+    }
+
+
+    chatbotSend.addEventListener(
+        "click",
+        sendUserQuestion
+    );
+
+
+    chatbotInput.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Enter") {
+
+                event.preventDefault();
+
+                sendUserQuestion();
+
+            }
+
+        }
+    );
+
+});
 </script>
+<script>
+
+document.querySelectorAll(
+    ".course-group > a"
+).forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function(e) {
+
+            e.preventDefault();
+
+            e.stopPropagation();
+
+            const submenu =
+                this.parentElement.querySelector(
+                    ".dropdown2"
+                );
+
+            document.querySelectorAll(
+                ".course-group .dropdown2"
+            ).forEach(function(menu) {
+
+                if (menu !== submenu) {
+
+                    menu.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            });
+
+            submenu.classList.toggle(
+                "show"
+            );
+
+        }
+    );
+
+});
+
+</script>
+
 
 
 <!-- =====================================================

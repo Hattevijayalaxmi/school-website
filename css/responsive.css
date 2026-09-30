@@ -201,3 +201,207 @@
     }
 
 }
+/* =========================================================
+   MOBILE COURSE DROPDOWN FIX
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Course main item */
+    .navbar-dropdown {
+        position: relative;
+    }
+
+    .navbar-dropdown > .course-main-link {
+        cursor: pointer;
+    }
+
+
+    /* Main dropdown */
+    .navbar-dropdown .dropdown {
+        position: static !important;
+
+        display: none;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        box-shadow: none;
+
+        background: transparent;
+
+        visibility: visible;
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    /* Show main Course dropdown */
+    .navbar-dropdown:hover .dropdown {
+        display: none;
+    }
+
+    .navbar-dropdown .dropdown.show {
+        display: block !important;
+    }
+
+
+    /* Dropdown list */
+    .navbar-dropdown .dropdown > ul {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    /* Primary / Secondary */
+    .course-group {
+        position: relative;
+
+        width: 100%;
+
+        display: block;
+    }
+
+
+    .course-group > a {
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        padding: 13px 20px;
+
+        box-sizing: border-box;
+
+        cursor: pointer;
+
+        text-decoration: none;
+
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    /* Arrow */
+    .course-group > a .arrow {
+        display: inline-block;
+
+        font-size: 22px;
+
+        transition: transform 0.3s ease;
+    }
+
+
+    /* Arrow rotate when submenu opens */
+    .course-group.active > a .arrow {
+        transform: rotate(90deg);
+    }
+
+
+    /* =====================================================
+       NURSERY / CLASS LINKS
+    ===================================================== */
+
+    .course-group .dropdown2 {
+
+        position: static !important;
+
+        display: none;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        visibility: visible;
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+
+    /* Show Nursery/Class submenu */
+    .course-group .dropdown2.show {
+
+        display: block !important;
+
+    }
+
+
+    /* Individual links */
+    .course-group .dropdown2 li {
+
+        width: 100%;
+
+        display: block;
+
+        margin: 0;
+
+        padding: 0;
+
+    }
+
+
+    .course-group .dropdown2 li a {
+
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 12px 35px;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        -webkit-tap-highlight-color: transparent;
+
+        touch-action: manipulation;
+    }
+
+
+    /*
+       Important:
+       Submenu links should remain clickable
+    */
+
+    .course-group .dropdown2 li a:hover {
+
+        text-decoration: none;
+
+    }
+
+
+    /* Prevent parent from blocking clicks */
+    .course-group .dropdown2 {
+
+        pointer-events: auto !important;
+
+    }
+
+
+    .course-group .dropdown2 li,
+    .course-group .dropdown2 li a {
+
+        pointer-events: auto !important;
+
+    }
+
+}

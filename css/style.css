@@ -2858,3 +2858,25 @@ footer .top {
     }
 
 }
+@media (max-width: 768px) {
+    .dropdown2 {
+        display: none !important; 
+        padding-left: 15px;
+        background: #f9f9f9;
+    }
+
+    .dropdown2.active {
+        display: block !important;
+    }
+
+    .course-group > a {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .course-group .arrow {
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+}
